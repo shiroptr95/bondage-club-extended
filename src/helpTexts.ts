@@ -23,7 +23,7 @@ export enum Views {
 
 // TODO
 export const HELP_TEXTS: Record<Views, string> = {
-	[Views.AuthorityRoles]: "If you are permitted, this screen enables you to view, add, or remove the BCX-only roles 'Owner' " +
+	[Views.AuthorityRoles]: "Если вам разрешено, этот экран позволяет вам просматривать, добавлять или удалять роли только для BCX. 'Owner' " +
 		"and 'Mistress', which expand the classic roles of BC such as Bondage Club's Owner and the Lovers. The hierarchy of all " +
 		"roles that can be used to set various things in BCX can be seen on the right. The higher up a role is, the more authority it has. " +
 		"For instance, if something applies or is permitted for a Mistress, it also always is for an Owner. Any number of " +
