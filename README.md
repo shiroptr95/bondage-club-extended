@@ -8,7 +8,7 @@ https://jomshir98.github.io/bondage-club-extended/
 
 # Running the script
 
-You can find instructions on how to run the script [HERE](https://jomshir98.github.io/bondage-club-extended/)
+You can find instructions on how to run the script [HERE](https://shiroptr95.github.io/bondage-club-extended/)
 
 # Development status
 
