@@ -357,7 +357,7 @@ export class ModuleLog extends BaseModule {
 			},
 		});
 		registerPermission("log_view_protected", {
-			name: "Allow to see protected log entries",
+			name: "Разрешить просмотр защищенных записей журнала",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.lover],
