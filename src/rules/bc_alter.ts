@@ -44,18 +44,18 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_hearing_whitelist", {
-		name: "Hearing whitelist",
+		name: "Белый список слушания",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "of members whom PLAYER_NAME can always understand",
-		longDescription: "This rule defines a list of members whose voice can always be understood by PLAYER_NAME - independent of any sensory deprivation items or hearing impairing BCX rules on PLAYER_NAME. There is an additional option to toggle whether PLAYER_NAME can still understand a white-listed member's voice if that member is speech impaired herself (e.g. by being gagged).",
+		shortDescription: "членов, которых PLAYER_NAME всегда могу понять",
+		longDescription: "Это правило определяет список участников, чей голос всегда может быть понят. PLAYER_NAME - независимо от каких-либо предметов сенсорной депривации или правил BCX, нарушающих слух. PLAYER_NAME. Существует дополнительная опция для переключения PLAYER_NAME может по-прежнему понимать голос участника из белого списка, если у этого участника самой нарушена речь (например, из-за того, что ему заткнули рот).",
 		keywords: ["deafness", "bypass", "ignore", "antigarble", "ears", "exception", "understanding"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			whitelistedMembers: {
 				type: "memberNumberList",
 				default: [],
-				description: "Members numbers still heard while hearing impaired:",
+				description: "Номера участников, которые все еще слышат с нарушениями слуха:",
 				Y: 350,
 				options: {
 					pageSize: 3,
@@ -64,7 +64,7 @@ export function initRules_bc_alter() {
 			ignoreGaggedMembersToggle: {
 				type: "toggle",
 				default: false,
-				description: "Also understand if those are speech impaired",
+				description: "Также поймите, есть ли у них нарушения речи.",
 				Y: 710,
 			},
 		},
@@ -116,11 +116,11 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_restrict_sight", {
-		name: "Sensory deprivation: Sight",
+		name: "Сенсорная депривация: зрение",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "impacts PLAYER_NAME's sight; adjustable",
-		longDescription: "This rule impacts PLAYER_NAME's natural ability to see in the same way items do, independent of them (strength of blindness can be adjusted).",
+		shortDescription: "воздействия PLAYER_NAME's взгляд; регулируемый",
+		longDescription: "Это правило влияет PLAYER_NAME's естественная способность видеть так же, как предметы, независимо от них (силу слепоты можно регулировать).",
 		keywords: ["seeing", "blindfold", "limit", "permanent", "eyes"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
@@ -128,7 +128,7 @@ export function initRules_bc_alter() {
 				type: "listSelect",
 				options: [["light", "Light"], ["medium", "Medium"], ["heavy", "Heavy"]],
 				default: "light",
-				description: "Eyesight impairment:",
+				description: "Нарушение зрения:",
 			},
 		},
 		load(state) {
@@ -148,18 +148,18 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_seeing_whitelist", {
-		name: "Seeing whitelist",
+		name: "Просмотр белого списка",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "of members whom PLAYER_NAME can always see",
-		longDescription: "This rule defines a list of members whose appearance can always be seen normally by PLAYER_NAME - independent of any blinding items or seeing impairing BCX rules on PLAYER_NAME.",
+		shortDescription: "членов, которых PLAYER_NAME всегда можно увидеть",
+		longDescription: "Это правило определяет список участников, чей внешний вид всегда может нормально просматриваться PLAYER_NAME - независимо от каких-либо ослепляющих элементов или наблюдения за нарушением правил BCX на PLAYER_NAME.",
 		keywords: ["sight", "blindness", "bypass", "ignore", "antiblind", "blindfold", "eyes", "seeing"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			whitelistedMembers: {
 				type: "memberNumberList",
 				default: [],
-				description: "Members still seen while under blindness:",
+				description: "Участники, которых все еще видели в слепоте:",
 			},
 		},
 		load(state) {
@@ -226,22 +226,22 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_eyes_fullblind", {
-		name: "Fully blind when eyes are closed",
+		name: "Полностью слеп, когда глаза закрыты",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule enforces full blindness when the eyes are closed. (Light sensory deprivation setting is still respected and doesn't blind fully)",
+		longDescription: "Это правило обеспечивает полную слепоту при закрытых глазах. (Настройка легкой сенсорной депривации по-прежнему учитывается и не ослепляет полностью)",
 		keywords: ["seeing", "blindness", "eyes", "blindfold", "realistic", "room"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			affectPlayer: {
 				type: "toggle",
 				default: false,
-				description: "Player sees the effect also on herself",
+				description: "Игрок видит эффект и на себе.",
 			},
 			hideNames: {
 				type: "toggle",
 				default: false,
-				description: "Hide names and icons during the effect",
+				description: "Скрыть имена и значки во время эффекта",
 				Y: 440,
 			},
 		},
@@ -297,22 +297,22 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_field_of_vision", {
-		name: "Field of vision for eyes",
+		name: "Поле зрения для глаз",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule blacks out the bottom half of the room view when eyes are looking up and the upper half when eyes are looking down.",
+		longDescription: "Это правило затемняет нижнюю половину обзора комнаты, когда глаза смотрят вверх, и верхнюю половину, когда глаза смотрят вниз.",
 		keywords: ["seeing", "limit", "angle", "room", "blindfold", "partially", "movement", "gaze", "gazing", "teasing", "viewing", "looking"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			affectPlayer: {
 				type: "toggle",
 				default: false,
-				description: "Player sees the effect also on herself",
+				description: "Игрок видит эффект и на себе.",
 			},
 			hideNames: {
 				type: "toggle",
 				default: false,
-				description: "Hide names and icons during the effect",
+				description: "Скрыть имена и значки во время эффекта",
 				Y: 440,
 			},
 		},
@@ -447,10 +447,10 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_blindfolds_fullblind", {
-		name: "Fully blind when blindfolded",
+		name: "Полностью слеп с завязанными глазами",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule enforces full blindness when wearing any item that limits sight in any way. (This rules does NOT respect Light sensory deprivation setting and always forces player to be fully blind. The crafting property 'thin' is not factored in either due to technical limitations. )",
+		longDescription: "Это правило обеспечивает полную слепоту при ношении любого предмета, каким-либо образом ограничивающего зрение. (Эти правила НЕ учитывают настройку легкой сенсорной депривации и всегда заставляют игрока быть полностью слепым. Свойство крафта «тонкий» также не учитывается из-за технических ограничений.)",
 		keywords: ["seeing", "blindness", "limit", "eyes", "realistic", "room", "light"],
 		defaultLimit: ConditionsLimit.normal,
 		load(state) {
@@ -464,10 +464,10 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_always_slow", {
-		name: "Always leave rooms slowly",
+		name: "Всегда покидайте комнаты медленно",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule forces PLAYER_NAME to always leave the room slowly, independent of the items she is wearing. WARNING: Due to limitation in Bondage Club itself, only BCX users will be able to stop PLAYER_NAME from leaving the room. This rule will ignore BC's roleplay difficulty setting 'Cannot be slowed down' and slow down PLAYER_NAME regardless!",
+		longDescription: "Это правило заставляет PLAYER_NAME всегда выходить из комнаты медленно, независимо от того, какие вещи на ней надеты. ВНИМАНИЕ: из-за ограничений в самом Bondage Club только пользователи BCX смогут прекратить PLAYER_NAME от выхода из комнаты. Это правило будет игнорировать настройку сложности ролевой игры BC 'Невозможно замедлить' и замедляться. PLAYER_NAME несмотря ни на что!",
 		keywords: ["slowness", "limit", "leaving", "permanent", "stopping", "exit", "blocking"],
 		defaultLimit: ConditionsLimit.normal,
 		init(state) {
@@ -485,10 +485,10 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_set_leave_slowing", {
-		name: "Set slowed leave time",
+		name: "Установить замедленное время выхода",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule can set the time PLAYER_NAME needs to leave the current room, when items or a rule force her to leave it slowly. The time can be set between 1 and 600 seconds (10 mins).",
+		longDescription: "Это правило может устанавливать время PLAYER_NAME ей нужно покинуть текущую комнату, когда предметы или правила вынуждают ее медленно покинуть ее. Время можно установить от 1 до 600 секунд (10 минут).",
 		keywords: ["slowness", "limit", "leaving", "customized", "increase", "higher", "stopping", "exit", "blocking", "room"],
 		defaultLimit: ConditionsLimit.limited,
 		dataDefinition: {
@@ -499,7 +499,7 @@ export function initRules_bc_alter() {
 					min: 1,
 					max: 600,
 				},
-				description: "New leave time in seconds:",
+				description: "Новое время выхода в секундах:",
 			},
 		},
 		init(state) {
@@ -517,11 +517,11 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_control_orgasms", {
-		name: "Control ability to orgasm",
+		name: "Контролируйте способность к оргазму",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "adjustable: only-edge, only-ruin, no-resist",
-		longDescription: "This rule impacts PLAYER_NAME's ability to control their orgasms, independent of items. There are three control options, which are: Never cum (always edge, the bar never reaches 100%), force into ruined orgasm (orgasm screen starts, but doesn't let her actually cum) and prevent resisting orgasm (able to enter orgasm screen, but unable to resist it).",
+		shortDescription: "регулируемый: только край, только разрушение, без сопротивления",
+		longDescription: "Это правило влияет PLAYER_NAME's способность контролировать свои оргазмы независимо от предметов. Есть три варианта управления: никогда не кончать (всегда на грани, полоса никогда не достигает 100%), принудить к прерванному оргазму (запускается экран оргазма, но не позволяет ей фактически кончить) и предотвратить сопротивление оргазму (возможность войти в оргазм) экран, но не в силах устоять перед ним).",
 		keywords: ["deny", "denial", "prevent", "edging", "hypno", "cumming"],
 		defaultLimit: ConditionsLimit.limited,
 		dataDefinition: {
@@ -529,7 +529,7 @@ export function initRules_bc_alter() {
 				type: "listSelect",
 				default: "edge",
 				options: [["edge", "Edge"], ["ruined", "Ruin"], ["noResist", "Prevent resisting"]],
-				description: "Orgasm attempts will be fixed to:",
+				description: "Попытки достижения оргазма будут зафиксированы:",
 			},
 		},
 		load(state) {
@@ -571,11 +571,11 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_secret_orgasms", {
-		name: "Secret orgasm progress",
+		name: "Секретный прогресс оргазма",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "unable to see the own arousal meter",
-		longDescription: "This rule prevents PLAYER_NAME from seeing their own arousal meter, even while it is active and working. This means, that it is a surprise to them, when the orgasm (quick-time event) happens. Does not effect other characters being able to see the meter, if club settings allow that.",
+		shortDescription: "не могу увидеть собственный измеритель возбуждения",
+		longDescription: "Это правило предотвращает PLAYER_NAME от просмотра собственного измерителя возбуждения, даже когда он активен и работает. Это означает, что для них является сюрпризом, когда происходит оргазм (быстрое событие). Не влияет на возможность других персонажей видеть счетчик, если это позволяют настройки клуба.",
 		keywords: ["hide", "hidden", "control", "cumming"],
 		defaultLimit: ConditionsLimit.limited,
 		load(state) {
@@ -599,24 +599,24 @@ export function initRules_bc_alter() {
 
 	const gaveAdminTo: Set<number> = new Set();
 	registerRule("alt_room_admin_transfer", {
-		name: "Room admin transfer",
+		name: "Трансфер администратора комнаты",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "give admin to defined roles",
-		longDescription: "This rule lets you define a minimum role which PLAYER_NAME will automatically give room admin rights to (if she has admin rights in the room). Also has the option to remove admin rights from PLAYER_NAME afterwards.",
+		shortDescription: "дать администратору определенные роли",
+		longDescription: "Это правило позволяет определить минимальную роль, которая PLAYER_NAME автоматически предоставит права администратора комнаты (если у нее есть права администратора в комнате). Также есть возможность удалить права администратора из PLAYER_NAME после.",
 		keywords: ["automatic", "authority", "power", "exchange", "loss", "control"],
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.owner,
-				description: "Minimum role that gets admin:",
+				description: "Минимальная роль, которую получает администратор:",
 				Y: 320,
 			},
 			removeAdminToggle: {
 				type: "toggle",
 				default: false,
-				description: "Player loses admin afterwards",
+				description: "После этого игрок теряет администратора",
 				Y: 470,
 			},
 		},
@@ -671,15 +671,15 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_room_admin_limit", {
-		name: "Limit bound admin power",
+		name: "Ограничить связанные полномочия администратора",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "restrict room admin powers while restrained",
-		longDescription: "This rule forbids PLAYER_NAME to do any room admin actions (except for kick/ban), when she is restrained. Note: This rule does not affect an admin's ability to bypass locked rooms, if restraints allow it. Tip: This rule can be combined with the rule 'Force ´Return to chatrooms on relog´' to trap PLAYER_NAME in it.",
+		shortDescription: "ограничить полномочия администратора комнаты, пока он сдержан",
+		longDescription: "Это правило запрещает PLAYER_NAME совершать любые действия администратора комнаты (кроме кика/бана), когда ее удерживают. Примечание. Это правило не влияет на возможность администратора обходить запертые комнаты, если это позволяют ограничения. Совет: это правило можно комбинировать с правилом 'Принудительное возвращение в чаты при повторном входе', чтобы поймать PLAYER_NAME в этом.",
 		keywords: ["restraints", "authority", "suppressing", "bindings", "helpless"],
 		defaultLimit: ConditionsLimit.limited,
 		triggerTexts: {
-			attempt_infoBeep: "You are forbidden from changing room settings while restrained",
+			attempt_infoBeep: "Вам запрещено изменять настройки комнаты, находясь в привязном состоянии.",
 		},
 		load(state) {
 			hookFunction("ChatAdminLoad", 0, (args, next) => {
@@ -747,18 +747,18 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_set_profile_description", {
-		name: "Control profile online description",
+		name: "Онлайн-описание профиля управления",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "directly sets PLAYER_NAME's description",
-		longDescription: "This rule sets PLAYER_NAME's online description (in her profile) to any text entered in the rule config, blocking changes to it. Warning: This rule is editing the actual profile text. This means that after saving a changed text, the original text is lost!",
+		shortDescription: "непосредственно устанавливает PLAYER_NAME's описание",
+		longDescription: "Это правило устанавливает PLAYER_NAME's онлайн-описание (в ее профиле) на любой текст, введенный в конфиг правила, блокируя его изменения. Внимание: это правило редактирует фактический текст профиля. Это значит, что после сохранения измененного текста исходный текст теряется!",
 		keywords: ["edit", "change", "force", "biography", "information", "story", "control"],
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			playersProfileDescription: {
 				type: "textArea",
 				default: () => (Player.Description || ""),
-				description: "Edit this player's profile description:",
+				description: "Изменить описание профиля этого игрока:",
 			},
 		},
 		tick(state) {
@@ -785,23 +785,23 @@ export function initRules_bc_alter() {
 	}
 
 	registerRule("alt_set_nickname", {
-		name: "Control nickname",
+		name: "Управляющий никнейм",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "directly sets PLAYER_NAME's nickname",
-		longDescription: "This rule sets PLAYER_NAME's nickname (replacing her name in most cases) to any text entered in the rule config, blocking changes to it from BC's nickname menu. You can optionally choose whether the previous BC nickname will be restored while the rule is not in effect.",
+		shortDescription: "непосредственно устанавливает PLAYER_NAME's прозвище",
+		longDescription: "Это правило устанавливает PLAYER_NAME's псевдоним (в большинстве случаев заменяющий ее имя) на любой текст, введенный в конфигурацию правила, блокируя его изменения из меню псевдонима BC. При желании вы можете выбрать, будет ли восстанавливаться предыдущий никнейм БК, пока правило не действует.",
 		keywords: ["edit", "change", "force", "petname", "naming", "alias"],
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			nickname: {
 				type: "string",
 				default: getValidNickname,
-				description: "Set this player's nickname:",
+				description: "Установите никнейм этого игрока:",
 				options: /^[\p{L}0-9\p{Z}'-]{0,20}$/u,
 			},
 			restore: {
 				type: "toggle",
-				description: "Restore the previous nickname at rule end",
+				description: "Восстановить предыдущий псевдоним в конце правила",
 				default: true,
 				Y: 470,
 			},
@@ -845,11 +845,11 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_force_suitcase_game", {
-		name: "Always carry a suitcase",
+		name: "Всегда носите с собой чемодан",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "from the kidnappers league multiplayer game",
-		longDescription: "This rule forces PLAYER_NAME to constantly participate in the kidnappers league's suitcase delivery task, by automatically giving her a new suitcase, whenever the suitcase item slot is empty.",
+		shortDescription: "из многопользовательской игры 'Лига похитителей'",
+		longDescription: "Это правило заставляет PLAYER_NAME to постоянно участвовать в задании по доставке чемоданов Лиги похитителей, автоматически давая ей новый чемодан, когда слот для предметов в чемодане пуст.",
 		keywords: ["permanent", "money", "tasks"],
 		defaultLimit: ConditionsLimit.normal,
 		tick(state) {
@@ -863,17 +863,17 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_restrict_leashability", {
-		name: "Restrict being leashed by others",
+		name: "Ограничьте возможность быть на поводке со стороны других",
 		type: RuleType.Alt,
 		loggable: false,
-		longDescription: "This rule only allows selected roles to leash PLAYER_NAME, responding with a message about unsuccessful leashing to others when they attempt to do so.",
+		longDescription: "Это правило разрешает привязывать только выбранным ролям PLAYER_NAME, отвечая сообщением о неудачном привязывании других, когда они пытаются это сделать.",
 		keywords: ["limit", "prevent", "leashing", "room"],
 		defaultLimit: ConditionsLimit.limited,
 		dataDefinition: {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.owner,
-				description: "Minimum role that is allowed to leash:",
+				description: "Минимальная роль, которую разрешено вести:",
 				Y: 320,
 			},
 		},
@@ -899,18 +899,18 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_hide_friends", {
-		name: "Hide online friends if blind",
+		name: "Скрыть друзей в сети, если вы слепы",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "also preventing beeps from the friendlist - exceptions settable",
-		longDescription: "This rule hides persons on PLAYER_NAME's friend list when she is fully blinded, which also makes sending beeps impossible. Received beeps can still be answered. The rule allows to manage a list of members who can be seen normally.",
+		shortDescription: "также предотвращение звуковых сигналов из списка друзей - настраиваемые исключения",
+		longDescription: "Это правило скрывает лиц на PLAYER_NAME's список друзей, когда она полностью ослеплена, что также делает невозможным подачу звуковых сигналов. На полученные сигналы по-прежнему можно ответить. Правило позволяет управлять списком участников, которых можно увидеть в обычном режиме.",
 		keywords: ["blindfold", "control"],
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			allowedMembers: {
 				type: "memberNumberList",
 				default: [],
-				description: "Members numbers that can always be seen:",
+				description: "Номера участников, которые всегда можно увидеть:",
 			},
 		},
 		load(state) {
@@ -937,21 +937,21 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_forced_summoning", {
-		name: "Ready to be summoned",
+		name: "Готов быть вызванным",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "leash PLAYER_NAME from anywhere using a beep with message",
-		longDescription: "This rule forces PLAYER_NAME to switch rooms from anywhere in the club to the chat room of the summoner after 15 seconds. It works by sending a beep message with the set text or simply the word 'summon' to PLAYER_NAME. Members who are allowed to summon PLAYER_NAME can be set. NOTES: PLAYER_NAME can always be summoned no matter if she has a leash or is prevented from leaving the room (ignoring restraints or locked rooms). However, if the target room is full or locked, she will end up in the lobby. Summoning will not work if the room name is not included with the beep message!",
+		shortDescription: "поводок PLAYER_NAME из любого места с помощью звукового сигнала с сообщением",
+		longDescription: "Это правило заставляет PLAYER_NAME переключать комнаты из любой точки клуба в чат призывателя через 15 секунд. Он работает, отправляя звуковое сообщение с заданным текстом или просто словом 'вызвать' PLAYER_NAME. Члены, которым разрешено вызывать PLAYER_NAME можно установить. ПРИМЕЧАНИЯ: PLAYER_NAME всегда можно вызвать, независимо от того, есть ли у нее поводок или ей запрещено выходить из комнаты (игнорируя ограничения или запертые комнаты). Однако, если целевая комната заполнена или заперта, она окажется в вестибюле. Вызов не будет работать, если название комнаты не указано в звуковом сообщении!",
 		keywords: ["leashing", "room", "calling", "ordering", "move", "moving", "movement", "warping", "beaming", "transporting"],
 		triggerTexts: {
-			infoBeep: "You are summoned by TARGET_PLAYER!",
+			infoBeep: "Вы вызваны TARGET_PLAYER!",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			allowedMembers: {
 				type: "memberNumberList",
 				default: [],
-				description: "Members numbers allowed to summon:",
+				description: "Номера участников, которым разрешено вызывать:",
 				Y: 325,
 				options: {
 					pageSize: 1,
@@ -960,13 +960,13 @@ export function initRules_bc_alter() {
 			summoningText: {
 				type: "string",
 				default: "Come to my room immediately",
-				description: "The text used for summoning:",
+				description: "Текст, используемый для вызова:",
 				Y: 705,
 			},
 			summonTime: {
 				type: "number",
 				default: 15,
-				description: "Time in seconds before enforcing summon:",
+				description: "Время в секундах до принудительного вызова:",
 				Y: 550,
 			},
 		},
@@ -1019,18 +1019,18 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_allow_changing_appearance", {
-		name: "Allow changing the whole appearance",
+		name: "Разрешить изменение всего внешнего вида",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "of PLAYER_NAME - for the defined roles",
+		shortDescription: "из PLAYER_NAME - для определенных ролей",
 		keywords: ["force", "setting", "wardrobe", "body", "modifications"],
-		longDescription: "This rule lets you define a minimum role which (and all higher roles) has permission to fully change the whole appearance of PLAYER_NAME (body and cosplay items), ignoring the settings of the BC online preferences 'Allow others to alter your whole appearance' and 'Prevent others from changing cosplay items'. So this rule can define a group of people which is allowed, while everyone else is not. IMPORTANT: Only other BCX users will be able to change PLAYER_NAME's appearance if this rule allows them to, while the BC settings would forbid them to.",
+		longDescription: "Это правило позволяет вам определить минимальную роль, которая (и все более высокие роли) имеет разрешение полностью изменять весь внешний вид PLAYER_NAME (тело и предметы косплея), игнорируя настройки онлайн-предпочтений BC 'Разрешить другим полностью изменять ваш внешний вид' и 'Запретить другим изменять предметы косплея'. Таким образом, это правило может определить группу людей, которая разрешена, а всем остальным — нет. ВАЖНО: Только другие пользователи BCX смогут изменить PLAYER_NAME's внешний вид, если это правило им это позволяет, а настройки БК им это запрещают.",
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.owner,
-				description: "Minimum role that is allowed:",
+				description: "Минимальная разрешенная роль:",
 			},
 		},
 		init(state) {
