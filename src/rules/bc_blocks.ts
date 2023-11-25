@@ -447,10 +447,10 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_restrict_allowed_poses", {
-		name: "Restrict allowed body poses",
+		name: "Ограничить разрешенные позы тела",
 		type: RuleType.Block,
 		loggable: false,
-		longDescription: "Allows to restrict the body poses PLAYER_NAME is able to get into by herself.",
+		longDescription: "Позволяет ограничить позы тела. PLAYER_NAME способна проникнуть сама.",
 		keywords: ["controling", "limiting", "preventing", "changing"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
