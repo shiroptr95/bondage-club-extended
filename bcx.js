@@ -22052,7 +22052,7 @@ qw(new class extends N {
     }
     init() {
         Kw("rules_normal", {
-            name: "Allows controlling non-limited rules",
+            name: "Позволяет контролировать неограниченные правила",
             category: C.Rules,
             defaults: {
                 [b.dominant]: [!0, Zw.lover],
@@ -22062,7 +22062,7 @@ qw(new class extends N {
             }
         }),
         Kw("rules_limited", {
-            name: "Allows controlling limited rules",
+            name: "Позволяет контролировать ограниченные правила",
             category: C.Rules,
             defaults: {
                 [b.dominant]: [!0, Zw.owner],
@@ -22072,7 +22072,7 @@ qw(new class extends N {
             }
         }),
         Kw("rules_global_configuration", {
-            name: "Allows editing the global rules configuration",
+            name: "Позволяет редактировать конфигурацию глобальных правил.",
             category: C.Rules,
             defaults: {
                 [b.dominant]: [!0, Zw.owner],
@@ -22082,7 +22082,7 @@ qw(new class extends N {
             }
         }),
         Kw("rules_change_limits", {
-            name: "Allows to limit/block specific rules",
+            name: "Позволяет ограничивать/блокировать определенные правила",
             category: C.Rules,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -22092,7 +22092,7 @@ qw(new class extends N {
             }
         }),
         Kw("rules_view_originator", {
-            name: "Allow to view who added the rule originally",
+            name: "Разрешить просматривать, кто изначально добавил правило",
             category: C.Rules,
             defaults: {
                 [b.dominant]: [!0, Zw.self],

@@ -901,7 +901,7 @@ export class ModuleRules extends BaseModule {
 
 	init() {
 		registerPermission("rules_normal", {
-			name: "Allows controlling non-limited rules",
+			name: "Позволяет контролировать неограниченные правила",
 			category: ModuleCategory.Rules,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.lover],
@@ -911,7 +911,7 @@ export class ModuleRules extends BaseModule {
 			},
 		});
 		registerPermission("rules_limited", {
-			name: "Allows controlling limited rules",
+			name: "Позволяет контролировать ограниченное правилоs",
 			category: ModuleCategory.Rules,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.owner],
@@ -921,7 +921,7 @@ export class ModuleRules extends BaseModule {
 			},
 		});
 		registerPermission("rules_global_configuration", {
-			name: "Allows editing the global rules configuration",
+			name: "Позволяет редактировать конфигурацию глобальных правил.",
 			category: ModuleCategory.Rules,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.owner],
@@ -931,7 +931,7 @@ export class ModuleRules extends BaseModule {
 			},
 		});
 		registerPermission("rules_change_limits", {
-			name: "Allows to limit/block specific rules",
+			name: "Позволяет ограничивать/блокировать определенные правила",
 			category: ModuleCategory.Rules,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -941,7 +941,7 @@ export class ModuleRules extends BaseModule {
 			},
 		});
 		registerPermission("rules_view_originator", {
-			name: "Allow to view who added the rule originally",
+			name: "Разрешить просматривать, кто изначально добавил правило",
 			category: ModuleCategory.Rules,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
