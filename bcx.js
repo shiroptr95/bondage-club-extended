@@ -23737,12 +23737,12 @@ qw(new class extends N {
             });
             let o = 0;
             wy("other_constant_reminder", {
-                name: "Listen to my voice",
+                name: "Послушай мой голос",
                 type: 99,
                 loggable: !1,
                 enforceable: !1,
-                shortDescription: "regularly show configurable sentences to PLAYER_NAME",
-                longDescription: "This rule reminds or tells PLAYER_NAME one of the recorded sentences at random in a settable interval. Only PLAYER_NAME can see the set message and it is only shown if in a chat room.",
+                shortDescription: "регулярно показывать настраиваемые предложения PLAYER_NAME",
+                longDescription: "Это правило напоминает или рассказывает PLAYER_NAME одно из записанных предложений случайным образом в заданном интервале. Только PLAYER_NAME может видеть установленное сообщение, и оно отображается только в чате.",
                 keywords: ["hear", "voices", "in", "head", "messages", "periodic"],
                 defaultLimit: E.limited,
                 dataDefinition: {
@@ -23750,29 +23750,29 @@ qw(new class extends N {
                         type: "stringList",
                     default:
                         [],
-                        description: "The sentences that will be shown at random:",
+                        description: "Предложения, которые будут показаны случайным образом:",
                         Y: 296
                     },
                     reminderFrequency: {
                         type: "number",
                     default:
                         15,
-                        description: "Frequency of a sentence being shown (in minutes):",
+                        description: "Частота показа предложения (в минутах):",
                         Y: 715
                     }
                 },
                 tick: e => !!(e.inEffect && e.customData && e.customData.reminderText.length > 0 && ServerPlayerIsInChatRoom() && Date.now() > o + 60 * e.customData.reminderFrequency * 1e3) && (o = Date.now(), NA("[Voice] " + e.customData.reminderText[Math.floor(Math.random() * e.customData.reminderText.length)]), !0)
             }),
             wy("other_log_money", {
-                name: "Log money changes",
+                name: "Записывать изменения денег",
                 type: 99,
                 enforceable: !1,
-                shortDescription: "spending and/or getting money",
-                longDescription: "This rule logs whenever money is used to buy something. It also shows how much money PLAYER_NAME currently has in the log entry. Optionally, earning money can also be logged. Note: Please be aware that this last option can potentially fill the whole behaviour log rapidly.",
+                shortDescription: "тратить и/или получать деньги",
+                longDescription: "Это правило регистрируется всякий раз, когда деньги используются для покупки чего-либо. Также показано, сколько денег PLAYER_NAME на данный момент есть запись в журнале. При желании можно также зарегистрировать заработок. Примечание. Имейте в виду, что этот последний вариант потенциально может быстро заполнить весь журнал поведения.",
                 keywords: ["record", "balance", "earnings", "using", "tracking", "logging", "entry", "financial", "findom"],
                 triggerTexts: {
-                    infoBeep: "A BCX rule has logged this financial transaction!",
-                    log: "PLAYER_NAME TYPE money: AMOUNT $ | new balance: BALANCE $",
+                    infoBeep: "Правило BCX зарегистрировало эту финансовую транзакцию!",
+                    log: "PLAYER_NAME TYPE деньги: AMOUNT $ | новый баланс: BALANCE $",
                     announce: ""
                 },
                 defaultLimit: E.normal,
@@ -23822,15 +23822,15 @@ qw(new class extends N {
                 })
             };
             wy("other_track_BCX_activation", {
-                name: "Track BCX activation",
+                name: "Отслеживать активацию BCX",
                 type: 99,
                 enforceable: !1,
-                shortDescription: "logs if PLAYER_NAME enters the club without BCX",
-                longDescription: "This rule observes PLAYER_NAME, logging it as a rule violation if the club was previously entered at least once without BCX active.",
+                shortDescription: "журналы, если PLAYER_NAME входит в клуб без BCX",
+                longDescription: "Это правило соблюдает PLAYER_NAME, регистрация этого как нарушение правил, если ранее хотя бы один раз в клуб входили без активного BCX.",
                 keywords: ["record", "online", "force", "useage", "using", "login"],
                 triggerTexts: {
-                    infoBeep: "You logged in without starting BCX beforehand!",
-                    log: "PLAYER_NAME logged in without starting BCX beforehand at least once",
+                    infoBeep: "Вы вошли в систему, не запустив BCX заранее!",
+                    log: "PLAYER_NAME вошел в систему без предварительного запуска BCX хотя бы один раз",
                     announce: ""
                 },
                 internalDataValidate: e => "number" == typeof e,
