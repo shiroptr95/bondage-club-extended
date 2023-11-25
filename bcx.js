@@ -388,7 +388,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
     function Y(e, t, n, r, o) {
         const i = MainCanvas.canvas.clientHeight / 1e3,
         a = MainCanvas.canvas.clientWidth / 2e3,
-        s = MainCanvas.canvas.clientWidth <= 2 * MainCanvas.canvas.clientHeight ? MainCanvas.canvas.clientWidth / 60 : MainCanvas.canvas.clientHeight / 25,
+        s = MainCanvas.canvas.clientWidth <= 2 * MainCanvas.canvas.clientHeight ? MainCanvas.canvas.clientWidth / 50 : MainCanvas.canvas.clientHeight / 45,
         l = o ? o * i : 1.15 * s,
         c = r * a - 18,
         u = MainCanvas.canvas.offsetTop + n * i - l / 2,
