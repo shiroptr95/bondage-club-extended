@@ -18938,7 +18938,7 @@ const Rk = Object.freeze(new class {
 qw(new class extends N {
     init() {
         Kw("authority_grant_self", {
-            name: "Allow granting self access",
+            name: "Разрешить предоставление самостоятельного доступа",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18948,7 +18948,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_revoke_self", {
-            name: "Allow forbidding self access",
+            name: "Разрешить запретить самостоятельный доступ",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18958,7 +18958,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_edit_min", {
-            name: "Allow lowest access modification",
+            name: "Разрешить изменение минимального доступа",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18968,7 +18968,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_mistress_add", {
-            name: "Allow granting Mistress status",
+            name: "Разрешить предоставление статуса Любовницы",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18978,7 +18978,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_mistress_remove", {
-            name: "Allow revoking Mistress status",
+            name: "Разрешить отзыв статуса Любовницы",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18988,7 +18988,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_owner_add", {
-            name: "Allow granting Owner status",
+            name: "Разрешить предоставление статуса владельца",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -18998,7 +18998,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_owner_remove", {
-            name: "Allow revoking Owner status",
+            name: "Разрешить отзыв статуса владельца",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -19008,7 +19008,7 @@ qw(new class extends N {
             }
         }),
         Kw("authority_view_roles", {
-            name: "Allow viewing list of owners/mistresses",
+            name: "Разрешить просмотр списка владельцев/хозяек",
             category: C.Authority,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -19554,7 +19554,7 @@ qw(new class extends N {
 qw(new class extends N {
     init() {
         Kw("misc_cheat_allowactivities", {
-            name: "Разрешить использование командыallowactivities на этом проигрывателе",
+            name: "Разрешить использование команды allowactivities на этом игроке",
             category: C.Misc,
             defaults: {
                 [b.dominant]: [!0, Zw.whitelist],
