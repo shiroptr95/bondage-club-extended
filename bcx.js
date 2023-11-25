@@ -20809,7 +20809,7 @@ qw(new class extends N {
     }
     init() {
         Kw("curses_normal", {
-            name: "Allows handling curses on non-limited object slots",
+            name: "Позволяет обрабатывать проклятия в неограниченных слотах объектов.",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.lover],
@@ -20819,7 +20819,7 @@ qw(new class extends N {
             }
         }),
         Kw("curses_limited", {
-            name: "Allows handling curses on limited object slots",
+            name: "Позволяет обрабатывать проклятия в ограниченных слотах объектов.",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.owner],
@@ -20829,7 +20829,7 @@ qw(new class extends N {
             }
         }),
         Kw("curses_global_configuration", {
-            name: "Allows editing the global curses configuration",
+            name: "Позволяет редактировать глобальную конфигурацию проклятий.",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.owner],
@@ -20839,7 +20839,7 @@ qw(new class extends N {
             }
         }),
         Kw("curses_change_limits", {
-            name: "Allows to limit/block individual curse object slots",
+            name: "Позволяет ограничивать/блокировать отдельные слоты для объектов проклятия.",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -20849,7 +20849,7 @@ qw(new class extends N {
             }
         }),
         Kw("curses_color", {
-            name: "Allow changing colors of cursed objects",
+            name: "Разрешить изменение цвета проклятых объектов",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.lover],
@@ -20859,7 +20859,7 @@ qw(new class extends N {
             }
         }),
         Kw("curses_view_originator", {
-            name: "Allow to view who added the curse originally",
+            name: "Разрешить просматривать, кто изначально добавил проклятие",
             category: C.Curses,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21557,7 +21557,7 @@ qw(new lw),
 qw(new class extends N {
     init() {
         Kw("log_view_normal", {
-            name: "Allow to see normal log entries",
+            name: "Разрешить видеть обычные записи журнала",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!0, Zw.mistress],
@@ -21577,7 +21577,7 @@ qw(new class extends N {
             }
         }),
         Kw("log_configure", {
-            name: "Allow to configure what is logged",
+            name: "Разрешить настройку того, что регистрируется",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21587,7 +21587,7 @@ qw(new class extends N {
             }
         }),
         Kw("log_delete", {
-            name: "Allow deleting log entries",
+            name: "Разрешить удаление записей журнала",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21597,7 +21597,7 @@ qw(new class extends N {
             }
         }),
         Kw("log_praise", {
-            name: "Allow to praise or scold",
+            name: "Разрешите похвалить или поругать",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!1, Zw.friend],
@@ -21607,7 +21607,7 @@ qw(new class extends N {
             }
         }),
         Kw("log_add_note", {
-            name: "Allow to attach notes to the body",
+            name: "Разрешить прикреплять заметки к телу",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!1, Zw.mistress],
