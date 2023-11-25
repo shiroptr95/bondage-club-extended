@@ -347,7 +347,7 @@ export const LOG_LEVEL_NAMES: Record<LogAccessLevel, string> = {
 export class ModuleLog extends BaseModule {
 	init() {
 		registerPermission("log_view_normal", {
-			name: "Allow to see normal log entries",
+			name: "Разрешить видеть обычные записи журнала",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.mistress],
@@ -367,7 +367,7 @@ export class ModuleLog extends BaseModule {
 			},
 		});
 		registerPermission("log_configure", {
-			name: "Allow to configure what is logged",
+			name: "Разрешить настройку того, что регистрируется",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -377,7 +377,7 @@ export class ModuleLog extends BaseModule {
 			},
 		});
 		registerPermission("log_delete", {
-			name: "Allow deleting log entries",
+			name: "Разрешить удаление записей журнала",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -387,7 +387,7 @@ export class ModuleLog extends BaseModule {
 			},
 		});
 		registerPermission("log_praise", {
-			name: "Allow to praise or scold",
+			name: "Разрешите похвалить или поругать",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [false, AccessLevel.friend],
@@ -397,7 +397,7 @@ export class ModuleLog extends BaseModule {
 			},
 		});
 		registerPermission("log_add_note", {
-			name: "Allow to attach notes to the body",
+			name: "Разрешить прикреплять заметки к телу",
 			category: ModuleCategory.Log,
 			defaults: {
 				[Preset.dominant]: [false, AccessLevel.mistress],

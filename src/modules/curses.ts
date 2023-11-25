@@ -269,7 +269,7 @@ export class ModuleCurses extends BaseModule {
 
 	init() {
 		registerPermission("curses_normal", {
-			name: "Allows handling curses on non-limited object slots",
+			name: "Позволяет обрабатывать проклятия в неограниченных слотах объектов.",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.lover],
@@ -279,7 +279,7 @@ export class ModuleCurses extends BaseModule {
 			},
 		});
 		registerPermission("curses_limited", {
-			name: "Allows handling curses on limited object slots",
+			name: "Позволяет обрабатывать проклятия в ограниченных слотах объектов.",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.owner],
@@ -289,7 +289,7 @@ export class ModuleCurses extends BaseModule {
 			},
 		});
 		registerPermission("curses_global_configuration", {
-			name: "Allows editing the global curses configuration",
+			name: "Позволяет редактировать глобальную конфигурацию проклятий.",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.owner],
@@ -299,7 +299,7 @@ export class ModuleCurses extends BaseModule {
 			},
 		});
 		registerPermission("curses_change_limits", {
-			name: "Allows to limit/block individual curse object slots",
+			name: "Позволяет ограничивать/блокировать отдельные слоты для объектов проклятия.",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -309,7 +309,7 @@ export class ModuleCurses extends BaseModule {
 			},
 		});
 		registerPermission("curses_color", {
-			name: "Allow changing colors of cursed objects",
+			name: "Разрешить изменение цвета проклятых объектов",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.lover],
@@ -319,7 +319,7 @@ export class ModuleCurses extends BaseModule {
 			},
 		});
 		registerPermission("curses_view_originator", {
-			name: "Allow to view who added the curse originally",
+			name: "Разрешить просматривать, кто изначально добавил проклятие",
 			category: ModuleCategory.Curses,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
