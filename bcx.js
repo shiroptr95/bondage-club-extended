@@ -22351,15 +22351,15 @@ qw(new class extends N {
         function () {
             const e = BA();
             wy("block_remoteuse_self", {
-                name: "Forbid using remotes on self",
+                name: "Запретить использование пультов на себе",
                 type: 0,
-                shortDescription: "PLAYER_NAME using one on PLAYER_NAME",
-                longDescription: "This rule forbids PLAYER_NAME to use or trigger a vibrator or similar remote controlled item on her own body. (Others still can use remotes on her)",
+                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                longDescription: "Это правило запрещает PLAYER_NAME использовать или активировать вибратор или аналогичный предмет с дистанционным управлением на своем теле. (Другие все еще могут использовать для нее пульты)",
                 keywords: ["controling", "preventing", "limiting", "vibrating", "vibrations"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to use a remote control for items on your body!",
-                    attempt_log: "PLAYER_NAME tried to use a remote control on her own body, which was forbidden",
-                    log: "PLAYER_NAME used a remote control on her own body, which was forbidden"
+                    infoBeep: "Запрещается использовать пульт дистанционного управления для предметов, находящихся на вашем теле!",
+                    attempt_log: "PLAYER_NAME пыталась использовать пульт дистанционного управления на своем теле, что было запрещено",
+                    log: "PLAYER_NAME использовала пульт дистанционного управления на своем теле, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22382,14 +22382,14 @@ qw(new class extends N {
                 }
             }),
             wy("block_remoteuse_others", {
-                name: "Forbid using remotes on others",
+                name: "Запретить использование пультов на других",
                 type: 0,
-                longDescription: "This rule forbids PLAYER_NAME to use or trigger a vibrator or similar remote controlled item on other club members.",
+                longDescription: "Это правило запрещает PLAYER_NAME использовать или активировать вибратор или аналогичный предмет с дистанционным управлением в отношении других членов клуба.",
                 keywords: ["controling", "preventing", "limiting", "vibrating", "vibrations"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to use a remote control on other's items!",
-                    attempt_log: "PLAYER_NAME tried to use a remote control on TARGET_PLAYER's body, which was forbidden",
-                    log: "PLAYER_NAME used a remote control on TARGET_PLAYER's body, which was forbidden"
+                    infoBeep: "Запрещается использовать пульт дистанционного управления на чужих предметах!",
+                    attempt_log: "PLAYER_NAME пытался использовать пульт дистанционного управления на TARGET_PLAYER's тело, которое было запрещено",
+                    log: "PLAYER_NAME использовал пульт дистанционного управления на TARGET_PLAYER's тело, которое было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22412,15 +22412,15 @@ qw(new class extends N {
                 }
             }),
             wy("block_keyuse_self", {
-                name: "Forbid using keys on self",
+                name: "Запретить использование ключей на себя",
                 type: 0,
-                shortDescription: "PLAYER_NAME using one on PLAYER_NAME",
-                longDescription: "This rule forbids PLAYER_NAME to unlock any locked item on her own body. Note: Despite the name, this rule also blocks unlocking locks that don't require a key (e.g. exclusive lock). However, locks that can be unlocked in other ways (timer locks by removing time, code/password locks by entering correct code) can still be unlocked by PLAYER_NAME. Others can still unlock her items on her normally.",
+                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                longDescription: "Это правило запрещает PLAYER_NAME чтобы разблокировать любой запертый предмет на своем теле. Примечание. Несмотря на название, это правило также блокирует разблокировку замков, для которых не требуется ключ (например, эксклюзивная блокировка). Однако замки, которые можно разблокировать другими способами (блокировка таймером путем удаления времени, блокировка кодом/паролем путем ввода правильного кода), все равно можно разблокировать с помощью PLAYER_NAME. Другие по-прежнему могут разблокировать ее предметы в обычном режиме.",
                 keywords: ["controling", "taking", "away", "limiting", "confiscate", "locks"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to use a key on items on your body!",
-                    attempt_log: "PLAYER_NAME tried to use a key on a worn item, which was forbidden",
-                    log: "PLAYER_NAME used a key on a worn item, which was forbidden"
+                    infoBeep: "Вам не разрешается использовать ключ на предметах на вашем теле!",
+                    attempt_log: "PLAYER_NAME пытался использовать ключ на изношенной вещи, что было запрещено",
+                    log: "PLAYER_NAME использовал ключ на изношенной вещи, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22436,14 +22436,14 @@ qw(new class extends N {
                 }
             }),
             wy("block_keyuse_others", {
-                name: "Forbid using keys on others",
+                name: "Запретить использование ключей на других",
                 type: 0,
-                longDescription: "This rule forbids PLAYER_NAME to unlock any locked item on other club members, with options to still allow unlocking of owner and/or lover locks and items. Note: Despite the name, this rule also blocks unlocking locks that don't require a key (e.g. exclusive lock). However, locks that can be unlocked in other ways (timer locks by removing time, code/password locks by entering correct code) can still be unlocked by PLAYER_NAME.",
+                longDescription: "Это правило запрещает PLAYER_NAME чтобы разблокировать любой заблокированный предмет у других членов клуба, с возможностью по-прежнему разрешить разблокировку замков и предметов владельца и / или любовника. Примечание. Несмотря на название, это правило также блокирует разблокировку замков, для которых не требуется ключ (например, эксклюзивная блокировка). Однако замки, которые можно разблокировать другими способами (блокировка таймером путем удаления времени, блокировка кодом/паролем путем ввода правильного кода), все равно можно разблокировать с помощью PLAYER_NAME.",
                 keywords: ["controling", "taking", "away", "limiting", "confiscate", "locks"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to use a key on other's items!",
-                    attempt_log: "PLAYER_NAME tried to use a key to unlock TARGET_PLAYER's item, which was forbidden",
-                    log: "PLAYER_NAME used a key to unlock TARGET_PLAYER's item, which was forbidden"
+                    infoBeep: "Вам не разрешено использовать ключ на чужих предметах!",
+                    attempt_log: "PLAYER_NAME пытался использовать ключ для разблокировки TARGET_PLAYER's предмет, который был запрещен",
+                    log: "PLAYER_NAME использовал ключ, чтобы разблокировать TARGET_PLAYER's предмет, который был запрещен"
                 },
                 defaultLimit: E.normal,
                 dataDefinition: {
@@ -22451,13 +22451,13 @@ qw(new class extends N {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Still allow unlocking owner locks or items"
+                        description: "По-прежнему разрешать разблокировку замков или предметов владельца."
                     },
                     allowLoverLocks: {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Still allow unlocking lover locks or items",
+                        description: "По-прежнему разрешать разблокировку замков или предметов любовника.",
                         Y: 530
                     }
                 },
@@ -22480,15 +22480,15 @@ qw(new class extends N {
                 }
             }),
             wy("block_lockpicking_self", {
-                name: "Forbid picking locks on self",
+                name: "Запретить взламывать замки самому себе",
                 type: 0,
-                shortDescription: "PLAYER_NAME picking one on PLAYER_NAME",
-                longDescription: "This rule forbids PLAYER_NAME to lockpick any locked items on her own body. (Others still can pick locks on her normally)",
+                shortDescription: "PLAYER_NAME выбирая один на PLAYER_NAME",
+                longDescription: "Это правило запрещает PLAYER_NAME взламывать любые запертые предметы на своем теле. (Другие все еще могут нормально взламывать ее замки.)",
                 keywords: ["controling", "limiting", "secure", "security"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to lockpick worn items on your body!",
-                    attempt_log: "PLAYER_NAME tried to lockpick a worn item, which was forbidden",
-                    log: "PLAYER_NAME lockpicked a worn item, which was forbidden"
+                    infoBeep: "Вам не разрешается взламывать изношенные предметы на вашем теле.!",
+                    attempt_log: "PLAYER_NAME пытался взломать изношенную вещь, что было запрещено",
+                    log: "PLAYER_NAME взломал замок изношенной вещи, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22505,14 +22505,14 @@ qw(new class extends N {
                 }
             }),
             wy("block_lockpicking_others", {
-                name: "Forbid picking locks on others",
+                name: "Запретить взламывать чужие замки",
                 type: 0,
-                longDescription: "This rule forbids PLAYER_NAME to lockpick any locked items on other club members.",
+                longDescription: "Это правило запрещает PLAYER_NAME взламывать любые запертые предметы у других членов клуба.",
                 keywords: ["controling", "limiting", "secure", "security"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to lockpick items on others!",
-                    attempt_log: "PLAYER_NAME tried to lockpick an item on TARGET_PLAYER, which was forbidden",
-                    log: "PLAYER_NAME lockpicked an item on TARGET_PLAYER, which was forbidden"
+                    infoBeep: "Вам не разрешено взламывать предметы у других!",
+                    attempt_log: "PLAYER_NAME пытался взломать предмет на TARGET_PLAYER, что было запрещено",
+                    log: "PLAYER_NAME взломал предмет на TARGET_PLAYER, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22529,15 +22529,15 @@ qw(new class extends N {
                 }
             }),
             wy("block_lockuse_self", {
-                name: "Forbid using locks on self",
+                name: "Запретить использование блокировок на себя",
                 type: 0,
-                shortDescription: "PLAYER_NAME using one on PLAYER_NAME",
-                longDescription: "This rule forbids PLAYER_NAME to use any kind of lock on her own body. (Others still can add locks on her items normally)",
+                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                longDescription: "Это правило запрещает PLAYER_NAME использовать любой вид замка на своем теле. (Другие по-прежнему могут добавлять блокировки к ее предметам в обычном режиме.)",
                 keywords: ["controling", "limiting", "locking", "preventing"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to lock items on your body!",
-                    attempt_log: "PLAYER_NAME tried to lock a worn item, which was forbidden",
-                    log: "PLAYER_NAME locked a worn item, which was forbidden"
+                    infoBeep: "Запрещается запирать предметы на своем теле!",
+                    attempt_log: "PLAYER_NAME пытался запереть надетую вещь, что было запрещено",
+                    log: "PLAYER_NAME запер надетую вещь, которая была запрещена"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22554,14 +22554,14 @@ qw(new class extends N {
                 }
             }),
             wy("block_lockuse_others", {
-                name: "Forbid using locks on others",
+                name: "Запретить использовать блокировки на других",
                 type: 0,
-                longDescription: "This rule forbids PLAYER_NAME to use any kind of lock on other club members.",
+                longDescription: "Это правило запрещает PLAYER_NAME использовать любые виды блокировки на других членах клуба.",
                 keywords: ["controling", "limiting", "locking", "preventing"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to lock other's items!",
-                    attempt_log: "PLAYER_NAME tried to lock TARGET_PLAYER's item, which was forbidden",
-                    log: "PLAYER_NAME locked TARGET_PLAYER's item, which was forbidden"
+                    infoBeep: "Вам не разрешено блокировать чужие предметы!",
+                    attempt_log: "PLAYER_NAME пытался заблокировать TARGET_PLAYER's предмет, который был запрещен",
+                    log: "PLAYER_NAME заперто TARGET_PLAYER's предмет, который был запрещен"
                 },
                 defaultLimit: E.normal,
                 load(e) {
