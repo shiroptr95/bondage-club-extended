@@ -22578,15 +22578,15 @@ qw(new class extends N {
                 }
             }),
             wy("block_wardrobe_access_self", {
-                name: "Forbid wardrobe use on self",
+                name: "Запретить использование гардероба на себе",
                 type: 0,
-                shortDescription: "PLAYER_NAME using PLAYER_NAME's wardrobe",
-                longDescription: "This rule forbids PLAYER_NAME to access her own wardrobe. (Others still can change her clothes normally)",
+                shortDescription: "PLAYER_NAME с использованием PLAYER_NAME's гардероб",
+                longDescription: "Это правило запрещает PLAYER_NAME чтобы получить доступ к ее собственному гардеробу. (Другие все еще могут нормально переодеться.)",
                 keywords: ["controling", "limiting", "clothings", "preventing", "changing"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to change what you are wearing!",
-                    attempt_log: "PLAYER_NAME tried to use their wardrobe, which was forbidden",
-                    log: "PLAYER_NAME used their wardrobe, which was forbidden"
+                    infoBeep: "Вам не разрешается менять то, что вы носите!",
+                    attempt_log: "PLAYER_NAME пытались воспользоваться своим гардеробом, что было запрещено",
+                    log: "PLAYER_NAME пользовались своим гардеробом, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
