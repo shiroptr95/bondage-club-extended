@@ -23046,15 +23046,15 @@ qw(new class extends N {
                 }
             }),
             wy("block_using_ggts", {
-                name: "Forbid using GGTS",
+                name: "Запретить использование GGTS",
                 type: 0,
-                shortDescription: "training by GGTS is forbidden",
-                longDescription: "This rule forbids PLAYER_NAME to revieve training by the base club's GGTS feature. If the rule is enforced while PLAYER_NAME has remaining GGTS training time, it is removed the moment PLAYER_NAME enters the GGTS room.",
+                shortDescription: "обучение по GGTS запрещено",
+                longDescription: "Это правило запрещает PLAYER_NAME просмотреть тренировку с помощью функции GGTS базового клуба. Если правило соблюдается в то время как PLAYER_NAME осталось время обучения GGTS, оно удаляется в тот момент, когда PLAYER_NAME входит в комнату GGTS.",
                 keywords: ["limiting", "preventing", "controling"],
                 triggerTexts: {
-                    infoBeep: "You are not allowed to recieve training by GGTS!",
-                    attempt_log: "PLAYER_NAME tried to recieve training by GGTS",
-                    log: "PLAYER_NAME started training by GGTS"
+                    infoBeep: "Вам не разрешено проходить обучение в GGTS!",
+                    attempt_log: "PLAYER_NAME пытался пройти обучение в GGTS",
+                    log: "PLAYER_NAME начал обучение в GGTS"
                 },
                 defaultLimit: E.limited,
                 load(e) {
@@ -23077,11 +23077,11 @@ qw(new class extends N {
                 }
             }),
             wy("block_club_slave_work", {
-                name: "Prevent working as club slave",
+                name: "Запретить работать в качестве раба в клубе",
                 type: 0,
                 loggable: !1,
-                shortDescription: "the task from the mistress room",
-                longDescription: "This rule prevents PLAYER_NAME to work as a club slave by picking up a club slave collar from the club management room.",
+                shortDescription: "задание из комнаты хозяйки",
+                longDescription: "Это правило предотвращает PLAYER_NAME работать клубным рабом, взяв ошейник клубного раба из комнаты управления клубом.",
                 keywords: ["limiting", "preventing", "controling", "task", "money"],
                 defaultLimit: E.limited,
                 load(e) {
@@ -23089,11 +23089,11 @@ qw(new class extends N {
                 }
             }),
             wy("block_using_unowned_items", {
-                name: "Prevent using items of others",
+                name: "Запретить использование чужих вещей",
                 type: 0,
                 loggable: !1,
-                shortDescription: "items not bought",
-                longDescription: "This rule prevents PLAYER_NAME to use items she does not own herself, but can use on someone because this person owns them.",
+                shortDescription: "предметы не куплены",
+                longDescription: "Это правило предотвращает PLAYER_NAME использовать предметы, которыми она не владеет сама, но может использовать на ком-то, потому что они принадлежат этому человеку.",
                 keywords: ["limiting", "forbid", "controling", "restraints", "gear", "characters"],
                 defaultLimit: E.normal,
                 load(e) {
@@ -23110,14 +23110,14 @@ qw(new class extends N {
                 }
             }),
             wy("block_changing_emoticon", {
-                name: "Prevent changing own emoticon",
+                name: "Запретить изменение собственного смайлика",
                 type: 0,
-                shortDescription: "for just PLAYER_NAME",
-                longDescription: "This rule prevents PLAYER_NAME from showing, removing or changing an emoticon (afk, zZZ, etc.) over her head. It also blocks her from using the emoticon command on herself.",
+                shortDescription: "Просто для PLAYER_NAME",
+                longDescription: "Это правило предотвращает PLAYER_NAME от показа, удаления или изменения смайла (афк, зЗЗ и т.п.) над головой. Это также не позволяет ей использовать команду смайлика на себе.",
                 triggerTexts: {
-                    infoBeep: "You are not allowed to change the emoticon!",
-                    attempt_log: "PLAYER_NAME tried to use the emoticon command",
-                    log: "PLAYER_NAME used the emoticon command"
+                    infoBeep: "Вам не разрешено менять смайлик!",
+                    attempt_log: "PLAYER_NAME пытался использовать команду смайлика",
+                    log: "PLAYER_NAME использовал команду смайлика"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -23134,11 +23134,11 @@ qw(new class extends N {
             });
             let t = !1;
             wy("block_ui_icons_names", {
-                name: "Force-hide UI elements",
+                name: "Принудительно скрыть элементы UI",
                 type: 0,
                 loggable: !1,
-                shortDescription: "e.g., icons, bars, or names",
-                longDescription: "This rule enforces hiding of certain UI elements for PLAYER_NAME over all characters inside the room. Different levels of the effect can be set which follow exactly the behavior of the 'eye'-toggle in the button row above the chat. There is also an option to hide emoticon bubbles over all characters' heads.",
+                shortDescription: "например, значки, полосы или имена",
+                longDescription: "Это правило обеспечивает скрытие определенных элементов UI для PLAYER_NAME над всеми персонажами внутри комнаты. Можно установить различные уровни эффекта, которые точно соответствуют поведению переключателя «глаз» в строке кнопок над чатом. Также есть возможность скрыть пузыри смайликов над головами всех персонажей.",
                 keywords: ["seeing", "room", "viewing", "looking", "eye", "emoticons"],
                 defaultLimit: E.blocked,
                 dataDefinition: {
@@ -23210,7 +23210,7 @@ qw(new class extends N {
                     shortDescription: n,
                     keywords: ["control", "settings", "configure", "change"],
                     defaultLimit: t,
-                    longDescription: `This rule forces PLAYER_NAME's base game setting '${e}' to configurable value and prevents her from changing it.`,
+                    longDescription: `Это правило заставляет PLAYER_NAME's базовая настройка игры '${e}' на настраиваемое значение и не позволяет ей изменить его.`,
                     triggerTexts: {
                         infoBeep: `Rule changed your '${e}' setting`
                     }
