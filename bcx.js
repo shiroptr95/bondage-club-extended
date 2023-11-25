@@ -22981,11 +22981,11 @@ qw(new class extends N {
                 }
             }),
             wy("block_mainhall_maidrescue", {
-                name: "Forbid mainhall maid services",
+                name: "Запретить услуги горничной в главном зале",
                 loggable: !1,
                 type: 0,
                 shortDescription: "to get out of any restraints",
-                longDescription: "This rule forbids PLAYER_NAME to use a maid's help to get out of restraints in the club's main hall. Recommended to combine with the rule: 'Force 'Cannot enter single-player rooms when restrained' (Existing BC setting)' to prevent NPCs in other rooms from helping.",
+                longDescription: "Это правило запрещает PLAYER_NAME воспользоваться помощью горничной, чтобы освободиться от ограничений в главном зале клуба. Рекомендуется комбинировать с правилом: «Принудительно «Невозможно войти в комнаты для одиночной игры, будучи ограниченным» (существующая настройка BC)», чтобы не дать NPC в других комнатах помочь.",
                 keywords: ["limiting", "preventing", "controling"],
                 defaultLimit: E.normal,
                 load(e) {
