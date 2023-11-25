@@ -21567,7 +21567,7 @@ qw(new class extends N {
             }
         }),
         Kw("log_view_protected", {
-            name: "Allow to see protected log entries",
+            name: "Разрешить просмотр защищенных записей журнала",
             category: C.Log,
             defaults: {
                 [b.dominant]: [!0, Zw.lover],
