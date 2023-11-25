@@ -19554,7 +19554,7 @@ qw(new class extends N {
 qw(new class extends N {
     init() {
         Kw("misc_cheat_allowactivities", {
-            name: "Allow using the allowactivities command on this player",
+            name: "Разрешить использование командыallowactivities на этом проигрывателе",
             category: C.Misc,
             defaults: {
                 [b.dominant]: [!0, Zw.whitelist],
@@ -20000,7 +20000,7 @@ qw(new class extends N {
     }
     init() {
         Kw("commands_normal", {
-            name: "Allows controlling non-limited commands",
+            name: "Позволяет управлять неограниченным количеством команд",
             category: C.Commands,
             defaults: {
                 [b.dominant]: [!0, Zw.lover],
@@ -20010,7 +20010,7 @@ qw(new class extends N {
             }
         }),
         Kw("commands_limited", {
-            name: "Allows controlling limited commands",
+            name: "Позволяет управлять ограниченными командами",
             category: C.Commands,
             defaults: {
                 [b.dominant]: [!0, Zw.owner],
@@ -20020,7 +20020,7 @@ qw(new class extends N {
             }
         }),
         Kw("commands_change_limits", {
-            name: "Allows to limit/block specific commands",
+            name: "Позволяет ограничивать/блокировать определенные команды",
             category: C.Commands,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21454,7 +21454,7 @@ qw(new class extends N {
 qw(new class extends N {
     init() {
         Kw("exportimport_export", {
-            name: "Allow exporting BCX module configurations",
+            name: "Разрешить экспорт конфигураций модуля BCX",
             category: C.ExportImport,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21874,7 +21874,7 @@ qw(new class extends N {
 qw(new class extends N {
     init() {
         Kw("relationships_view_all", {
-            name: "Allow viewing others in relationship list",
+            name: "Разрешить просмотр других в списке отношений",
             category: C.Relationships,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21884,7 +21884,7 @@ qw(new class extends N {
             }
         }),
         Kw("relationships_modify_self", {
-            name: "Allow changing relationship config for herself",
+            name: "Разрешить изменение конфигурации отношений для себя",
             category: C.Relationships,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -21894,7 +21894,7 @@ qw(new class extends N {
             }
         }),
         Kw("relationships_modify_others", {
-            name: "Allow changing relationship config for others",
+            name: "Разрешить изменение конфигурации отношений для других",
             category: C.Relationships,
             defaults: {
                 [b.dominant]: [!0, Zw.self],
@@ -24136,7 +24136,7 @@ qw(new class extends N {
 qw(new class extends N {
     init() {
         Kw("misc_wardrobe_item_import", {
-            name: "Allow importing items using wardrobe",
+            name: "Разрешить импорт предметов с помощью гардероба",
             category: C.Misc,
             defaults: {
                 [b.dominant]: [!0, Zw.whitelist],

@@ -130,7 +130,7 @@ export class ModuleCommandsModule extends BaseModule {
 
 	init() {
 		registerPermission("commands_normal", {
-			name: "Allows controlling non-limited commands",
+			name: "Позволяет управлять неограниченным количеством команд",
 			category: ModuleCategory.Commands,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.lover],
@@ -140,7 +140,7 @@ export class ModuleCommandsModule extends BaseModule {
 			},
 		});
 		registerPermission("commands_limited", {
-			name: "Allows controlling limited commands",
+			name: "Позволяет управлять ограниченными командами",
 			category: ModuleCategory.Commands,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.owner],
@@ -150,7 +150,7 @@ export class ModuleCommandsModule extends BaseModule {
 			},
 		});
 		registerPermission("commands_change_limits", {
-			name: "Allows to limit/block specific commands",
+			name: "Позволяет ограничивать/блокировать определенные команды",
 			category: ModuleCategory.Commands,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],

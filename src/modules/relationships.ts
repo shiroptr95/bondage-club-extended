@@ -61,7 +61,7 @@ export function RelationshipsGetNickname(target: number | ChatroomCharacter | nu
 export class ModuleRelationhips extends BaseModule {
 	override init(): void {
 		registerPermission("relationships_view_all", {
-			name: "Allow viewing others in relationship list",
+			name: "Разрешить просмотр других в списке отношений",
 			category: ModuleCategory.Relationships,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -72,7 +72,7 @@ export class ModuleRelationhips extends BaseModule {
 		});
 
 		registerPermission("relationships_modify_self", {
-			name: "Allow changing relationship config for herself",
+			name: "Разрешить изменение конфигурации отношений для себя",
 			category: ModuleCategory.Relationships,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -83,7 +83,7 @@ export class ModuleRelationhips extends BaseModule {
 		});
 
 		registerPermission("relationships_modify_others", {
-			name: "Allow changing relationship config for others",
+			name: "Разрешить изменение конфигурации отношений для других",
 			category: ModuleCategory.Relationships,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
