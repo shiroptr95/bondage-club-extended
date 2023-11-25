@@ -23227,7 +23227,7 @@ qw(new class extends N {
             }) {
                 return wy(n, {
                     ...t(r, a, o),
-                    longDescription: `This rule forces PLAYER_NAME's base game or BCX setting '${r}' to the configured value and prevents her from changing it. There is also an option to restore the setting to the state it was in before the rule changed it. The restoration happens either when the rule becomes inactive (for instance through toggle or unfulfilled trigger conditions) or when it is removed.`,
+                    longDescription: `Это правило заставляет PLAYER_NAME's базовая игра или настройка BCX '${r}' настроенному значению и не позволяет ей его изменить. Существует также возможность восстановить настройку до того состояния, в котором она была до того, как правило изменило ее. Восстановление происходит либо тогда, когда правило становится неактивным (например, из-за переключения или невыполнения триггерных условий), либо когда оно удаляется.`,
                     dataDefinition: {
                         value: {
                             type: "toggle",
