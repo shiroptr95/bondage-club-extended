@@ -418,14 +418,14 @@ export function initRules_bc_blocks() {
 
 	// TODO: Make it clearer it is blocked by BCX
 	registerRule("block_wardrobe_access_others", {
-		name: "Forbid wardrobe use on others",
+		name: "Запретить использование гардероба на других",
 		type: RuleType.Block,
 		longDescription: "This rule forbids PLAYER_NAME to use the wardrobe of other club members.",
 		keywords: ["controling", "limiting", "clothings", "preventing", "changing"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to change what others wear!",
-			attempt_log: "PLAYER_NAME tried to use TARGET_PLAYER's wardrobe, which was forbidden",
-			log: "PLAYER_NAME used TARGET_PLAYER's wardrobe, which was forbidden",
+			infoBeep: "Вам не разрешается менять то, что носят другие!",
+			attempt_log: "PLAYER_NAME пытался использовать TARGET_PLAYER's шкаф, который был запрещен",
+			log: "PLAYER_NAME использовал TARGET_PLAYER's шкаф, который был запрещен",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		load(state) {
@@ -457,7 +457,7 @@ export function initRules_bc_blocks() {
 			poseButtons: {
 				type: "poseSelect",
 				default: [],
-				description: "Mark poses as being allowed or forbidden:",
+				description: "Марк изображает из себя разрешенного или запрещенного:",
 			},
 		},
 		load(state) {
@@ -492,14 +492,14 @@ export function initRules_bc_blocks() {
 
 	// TODO: Triggers on opening chat create *window*, improve to trigger on actual room creation
 	registerRule("block_creating_rooms", {
-		name: "Forbid creating new rooms",
+		name: "Запретить создание новых комнат",
 		type: RuleType.Block,
-		longDescription: "This rule forbids PLAYER_NAME to create new rooms.",
+		longDescription: "Это правило запрещает PLAYER_NAME создавать новые комнаты.",
 		keywords: ["controling", "limiting", "preventing"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to create a new room!",
-			attempt_log: "PLAYER_NAME tried to create a chatroom, which was forbidden",
-			log: "PLAYER_NAME created a chatroom, which was forbidden",
+			infoBeep: "Вам не разрешено создавать новую комнату!",
+			attempt_log: "PLAYER_NAME пытался создать чат, который был запрещен",
+			log: "PLAYER_NAME создал чат, который был запрещен",
 			announce: "",
 			attempt_announce: "",
 		},
@@ -530,24 +530,24 @@ export function initRules_bc_blocks() {
 
 	// TODO: Triggers on attempting to enter room, improve to trigger on actual room entry
 	registerRule("block_entering_rooms", {
-		name: "Restrict entering rooms",
+		name: "Ограничить вход в помещения",
 		type: RuleType.Block,
-		shortDescription: "only allow entering specific ones",
-		longDescription: "This rule forbids PLAYER_NAME to enter all rooms, that are not on an editable whitelist of still allowed ones. NOTE: As safety measure this rule is not in effect while the list is empty. TIP: This rule can be combined with the rule \"Forbid creating new rooms\".",
+		shortDescription: "разрешить ввод только определенных",
+		longDescription: "Это правило запрещает PLAYER_NAME для входа во все комнаты, которых нет в редактируемом белом списке разрешенных. ПРИМЕЧАНИЕ. В целях безопасности это правило не действует, пока список пуст. СОВЕТ: Это правило можно объединить с правилом \"Запретить создание новых комнат\".",
 		keywords: ["controling", "limiting", "preventing", "entry"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to enter this room!",
-			attempt_log: "PLAYER_NAME tried to enter a forbidden room",
-			log: "PLAYER_NAME entered a forbidden room",
+			infoBeep: "Вам не разрешено входить в эту комнату!",
+			attempt_log: "PLAYER_NAME tпытался войти в запретную комнату",
+			log: "PLAYER_NAME вошел в запретную комнату",
 			attempt_announce: "",
-			announce: "PLAYER_NAME violated a rule to not enter this room",
+			announce: "PLAYER_NAME нарушил правило не входить в эту комнату",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			roomList: {
 				type: "stringList",
 				default: [],
-				description: "Only joining rooms with these names is allowed:",
+				description: "Разрешено объединять только комнаты с этими именами:",
 			},
 		},
 		load(state) {
@@ -609,22 +609,22 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_leaving_room", {
-		name: "Prevent leaving the room",
+		name: "Запретить выходить из комнаты",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "while defined roles are inside",
-		longDescription: "This rule prevents PLAYER_NAME from leaving the room they are currently inside while at least one character with the set minimum role or a higher one is present inside. NOTE: Careful when setting the minimum role too low. If it is set to public for instance, it would mean that PLAYER_NAME can only leave the room when they are alone in it.",
+		shortDescription: "пока определенные роли находятся внутри",
+		longDescription: "Это правило предотвращает PLAYER_NAME выйти из комнаты, в которой они сейчас находятся, пока внутри находится хотя бы один персонаж с установленной минимальной или более высокой ролью. ПРИМЕЧАНИЕ. Будьте осторожны, устанавливая слишком низкую минимальную роль. Например, если он установлен как общедоступный, это будет означать, что PLAYER_NAME могут выйти из комнаты только тогда, когда они одни.",
 		keywords: ["controling", "limiting", "stopping", "exiting"],
 		triggerTexts: {
-			infoBeep: "Someone's presence does not allowed you to leave!",
-			attempt_announce: "PLAYER_NAME violated a rule by trying to leave this room",
+			infoBeep: "Чье-то присутствие не дает вам уйти!",
+			attempt_announce: "PLAYER_NAME нарушил правило, пытаясь покинуть эту комнату",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.mistress,
-				description: "Minimum role preventing room leaving:",
+				description: "Минимальная роль, предотвращающая выход из комнаты:",
 				Y: 320,
 			},
 		},
@@ -652,22 +652,22 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_freeing_self", {
-		name: "Forbid freeing self",
+		name: "Запретить освобождать себя",
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME removing any items from PLAYER_NAME's body",
-		longDescription: "This rule forbids PLAYER_NAME to remove any items from her own body. Other people can still remove them. The rule has a toggle to optionally still allow to remove items which were given a low difficulty score by the original asset maker, such as hand-held items, plushies, etc. This means that custom crafted properties given to an item such as 'decoy' are not factored in.",
+		shortDescription: "PLAYER_NAME удаление любых предметов из PLAYER_NAME's тело",
+		longDescription: "Это правило запрещает PLAYER_NAME удалять любые предметы со своего тела. Другие люди по-прежнему могут их удалить. В правиле есть переключатель, позволяющий при необходимости удалять предметы, которым первоначальный создатель объекта присвоил низкую оценку сложности, например ручные предметы, плюшевые игрушки и т. д. Это означает, что специально созданные свойства, присвоенные предмету, такие как «приманка», ' не учитываются.",
 		keywords: ["limiting", "untying", "unbinding", "bondage"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to remove an item from your body!",
-			attempt_log: "PLAYER_NAME tried to remove a worn item, which was forbidden",
-			log: "PLAYER_NAME removed a worn item, which was forbidden",
+			infoBeep: "Вынимать предмет из тела запрещено!",
+			attempt_log: "PLAYER_NAME пытался снять изношенную вещь, что было запрещено",
+			log: "PLAYER_NAME сняла изношенную вещь, что было запрещено",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			allowEasyItemsToggle: {
 				type: "toggle",
 				default: false,
-				description: "Still allow removing low difficulty items",
+				description: "По-прежнему разрешается удалять предметы низкой сложности.",
 			},
 		},
 		load(state) {
@@ -733,22 +733,22 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_tying_others", {
-		name: "Forbid tying up others",
+		name: "Запретить связывать других",
 		type: RuleType.Block,
-		shortDescription: "either everybody or only more dominant characters",
-		longDescription: "This rule forbids PLAYER_NAME to use any items on other characters. Can be set to only affect using items on characters with a higher dominant / lower submissive score than PLAYER_NAME has.",
+		shortDescription: "либо все, либо только наиболее доминирующие персонажи",
+		longDescription: "Это правило запрещает PLAYER_NAME использовать любые предметы на других персонажах. Можно настроить так, чтобы использование предметов влияло только на персонажей с более высоким показателем доминирования / более низким показателем подчинения, чем PLAYER_NAME имеет.",
 		keywords: ["limiting", "prevent", "restraints", "bondage"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to use an item on TARGET_PLAYER!",
-			attempt_log: "PLAYER_NAME tried to use an item on TARGET_PLAYER, which was forbidden",
-			log: "PLAYER_NAME used an item on TARGET_PLAYER, which was forbidden",
+			infoBeep: "Вам не разрешено использовать предмет на TARGET_PLAYER!",
+			attempt_log: "PLAYER_NAME пытался использовать предмет на TARGET_PLAYER, что было запрещено",
+			log: "PLAYER_NAME использовал предмет на TARGET_PLAYER, что было запрещено",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
 			onlyMoreDominantsToggle: {
 				type: "toggle",
 				default: true,
-				description: "Only forbid tying people with higher dominance",
+				description: "Только запретите связывать людей с более высоким доминированием",
 			},
 		},
 		load(state) {
@@ -779,22 +779,22 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_blacklisting", {
-		name: "Prevent blacklisting",
+		name: "Предотвращение внесения в черный список",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "and ghosting of the defined roles",
-		longDescription: "This rule prevents PLAYER_NAME from adding characters with the set minimum role or a higher one to their bondage club blacklist and ghostlist.",
+		shortDescription: "и ореолы определенных ролей",
+		longDescription: "Это правило предотвращает PLAYER_NAME от добавления персонажей с установленной минимальной ролью или выше в черный список и список призраков клуба бондажа.",
 		keywords: ["limiting"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to blacklist/ghost this person!",
-			attempt_announce: "PLAYER_NAME violated a rule by trying to blacklist TARGET_PLAYER",
+			infoBeep: "Вам не разрешено вносить этого человека в черный список/призрак!",
+			attempt_announce: "PLAYER_NAME нарушил правило, попытавшись внести в черный список TARGET_PLAYER",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.mistress,
-				description: "Minimum role forbidden to blacklist:",
+				description: "Минимальная роль, запрещенная для внесения в черный список:",
 				Y: 320,
 			},
 		},
@@ -820,15 +820,15 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_whitelisting", {
-		name: "Prevent whitelisting",
+		name: "Запретить внесение в белый список",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "of roles 'friend' or 'public'",
-		longDescription: "This rule prevents PLAYER_NAME from adding characters with a role lower than a BCX Mistress to their bondage club whitelist.",
+		shortDescription: "ролей 'друг' или 'публичный'",
+		longDescription: "Это правило предотвращает PLAYER_NAME от добавления персонажей с ролью ниже, чем Хозяйка BCX, в белый список клуба бондажа.",
 		keywords: ["limiting"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to whitelist this person!",
-			attempt_announce: "PLAYER_NAME violated a rule by trying to whitelist TARGET_PLAYER",
+			infoBeep: "Вам не разрешено внести этого человека в белый список!",
+			attempt_announce: "PLAYER_NAME нарушил правило, попытавшись внести в белый список TARGET_PLAYER",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		load(state) {
@@ -852,30 +852,30 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_antiblind", {
-		name: "Forbid the antiblind command",
+		name: "Запретить команду antiblind",
 		type: RuleType.Block,
-		shortDescription: "BCX's .antiblind command",
-		longDescription: "This rule forbids PLAYER_NAME to use the antiblind command. Antiblind is a BCX feature that enables a BCX user to see the whole chat room and all other characters at all times, even when wearing a blinding item. If PLAYER_NAME should be forbidden to use the command, this rule should be used.",
+		shortDescription: "BCX's .antiblind команда",
+		longDescription: "Это правило запрещает PLAYER_NAME использовать команду antiblind. Антислепой — это функция BCX, которая позволяет пользователю BCX видеть всю комнату чата и всех других персонажей в любое время, даже если он носит ослепляющий предмет. Если PLAYER_NAME следует запретить использование команды, следует использовать это правило.",
 		keywords: ["limiting", "preventing", "controling"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to use the antiblind command!",
-			attempt_log: "PLAYER_NAME tried to use the antiblind command",
-			log: "PLAYER_NAME used the antiblind command",
+			infoBeep: "Вам не разрешено использовать команду antiblind!",
+			attempt_log: "PLAYER_NAME попробовал использовать команду antiblind",
+			log: "PLAYER_NAME использовал команду antiblind",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		// Implemented externally
 	});
 
 	registerRule("block_difficulty_change", {
-		name: "Forbid changing difficulty",
+		name: "Запретить изменение сложности",
 		type: RuleType.Block,
-		shortDescription: "multiplayer difficulty preference",
-		longDescription: "This rule forbids PLAYER_NAME to change her Bondage Club multiplayer difficulty, regardless of the current value.",
+		shortDescription: "предпочтения сложности многопользовательской игры",
+		longDescription: "Это правило запрещает PLAYER_NAME чтобы изменить ее многопользовательскую сложность в Bondage Club, независимо от текущего значения.",
 		keywords: ["limiting", "preventing", "controling"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to change your difficulty!",
-			attempt_log: "PLAYER_NAME tried to change her multiplayer difficulty",
-			log: "PLAYER_NAME changed her multiplayer difficulty",
+			infoBeep: "Вам не разрешено менять сложность!",
+			attempt_log: "PLAYER_NAME пыталась изменить сложность многопользовательской игры",
+			log: "PLAYER_NAME изменила сложность ее мультиплеера",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		load(state) {
@@ -914,11 +914,11 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_activities", {
-		name: "Prevent usage of all activities",
+		name: "Запретить использование всех действий",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "any action buttons such as kissing or groping",
-		longDescription: "This rule forbids PLAYER_NAME to use any (sexual) activities in chat rooms. Other players can still use activities on her, as this rules does not block the arousal & sexual activities system itself, as forcing the according BC setting would.",
+		shortDescription: "любые кнопки действий, такие как поцелуи или ласки",
+		longDescription: "Это правило запрещает PLAYER_NAME использовать любые (сексуальные) действия в чатах. Другие игроки по-прежнему могут использовать на ней действия, поскольку эти правила не блокируют саму систему возбуждения и сексуальной активности, как это могло бы произойти при принудительном использовании соответствующих настроек BC.",
 		keywords: ["limiting", "forbid", "controling"],
 		defaultLimit: ConditionsLimit.blocked,
 		load(state) {
@@ -959,40 +959,40 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_action", {
-		name: "Forbid the action command",
+		name: "Запретить команду действия",
 		type: RuleType.Block,
-		shortDescription: "BCX's .action/.a chat command",
-		longDescription: "This rule forbids PLAYER_NAME to use the action command. Action is a BCX feature that enables to format a message to look like a BC chat action. If PLAYER_NAME should be forbidden to use the command to communicate, this rule should be used.",
+		shortDescription: "BCX's .action/.a команда чата",
+		longDescription: "Это правило запрещает PLAYER_NAME использовать команду действия. Действие — это функция BCX, которая позволяет форматировать сообщение так, чтобы оно выглядело как действие чата BC. Если PLAYER_NAME нужно запретить использовать команду для общения, следует использовать это правило.",
 		keywords: ["limiting", "preventing", "controling"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to use the action command!",
-			attempt_log: "PLAYER_NAME tried to use the action command",
-			log: "PLAYER_NAME used the action command",
+			infoBeep: "Вам не разрешено использовать команду действия!",
+			attempt_log: "PLAYER_NAME пытался использовать команду действия",
+			log: "PLAYER_NAME использовал команду действия",
 		},
 		defaultLimit: ConditionsLimit.blocked,
 		// Implemented externally
 	});
 
 	registerRule("block_BCX_permissions", {
-		name: "Prevent using BCX permissions",
+		name: "Запретить использование разрешений BCX",
 		loggable: false,
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME using her permissions for her own BCX, with some exceptions",
-		longDescription: "This rule forbids PLAYER_NAME access to some parts of their own BCX they have permission to use, making it as if they do not have 'self access' (see BCX tutorial on permission system) while the rule is active. This rule still leaves access for all permissions where the lowest permitted role ('lowest access') is also set to PLAYER_NAME (to prevent getting stuck). This rule does not affect PLAYER_NAME's permissions to use another users's BCX.",
+		shortDescription: "PLAYER_NAME используя свои разрешения для собственного BCX, за некоторыми исключениями",
+		longDescription: "Это правило запрещает PLAYER_NAME доступ к некоторым частям своего собственного BCX, на использование которых у них есть разрешение, как будто у них нет «самостоятельного доступа» (см. руководство BCX по системе разрешений), пока правило активно. Это правило по-прежнему оставляет доступ для всех разрешений, для которых также установлена наименьшая разрешенная роль ('самый низкий доступ'). PLAYER_NAME (чтобы не застрять). Это правило не влияет PLAYER_NAME's разрешения на использование BCX других пользователей.",
 		keywords: ["limiting", "preventing", "controlling", "accessing", "self", "rights"],
 		defaultLimit: ConditionsLimit.blocked,
 		// Implemented externally
 	});
 
 	registerRule("block_room_admin_UI", {
-		name: "Forbid looking at room admin UI",
+		name: "Запретить просмотр UI администратора комнаты",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "while blindfolded",
-		longDescription: "This rule forbids PLAYER_NAME from opening the room admin screen while blindfolded, as this discloses the room background and the member numbers of admins, potentially in the room right now. If PLAYER_NAME is a room admin, she can still use chat commands for altering the room or kicking/banning.",
+		shortDescription: "с завязанными глазами",
+		longDescription: "Это правило запрещает PLAYER_NAME от открытия экрана администратора комнаты с завязанными глазами, поскольку это раскрывает фон комнаты и количество членов администраторов, потенциально находящихся в комнате прямо сейчас. Если PLAYER_NAME является администратором комнаты, она по-прежнему может использовать команды чата для изменения комнаты или удаления/бана.",
 		keywords: ["limiting", "preventing", "controling", "seeing"],
 		triggerTexts: {
-			infoBeep: "A BCX rule prevents you from using this while unable to see!",
+			infoBeep: "Правило BCX не позволяет вам использовать это, пока вы не видите!",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		load(state) {
@@ -1022,15 +1022,15 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_using_ggts", {
-		name: "Forbid using GGTS",
+		name: "Запретить использование GGTS",
 		type: RuleType.Block,
-		shortDescription: "training by GGTS is forbidden",
-		longDescription: "This rule forbids PLAYER_NAME to revieve training by the base club's GGTS feature. If the rule is enforced while PLAYER_NAME has remaining GGTS training time, it is removed the moment PLAYER_NAME enters the GGTS room.",
+		shortDescription: "обучение по GGTS запрещено",
+		longDescription: "Это правило запрещает PLAYER_NAME просмотреть тренировку с помощью функции GGTS базового клуба. Если правило соблюдается в то время как PLAYER_NAME осталось время обучения GGTS, оно удаляется в тот момент, когда PLAYER_NAME входит в комнату GGTS.",
 		keywords: ["limiting", "preventing", "controling"],
 		triggerTexts: {
-			infoBeep: "You are not allowed to recieve training by GGTS!",
-			attempt_log: "PLAYER_NAME tried to recieve training by GGTS",
-			log: "PLAYER_NAME started training by GGTS",
+			infoBeep: "Вам не разрешено проходить обучение в GGTS!",
+			attempt_log: "PLAYER_NAME пытался пройти обучение в GGTS",
+			log: "PLAYER_NAME начал обучение в GGTS",
 		},
 		defaultLimit: ConditionsLimit.limited,
 		load(state) {
@@ -1058,11 +1058,11 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_club_slave_work", {
-		name: "Prevent working as club slave",
+		name: "Запретить работать в качестве раба в клубе",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "the task from the mistress room",
-		longDescription: "This rule prevents PLAYER_NAME to work as a club slave by picking up a club slave collar from the club management room.",
+		shortDescription: "задание из комнаты хозяйки",
+		longDescription: "Это правило предотвращает PLAYER_NAME работать клубным рабом, взяв ошейник клубного раба из комнаты управления клубом.",
 		keywords: ["limiting", "preventing", "controling", "task", "money"],
 		defaultLimit: ConditionsLimit.limited,
 		load(state) {
@@ -1076,11 +1076,11 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_using_unowned_items", {
-		name: "Prevent using items of others",
+		name: "Запретить использование чужих вещей",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "items not bought",
-		longDescription: "This rule prevents PLAYER_NAME to use items she does not own herself, but can use on someone because this person owns them.",
+		shortDescription: "предметы не куплены",
+		longDescription: "Это правило предотвращает PLAYER_NAME использовать предметы, которыми она не владеет сама, но может использовать на ком-то, потому что они принадлежат этому человеку.",
 		keywords: ["limiting", "forbid", "controling", "restraints", "gear", "characters"],
 		defaultLimit: ConditionsLimit.normal,
 		load(state) {
@@ -1100,14 +1100,14 @@ export function initRules_bc_blocks() {
 	});
 
 	registerRule("block_changing_emoticon", {
-		name: "Prevent changing own emoticon",
+		name: "Запретить изменение собственного смайлика",
 		type: RuleType.Block,
-		shortDescription: "for just PLAYER_NAME",
-		longDescription: "This rule prevents PLAYER_NAME from showing, removing or changing an emoticon (afk, zZZ, etc.) over her head. It also blocks her from using the emoticon command on herself.",
+		shortDescription: "Просто для PLAYER_NAME",
+		longDescription: "Это правило предотвращает PLAYER_NAME от показа, удаления или изменения смайла (афк, зЗЗ и т.п.) над головой. Это также не позволяет ей использовать команду смайлика на себе.",
 		triggerTexts: {
-			infoBeep: "You are not allowed to change the emoticon!",
-			attempt_log: "PLAYER_NAME tried to use the emoticon command",
-			log: "PLAYER_NAME used the emoticon command",
+			infoBeep: "Вам не разрешено менять смайлик!",
+			attempt_log: "PLAYER_NAME пытался использовать команду смайлика",
+			log: "PLAYER_NAME использовал команду смайлика",
 		},
 		defaultLimit: ConditionsLimit.normal,
 		load(state) {
@@ -1128,11 +1128,11 @@ export function initRules_bc_blocks() {
 
 	let changed = false;
 	registerRule("block_ui_icons_names", {
-		name: "Force-hide UI elements",
+		name: "Принудительно скрыть элементы UI",
 		type: RuleType.Block,
 		loggable: false,
-		shortDescription: "e.g., icons, bars, or names",
-		longDescription: "This rule enforces hiding of certain UI elements for PLAYER_NAME over all characters inside the room. Different levels of the effect can be set which follow exactly the behavior of the 'eye'-toggle in the button row above the chat. There is also an option to hide emoticon bubbles over all characters' heads.",
+		shortDescription: "например, значки, полосы или имена",
+		longDescription: "Это правило обеспечивает скрытие определенных элементов UI для PLAYER_NAME над всеми персонажами внутри комнаты. Можно установить различные уровни эффекта, которые точно соответствуют поведению переключателя «глаз» в строке кнопок над чатом. Также есть возможность скрыть пузыри смайликов над головами всех персонажей.",
 		keywords: ["seeing", "room", "viewing", "looking", "eye", "emoticons"],
 		defaultLimit: ConditionsLimit.blocked,
 		dataDefinition: {
@@ -1140,12 +1140,12 @@ export function initRules_bc_blocks() {
 				type: "listSelect",
 				default: "icons",
 				options: [["icons", "Icons"], ["arousal", "Icons/Bar"], ["names", "Icons/Bar/Names"]],
-				description: "Select what shall be hidden:",
+				description: "Выберите, что будет скрыто:",
 			},
 			alsoHideEmoticons: {
 				type: "toggle",
 				default: false,
-				description: "Also hide emoticons during the effect",
+				description: "Также скройте смайлы во время эффекта.",
 				Y: 440,
 			},
 		},

@@ -15,14 +15,14 @@ export function initRules_other() {
 	}
 
 	registerRule("other_forbid_afk", {
-		name: "Forbid going afk",
+		name: "Запретить идти в afk",
 		type: RuleType.Other,
 		enforceable: false,
-		shortDescription: "logs whenever PLAYER_NAME is inactive",
-		longDescription: "This rule forbids PLAYER_NAME to go afk and logs when the allowed inactivity threshold is overstepped.",
+		shortDescription: "журналы всякий раз, когда PLAYER_NAME неактивен",
+		longDescription: "Это правило запрещает PLAYER_NAME отключаться и регистрироваться при превышении разрешенного порога бездействия.",
 		keywords: ["inactivity", "detect", "record"],
 		triggerTexts: {
-			log: "PLAYER_NAME became inactive, which was forbidden",
+			log: "PLAYER_NAME стал неактивным, что было запрещено",
 			announce: "",
 		},
 		defaultLimit: ConditionsLimit.blocked,
@@ -30,7 +30,7 @@ export function initRules_other() {
 			minutesBeforeAfk: {
 				type: "number",
 				default: 10,
-				description: "Amount of minutes, before being considered inactive:",
+				description: "Количество минут, прежде чем считаться неактивным:",
 			},
 		},
 		load() {
@@ -42,7 +42,7 @@ export function initRules_other() {
 			) {
 				afkDidTrigger = true;
 				state.trigger();
-				ChatRoomSendLocal("You broke a BCX rule by being inactive for too long. The transgression was logged.");
+				ChatRoomSendLocal("Вы нарушили правило BCX, будучи неактивным слишком долго. Преступление было зарегистрировано.");
 				return true;
 			}
 			return false;
@@ -54,12 +54,12 @@ export function initRules_other() {
 
 	let lastUpdate: number = 0;
 	registerRule("other_track_time", {
-		name: "Track rule effect time",
+		name: "Отслеживать время действия правила",
 		type: RuleType.Other,
 		enforceable: false,
 		loggable: false,
-		shortDescription: "counts the time this rule's trigger conditions were fulfilled",
-		longDescription: "This rule shows the amount of time that PLAYER_NAME spent (online) in the club, since the rule was added, while all of the rule's trigger conditions were fulfilled. So it can for instance log the time spent in public rooms / in the club in general, or in a specific room or with some person as part of a roleplayed task or order. The currently tracked time can be inquired by whispering '!ruletime' to PLAYER_NAME. To reset the counter, remove and add the rule again.",
+		shortDescription: "подсчитывает время выполнения условий срабатывания этого правила",
+		longDescription: "Это правило показывает, сколько времени PLAYER_NAME потрачено (онлайн) в клубе с момента добавления правила и при выполнении всех условий срабатывания правила. Таким образом, он может, например, регистрировать время, проведенное в общественных помещениях/в клубе в целом, или в конкретной комнате, или с каким-либо человеком в рамках ролевого задания или приказа. Текущее отслеживаемое время можно узнать, прошептав '!ruletime' PLAYER_NAME. Чтобы сбросить счетчик, удалите и добавьте правило снова.",
 		keywords: ["record", "stopwatch", "timer", "online"],
 		internalDataValidate: (v) => typeof v === "number",
 		internalDataDefault: () => 0,
@@ -68,7 +68,7 @@ export function initRules_other() {
 			minimumPermittedRole: {
 				type: "roleSelector",
 				default: AccessLevel.lover,
-				description: "Minimum role able to request counted time:",
+				description: "Минимальная роль, способная запросить отсчёт времени:",
 			},
 		},
 		init(state) {
@@ -108,25 +108,25 @@ export function initRules_other() {
 
 	let lastReminder = 0;
 	registerRule("other_constant_reminder", {
-		name: "Listen to my voice",
+		name: "Послушай мой голос",
 		type: RuleType.Other,
 		loggable: false,
 		enforceable: false,
-		shortDescription: "regularly show configurable sentences to PLAYER_NAME",
-		longDescription: "This rule reminds or tells PLAYER_NAME one of the recorded sentences at random in a settable interval. Only PLAYER_NAME can see the set message and it is only shown if in a chat room.",
+		shortDescription: "регулярно показывать настраиваемые предложения PLAYER_NAME",
+		longDescription: "Это правило напоминает или рассказывает PLAYER_NAME одно из записанных предложений случайным образом в заданном интервале. Только PLAYER_NAME может видеть установленное сообщение, и оно отображается только в чате.",
 		keywords: ["hear", "voices", "in", "head", "messages", "periodic"],
 		defaultLimit: ConditionsLimit.limited,
 		dataDefinition: {
 			reminderText: {
 				type: "stringList",
 				default: [],
-				description: "The sentences that will be shown at random:",
+				description: "Предложения, которые будут показаны случайным образом:",
 				Y: 296,
 			},
 			reminderFrequency: {
 				type: "number",
 				default: 15,
-				description: "Frequency of a sentence being shown (in minutes):",
+				description: "Частота показа предложения (в минутах):",
 				Y: 715,
 			},
 		},
@@ -144,15 +144,15 @@ export function initRules_other() {
 	});
 
 	registerRule("other_log_money", {
-		name: "Log money changes",
+		name: "Записывать изменения денег",
 		type: RuleType.Other,
 		enforceable: false,
-		shortDescription: "spending and/or getting money",
-		longDescription: "This rule logs whenever money is used to buy something. It also shows how much money PLAYER_NAME currently has in the log entry. Optionally, earning money can also be logged. Note: Please be aware that this last option can potentially fill the whole behaviour log rapidly.",
+		shortDescription: "тратить и/или получать деньги",
+		longDescription: "Это правило регистрируется всякий раз, когда деньги используются для покупки чего-либо. Также показано, сколько денег PLAYER_NAME на данный момент есть запись в журнале. При желании можно также зарегистрировать заработок. Примечание. Имейте в виду, что этот последний вариант потенциально может быстро заполнить весь журнал поведения.",
 		keywords: ["record", "balance", "earnings", "using", "tracking", "logging", "entry", "financial", "findom"],
 		triggerTexts: {
-			infoBeep: "A BCX rule has logged this financial transaction!",
-			log: "PLAYER_NAME TYPE money: AMOUNT $ | new balance: BALANCE $",
+			infoBeep: "Правило BCX зарегистрировало эту финансовую транзакцию!",
+			log: "PLAYER_NAME TYPE деньги: AMOUNT $ | новый баланс: BALANCE $",
 			announce: "",
 		},
 		defaultLimit: ConditionsLimit.normal,
@@ -223,15 +223,15 @@ export function initRules_other() {
 	};
 
 	registerRule("other_track_BCX_activation", {
-		name: "Track BCX activation",
+		name: "Отслеживать активацию BCX",
 		type: RuleType.Other,
 		enforceable: false,
-		shortDescription: "logs if PLAYER_NAME enters the club without BCX",
-		longDescription: "This rule observes PLAYER_NAME, logging it as a rule violation if the club was previously entered at least once without BCX active.",
+		shortDescription: "журналы, если PLAYER_NAME входит в клуб без BCX",
+		longDescription: "Это правило соблюдает PLAYER_NAME,регистрация этого как нарушение правил, если ранее хотя бы один раз в клуб входили без активного BCX.",
 		keywords: ["record", "online", "force", "useage", "using", "login"],
 		triggerTexts: {
-			infoBeep: "You logged in without starting BCX beforehand!",
-			log: "PLAYER_NAME logged in without starting BCX beforehand at least once",
+			infoBeep: "Вы вошли в систему, не запустив BCX заранее!",
+			log: "PLAYER_NAME вошел в систему без предварительного запуска BCX хотя бы один раз",
 			announce: "",
 		},
 		internalDataValidate: (v) => typeof v === "number",
