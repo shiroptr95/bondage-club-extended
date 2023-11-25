@@ -375,7 +375,7 @@ export function editRole(role: "owner" | "mistress", action: "add" | "remove", t
 export class ModuleAuthority extends BaseModule {
 	init() {
 		registerPermission("authority_grant_self", {
-			name: "Allow granting self access",
+			name: "Разрешить предоставление самостоятельного доступа",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -385,7 +385,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_revoke_self", {
-			name: "Allow forbidding self access",
+			name: "Разрешить запретить самостоятельный доступ",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -395,7 +395,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_edit_min", {
-			name: "Allow lowest access modification",
+			name: "Разрешить изменение минимального доступа",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -405,7 +405,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_mistress_add", {
-			name: "Allow granting Mistress status",
+			name: "Разрешить предоставление статуса Любовницы",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -415,7 +415,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_mistress_remove", {
-			name: "Allow revoking Mistress status",
+			name: "Разрешить отзыв статуса Любовницы",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -425,7 +425,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_owner_add", {
-			name: "Allow granting Owner status",
+			name: "Разрешить предоставление статуса владельца",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -435,7 +435,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_owner_remove", {
-			name: "Allow revoking Owner status",
+			name: "Разрешить отзыв статуса владельца",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
@@ -445,7 +445,7 @@ export class ModuleAuthority extends BaseModule {
 			},
 		});
 		registerPermission("authority_view_roles", {
-			name: "Allow viewing list of owners/mistresses",
+			name: "Разрешить просмотр списка владельцев/хозяек",
 			category: ModuleCategory.Authority,
 			defaults: {
 				[Preset.dominant]: [true, AccessLevel.self],
