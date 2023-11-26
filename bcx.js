@@ -23212,7 +23212,7 @@ qw(new class extends N {
                     defaultLimit: t,
                     longDescription: `Это правило заставляет PLAYER_NAME's изменить базовую настройку игры '${e}' на настраиваемое значение и не позволяет ей изменить его.`,
                     triggerTexts: {
-                        infoBeep: `Rule changed your '${e}' setting`
+                        infoBeep: `Правило изменило ваш параметр: '${e}'`
                     }
                 }
             }
@@ -23237,7 +23237,7 @@ qw(new class extends N {
                         },
                         restore: {
                             type: "toggle",
-                            description: "Restore previous value when rule ends",
+                            description: "Восстановить предыдущее значение после завершения правила",
                         default:
                             !0,
                             Y: 420
@@ -23271,14 +23271,14 @@ qw(new class extends N {
                 })
             }
             wy("setting_item_permission", {
-                ...t("Item permission", E.limited),
+                ...t("Разрешение на предмет", E.limited),
                 dataDefinition: {
                     value: {
                         type: "listSelect",
                         options: [["everyone", "Everyone, no exceptions"], ["everyoneBlacklist", "Everyone, except blacklist"], ["dominants", "Owner, Lovers, whitelist & Dominants"], ["whitelist", "Owner, Lovers and whitelist only"]],
                     default:
                         "everyone",
-                        description: "Item permission"
+                        description: "Разрешение на предмет"
                     }
                 },
                 tick(t) {
@@ -23299,7 +23299,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_forbid_lockpicking",
-                setting: "Locks on you can't be picked",
+                setting: "Замки на вас не могут быть взломаны",
                 defaultValue: !0,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23310,7 +23310,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_forbid_SP_rooms",
-                setting: "Cannot enter single-player rooms when restrained",
+                setting: "Невозможно войти в однопользовательскую комнату, если он ограничен.",
                 defaultValue: !0,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23321,7 +23321,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_forbid_safeword",
-                setting: "Allow safeword use",
+                setting: "Разрешить использование безопасного слова",
                 defaultValue: !1,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23331,21 +23331,21 @@ qw(new class extends N {
                 set: e => Player.GameplaySettings.EnableSafeword = e
             }),
             wy("setting_arousal_meter", {
-                ...t("Arousal meter", E.limited),
+                ...t("Измеритель возбуждения", E.limited),
                 dataDefinition: {
                     active: {
                         type: "listSelect",
                         options: [["Inactive", "Disable sexual activities"], ["NoMeter", "Allow without a meter"], ["Manual", "Allow with a manual meter"], ["Hybrid", "Allow with a hybrid meter"], ["Automatic", "Allow with a locked meter"]],
                     default:
                         "Hybrid",
-                        description: "Sexual activities - Activation"
+                        description: "Сексуальная активность - Активация"
                     },
                     visible: {
                         type: "listSelect",
                         options: [["All", "Show arousal to everyone"], ["Access", "Show if they have access"], ["Self", "Show to yourself only"]],
                     default:
                         "All",
-                        description: "Meter visibility",
+                        description: "Meter видимость",
                         Y: 480
                     }
                 },
@@ -23357,7 +23357,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_block_vibe_modes",
-                setting: "Block advanced vibrator modes",
+                setting: "Блокировать расширенные режимы вибратора",
                 defaultValue: !1,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23367,21 +23367,21 @@ qw(new class extends N {
                 set: e => Player.ArousalSettings.DisableAdvancedVibes = e
             }),
             wy("setting_arousal_stutter", {
-                ...t("Arousal speech stuttering", E.limited),
+                ...t("Речевое заикание при возбуждении", E.limited),
                 dataDefinition: {
                     value: {
                         type: "listSelect",
                         options: [["None", "Never stutter"], ["Arousal", "When you're aroused"], ["Vibration", "When you're vibrated"], ["All", "Aroused & vibrated"]],
                     default:
                         "All",
-                        description: "Speech stuttering"
+                        description: "Речевое заикание"
                     }
                 },
                 tick: t => !!(t.isEnforced && t.customData && Player.ArousalSettings && Player.ArousalSettings.AffectStutter !== t.customData.value) && (Player.ArousalSettings.AffectStutter = t.customData.value, t.trigger(), e(), !0)
             }),
             n({
                 id: "setting_show_afk",
-                setting: "Show AFK bubble",
+                setting: "Показать пузырь AFK",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23392,7 +23392,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_allow_body_mod",
-                setting: "Allow others to alter your whole appearance",
+                setting: "Позвольте другим полностью изменить вашу внешность",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23403,7 +23403,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_forbid_cosplay_change",
-                setting: "Prevent others from changing cosplay items",
+                setting: "Не позволяйте другим менять предметы косплея",
                 defaultValue: !1,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23413,27 +23413,27 @@ qw(new class extends N {
                 set: e => Player.OnlineSharedSettings.BlockBodyCosplay = e
             }),
             wy("setting_sensdep", {
-                ...t("Sensory deprivation setting", E.blocked),
+                ...t("Настройка сенсорной депривации", E.blocked),
                 dataDefinition: {
                     value: {
                         type: "listSelect",
                         options: [["SensDepLight", "Light"], ["Normal", "Normal"], ["SensDepNames", "Hide names"], ["SensDepTotal", "Heavy"], ["SensDepExtreme", "Total"]],
                     default:
                         "Normal",
-                        description: "Sensory deprivation setting"
+                        description: "Настройка сенсорной депривации"
                     },
                     disableExamine: {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Disable examining when blind",
+                        description: "Отключить исследование вслепую",
                         Y: 480
                     },
                     hideMessages: {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Hide others' messages",
+                        description: "Скрыть сообщения других",
                         Y: 580
                     }
                 },
@@ -23454,7 +23454,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_hide_non_adjecent",
-                setting: "Hide non-adjacent players while partially blind",
+                setting: "Скрыть несмежных игроков, пока они частично слепы",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23465,7 +23465,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_blind_room_garbling",
-                setting: "Garble chatroom names and descriptions while blind",
+                setting: "Искажать названия и описания чатов вслепую",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23476,7 +23476,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_relog_keeps_restraints",
-                setting: "Keep all restraints when relogging",
+                setting: "Соблюдайте все ограничения при повторном входе",
                 defaultValue: !0,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23487,7 +23487,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_leashed_roomchange",
-                setting: "Players can drag you to rooms when leashed",
+                setting: "Игроки могут перетаскивать вас в комнаты на поводке.",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23497,19 +23497,19 @@ qw(new class extends N {
                 set: e => Player.OnlineSharedSettings.AllowPlayerLeashing = e
             }),
             wy("setting_room_rejoin", {
-                ...t("Return to chatrooms on relog", E.limited),
+                ...t("Вернуться в чаты при релоге", E.limited),
                 dataDefinition: {
                     value: {
                         type: "toggle",
                     default:
                         !0,
-                        description: "Return to chatrooms on relog"
+                        description: "Вернуться в чаты при релоге"
                     },
                     remakeRooms: {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Auto-remake rooms",
+                        description: "Автопеределка комнат",
                         Y: 425
                     }
                 },
@@ -23526,7 +23526,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_plug_vibe_events",
-                setting: "Events while plugged or vibed",
+                setting: "События во время подключения или вибрации",
                 defaultValue: !0,
                 defaultLimit: E.normal,
                 get: () => {
@@ -23537,7 +23537,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_allow_tint_effects",
-                setting: "Allow item tint effects",
+                setting: "Разрешить эффекты оттенка предметов",
                 defaultValue: !0,
                 defaultLimit: E.limited,
                 get: () => {
@@ -23548,7 +23548,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_allow_blur_effects",
-                setting: "Allow item blur effects",
+                setting: "Разрешить эффекты размытия предметов",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23559,7 +23559,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_upsidedown_view",
-                setting: "Flip room vertically when upside-down",
+                setting: "Перевернуть комнату вертикально, когда она перевернута",
                 defaultValue: !0,
                 defaultLimit: E.blocked,
                 get: () => {
@@ -23570,8 +23570,8 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_random_npc_events",
-                setting: "Prevent random NPC events",
-                shortDescription: "from BCX's Misc module",
+                setting: "Предотвратите случайные события NPC",
+                shortDescription: "из модуля 'Разное' BCX",
                 defaultValue: !0,
                 defaultLimit: E.normal,
                 get: () => ry(M.BlockRandomEvents),

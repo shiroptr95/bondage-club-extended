@@ -121,7 +121,7 @@ export function initRules_bc_settings() {
 	// "General" settings
 
 	registerRule("setting_item_permission", {
-		...settingHelper("Item permission", ConditionsLimit.limited),
+		...settingHelper("Разрешение на предмет", ConditionsLimit.limited),
 		dataDefinition: {
 			value: {
 				type: "listSelect",
@@ -132,7 +132,7 @@ export function initRules_bc_settings() {
 					["whitelist", "Owner, Lovers and whitelist only"],
 				],
 				default: "everyone",
-				description: "Item permission",
+				description: "Разрешение на предмет",
 			},
 		},
 		tick(state) {
@@ -157,7 +157,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_forbid_lockpicking",
-		setting: "Locks on you can't be picked",
+		setting: "Замки на вас не могут быть взломаны",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.OnlineSharedSettings?.DisablePickingLocksOnSelf,
@@ -166,7 +166,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_forbid_SP_rooms",
-		setting: "Cannot enter single-player rooms when restrained",
+		setting: "Невозможно войти в однопользовательскую комнату, если он ограничен.",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.GameplaySettings?.OfflineLockedRestrained,
@@ -175,7 +175,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_forbid_safeword",
-		setting: "Allow safeword use",
+		setting: "Разрешить использование безопасного слова",
 		defaultValue: false,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.GameplaySettings?.EnableSafeword,
@@ -185,7 +185,7 @@ export function initRules_bc_settings() {
 	// "Arousal" settings
 
 	registerRule("setting_arousal_meter", {
-		...settingHelper("Arousal meter", ConditionsLimit.limited),
+		...settingHelper("Измеритель возбуждения", ConditionsLimit.limited),
 		dataDefinition: {
 			active: {
 				type: "listSelect",
@@ -197,7 +197,7 @@ export function initRules_bc_settings() {
 					["Automatic", "Allow with a locked meter"],
 				],
 				default: "Hybrid",
-				description: "Sexual activities - Activation",
+				description: "Сексуальная активность - Активация",
 			},
 			visible: {
 				type: "listSelect",
@@ -207,7 +207,7 @@ export function initRules_bc_settings() {
 					["Self", "Show to yourself only"],
 				],
 				default: "All",
-				description: "Meter visibility",
+				description: "Meter видимость",
 				Y: 480,
 			},
 		},
@@ -233,7 +233,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_block_vibe_modes",
-		setting: "Block advanced vibrator modes",
+		setting: "Блокировать расширенные режимы вибратора",
 		defaultValue: false,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.ArousalSettings?.DisableAdvancedVibes,
@@ -241,7 +241,7 @@ export function initRules_bc_settings() {
 	});
 
 	registerRule("setting_arousal_stutter", {
-		...settingHelper("Arousal speech stuttering", ConditionsLimit.limited),
+		...settingHelper("Речевое заикание при возбуждении", ConditionsLimit.limited),
 		dataDefinition: {
 			value: {
 				type: "listSelect",
@@ -252,7 +252,7 @@ export function initRules_bc_settings() {
 					["All", "Aroused & vibrated"],
 				],
 				default: "All",
-				description: "Speech stuttering",
+				description: "Речевое заикание",
 			},
 		},
 		tick(state) {
@@ -272,7 +272,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_show_afk",
-		setting: "Show AFK bubble",
+		setting: "Показать пузырь AFK",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.OnlineSettings?.EnableAfkTimer,
@@ -281,7 +281,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_allow_body_mod",
-		setting: "Allow others to alter your whole appearance",
+		setting: "Позвольте другим полностью изменить вашу внешность",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.OnlineSharedSettings?.AllowFullWardrobeAccess,
@@ -290,7 +290,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_forbid_cosplay_change",
-		setting: "Prevent others from changing cosplay items",
+		setting: "Не позволяйте другим менять предметы косплея",
 		defaultValue: false,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.OnlineSharedSettings?.BlockBodyCosplay,
@@ -300,7 +300,7 @@ export function initRules_bc_settings() {
 	// "Immersion" settings
 
 	registerRule("setting_sensdep", {
-		...settingHelper("Sensory deprivation setting", ConditionsLimit.blocked),
+		...settingHelper("Настройка сенсорной депривации", ConditionsLimit.blocked),
 		dataDefinition: {
 			value: {
 				type: "listSelect",
@@ -312,18 +312,18 @@ export function initRules_bc_settings() {
 					["SensDepExtreme", "Total"],
 				],
 				default: "Normal",
-				description: "Sensory deprivation setting",
+				description: "Настройка сенсорной депривации",
 			},
 			disableExamine: {
 				type: "toggle",
 				default: false,
-				description: "Disable examining when blind",
+				description: "Отключить исследование вслепую",
 				Y: 480,
 			},
 			hideMessages: {
 				type: "toggle",
 				default: false,
-				description: "Hide others' messages",
+				description: "Скрыть сообщения других",
 				Y: 580,
 			},
 		},
@@ -358,7 +358,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_hide_non_adjecent",
-		setting: "Hide non-adjacent players while partially blind",
+		setting: "Скрыть несмежных игроков, пока они частично слепы",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.ImmersionSettings?.BlindAdjacent,
@@ -367,7 +367,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_blind_room_garbling",
-		setting: "Garble chatroom names and descriptions while blind",
+		setting: "Искажать названия и описания чатов вслепую",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.ImmersionSettings?.ChatRoomMuffle,
@@ -376,7 +376,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_relog_keeps_restraints",
-		setting: "Keep all restraints when relogging",
+		setting: "Соблюдайте все ограничения при повторном входе",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.GameplaySettings?.DisableAutoRemoveLogin,
@@ -385,7 +385,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_leashed_roomchange",
-		setting: "Players can drag you to rooms when leashed",
+		setting: "Игроки могут перетаскивать вас в комнаты на поводке.",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.OnlineSharedSettings?.AllowPlayerLeashing,
@@ -393,17 +393,17 @@ export function initRules_bc_settings() {
 	});
 
 	registerRule("setting_room_rejoin", {
-		...settingHelper("Return to chatrooms on relog", ConditionsLimit.limited),
+		...settingHelper("Вернуться в чаты при релоге", ConditionsLimit.limited),
 		dataDefinition: {
 			value: {
 				type: "toggle",
 				default: true,
-				description: "Return to chatrooms on relog",
+				description: "Вернуться в чаты при релоге",
 			},
 			remakeRooms: {
 				type: "toggle",
 				default: false,
-				description: "Auto-remake rooms",
+				description: "Автопеределка комнат",
 				Y: 425,
 			},
 		},
@@ -431,7 +431,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_plug_vibe_events",
-		setting: "Events while plugged or vibed",
+		setting: "События во время подключения или вибрации",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.normal,
 		get: () => Player.ImmersionSettings?.StimulationEvents,
@@ -440,7 +440,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_allow_tint_effects",
-		setting: "Allow item tint effects",
+		setting: "Разрешить эффекты оттенка предметов",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.ImmersionSettings?.AllowTints,
@@ -451,7 +451,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_allow_blur_effects",
-		setting: "Allow item blur effects",
+		setting: "Разрешить эффекты размытия предметов",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.GraphicsSettings?.AllowBlur,
@@ -460,7 +460,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_upsidedown_view",
-		setting: "Flip room vertically when upside-down",
+		setting: "Перевернуть комнату вертикально, когда она перевернута",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.blocked,
 		get: () => Player.GraphicsSettings?.InvertRoom,
@@ -471,8 +471,8 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_random_npc_events",
-		setting: "Prevent random NPC events",
-		shortDescription: "from BCX's Misc module",
+		setting: "Предотвратите случайные события NPC",
+		shortDescription: "из модуля 'Разное' BCX",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.normal,
 		get: () => cheatIsEnabled(MiscCheat.BlockRandomEvents),
