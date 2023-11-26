@@ -162,7 +162,7 @@ export class GuiMainMenu extends GuiSubscreen {
 
 		MainCanvas.textAlign = "center";
 		if (this.character.isPlayer()) {
-			DrawText(`Your BCX version: ${VERSION.replace(/-[0-f]+$/i, "")}`, 1450 + 400 / 2, 500, "Black", "");
+			DrawText(`Your BCX version: RU ${VERSION.replace(/-[0-f]+$/i, "")}`, 1450 + 400 / 2, 500, "Black", "");
 			DrawButton(1450, 590, 400, 90, "", "White", "", "Open changelog on GitHub");
 			if (versionCheckNewAvailable === true) {
 				const tick = Date.now() % 6_000;

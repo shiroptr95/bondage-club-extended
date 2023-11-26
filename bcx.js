@@ -17154,7 +17154,7 @@ class iw extends br {
             DrawTextFit(w[t.module], 250 + 430 * n, 235 + 120 * r, 310, "Black")
         }
         if (MainCanvas.textAlign = "center", this.character.isPlayer()) {
-            if (DrawText(`Your BCX version: ${g.replace(/-[0-f]+$/i, "")}`, 1650, 500, "Black", ""), DrawButton(1450, 590, 400, 90, "", "White", "", "Open changelog on GitHub"), !0 === yb) {
+            if (DrawText(`Your BCX version: RU ${g.replace(/-[0-f]+$/i, "")}`, 1650, 500, "Black", ""), DrawButton(1450, 590, 400, 90, "", "White", "", "Open changelog on GitHub"), !0 === yb) {
                 Date.now() % 6e3 < 3e3 ? DrawText("New version available", 1650, 555, "Red", "Black") : DrawText("Login again to upgrade", 1650, 555, "Red", "Black")
             } else !1 === yb && DrawText("This is the latest version", 1650, 555, "Black", "");
             DrawText("View changelog", 1625, 635, "Black", ""),

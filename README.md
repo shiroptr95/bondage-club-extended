@@ -1,27 +1,25 @@
 # ![logo](resources/BCX_small.png)  Bondage Club Extended (BCX)
 
-An extension for the Bondage Club online game ([https://www.bondageprojects.com/club_game/](https://www.bondageprojects.com/club_game/)) by Jomshir98, one of the club's coders.
+Расширение для онлайн-игры Bondage Club ([https://www.bondageprojects.com/club_game/](https://www.bondageprojects.com/club_game/)).
 
-Расширение для онлайн-игры Bondage Club ([https://www.bondageprojects.com/club_game/](https://www.bondageprojects.com/club_game/)) от Jomshir98, одного из программистов клуба.
+# Оригинальный проект
 
-# Original project
+https://jomshir98.github.io/bondage-club-extended/ от Jomshir98, один из программистов Bondage Club.
 
-https://jomshir98.github.io/bondage-club-extended/
-
-# About
-
-Russified version of BCX.
+# Описание проекта
 
 Русифицированная версия BCX.
+Новые функции не добавляются, только перевод на русский язык.
 
-# Running the script
+# Установка и запуск скрипта
 
-You can find instructions on how to run the script [HERE](https://shiroptr95.github.io/bondage-club-extended/).
+Инструкция по запуску и сам скрипт доступны по ссылке [ЗДЕСЬ](https://shiroptr95.github.io/bondage-club-extended/)
 
-Инструкцию по запуску скрипта вы можете найти [ЗДЕСЬ](https://shiroptr95.github.io/bondage-club-extended/)
+# Статус разработки
 
-# Development status
+Активно, но не быстро.
 
-No new features are being added.
+Перевод не оптимизирован под размеры полей и может вылезать за границы отведённых для них блоков.
+Сам перевод так же требует улучшения.
 
-Новые фенкции не добавляются, только перевод на русский язык.
+
