@@ -23210,7 +23210,7 @@ qw(new class extends N {
                     shortDescription: n,
                     keywords: ["control", "settings", "configure", "change"],
                     defaultLimit: t,
-                    longDescription: `Это правило заставляет PLAYER_NAME's базовая настройка игры '${e}' на настраиваемое значение и не позволяет ей изменить его.`,
+                    longDescription: `Это правило заставляет PLAYER_NAME's изменить базовую настройку игры '${e}' на настраиваемое значение и не позволяет ей изменить его.`,
                     triggerTexts: {
                         infoBeep: `Rule changed your '${e}' setting`
                     }
