@@ -9785,10 +9785,10 @@ function Vp() {
         }
     }),
     wy("alt_hearing_whitelist", {
-        name: "Белый список слушания",
+        name: "Белый список слышащих",
         type: 1,
         loggable: !1,
-        shortDescription: "членов, которых PLAYER_NAME всегда могу понять",
+        shortDescription: "участники, которых PLAYER_NAME всегда может понять",
         longDescription: "Это правило определяет список участников, чей голос всегда может быть понят. PLAYER_NAME - независимо от каких-либо предметов сенсорной депривации или правил BCX, нарушающих слух PLAYER_NAME. Существует дополнительная опция для переключения PLAYER_NAME может по-прежнему понимать голос участника из белого списка, если у этого участника самой нарушена речь (например, из-за того, что ему заткнули рот).",
         keywords: ["deafness", "bypass", "ignore", "antigarble", "ears", "exception", "understanding"],
         defaultLimit: E.normal,
@@ -9865,10 +9865,10 @@ function Vp() {
         }
     }),
     wy("alt_seeing_whitelist", {
-        name: "Просмотр белого списка",
+        name: "Белый список видимых",
         type: 1,
         loggable: !1,
-        shortDescription: "членов, которых PLAYER_NAME всегда можно увидеть",
+        shortDescription: "участники, которых PLAYER_NAME всегда может увидеть",
         longDescription: "Это правило определяет список участников, чей внешний вид всегда может нормально просматриваться PLAYER_NAME - независимо от каких-либо ослепляющих элементов или наблюдения за нарушением правил BCX на PLAYER_NAME.",
         keywords: ["sight", "blindness", "bypass", "ignore", "antiblind", "blindfold", "eyes", "seeing"],
         defaultLimit: E.normal,
@@ -16120,7 +16120,7 @@ class xC extends AC {
         r = this.checkAccess();
         MainCanvas.textAlign = "left";
         let o = 175;
-        if (!1 !== this.definition.enforceable && (DrawCheckbox(1050, o, 64, 64, "Enforce this rule", n.data.enforce, !r), o += 100), !1 !== this.definition.loggable && (DrawCheckbox(1050, o, 64, 64, "Behaviour log entry when rule is violated", n.data.log, !r), o += 100), o += 45, this.definition.dataDefinition)
+        if (!1 !== this.definition.enforceable && (DrawCheckbox(1050, o, 64, 64, "Enforce this rule", n.data.enforce, !r), o += 100), !1 !== this.definition.loggable && (DrawCheckbox(1050, o, 64, 64, "Запись в журнале поведения при нарушении правила", n.data.log, !r), o += 100), o += 45, this.definition.dataDefinition)
             for (const [e, i] of Object.entries(this.definition.dataDefinition)) {
                 Ey[i.type].run({
                     def: i,

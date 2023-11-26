@@ -87,7 +87,7 @@ export class GuiConditionEditRules extends GuiConditionEdit<"rules"> {
 			Y += 100;
 		}
 		if (this.definition.loggable !== false) {
-			DrawCheckbox(1050, Y, 64, 64, "Behaviour log entry when rule is violated", data.data.log, !access);
+			DrawCheckbox(1050, Y, 64, 64, "Запись в журнале поведения при нарушении правила", data.data.log, !access);
 			Y += 100;
 		}
 

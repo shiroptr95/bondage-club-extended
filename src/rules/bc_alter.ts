@@ -12,11 +12,11 @@ import { isValidNickname } from "../modules/relationships";
 
 export function initRules_bc_alter() {
 	registerRule("alt_restrict_hearing", {
-		name: "Sensory deprivation: Sound",
+		name: "Сенсорная депривация: Звук",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "impacts PLAYER_NAME's hearing; adjustable",
-		longDescription: "This rule impacts PLAYER_NAME's natural ability to hear in the same way items do, independent of them (strength of deafening can be adjusted).",
+		shortDescription: "воздействия PLAYER_NAME's слух; регулируемый",
+		longDescription: "Это правило влияет PLAYER_NAME's естественная способность слышать так же, как предметы, независимо от них (силу оглушения можно регулировать).",
 		keywords: ["deafness", "limit", "permanent", "ears"],
 		defaultLimit: ConditionsLimit.normal,
 		dataDefinition: {
@@ -24,7 +24,7 @@ export function initRules_bc_alter() {
 				type: "listSelect",
 				options: [["light", "Light"], ["medium", "Medium"], ["heavy", "Heavy"]],
 				default: "light",
-				description: "Hearing impairment:",
+				description: "Нарушение слуха:",
 			},
 		},
 		load(state) {
@@ -44,10 +44,10 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_hearing_whitelist", {
-		name: "Белый список слушания",
+		name: "Белый список слышащих",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "членов, которых PLAYER_NAME всегда могу понять",
+		shortDescription: "участники, которых PLAYER_NAME всегда может понять",
 		longDescription: "Это правило определяет список участников, чей голос всегда может быть понят. PLAYER_NAME - независимо от каких-либо предметов сенсорной депривации или правил BCX, нарушающих слух. PLAYER_NAME. Существует дополнительная опция для переключения PLAYER_NAME может по-прежнему понимать голос участника из белого списка, если у этого участника самой нарушена речь (например, из-за того, что ему заткнули рот).",
 		keywords: ["deafness", "bypass", "ignore", "antigarble", "ears", "exception", "understanding"],
 		defaultLimit: ConditionsLimit.normal,
@@ -148,10 +148,10 @@ export function initRules_bc_alter() {
 	});
 
 	registerRule("alt_seeing_whitelist", {
-		name: "Просмотр белого списка",
+		name: "Белый список видящих",
 		type: RuleType.Alt,
 		loggable: false,
-		shortDescription: "членов, которых PLAYER_NAME всегда можно увидеть",
+		shortDescription: "участники, которых PLAYER_NAME всегда может увидеть",
 		longDescription: "Это правило определяет список участников, чей внешний вид всегда может нормально просматриваться PLAYER_NAME - независимо от каких-либо ослепляющих элементов или наблюдения за нарушением правил BCX на PLAYER_NAME.",
 		keywords: ["sight", "blindness", "bypass", "ignore", "antiblind", "blindfold", "eyes", "seeing"],
 		defaultLimit: ConditionsLimit.normal,
