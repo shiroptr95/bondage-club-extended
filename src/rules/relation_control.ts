@@ -4,10 +4,10 @@ import { hookFunction } from "../patching";
 
 export function initRules_bc_relation_control() {
 	registerRule("rc_club_owner", {
-		name: "Forbid club owner changes",
+		name: "Запретить смену владельца клуба",
 		type: RuleType.RC,
-		shortDescription: "getting or leaving owner",
-		longDescription: "This rule forbids PLAYER_NAME to leave their current club owner or get a new one. Advancing ownership from trial to full ownership is unaffected. Doesn't prevent the club owner from releasing her.",
+		shortDescription: "получение или выход из владельца",
+		longDescription: "Это правило запрещает PLAYER_NAME покинуть нынешнего владельца клуба или приобрести нового. Переход от пробного владения к полному не затрагивается. Это не мешает владельцу клуба освободить ее.",
 		keywords: ["prevent", "ownership", "collaring", "break"],
 		// Logs are not implemented
 		loggable: false,
@@ -42,9 +42,9 @@ export function initRules_bc_relation_control() {
 	});
 
 	registerRule("rc_lover_new", {
-		name: "Forbid getting new lovers",
+		name: "Запретить заводить новых любовников",
 		type: RuleType.RC,
-		longDescription: "This rule forbids PLAYER_NAME to get a new lover. Advancing lovership from dating to engagement or from engagement to marriage is unaffected.",
+		longDescription: "Это правило запрещает PLAYER_NAME чтобы завести нового любовника. Развитие любовных отношений от свидания к помолвке или от помолвки к браку не затрагивается.",
 		keywords: ["prevent", "lovership", "dating"],
 		// Logs are not implemented
 		loggable: false,
@@ -65,9 +65,9 @@ export function initRules_bc_relation_control() {
 	});
 
 	registerRule("rc_lover_leave", {
-		name: "Forbid breaking up with lovers",
+		name: "Запретить расставание с любовниками",
 		type: RuleType.RC,
-		longDescription: "This rule forbids PLAYER_NAME to leave any of their lovers, independent of lovership stage (leaving dating, engaged and married characters is forbidden). Doesn't prevent her lovers from breaking up with her.",
+		longDescription: "Это правило запрещает PLAYER_NAME оставлять любого из своих возлюбленных, независимо от стадии любовных отношений (запрещено оставлять встречающихся, помолвленных и женатых персонажей). Не мешает любовникам расстаться с ней.",
 		keywords: ["prevent", "lovership", "dating", "leave", "leaving"],
 		// Logs are not implemented
 		loggable: false,
@@ -90,10 +90,10 @@ export function initRules_bc_relation_control() {
 	});
 
 	registerRule("rc_sub_new", {
-		name: "Forbid taking new submissives",
+		name: "Запретить брать новых сабмиссивов",
 		type: RuleType.RC,
-		shortDescription: "by offering them an ownership trial",
-		longDescription: "This rule forbids PLAYER_NAME to start a trial with new submissive. Advancing ownership from trial to full ownership is unaffected.",
+		shortDescription: "предложив им попробовать право собственности",
+		longDescription: "Это правило запрещает PLAYER_NAME начать испытание с новым сабмиссивом. Переход от пробного владения к полному не затрагивается.",
 		keywords: ["prevent", "subbies", "collaring"],
 		// Logs are not implemented
 		loggable: false,
@@ -114,9 +114,9 @@ export function initRules_bc_relation_control() {
 	});
 
 	registerRule("rc_sub_leave", {
-		name: "Forbid disowning submissives",
+		name: "Запретить отрекаться от сабмиссивов",
 		type: RuleType.RC,
-		longDescription: "This rule forbids PLAYER_NAME to let go of any of their subs. (affects both trial and full ownerships). Doesn't prevent her submissives from breaking the bond.",
+		longDescription: "Это правило запрещает PLAYER_NAME отпустить любого из своих подчиненных. (влияет как на пробное, так и на полное владение). Это не мешает ее подчиненным разорвать связь.",
 		keywords: ["prevent", "subbies", "collar", "freeing", "releasing", "release"],
 		// Logs are not implemented
 		loggable: false,

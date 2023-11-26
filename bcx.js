@@ -23580,10 +23580,10 @@ qw(new class extends N {
         }
         (),
         wy("rc_club_owner", {
-            name: "Forbid club owner changes",
+            name: "Запретить смену владельца клуба",
             type: 3,
-            shortDescription: "getting or leaving owner",
-            longDescription: "This rule forbids PLAYER_NAME to leave their current club owner or get a new one. Advancing ownership from trial to full ownership is unaffected. Doesn't prevent the club owner from releasing her.",
+            shortDescription: "получение или выход из владельца",
+            longDescription: "Это правило запрещает PLAYER_NAME покинуть нынешнего владельца клуба или приобрести нового. Переход от пробного владения к полному не затрагивается. Это не мешает владельцу клуба освободить ее.",
             keywords: ["prevent", "ownership", "collaring", "break"],
             loggable: !1,
             defaultLimit: E.blocked,
@@ -23598,9 +23598,9 @@ qw(new class extends N {
             }
         }),
         wy("rc_lover_new", {
-            name: "Forbid getting new lovers",
+            name: "Запретить заводить новых любовников",
             type: 3,
-            longDescription: "This rule forbids PLAYER_NAME to get a new lover. Advancing lovership from dating to engagement or from engagement to marriage is unaffected.",
+            longDescription: "Это правило запрещает PLAYER_NAME чтобы завести нового любовника. Развитие любовных отношений от свидания к помолвке или от помолвки к браку не затрагивается.",
             keywords: ["prevent", "lovership", "dating"],
             loggable: !1,
             defaultLimit: E.blocked,
@@ -23612,9 +23612,9 @@ qw(new class extends N {
             }
         }),
         wy("rc_lover_leave", {
-            name: "Forbid breaking up with lovers",
+            name: "Запретить расставание с любовниками",
             type: 3,
-            longDescription: "This rule forbids PLAYER_NAME to leave any of their lovers, independent of lovership stage (leaving dating, engaged and married characters is forbidden). Doesn't prevent her lovers from breaking up with her.",
+            longDescription: "Это правило запрещает PLAYER_NAME оставлять любого из своих возлюбленных, независимо от стадии любовных отношений (запрещено оставлять встречающихся, помолвленных и женатых персонажей). Не мешает любовникам расстаться с ней.",
             keywords: ["prevent", "lovership", "dating", "leave", "leaving"],
             loggable: !1,
             defaultLimit: E.blocked,
@@ -23624,10 +23624,10 @@ qw(new class extends N {
             }
         }),
         wy("rc_sub_new", {
-            name: "Forbid taking new submissives",
+            name: "Запретить брать новых сабмиссивов",
             type: 3,
-            shortDescription: "by offering them an ownership trial",
-            longDescription: "This rule forbids PLAYER_NAME to start a trial with new submissive. Advancing ownership from trial to full ownership is unaffected.",
+            shortDescription: "предложив им попробовать право собственности",
+            longDescription: "Это правило запрещает PLAYER_NAME начать испытание с новым сабмиссивом. Переход от пробного владения к полному не затрагивается.",
             keywords: ["prevent", "subbies", "collaring"],
             loggable: !1,
             defaultLimit: E.blocked,
@@ -23639,9 +23639,9 @@ qw(new class extends N {
             }
         }),
         wy("rc_sub_leave", {
-            name: "Forbid disowning submissives",
+            name: "Запретить отрекаться от сабмиссивов",
             type: 3,
-            longDescription: "This rule forbids PLAYER_NAME to let go of any of their subs. (affects both trial and full ownerships). Doesn't prevent her submissives from breaking the bond.",
+            longDescription: "Это правило запрещает PLAYER_NAME отпустить любого из своих подчиненных. (влияет как на пробное, так и на полное владение). Это не мешает ее подчиненным разорвать связь.",
             keywords: ["prevent", "subbies", "collar", "freeing", "releasing", "release"],
             loggable: !1,
             defaultLimit: E.blocked,
@@ -23658,14 +23658,14 @@ qw(new class extends N {
                 t = !1
             }
             wy("other_forbid_afk", {
-                name: "Forbid going afk",
+                name: "Запретить идти в afk",
                 type: 99,
                 enforceable: !1,
-                shortDescription: "logs whenever PLAYER_NAME is inactive",
-                longDescription: "This rule forbids PLAYER_NAME to go afk and logs when the allowed inactivity threshold is overstepped.",
+                shortDescription: "журналы всякий раз, когда PLAYER_NAME неактивен",
+                longDescription: "Это правило запрещает PLAYER_NAME отключаться и регистрироваться при превышении разрешенного порога бездействия.",
                 keywords: ["inactivity", "detect", "record"],
                 triggerTexts: {
-                    log: "PLAYER_NAME became inactive, which was forbidden",
+                    log: "PLAYER_NAME стал неактивным, что было запрещено",
                     announce: ""
                 },
                 defaultLimit: E.blocked,
@@ -23674,7 +23674,7 @@ qw(new class extends N {
                         type: "number",
                     default:
                         10,
-                        description: "Amount of minutes, before being considered inactive:"
+                        description: "Количество минут, прежде чем считаться неактивным:"
                     }
                 },
                 load() {
@@ -23687,12 +23687,12 @@ qw(new class extends N {
             });
             let r = 0;
             wy("other_track_time", {
-                name: "Track rule effect time",
+                name: "Отслеживать время действия правила",
                 type: 99,
                 enforceable: !1,
                 loggable: !1,
-                shortDescription: "counts the time this rule's trigger conditions were fulfilled",
-                longDescription: "This rule shows the amount of time that PLAYER_NAME spent (online) in the club, since the rule was added, while all of the rule's trigger conditions were fulfilled. So it can for instance log the time spent in public rooms / in the club in general, or in a specific room or with some person as part of a roleplayed task or order. The currently tracked time can be inquired by whispering '!ruletime' to PLAYER_NAME. To reset the counter, remove and add the rule again.",
+                shortDescription: "подсчитывает время выполнения условий срабатывания этого правила",
+                longDescription: "Это правило показывает, сколько времени PLAYER_NAME потрачено (онлайн) в клубе с момента добавления правила и при выполнении всех условий срабатывания правила. Таким образом, он может, например, регистрировать время, проведенное в общественных помещениях/в клубе в целом, или в конкретной комнате, или с каким-либо человеком в рамках ролевого задания или приказа. Текущее отслеживаемое время можно узнать, прошептав '!ruletime' PLAYER_NAME. Чтобы сбросить счетчик, удалите и добавьте правило снова.",
                 keywords: ["record", "stopwatch", "timer", "online"],
                 internalDataValidate: e => "number" == typeof e,
                 internalDataDefault: () => 0,
@@ -23702,7 +23702,7 @@ qw(new class extends N {
                         type: "roleSelector",
                     default:
                         Zw.lover,
-                        description: "Minimum role able to request counted time:"
+                        description: "Минимальная роль, способная запросить отсчёт времени:"
                     }
                 },
                 init(e) {
