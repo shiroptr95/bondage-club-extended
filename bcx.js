@@ -23202,7 +23202,7 @@ qw(new class extends N {
                     ItemPermission: Player.ItemPermission
                 })
             }
-            function t(e, t, n = "Existing BC setting") {
+            function t(e, t, n = "Существующая настройка BC") {
                 return {
                     name: `Force '${e}'`,
                     type: 2,
