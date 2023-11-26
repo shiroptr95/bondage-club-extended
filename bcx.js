@@ -10821,15 +10821,15 @@ function gy() {
         }
     }),
     wy("speech_ban_words", {
-        name: "Forbid saying certain words in chat",
+        name: "Запретить произносить определенные слова в чате",
         type: 4,
-        shortDescription: "based on a configurable blacklist",
-        longDescription: "This rule forbids PLAYER_NAME to use certain words in the chat. The list of banned words can be configured. Checks are not case sensitive (forbidding 'no' also forbids 'NO' and 'No'). Doesn't affect emotes and OOC text, but does affect whispers.",
+        shortDescription: "на основе настраиваемого черного списка",
+        longDescription: "Это правило запрещает PLAYER_NAME использовать определенные слова в чате. Список запрещенных слов можно настроить. Проверки не чувствительны к регистру (запрет «нет» также запрещает «НЕТ» и «Нет»). Не влияет на эмоции и текст OOC, но влияет на шепот.",
         keywords: ["limit", "restrict", "blacklist", "blocklist", "forbidden"],
         triggerTexts: {
-            infoBeep: "You are not allowed to use the word 'USED_WORD'!",
-            attempt_log: "PLAYER_NAME tried to use the banned word 'USED_WORD'",
-            log: "PLAYER_NAME used the banned word 'USED_WORD'"
+            infoBeep: "Вам не разрешено использовать слово 'USED_WORD'!",
+            attempt_log: "PLAYER_NAME пытался использовать запрещенное слово 'USED_WORD'",
+            log: "PLAYER_NAME использовал запрещенное слово 'USED_WORD'"
         },
         defaultLimit: E.normal,
         dataDefinition: {
@@ -10837,7 +10837,7 @@ function gy() {
                 type: "stringList",
             default:
                 [],
-                description: "All forbidden words:",
+                description: "Все запрещенные слова:",
                 options: {
                     validate: /^[\p{L} ]*$/iu
                 }
@@ -10866,15 +10866,15 @@ function gy() {
         }
     }),
     wy("speech_ban_words_in_emotes", {
-        name: "Forbid saying certain words in emotes",
+        name: "Запретить произносить определенные слова в эмоциях",
         type: 4,
-        shortDescription: "based on a configurable blacklist",
-        longDescription: "This rule forbids PLAYER_NAME to use certain words as part of any emote messages. The list of banned words can be configured. Checks are not case sensitive (forbidding 'no' also forbids 'NO' and 'No').",
+        shortDescription: "на основе настраиваемого черного списка",
+        longDescription: "Это правило запрещает PLAYER_NAME использовать определенные слова в каких-либо эмотических сообщениях. Список запрещенных слов можно настроить. Проверки не чувствительны к регистру (запрещается 'нет' также запрещает 'НЕТ' и 'Нет').",
         keywords: ["limit", "restrict", "blacklist", "blocklist", "forbidden"],
         triggerTexts: {
-            infoBeep: "You are not allowed to use the word 'USED_WORD'!",
-            attempt_log: "PLAYER_NAME tried to use the banned word 'USED_WORD'",
-            log: "PLAYER_NAME used the banned word 'USED_WORD'"
+            infoBeep: "Вам не разрешено использовать слово 'USED_WORD'!",
+            attempt_log: "PLAYER_NAME пытался использовать запрещенное слово 'USED_WORD'",
+            log: "PLAYER_NAME использовал запрещенное слово 'USED_WORD'"
         },
         defaultLimit: E.limited,
         dataDefinition: {
@@ -10911,15 +10911,15 @@ function gy() {
         }
     }),
     wy("speech_forbid_open_talking", {
-        name: "Forbid talking openly",
+        name: "Запретить говорить открыто",
         type: 4,
-        shortDescription: "in a chat room",
-        longDescription: "This rule forbids PLAYER_NAME to send a message to all people inside a chat room. Does not affect whispers or emotes, but does affect OOC.",
+        shortDescription: "в чате",
+        longDescription: "Это правило запрещает PLAYER_NAME чтобы отправить сообщение всем людям в чате. Не влияет на шепот или эмоции, но влияет OOC.",
         keywords: ["limit", "restrict", "loud", "saying", "speaking", "chatting"],
         triggerTexts: {
-            infoBeep: "You are not allowed to talk openly in chatrooms!",
-            attempt_log: "PLAYER_NAME tried to openly speak in a room",
-            log: "PLAYER_NAME spoke openly in a room"
+            infoBeep: "В чатах нельзя открыто разговаривать!",
+            attempt_log: "PLAYER_NAME пытался открыто говорить в комнате",
+            log: "PLAYER_NAME открыто говорил в комнате"
         },
         defaultLimit: E.blocked,
         init(e) {
@@ -10933,21 +10933,21 @@ function gy() {
         }
     }),
     wy("speech_limit_open_talking", {
-        name: "Limit talking openly",
+        name: "Ограничьте разговоры открыто",
         type: 4,
         loggable: !1,
-        shortDescription: "only allow a set number of chat messages per minute",
-        longDescription: "This rule limits PLAYER_NAME's ability to send a message to all people inside a chat room to only the set number per minute. Does not affect whispers or emotes, but does affect OOC. Note: Setting '0' will have no effect, as there is another rule to forbid open talking completely.",
+        shortDescription: "разрешать только определенное количество сообщений чата в минуту",
+        longDescription: "Это правило ограничивает PLAYER_NAME's возможность отправлять сообщения всем людям в чате только на заданное количество в минуту. Не влияет на шепот и эмоции, но влияет на внешний вид. Примечание. Установка «0» не будет иметь никакого эффекта, поскольку существует другое правило, полностью запрещающее открытые разговоры.",
         keywords: ["limit", "restrict", "loud", "saying", "speaking", "chatting", "slow", "fast"],
         triggerTexts: {
-            infoBeep: "You exceeded the number of allowed chat messages per minute!"
+            infoBeep: "Вы превысили разрешенное количество сообщений в чате в минуту!"
         },
         dataDefinition: {
             maxNumberOfMsg: {
                 type: "number",
             default:
                 42,
-                description: "Maximum allowed number of chat messages per minute (> 0):",
+                description: "Максимально допустимое количество сообщений чата в минуту (> 0):",
                 Y: 380
             }
         },
@@ -10975,15 +10975,15 @@ function gy() {
         }
     }),
     wy("speech_forbid_emotes", {
-        name: "Forbid using emotes",
+        name: "Запретить использование эмоций",
         type: 4,
-        shortDescription: "in a chat room",
-        longDescription: "This rule forbids PLAYER_NAME to send an emote (with * or /me) to all people inside a chat room.",
+        shortDescription: "в чате",
+        longDescription: "Это правило запрещает PLAYER_NAME отправить эмоцию (с * или /me) всем людям в чате.",
         keywords: ["limit", "restrict", "emoting", "acting"],
         triggerTexts: {
-            infoBeep: "You are not allowed to use emotes in chatrooms!",
-            attempt_log: "PLAYER_NAME tried to use an emote in a room",
-            log: "PLAYER_NAME used an emote in a room"
+            infoBeep: "Вам запрещено использовать эмоции в чатах!",
+            attempt_log: "PLAYER_NAME пытался использовать эмоцию в комнате",
+            log: "PLAYER_NAME использовал эмоцию в комнате"
         },
         defaultLimit: E.blocked,
         init(e) {
@@ -10997,21 +10997,21 @@ function gy() {
         }
     }),
     wy("speech_limit_emotes", {
-        name: "Limit using emotes",
+        name: "Ограничьте использование эмоций",
         type: 4,
         loggable: !1,
-        shortDescription: "only allow a set number of emotes per minute",
-        longDescription: "This rule forbids PLAYER_NAME to send an emote (with * or /me) to all people inside a chat room to only the set number per minute. Note: Setting '0' will have no effect, as there is another rule to forbid using emotes completely.",
+        shortDescription: "разрешить только определенное количество эмоций в минуту",
+        longDescription: "Это правило запрещает PLAYER_NAME отправить эмоцию (с * или /me) всем людям в чате только заданное количество в минуту. Примечание. Установка значения «0» не будет иметь никакого эффекта, поскольку существует другое правило, полностью запрещающее использование эмоций.",
         keywords: ["restrict", "emoting", "acting", "slow", "fast"],
         triggerTexts: {
-            infoBeep: "You exceeded the number of allowed emotes per minute!"
+            infoBeep: "Вы превысили разрешенное количество эмоций в минуту!"
         },
         dataDefinition: {
             maxNumberOfEmotes: {
                 type: "number",
             default:
                 42,
-                description: "Maximum allowed number of emotes per minute (> 0):",
+                description: "Максимально допустимое количество эмоций в минуту (> 0):",
                 Y: 380
             }
         },
@@ -11035,15 +11035,15 @@ function gy() {
         }
     }),
     wy("speech_restrict_whisper_send", {
-        name: "Restrict sending whispers",
+        name: "Ограничить отправку шепота",
         type: 4,
-        shortDescription: "except to defined roles",
-        longDescription: "This rule forbids PLAYER_NAME to whisper anything to most people inside a chat room, except to the defined roles. Also affects whispered OOC messages.",
+        shortDescription: "кроме определенных ролей",
+        longDescription: "Это правило запрещает PLAYER_NAME шептать что-либо большинству людей в чате, кроме определенных ролей. Также влияет на сообщения OOC, передаваемые шепотом.",
         keywords: ["limit", "forbid", "whispering", "allowlist", "block", "whitelist"],
         triggerTexts: {
-            infoBeep: "You are not allowed to whisper to TARGET_PLAYER!",
-            attempt_log: "PLAYER_NAME tried to whisper to TARGET_PLAYER",
-            log: "PLAYER_NAME whispered to TARGET_PLAYER"
+            infoBeep: "Вам не разрешено шептаться TARGET_PLAYER!",
+            attempt_log: "PLAYER_NAME пытался шепнуть TARGET_PLAYER",
+            log: "PLAYER_NAME прошептал TARGET_PLAYER"
         },
         defaultLimit: E.limited,
         dataDefinition: {
@@ -11051,7 +11051,7 @@ function gy() {
                 type: "roleSelector",
             default:
                 Zw.mistress,
-                description: "Minimum role whispering is still allowed to:"
+                description: "Минимальная роль шепота по-прежнему разрешена:"
             }
         },
         init(e) {
@@ -11069,11 +11069,11 @@ function gy() {
         }
     }),
     wy("speech_restrict_whisper_receive", {
-        name: "Restrict receiving whispers",
+        name: "Ограничить получение шепота",
         type: 4,
         loggable: !1,
-        shortDescription: "except from defined roles",
-        longDescription: "This rule prevents PLAYER_NAME from receiving any whispers, except from the defined roles. If someone tries to send PLAYER_NAME a whisper message while this rule blocks them from doing so, they get an auto reply whisper, if the rule has an auto reply set (text field is not empty). PLAYER_NAME won't get any indication that she would have received a whisper unless the rule is not enforced, in which case she will see both the whisper and the auto reply. This rule can also be used (by dommes) to prevent getting unwanted whispers from strangers in public.",
+        shortDescription: "кроме определенных ролей",
+        longDescription: "Это правило предотвращает PLAYER_NAME от получения каких-либо шепотов, кроме как от определенных ролей. Если кто-то попытается отправить PLAYER_NAME сообщение шепотом, пока это правило запрещает им это делать, они получают шепот автоответа, если для правила установлен автоответчик (текстовое поле не пусто). PLAYER_NAME не получит никаких указаний на то, что она получила бы шепот, если бы правило не применялось; в этом случае она увидит и шепот, и автоматический ответ. Это правило также может использоваться (домами), чтобы предотвратить нежелательные шепоты от незнакомцев в общественных местах.",
         keywords: ["limit", "forbid", "prevent", "whispering", "hearing", "listening", "allowlist", "block", "whitelist"],
         defaultLimit: E.blocked,
         dataDefinition: {
@@ -11081,14 +11081,14 @@ function gy() {
                 type: "roleSelector",
             default:
                 Zw.whitelist,
-                description: "Minimum role still allowed to send whisper:",
+                description: "Минимальная роль, по-прежнему позволяющая отправить шепот:",
                 Y: 480
             },
             autoreplyText: {
                 type: "string",
             default:
                 "PLAYER_NAME is currently forbidden to receive whispers.",
-                description: "Auto replies blocked sender with this:",
+                description: "Автоматически отвечает заблокированному отправителю следующим образом:",
                 Y: 320,
                 options: /^([^/.*].*)?$/
             }
@@ -11118,14 +11118,14 @@ function gy() {
         }
     }),
     wy("speech_restrict_beep_send", {
-        name: "Restrict sending beep messages",
+        name: "Ограничить отправку звуковых сообщений",
         type: 4,
-        shortDescription: "except to selected members",
-        longDescription: "This rule forbids PLAYER_NAME to send any beeps with message, except to the defined list of member numbers. Sending beeps without a message is not affected. Optionally, it can be set that PLAYER_NAME is only forbidden to send beeps while she is unable to use her hands (e.g. fixed to a cross).",
+        shortDescription: "кроме избранных участников",
+        longDescription: "Это правило запрещает PLAYER_NAME отправлять любые звуковые сигналы с сообщением, кроме определенного списка номеров участников. На отправку звуковых сигналов без сообщения это не влияет. Опционально можно установить, что PLAYER_NAME запрещено подавать звуковые сигналы только тогда, когда она не может использовать руки (например, прикреплена к кресту).",
         triggerTexts: {
-            infoBeep: "You broke the rule that forbids sending a beep message to TARGET_PLAYER!",
-            attempt_log: "PLAYER_NAME broke a rule by trying to send a beep message to TARGET_PLAYER",
-            log: "PLAYER_NAME broke a rule by sending a beep message to TARGET_PLAYER"
+            infoBeep: "Вы нарушили правило, запрещающее отправлять звуковые сообщения TARGET_PLAYER!",
+            attempt_log: "PLAYER_NAME нарушил правило, попытавшись отправить звуковой сигнал TARGET_PLAYER",
+            log: "PLAYER_NAME нарушил правило, отправив звуковое сообщение на TARGET_PLAYER"
         },
         keywords: ["limit", "forbid", "prevent", "whitelist", "allowlist"],
         defaultLimit: E.blocked,
@@ -11134,7 +11134,7 @@ function gy() {
                 type: "memberNumberList",
             default:
                 [],
-                description: "Member numbers still allowed to be beeped:",
+                description: "Номера участников по-прежнему разрешены для подачи звукового сигнала:",
                 options: {
                     pageSize: 2
                 }
@@ -11143,7 +11143,7 @@ function gy() {
                 type: "toggle",
             default:
                 !1,
-                description: "Only in effect when unable to use hands",
+                description: "Действует только тогда, когда невозможно использовать руки.",
                 Y: 700
             }
         },
@@ -11160,11 +11160,11 @@ function gy() {
         }
     }),
     wy("speech_restrict_beep_receive", {
-        name: "Restrict receiving beeps",
+        name: "Ограничить получение звуковых сигналов",
         type: 4,
         loggable: !1,
-        shortDescription: "and beep messages, except from selected members",
-        longDescription: "This rule prevents PLAYER_NAME from receiving any beep (regardless if the beep carries a message or not), except for beeps from the defined list of member numbers. If someone tries to send PLAYER_NAME a beep message while this rule blocks them from doing so, they get an auto reply beep, if the rule has an auto reply set. PLAYER_NAME won't get any indication that she would have received a beep unless the rule is not enforced, in which case she will see both the beep and the auto reply. Optionally, the rule can be set to only activate while PLAYER_NAME is unable to use her hands (e.g. fixed to a cross).",
+        shortDescription: "и звуковые сообщения, кроме избранных участников",
+        longDescription: "Это правило предотвращает PLAYER_NAME от получения каких-либо звуковых сигналов (независимо от того, несет ли этот звуковой сигнал сообщение или нет), за исключением звуковых сигналов из определенного списка номеров участников. Если кто-то попытается отправить PLAYER_NAME звуковое сообщение, пока это правило запрещает им это делать, они получают звуковой сигнал автоответа, если для правила установлен автоответчик. PLAYER_NAME не получит никаких указаний на то, что она получила бы звуковой сигнал, если бы правило не применялось; в этом случае она увидит и звуковой сигнал, и автоматический ответ. При желании правило можно настроить так, чтобы оно активировалось только во время PLAYER_NAME не может пользоваться руками (например, прикреплена к кресту).",
         keywords: ["limit", "forbid", "prevent", "reading", "whitelist", "allowlist"],
         defaultLimit: E.blocked,
         dataDefinition: {
@@ -11172,7 +11172,7 @@ function gy() {
                 type: "memberNumberList",
             default:
                 [],
-                description: "Member numbers still allowed to send beeps:",
+                description: "Номера участников, которым по-прежнему разрешено отправлять звуковые сигналы:",
                 Y: 470,
                 options: {
                     pageSize: 2
@@ -11182,14 +11182,14 @@ function gy() {
                 type: "string",
             default:
                 "PLAYER_NAME is currently forbidden to receive beeps.",
-                description: "Auto replies blocked sender with this:",
+                description: "Автоматически отвечает заблокированному отправителю следующим образом:",
                 Y: 300
             },
             onlyWhenBound: {
                 type: "toggle",
             default:
                 !1,
-                description: "Only in effect when unable to use hands",
+                description: "Действует только тогда, когда невозможно использовать руки.",
                 Y: 740
             }
         },
@@ -11224,14 +11224,14 @@ function gy() {
         }
     }),
     wy("speech_greet_order", {
-        name: "Order to greet club",
+        name: "Приказ поприветствовать клуб",
         type: 4,
         loggable: !1,
-        shortDescription: "when entering it through the login portal",
-        longDescription: "PLAYER_NAME will automatically send all defined member numbers (if they are currently online and friends with PLAYER_NAME) a beep the moment PLAYER_NAME joins the club or the moment she start BCX to make her presence known. Disconnects don't count as coming into the club again, as far as detectable. NOTE: Trigger conditions should not be selected when using this rule, as if you for instance select 'when in public room' the rule will only greet when you load BCX in a public room.",
+        shortDescription: "при входе в него через портал входа",
+        longDescription: "PLAYER_NAME автоматически отправит все определенные номера участников (если они в данный момент онлайн и являются друзьями с PLAYER_NAME) звуковой сигнал в тот момент PLAYER_NAME присоединяется к клубу или в тот момент, когда она запускает BCX, чтобы заявить о своем присутствии. Отключения не считаются повторным входом в клуб, насколько это можно обнаружить. ПРИМЕЧАНИЕ. При использовании этого правила не следует выбирать условия триггера, так как если вы, например, выберете «когда в публичной комнате», правило будет приветствовать только тогда, когда вы загружаете BCX в публичной комнате.",
         keywords: ["beep", "loging", "in", "online"],
         triggerTexts: {
-            infoBeep: "A BCX rule made you greet one or more people (if currently online) with a beep.",
+            infoBeep: "Правило BCX предписывало приветствовать одного или нескольких человек (если они в данный момент находятся в сети) звуковым сигналом.",
             attempt_log: "",
             log: ""
         },
@@ -11241,7 +11241,7 @@ function gy() {
                 type: "memberNumberList",
             default:
                 [],
-                description: "Member numbers that will be greeted:"
+                description: "Номера участников, которых будут приветствовать:"
             }
         },
         load(e) {
@@ -11259,40 +11259,40 @@ function gy() {
         }
     }),
     wy("speech_block_antigarble", {
-        name: "Forbid the antigarble option",
+        name: "Запретить опцию antigarble",
         type: 4,
-        shortDescription: "BCX's .antigarble command",
-        longDescription: "This rule forbids PLAYER_NAME to use the antigarble command. Antigarble is a BCX feature that enables a BCX user to understand muffled voices from other gagged characters or when wearing a deafening item. If PLAYER_NAME should be forbidden to use the command, this rule should be used.",
+        shortDescription: "Команда .antigarble BCX",
+        longDescription: "Это правило запрещает PLAYER_NAME использовать команду antigarble. Antigarble — это функция BCX, которая позволяет пользователю BCX понимать приглушенные голоса других персонажей с кляпом во рту или при ношении оглушающего предмета. Если PLAYER_NAME следует запретить использование команды, следует использовать это правило.",
         keywords: ["limit", "forbid", "prevent", "garbling", "deafness", "gagged", "gagtalk"],
         triggerTexts: {
-            infoBeep: "You are not allowed to use the antigarble command!",
-            attempt_log: "PLAYER_NAME tried to use the antigarble command",
-            log: "PLAYER_NAME used the antigarble command"
+            infoBeep: "Вам не разрешено использовать команду antigarble!",
+            attempt_log: "PLAYER_NAME пытался использовать команду antigarble",
+            log: "PLAYER_NAME использовал команду antigarble"
         },
         defaultLimit: E.normal
     }),
     wy("speech_force_retype", {
-        name: "Force to retype",
+        name: "Заставить перепечатать",
         type: 4,
         loggable: !1,
-        shortDescription: "if sending a message in chat is rejected by BCX due to a rule violation",
-        longDescription: "This rule forces PLAYER_NAME to retype any chat/whisper/emote/OOC message as a punishment when they try to send it and another enforced BCX speech rule determines that there is any rule violation in that message.",
+        shortDescription: "если отправка сообщения в чат отклонена BCX из-за нарушения правил",
+        longDescription: "Это правило заставляет PLAYER_NAME перепечатывать любое сообщение чата, шепота, эмоций или OOC в качестве наказания при попытке отправить его, а другое принудительное речевое правило BCX определяет, что в этом сообщении есть какое-либо нарушение правил.",
         keywords: ["punish", "retry", "clear", "input", "blocked", "forbidden"],
         defaultLimit: E.limited
     });
     let e = !1,
     t = "";
     wy("greet_room_order", {
-        name: "Order to greet room",
+        name: "Заказ приветственной комнаты",
         type: 4,
-        shortDescription: "with a settable sentence when entering it newly",
-        longDescription: "Sets a specific sentence that PLAYER_NAME must say loud after entering a room that is not empty. The sentence is autopopulating the chat window text input. When to say it is left to PLAYER_NAME, but when the rule is enforced, it is the only thing that can be said in this room after joining it. Emotes can still be used, though, unless toggled to be forbidden. Disconnects don't count as coming into a new room again, as far as detectable.",
+        shortDescription: "с настраиваемым предложением при его новом вводе",
+        longDescription: "Устанавливает конкретное предложение, которое PLAYER_NAME необходимо громко произнести, войдя в комнату, которая не пуста. Предложение автоматически заполняет ввод текста в окне чата. Когда сказать, что осталось PLAYER_NAME, но когда правило применяется, это единственное, что можно сказать в этой комнате после присоединения к ней. Однако эмоции по-прежнему можно использовать, если только их не запретить. Отключения не считаются повторным входом в новую комнату, насколько это можно обнаружить.",
         keywords: ["say", "present", "introduce"],
         triggerTexts: {
-            infoBeep: "You broke the rule to greet this room like taught!",
-            attempt_infoBeep: "You need to greet this room like taught!",
-            attempt_log: "PLAYER_NAME almost broke a rule by not greeting the room like taught",
-            log: "PLAYER_NAME broke a rule by not greeting the room like taught"
+            infoBeep: "Ты нарушил правило приветствовать эту комнату так, как учили!",
+            attempt_infoBeep: "Вам нужно приветствовать эту комнату так, как учили!",
+            attempt_log: "PLAYER_NAME чуть не нарушил правило, не поприветствовав комнату, как учили",
+            log: "PLAYER_NAME нарушил правило, не поприветствовав комнату, как учили"
         },
         defaultLimit: E.limited,
         dataDefinition: {
@@ -11300,14 +11300,14 @@ function gy() {
                 type: "string",
             default:
                 "",
-                description: "The sentence that has to be used to greet any joined room:",
+                description: "Предложение, которое следует использовать для приветствия любой объединенной комнаты:",
                 options: /^([^/.*()\s][^()]*)?$/
             },
             affectEmotes: {
                 type: "toggle",
             default:
                 !1,
-                description: "Also forbid emote messages before greeting",
+                description: "Также запретите отправлять сообщения с эмоциями перед приветствием.",
                 Y: 560
             }
         },
@@ -11340,11 +11340,11 @@ function gy() {
         }
     }),
     wy("greet_new_guests", {
-        name: "Greet new guests",
+        name: "Приветствуйте новых гостей",
         type: 4,
         loggable: !1,
-        shortDescription: "when they join the current room",
-        longDescription: "Forces PLAYER_NAME to greet people newly entering the current chat room with the set sentence. NOTE: Only PLAYER_NAME and the new guest can see the message not to make it spammy. After a new person has been greeted, she will not be greeted for 10 minutes after she left (including disconnect) the room PLAYER_NAME is in. Setting an emote as a greeting is also supported by starting the set message with one or two '*' characters.",
+        shortDescription: "когда они присоединяются к текущей комнате",
+        longDescription: "Силы PLAYER_NAME приветствовать людей, впервые входящих в текущий чат, заданным предложением. ПРИМЕЧАНИЕ. Только PLAYER_NAME и новый гость сможет увидеть сообщение, чтобы не превратить его в спам. После того, как нового человека поприветствовали, его не будут приветствовать в течение 10 минут после того, как он покинул (в том числе отключился) комнату. PLAYER_NAME присутствует. Установить эмоцию в качестве приветствия также можно, начав установленное сообщение с одного или двух '*' персонажи.",
         keywords: ["say", "present", "introduce"],
         defaultLimit: E.limited,
         dataDefinition: {
@@ -11352,7 +11352,7 @@ function gy() {
                 type: "string",
             default:
                 "",
-                description: "The sentence that will be used to greet new guests:",
+                description: "Предложение, которое будет использоваться для приветствия новых гостей:",
                 options: /^([^/.].*)?$/
             }
         },
@@ -11398,11 +11398,11 @@ function gy() {
         }
     }),
     wy("speech_alter_faltering", {
-        name: "Enforce faltering speech",
+        name: "Обеспечьте прерывистую речь",
         type: 4,
         loggable: !1,
-        shortDescription: "an enhanced studder effect is added to PLAYER_NAME's chat texts",
-        longDescription: "Thus rule converts PLAYER_NAME's messages, so she is only able to speak studdering and with random filler sounds, for some [RP] reason (anxiousness, arousal, fear, etc.). Converts the typed chat text automatically. Affects chat messages and whispers, but not OOC.",
+        shortDescription: "добавлен усиленный эффект шиповки PLAYER_NAME's тексты чата",
+        longDescription: "Таким образом правило преобразуется PLAYER_NAME's сообщений, поэтому по какой-то причине [RP] (тревога, возбуждение, страх и т. д.) она может говорить только заикаясь и произнося случайные звуки-наполнители. Автоматически преобразует набранный текст чата. Влияет на сообщения чата и шепот, но не на ООС.",
         keywords: ["garble", "saying", "talking"],
         defaultLimit: E.limited,
         init(e) {
@@ -11430,15 +11430,15 @@ function gy() {
         }
     }),
     wy("speech_mandatory_words", {
-        name: "Establish mandatory words",
+        name: "Установите обязательные слова",
         type: 4,
-        shortDescription: "of which at least one needs to always be included when speaking",
-        longDescription: "This rule gives PLAYER_NAME a list of words from which at least one has to always be used in any chat message. The list of mandatory words can be configured. Checks are not case sensitive (adding 'miss' also works for 'MISS' and 'Miss' - Note: 'Miiiiissss' would also match). Doesn't affect whispers, emotes and OOC text. There is a toggle for affecting whispers, too.",
+        shortDescription: "из которых хотя бы один всегда необходимо включать в разговор",
+        longDescription: "Это правило дает PLAYER_NAME список слов, из которых хотя бы одно всегда должно использоваться в любом сообщении чата. Список обязательных слов можно настроить. Проверки не чувствительны к регистру (добавление «промах» также работает для 'MISS' и 'Miss' - Примечание: 'Miiiiissss' тоже будет соответствовать). Не влияет на шепот, эмоции и текст OOC. Также есть переключатель для воздействия на шепот.",
         keywords: ["force", "require", "talking", "saying", "certain", "specific"],
         triggerTexts: {
-            infoBeep: "You forgot to include one of the mandatory words!",
-            attempt_log: "PLAYER_NAME almost forgot to use a mandatory word while talking",
-            log: "PLAYER_NAME did not use a mandatory word while talking"
+            infoBeep: "Вы забыли указать одно из обязательных слов!",
+            attempt_log: "PLAYER_NAME чуть не забыл использовать обязательное слово во время разговора",
+            log: "PLAYER_NAME не использовал обязательное слово во время разговора"
         },
         defaultLimit: E.normal,
         dataDefinition: {
@@ -11446,7 +11446,7 @@ function gy() {
                 type: "stringList",
             default:
                 [],
-                description: "At least one of these words always needs to be used:",
+                description: "Всегда необходимо использовать хотя бы одно из этих слов:",
                 options: {
                     validate: /^[\p{L} ]*$/iu,
                     pageSize: 3
@@ -11456,7 +11456,7 @@ function gy() {
                 type: "toggle",
             default:
                 !1,
-                description: "Also affect whispered messages",
+                description: "Также влияет на сообщения шепотом",
                 Y: 740
             }
         },
@@ -11483,15 +11483,15 @@ function gy() {
         }
     }),
     wy("speech_mandatory_words_in_emotes", {
-        name: "Establish mandatory words in emotes",
+        name: "Установите обязательные слова в эмоциях",
         type: 4,
-        shortDescription: "of which at least one needs to always be included",
-        longDescription: "This rule gives PLAYER_NAME a list of words from which at least one has to always be used in any emote message. The list of mandatory words can be configured. Checks are not case sensitive (adding 'miss' also works for 'MISS' and 'Miss' - Note: 'Miiiiissss' would also match).",
+        shortDescription: "из которых хотя бы один всегда должен быть включен",
+        longDescription: "Это правило дает PLAYER_NAME список слов, из которых хотя бы одно всегда должно использоваться в любом эмоциональном сообщении. Список обязательных слов можно настроить. Проверки не чувствительны к регистру (добавление «промах» также работает для 'MISS' и 'Miss' - Примечание: 'Miiiiissss' также будет соответствовать).",
         keywords: ["force", "require", "talking", "saying", "certain", "specific"],
         triggerTexts: {
-            infoBeep: "You forgot to include one of the mandatory words!",
-            attempt_log: "PLAYER_NAME almost forgot to use a mandatory word while talking",
-            log: "PLAYER_NAME did not use a mandatory word while talking"
+            infoBeep: "Вы забыли указать одно из обязательных слов!",
+            attempt_log: "PLAYER_NAME чуть не забыл использовать обязательное слово во время разговора",
+            log: "PLAYER_NAME не использовал обязательное слово во время разговора"
         },
         defaultLimit: E.blocked,
         dataDefinition: {
@@ -11499,7 +11499,7 @@ function gy() {
                 type: "stringList",
             default:
                 [],
-                description: "At least one of these words always needs to be used:",
+                description: "Всегда необходимо использовать хотя бы одно из этих слов:",
                 options: {
                     validate: /^[\p{L} ]*$/iu
                 }
@@ -11527,10 +11527,10 @@ function gy() {
         }
     }),
     wy("speech_partial_hearing", {
-        name: "Partial hearing",
+        name: "Частичное слушание",
         type: 4,
-        shortDescription: "of muffled speech - random & word list based",
-        longDescription: "This rule gives PLAYER_NAME ability to understand parts of a muffled sentence ungarbled, based on a white list of words and/or randomly. On default, applies only to muffled hearing from deafening effects on PLAYER_NAME, but optionally can be enhanced to allow also partially understanding the muffled speech of other persons who are speech impaired. Doesn't affect emotes and OOC text.",
+        shortDescription: "приглушенной речи – на основе случайных чисел и списка слов",
+        longDescription: "Это правило дает PLAYER_NAME способность понимать части невнятного предложения без искажений, на основе белого списка слов и/или случайным образом. По умолчанию применяется только к приглушенному слуху из-за оглушающих эффектов на PLAYER_NAME, но опционально может быть расширен, чтобы позволить частично понимать приглушенную речь других людей с нарушениями речи. Не влияет на эмоции и текст OOC.",
         keywords: ["deafness", "garbling", "antigarble", "understanding", "ungarble", "specific", "words", "whitelist", "allowlist"],
         loggable: !1,
         defaultLimit: E.normal,
@@ -11539,7 +11539,7 @@ function gy() {
                 type: "stringList",
             default:
                 [],
-                description: "Words that can always be understood:",
+                description: "Слова, которые всегда можно понять:",
                 options: {
                     validate: /^[\p{L}]*$/iu,
                     pageSize: 3
@@ -11549,14 +11549,14 @@ function gy() {
                 type: "toggle",
             default:
                 !0,
-                description: "Some words are randomly understood",
+                description: "Некоторые слова понимаются случайно",
                 Y: 650
             },
             affectGaggedMembersToggle: {
                 type: "toggle",
             default:
                 !1,
-                description: "Can also understand gagged persons",
+                description: "Также может понимать людей с кляпом во рту",
                 Y: 740
             }
         },
@@ -11572,11 +11572,11 @@ function gy() {
         }
     }),
     wy("speech_garble_while_talking", {
-        name: "Force garbled speech",
+        name: "Принудительно искажать речь",
         type: 4,
         loggable: !1,
-        shortDescription: "force PLAYER_NAME to talk as if they were gagged",
-        longDescription: 'This rule forces PLAYER_NAME to talk as if they were gagged, automatically garbling all of their speech. This rule does not affect OOC. This rule only affects whispers if the rule "Garble whispers while gagged" is also in effect.',
+        shortDescription: "сила PLAYER_NAME говорить так, как будто им заткнули рот",
+        longDescription: 'Это правило заставляет PLAYER_NAME говорить так, как будто им заткнули рот, автоматически искажая всю свою речь. Это правило не влияет на OOC. Это правило влияет только на шепот, если правило "Гэрбл шепчет с кляпом во рту" также действует.',
         keywords: ["saying", "talking", "gagtalk", "garbling", "forced"],
         defaultLimit: E.normal,
         dataDefinition: {
@@ -11588,7 +11588,7 @@ function gy() {
                     min: 1,
                     max: 25
                 },
-                description: "The level of forced garbling"
+                description: "Уровень принудительного искажения"
             }
         },
         init(e) {
