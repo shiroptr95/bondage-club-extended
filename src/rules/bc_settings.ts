@@ -16,17 +16,17 @@ export function initRules_bc_settings() {
 		});
 	}
 
-	function settingHelper(setting: string, defaultLimit: ConditionsLimit, shortDescription: string = "Existing BC setting"): RuleDisplayDefinition {
+	function settingHelper(setting: string, defaultLimit: ConditionsLimit, shortDescription: string = "Существующая настройка BC"): RuleDisplayDefinition {
 		return {
-			name: `Force '${setting}'`,
+			name: `Принудительно '${setting}'`,
 			type: RuleType.Setting,
 			loggable: false,
 			shortDescription,
 			keywords: ["control", "settings", "configure", "change"],
 			defaultLimit,
-			longDescription: `This rule forces PLAYER_NAME's base game setting '${setting}' to configurable value and prevents her from changing it.`,
+			longDescription: `Это правило заставляет PLAYER_NAME's базовая настройка игры '${setting}' на настраиваемое значение и не позволяет ей изменить его.`,
 			triggerTexts: {
-				infoBeep: `Rule changed your '${setting}' setting`,
+				infoBeep: `Правило изменило ваш параметр: '${setting}'`,
 			},
 		};
 	}
@@ -67,9 +67,9 @@ export function initRules_bc_settings() {
 	}) {
 		return registerRule<BooleanRule>(id, {
 			...settingHelper(setting, defaultLimit, shortDescription),
-			longDescription: `This rule forces PLAYER_NAME's base game or BCX setting '${setting}' to the configured value and prevents her from changing it. ` +
-				`There is also an option to restore the setting to the state it was in before the rule changed it. The restoration happens either when the rule becomes ` +
-				`inactive (for instance through toggle or unfulfilled trigger conditions) or when it is removed.`,
+			longDescription: `Это правило заставляет PLAYER_NAME's базовая игра или настройка BCX '${setting}' настроенному значению и не позволяет ей его изменить. ` +
+				`Существует также возможность восстановить настройку до того состояния, в котором она была до того, как правило изменило ее. Восстановление происходит либо тогда, когда правило становится ` +
+				`неактивен (например, из-за переключения или невыполненных условий триггера) или когда он удален.`,
 			dataDefinition: {
 				value: {
 					type: "toggle",
@@ -78,7 +78,7 @@ export function initRules_bc_settings() {
 				},
 				restore: {
 					type: "toggle",
-					description: "Restore previous value when rule ends",
+					description: "Восстановить предыдущее значение после завершения правила",
 					default: true,
 					Y: 420,
 				},

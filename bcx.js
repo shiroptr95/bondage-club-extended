@@ -23204,7 +23204,7 @@ qw(new class extends N {
             }
             function t(e, t, n = "Существующая настройка BC") {
                 return {
-                    name: `Force '${e}'`,
+                    name: `Принудительно '${e}'`,
                     type: 2,
                     loggable: !1,
                     shortDescription: n,
