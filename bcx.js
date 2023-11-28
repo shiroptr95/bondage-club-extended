@@ -23147,13 +23147,13 @@ qw(new class extends N {
                     default:
                         "icons",
                         options: [["icons", "Icons"], ["arousal", "Icons/Bar"], ["names", "Icons/Bar/Names"]],
-                        description: "Select what shall be hidden:"
+                        description: "Выберите, что должно быть скрыто:"
                     },
                     alsoHideEmoticons: {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Also hide emoticons during the effect",
+                        description: "Также скрывайте смайлики во время эффекта",
                         Y: 440
                     }
                 },
