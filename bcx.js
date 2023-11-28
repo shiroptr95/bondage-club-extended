@@ -22840,7 +22840,7 @@ qw(new class extends N {
                         type: "toggle",
                     default:
                         !0,
-                        description: "Only forbid tying people with higher dominance"
+                        description: "Запрещено связывать только людей с более высокой доминантностью"
                     }
                 },
                 load(e) {
