@@ -83,7 +83,7 @@ export class GuiConditionEditRules extends GuiConditionEdit<"rules"> {
 
 		////// right side: special rules category options
 		if (this.definition.enforceable !== false) {
-			DrawCheckbox(1050, Y, 64, 64, "Enforce this rule", data.data.enforce, !access);
+			DrawCheckbox(1050, Y, 64, 64, "Соблюдать это правило", data.data.enforce, !access);
 			Y += 100;
 		}
 		if (this.definition.loggable !== false) {

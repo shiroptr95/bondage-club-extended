@@ -207,7 +207,7 @@ export function initRules_bc_settings() {
 					["Self", "Show to yourself only"],
 				],
 				default: "All",
-				description: "Meter видимость",
+				description: "Видимость измерителя",
 				Y: 480,
 			},
 		},

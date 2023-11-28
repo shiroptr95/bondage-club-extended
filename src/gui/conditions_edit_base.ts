@@ -244,16 +244,16 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		DrawText(statusText, 530, 311, data.active || !data.timer ? "Black" : "#060");
 
 		if (data.timer === null) {
-			DrawButton(120, 360, 820, 160, "Enable timer", "White");
+			DrawButton(120, 360, 820, 160, "Включить таймер", "White");
 			MainCanvas.textAlign = "left";
 		} else {
-			DrawButton(120, 360, 85, 60, "-1d", !access ? "#ddd" : "White", "", "Remove 1 day from the timer", !access);
-			DrawButton(120 + 125, 360, 85, 60, "-1h", !access ? "#ddd" : "White", "", "Remove 1 hour from the timer", !access);
-			DrawButton(120 + 2 * (125), 360, 85, 60, "-5m", !access ? "#ddd" : "White", "", "Remove 5 minutes from the timer", !access);
-			DrawButton(120 + 3 * (125), 360, 70, 60, "∞", !access ? "#ddd" : "White", "", "Disable the timer", !access);
-			DrawButton(105 + 4 * (125), 360, 85, 60, "+5m", !access ? "#ddd" : "White", "", "Add 5 minutes to the timer", !access);
-			DrawButton(105 + 5 * (125), 360, 85, 60, "+1h", !access ? "#ddd" : "White", "", "Add 1 hour to the timer", !access);
-			DrawButton(105 + 6 * (125), 360, 85, 60, "+1d", !access ? "#ddd" : "White", "", "Add 1 day to the timer", !access);
+			DrawButton(120, 360, 85, 60, "-1d", !access ? "#ddd" : "White", "", "Удалите 1 день из таймера", !access);
+			DrawButton(120 + 125, 360, 85, 60, "-1h", !access ? "#ddd" : "White", "", "Уберите 1 час с таймера", !access);
+			DrawButton(120 + 2 * (125), 360, 85, 60, "-5m", !access ? "#ddd" : "White", "", "Уберите 5 минут с таймера", !access);
+			DrawButton(120 + 3 * (125), 360, 70, 60, "∞", !access ? "#ddd" : "White", "", "Отключить таймер", !access);
+			DrawButton(105 + 4 * (125), 360, 85, 60, "+5m", !access ? "#ddd" : "White", "", "Добавьте 5 минут к таймеру", !access);
+			DrawButton(105 + 5 * (125), 360, 85, 60, "+1h", !access ? "#ddd" : "White", "", "Добавьте 1 час к таймеру", !access);
+			DrawButton(105 + 6 * (125), 360, 85, 60, "+1d", !access ? "#ddd" : "White", "", "Добавьте 1 день к таймеру", !access);
 
 			MainCanvas.textAlign = "left";
 			if (data.active) {

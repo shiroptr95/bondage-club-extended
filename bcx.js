@@ -15184,9 +15184,9 @@ class AC extends br {
         DrawCheckbox(125, 180, 64, 64, `This ${this.conditionCategory.slice(0, -1)} is active and can trigger`, d.active, !f),
         m && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(526, 546, 418, 68), MainCanvas.fillRect(120, 615, 74, 74), MainCanvas.fillRect(120, 695, 74, 74), MainCanvas.fillRect(120, 775, 74, 74), MainCanvas.fillRect(120, 855, 74, 74)),
         MainCanvas.textAlign = "center",
-        y = null === d.timer ? "Timer disabled" : `${d.active ? "Deactivates" : "Activates"} in: ${F(d.timer - Date.now())}`,
+        y = null === d.timer ? "Таймер выключен" : `${d.active ? "Deactivates" : "Activates"} in: ${F(d.timer - Date.now())}`,
         DrawText(y, 530, 311, d.active || !d.timer ? "Black" : "#060"),
-        null === d.timer ? (DrawButton(120, 360, 820, 160, "Enable timer", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", f ? "White" : "#ddd", "", "Remove 1 day from the timer", !f), DrawButton(245, 360, 85, 60, "-1h", f ? "White" : "#ddd", "", "Remove 1 hour from the timer", !f), DrawButton(370, 360, 85, 60, "-5m", f ? "White" : "#ddd", "", "Remove 5 minutes from the timer", !f), DrawButton(495, 360, 70, 60, "∞", f ? "White" : "#ddd", "", "Disable the timer", !f), DrawButton(605, 360, 85, 60, "+5m", f ? "White" : "#ddd", "", "Add 5 minutes to the timer", !f), DrawButton(730, 360, 85, 60, "+1h", f ? "White" : "#ddd", "", "Add 1 hour to the timer", !f), DrawButton(855, 360, 85, 60, "+1d", f ? "White" : "#ddd", "", "Add 1 day to the timer", !f), MainCanvas.textAlign = "left", d.active && DrawCheckbox(125, 450, 64, 64, `Delete the ${this.conditionCategory.slice(0, -1)} when timer runs out`, d.timerRemove, !f)),
+        null === d.timer ? (DrawButton(120, 360, 820, 160, "Включить таймер", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", f ? "White" : "#ddd", "", "Убрать 1 день из таймера", !f), DrawButton(245, 360, 85, 60, "-1h", f ? "White" : "#ddd", "", "Убрать 1 час с таймера", !f), DrawButton(370, 360, 85, 60, "-5m", f ? "White" : "#ddd", "", "Убрать 5 минут с таймера", !f), DrawButton(495, 360, 70, 60, "∞", f ? "White" : "#ddd", "", "Отключить таймер", !f), DrawButton(605, 360, 85, 60, "+5m", f ? "White" : "#ddd", "", "Добавьте 5 минут к таймеру", !f), DrawButton(730, 360, 85, 60, "+1h", f ? "White" : "#ddd", "", "Добавьте 1 час к таймеру", !f), DrawButton(855, 360, 85, 60, "+1d", f ? "White" : "#ddd", "", "Add 1 day to the timer", !f), MainCanvas.textAlign = "left", d.active && DrawCheckbox(125, 450, 64, 64, `Delete the ${this.conditionCategory.slice(0, -1)} when timer runs out`, d.timerRemove, !f)),
         DrawText(`${O(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", ""),
         MainCanvas.textAlign = "center";
         const v = !!(h.room || h.roomName || h.role || h.player);
@@ -15498,9 +15498,9 @@ class DC extends br {
         MainCanvas.lineTo(960, 540),
         MainCanvas.stroke(),
         MainCanvas.textAlign = "center",
-        h = null === l.timer ? "Timer disabled by default" : `Default timer: ${F(l.timer)}`,
+        h = null === l.timer ? "По умолчанию таймер отключен" : `Default timer: ${F(l.timer)}`,
         DrawText(h, 530, 311, "Black"),
-        null === l.timer ? (DrawButton(120, 360, 820, 160, "Enable timer", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", u ? "White" : "#ddd", "", "Remove 1 day from the timer", !u), DrawButton(245, 360, 85, 60, "-1h", u ? "White" : "#ddd", "", "Remove 1 hour from the timer", !u), DrawButton(370, 360, 85, 60, "-5m", u ? "White" : "#ddd", "", "Remove 5 minutes from the timer", !u), DrawButton(495, 360, 70, 60, "∞", u ? "White" : "#ddd", "", "Set lifetime to infinite", !u), DrawButton(605, 360, 85, 60, "+5m", u ? "White" : "#ddd", "", "Add 5 minutes to the timer", !u), DrawButton(730, 360, 85, 60, "+1h", u ? "White" : "#ddd", "", "Add 1 hour to the timer", !u), DrawButton(855, 360, 85, 60, "+1d", u ? "White" : "#ddd", "", "Add 1 day to the timer", !u), MainCanvas.textAlign = "left", DrawCheckbox(125, 450, 64, 64, `Remove the ${this.conditionCategory.slice(0, -1)} when timer runs out`, l.timerRemove, !u)),
+        null === l.timer ? (DrawButton(120, 360, 820, 160, "Включить таймер", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", u ? "White" : "#ddd", "", "Убрать 1 день из таймера", !u), DrawButton(245, 360, 85, 60, "-1h", u ? "White" : "#ddd", "", "Убрать 1 час с таймера", !u), DrawButton(370, 360, 85, 60, "-5m", u ? "White" : "#ddd", "", "Убрать 5 минут с таймера", !u), DrawButton(495, 360, 70, 60, "∞", u ? "White" : "#ddd", "", "Установите время жизни на бесконечность", !u), DrawButton(605, 360, 85, 60, "+5m", u ? "White" : "#ddd", "", "Добавьте 5 минут к таймеру", !u), DrawButton(730, 360, 85, 60, "+1h", u ? "White" : "#ddd", "", "Добавьте 1 час к таймеру", !u), DrawButton(855, 360, 85, 60, "+1d", u ? "White" : "#ddd", "", "Добавьте 1 день к таймеру", !u), MainCanvas.textAlign = "left", DrawCheckbox(125, 450, 64, 64, `Remove the ${this.conditionCategory.slice(0, -1)} when timer runs out`, l.timerRemove, !u)),
         DrawText(`${O(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", ""),
         MainCanvas.textAlign = "center";
         const m = !!(c.room || c.roomName || c.role || c.player);
@@ -16120,7 +16120,7 @@ class xC extends AC {
         r = this.checkAccess();
         MainCanvas.textAlign = "left";
         let o = 175;
-        if (!1 !== this.definition.enforceable && (DrawCheckbox(1050, o, 64, 64, "Enforce this rule", n.data.enforce, !r), o += 100), !1 !== this.definition.loggable && (DrawCheckbox(1050, o, 64, 64, "Запись в журнале поведения при нарушении правила", n.data.log, !r), o += 100), o += 45, this.definition.dataDefinition)
+        if (!1 !== this.definition.enforceable && (DrawCheckbox(1050, o, 64, 64, "Соблюдать это правило", n.data.enforce, !r), o += 100), !1 !== this.definition.loggable && (DrawCheckbox(1050, o, 64, 64, "Запись в журнале поведения при нарушении правила", n.data.log, !r), o += 100), o += 45, this.definition.dataDefinition)
             for (const [e, i] of Object.entries(this.definition.dataDefinition)) {
                 Ey[i.type].run({
                     def: i,
@@ -16190,7 +16190,7 @@ class IC extends DC {
         return `View / Edit the global ${this.conditionCategory} configuration`
     }
     Run() {
-        return !(!super.Run() && null !== this.conditionCategoryData) || (MainCanvas.textAlign = "left", DrawText("Note: Settings are applied to new rules and all existing ones set to the global config.", 130, 210, "Black", ""), this.showHelp && FA(Ar[gr.ConditionsGlobalRules]), !1)
+        return !(!super.Run() && null !== this.conditionCategoryData) || (MainCanvas.textAlign = "left", DrawText("Примечание: Настройки применяются к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.", 130, 210, "Black", ""), this.showHelp && FA(Ar[gr.ConditionsGlobalRules]), !1)
     }
     Click() {
         return !(!super.Click() && null !== this.conditionCategoryData)
@@ -23345,7 +23345,7 @@ qw(new class extends N {
                         options: [["All", "Show arousal to everyone"], ["Access", "Show if they have access"], ["Self", "Show to yourself only"]],
                     default:
                         "All",
-                        description: "Meter видимость",
+                        description: "Видимость измерителя",
                         Y: 480
                     }
                 },
