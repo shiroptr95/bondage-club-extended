@@ -106,7 +106,7 @@ export class GuiMainMenu extends GuiSubscreen {
 
 		DrawText("- Bondage Club Extended -", 125, 125, "Black", "Gray");
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png");
-		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png", "Show the BCX tutorial again");
+		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png", "Посмотреть учебник BCX еще раз");
 
 		if (this.character.supporterStatus === "supporter") {
 			DrawText("BCX Supporter", 690, 125, "#DAA520", "#FFD700");
