@@ -22778,7 +22778,7 @@ qw(new class extends N {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Still allow removing low difficulty items"
+                        description: "По-прежнему позволяет удалять предметы низкой сложности"
                     }
                 },
                 load(e) {
