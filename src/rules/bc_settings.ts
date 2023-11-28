@@ -166,7 +166,7 @@ export function initRules_bc_settings() {
 
 	toggleSettingHelper({
 		id: "setting_forbid_SP_rooms",
-		setting: "Невозможно войти в однопользовательскую комнату, если он ограничен.",
+		setting: "Невозможно войти в однопользовательскую комнату, если связан",
 		defaultValue: true,
 		defaultLimit: ConditionsLimit.limited,
 		get: () => Player.GameplaySettings?.OfflineLockedRestrained,

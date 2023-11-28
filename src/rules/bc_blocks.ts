@@ -13,7 +13,7 @@ export function initRules_bc_blocks() {
 	registerRule("block_remoteuse_self", {
 		name: "Запретить использование пультов на себе",
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+		shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
 		longDescription: "Это правило запрещает PLAYER_NAME использовать или активировать вибратор или аналогичный предмет с дистанционным управлением на своем теле. (Другие все еще могут использовать для нее пульты)",
 		keywords: ["controling", "preventing", "limiting", "vibrating", "vibrations"],
 		triggerTexts: {
@@ -114,7 +114,7 @@ export function initRules_bc_blocks() {
 	registerRule("block_keyuse_self", {
 		name: "Запретить использование ключей на себя",
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+		shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
 		longDescription: "Это правило запрещает PLAYER_NAME чтобы разблокировать любой запертый предмет на своем теле. Примечание. Несмотря на название, это правило также блокирует разблокировку замков, для которых не требуется ключ (например, эксклюзивная блокировка). Однако замки, которые можно разблокировать другими способами (блокировка таймером путем удаления времени, блокировка кодом/паролем путем ввода правильного кода), все равно можно разблокировать с помощью PLAYER_NAME. Другие по-прежнему могут разблокировать ее предметы в обычном режиме.",
 		keywords: ["controling", "taking", "away", "limiting", "confiscate", "locks"],
 		triggerTexts: {
@@ -230,7 +230,7 @@ export function initRules_bc_blocks() {
 	registerRule("block_lockpicking_self", {
 		name: "Forbid picking locks on self",
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME выбирая один на PLAYER_NAME",
+		shortDescription: "PLAYER_NAME выбирая на PLAYER_NAME",
 		longDescription: "Это правило запрещает PLAYER_NAME взламывать любые запертые предметы на своем теле. (Другие все еще могут нормально взламывать ее замки)",
 		keywords: ["controling", "limiting", "secure", "security"],
 		triggerTexts: {
@@ -309,7 +309,7 @@ export function initRules_bc_blocks() {
 	registerRule("block_lockuse_self", {
 		name: "Запретить использование блокировок на себя",
 		type: RuleType.Block,
-		shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+		shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
 		longDescription: "Это правило запрещает PLAYER_NAME использовать любой вид замка на своем теле. (Другие по-прежнему могут добавлять блокировки к ее предметам в обычном режиме.)",
 		keywords: ["controling", "limiting", "locking", "preventing"],
 		triggerTexts: {

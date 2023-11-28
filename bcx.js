@@ -10486,7 +10486,7 @@ function Vp() {
         name: "Готов быть вызванным",
         type: 1,
         loggable: !1,
-        shortDescription: "поводок PLAYER_NAME из любого места с помощью звукового сигнала с сообщением",
+        shortDescription: "вызвать PLAYER_NAME из любого места с помощью звукового сигнала с сообщением",
         longDescription: "Это правило заставляет PLAYER_NAME переключать комнаты из любой точки клуба в чат призывателя через 15 секунд. Он работает, отправляя звуковое сообщение с заданным текстом или просто словом 'вызвать' PLAYER_NAME. Члены, которым разрешено вызывать PLAYER_NAME можно установить. ПРИМЕЧАНИЯ: PLAYER_NAME всегда можно вызвать, независимо от того, есть ли у нее поводок или ей запрещено выходить из комнаты (игнорируя ограничения или запертые комнаты). Однако, если целевая комната заполнена или заперта, она окажется в вестибюле. Вызов не будет работать, если название комнаты не указано в звуковом сообщении!",
         keywords: ["leashing", "room", "calling", "ordering", "move", "moving", "movement", "warping", "beaming", "transporting"],
         triggerTexts: {
@@ -22353,7 +22353,7 @@ qw(new class extends N {
             wy("block_remoteuse_self", {
                 name: "Запретить использование пультов на себе",
                 type: 0,
-                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
                 longDescription: "Это правило запрещает PLAYER_NAME использовать или активировать вибратор или аналогичный предмет с дистанционным управлением на своем теле. (Другие все еще могут использовать для нее пульты)",
                 keywords: ["controling", "preventing", "limiting", "vibrating", "vibrations"],
                 triggerTexts: {
@@ -22414,7 +22414,7 @@ qw(new class extends N {
             wy("block_keyuse_self", {
                 name: "Запретить использование ключей на себя",
                 type: 0,
-                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
                 longDescription: "Это правило запрещает PLAYER_NAME чтобы разблокировать любой запертый предмет на своем теле. Примечание. Несмотря на название, это правило также блокирует разблокировку замков, для которых не требуется ключ (например, эксклюзивная блокировка). Однако замки, которые можно разблокировать другими способами (блокировка таймером путем удаления времени, блокировка кодом/паролем путем ввода правильного кода), все равно можно разблокировать с помощью PLAYER_NAME. Другие по-прежнему могут разблокировать ее предметы в обычном режиме.",
                 keywords: ["controling", "taking", "away", "limiting", "confiscate", "locks"],
                 triggerTexts: {
@@ -22482,7 +22482,7 @@ qw(new class extends N {
             wy("block_lockpicking_self", {
                 name: "Запретить взламывать замки самому себе",
                 type: 0,
-                shortDescription: "PLAYER_NAME выбирая один на PLAYER_NAME",
+                shortDescription: "PLAYER_NAME выбирая на PLAYER_NAME",
                 longDescription: "Это правило запрещает PLAYER_NAME взламывать любые запертые предметы на своем теле. (Другие все еще могут нормально взламывать ее замки.)",
                 keywords: ["controling", "limiting", "secure", "security"],
                 triggerTexts: {
@@ -22531,7 +22531,7 @@ qw(new class extends N {
             wy("block_lockuse_self", {
                 name: "Запретить использование блокировок на себя",
                 type: 0,
-                shortDescription: "PLAYER_NAME используя один на PLAYER_NAME",
+                shortDescription: "PLAYER_NAME используя на PLAYER_NAME",
                 longDescription: "Это правило запрещает PLAYER_NAME использовать любой вид замка на своем теле. (Другие по-прежнему могут добавлять блокировки к ее предметам в обычном режиме.)",
                 keywords: ["controling", "limiting", "locking", "preventing"],
                 triggerTexts: {
@@ -23310,7 +23310,7 @@ qw(new class extends N {
             }),
             n({
                 id: "setting_forbid_SP_rooms",
-                setting: "Невозможно войти в однопользовательскую комнату, если он ограничен.",
+                setting: "Невозможно войти в однопользовательскую комнату, если связан",
                 defaultValue: !0,
                 defaultLimit: E.limited,
                 get: () => {
