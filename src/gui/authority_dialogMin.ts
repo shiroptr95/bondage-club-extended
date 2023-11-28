@@ -33,12 +33,12 @@ export class GuiAuthorityDialogMin extends GuiSubscreen {
 		DrawTextFit(`- Authority: Changing minimum access to permission "${this.permissionData.name}" -`, 125, 125, 1850, "Black", "Gray");
 		MainCanvas.textAlign = "center";
 
-		DrawText("Please select the new lowest role that should still have this permission.", 1000, 255, "Black");
-		DrawTextFit(`Info: Currently set role: ${this.permissionData.min === AccessLevel.self ?
+		DrawText("Выберите новую низшую роль, которая должна иметь это разрешение.", 1000, 255, "Black");
+		DrawTextFit(`Информация: В настоящее время установлена роль: ${this.permissionData.min === AccessLevel.self ?
 			this.character.Name : capitalizeFirstLetter(AccessLevel[this.permissionData.min])} → ` +
-			`Newly selected role: ${this.selectedLevel === AccessLevel.self ?
+			`Недавно выбранная роль: ${this.selectedLevel === AccessLevel.self ?
 				this.character.Name : capitalizeFirstLetter(AccessLevel[this.selectedLevel])}`, 1000, 320, 1850, "Black");
-		DrawText("All roles to the left of the selected one will also automatically get access.", 1000, 385, "Black");
+		DrawText("Все роли, расположенные слева от выбранной, также автоматически получат доступ.", 1000, 385, "Black");
 
 		if (this.myAccessLevel === AccessLevel.self) {
 			const available = (this.permissionData.min <= AccessLevel.self) || !this.noAccess;
@@ -56,7 +56,7 @@ export class GuiAuthorityDialogMin extends GuiSubscreen {
 		}
 
 		if (this.character.isPlayer() && this.permission === "authority_revoke_self" && this.selectedLevel !== AccessLevel.self) {
-			DrawText(`WARNING: If you confirm, all permitted roles can remove your access to this and all other permissions!`, 1000, 730, "Red", "Gray");
+			DrawText(`ПРЕДУПРЕЖДЕНИЕ: Если вы подтвердите, все разрешенные роли смогут удалить ваш доступ к этому и всем другим разрешениям!`, 1000, 730, "Red", "Gray");
 		}
 
 		DrawButton(700, 800, 200, 80, "Confirm", "White");

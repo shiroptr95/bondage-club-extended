@@ -1502,7 +1502,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
             this.selectedLevel = n.min
         }
         Run() {
-            if (DrawTextFit(`- Authority: Changing minimum access to permission "${this.permissionData.name}" -`, 125, 125, 1850, "Black", "Gray"), MainCanvas.textAlign = "center", DrawText("Please select the new lowest role that should still have this permission.", 1e3, 255, "Black"), DrawTextFit(`Info: Currently set role: ${this.permissionData.min === Zw.self ? this.character.Name : O(Zw[this.permissionData.min])} → Newly selected role: ${this.selectedLevel === Zw.self ? this.character.Name : O(Zw[this.selectedLevel])}`, 1e3, 320, 1850, "Black"), DrawText("All roles to the left of the selected one will also automatically get access.", 1e3, 385, "Black"), this.myAccessLevel === Zw.self) {
+            if (DrawTextFit(`- Authority: Changing minimum access to permission "${this.permissionData.name}" -`, 125, 125, 1850, "Black", "Gray"), MainCanvas.textAlign = "center", DrawText("Выберите новую низшую роль, которая должна иметь это разрешение.", 1e3, 255, "Black"), DrawTextFit(`Информация: В настоящее время установлена роль: ${this.permissionData.min === Zw.self ? this.character.Name : O(Zw[this.permissionData.min])} → Недавно выбранная роль: ${this.selectedLevel === Zw.self ? this.character.Name : O(Zw[this.selectedLevel])}`, 1e3, 320, 1850, "Black"), DrawText("Все роли, расположенные слева от выбранной, также автоматически получат доступ.", 1e3, 385, "Black"), this.myAccessLevel === Zw.self) {
                 const e = this.permissionData.min <= Zw.self || !this.noAccess;
                 DrawButton(890, 460, 220, 72, sA(Zw.self, this.character), this.selectedLevel === Zw.self ? "Cyan" : e ? "White" : "#ddd", void 0, void 0, !e)
             }
@@ -1512,7 +1512,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
                 DrawButton(230 * e - 15, 577, 190, 72, sA(e, this.character), t ? "Cyan" : n ? "White" : "#ddd", void 0, void 0, !n),
                 e < 7 && DrawText(">", 196 + 230 * e, 613, "Black")
             }
-            this.character.isPlayer() && "authority_revoke_self" === this.permission && this.selectedLevel !== Zw.self && DrawText("WARNING: If you confirm, all permitted roles can remove your access to this and all other permissions!", 1e3, 730, "Red", "Gray"),
+            this.character.isPlayer() && "authority_revoke_self" === this.permission && this.selectedLevel !== Zw.self && DrawText("ПРЕДУПРЕЖДЕНИЕ: Если вы подтвердите, все разрешенные роли смогут удалить ваш доступ к этому и всем другим разрешениям!", 1e3, 730, "Red", "Gray"),
             DrawButton(700, 800, 200, 80, "Confirm", "White"),
             DrawButton(1120, 800, 200, 80, "Cancel", "White")
         }
