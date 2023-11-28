@@ -84,7 +84,7 @@ export function initRules_bc_speech_control() {
 	});
 
 	registerRule("speech_garble_whispers", {
-		name: "Гэрбл шепчет с кляпом во рту",
+		name: "Искажать шепот с кляпом во рту",
 		type: RuleType.Speech,
 		loggable: false,
 		shortDescription: "так же, как обычные сообщения",

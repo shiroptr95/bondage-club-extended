@@ -10716,7 +10716,7 @@ function gy() {
         }
     }),
     wy("speech_garble_whispers", {
-        name: "Гэрбл шепчет с кляпом во рту",
+        name: "Искажать шепот с кляпом во рту",
         type: 4,
         loggable: !1,
         shortDescription: "так же, как обычные сообщения",
