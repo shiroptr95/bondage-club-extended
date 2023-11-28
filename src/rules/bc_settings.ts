@@ -16,7 +16,7 @@ export function initRules_bc_settings() {
 		});
 	}
 
-	function settingHelper(setting: string, defaultLimit: ConditionsLimit, shortDescription: string = "Существующая настройка BC"): RuleDisplayDefinition {
+	function settingHelper(setting: string, defaultLimit: ConditionsLimit, shortDescription: string = "настройка BC"): RuleDisplayDefinition {
 		return {
 			name: `Принудительно '${setting}'`,
 			type: RuleType.Setting,
