@@ -390,7 +390,7 @@ export function initRules_bc_blocks() {
 		name: "Запретить использование гардероба на себе",
 		type: RuleType.Block,
 		shortDescription: "PLAYER_NAME с использованием PLAYER_NAME's гардероб",
-		longDescription: "Это правило запрещает PLAYER_NAME чтобы получить доступ к ее собственному гардеробу. (Другие все еще могут нормально переодеться.)",
+		longDescription: "Это правило запрещает PLAYER_NAME доступ к собственному гардеробу. (Другие все еще могут нормально переодеться.)",
 		keywords: ["controling", "limiting", "clothings", "preventing", "changing"],
 		triggerTexts: {
 			infoBeep: "Вам не разрешено менять то, что вы носите!",
