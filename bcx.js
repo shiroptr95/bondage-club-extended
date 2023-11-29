@@ -12150,7 +12150,7 @@ function By(e, t) {
     if (t && !kv("rules", e, t))
         return !1;
     const n = Ay(e);
-    return Dv("rules", e) && t && (Mp("rule_change", kp.plaintext, `${t} removed the rule: ${n.name}`), t.isPlayer() || NA(`${t.toNicknamedString()} removed your rule "${n.name}"`)),
+    return Dv("rules", e) && t && (Mp("rule_change", kp.plaintext, `${t} removed the rule: ${n.name}`), t.isPlayer() || NA(`${t.toNicknamedString()} удалил ваше правило: "${n.name}"`)),
     !0
 }
 class Sy {
