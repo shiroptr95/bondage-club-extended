@@ -746,9 +746,9 @@ export function RulesCreate(rule: BCX_Rule, character: ChatroomCharacter | null)
 		}
 		ConditionsSetCondition("rules", rule, ruleData, character);
 		if (character) {
-			logMessage("rule_change", LogEntryType.plaintext, `${character} added a new rule: ${definition.name}`);
+			logMessage("rule_change", LogEntryType.plaintext, `${character} добавил новое правило: ${definition.name}`);
 			if (!character.isPlayer()) {
-				ChatRoomSendLocal(`${character.toNicknamedString()} gave you a new rule: "${definition.name}"`);
+				ChatRoomSendLocal(`${character.toNicknamedString()} дал вам новое правило: "${definition.name}"`);
 			}
 		}
 	}
@@ -766,9 +766,9 @@ export function RulesDelete(rule: BCX_Rule, character: ChatroomCharacter | null)
 	const display = RulesGetDisplayDefinition(rule);
 
 	if (ConditionsRemoveCondition("rules", rule) && character) {
-		logMessage("rule_change", LogEntryType.plaintext, `${character} removed the rule: ${display.name}`);
+		logMessage("rule_change", LogEntryType.plaintext, `${character} удалил правило: ${display.name}`);
 		if (!character.isPlayer()) {
-			ChatRoomSendLocal(`${character.toNicknamedString()} removed your rule "${display.name}"`);
+			ChatRoomSendLocal(`${character.toNicknamedString()} удалил ваше правило "${display.name}"`);
 		}
 	}
 

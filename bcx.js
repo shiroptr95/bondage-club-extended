@@ -22120,7 +22120,7 @@ qw(new class extends N {
                 if (r.internalDataDefault && (o.internalData = r.internalDataDefault(), !(null === (n = r.internalDataValidate) || void 0 === n ? void 0 : n.call(r, o.internalData))))
                     throw new Error(`Failed to create valid internal data for rule '${e}'`);
                 wv("rules", e, o, t),
-                t && (Mp("rule_change", kp.plaintext, `${t} added a new rule: ${r.name}`), t.isPlayer() || NA(`${t.toNicknamedString()} gave you a new rule: "${r.name}"`))
+                t && (Mp("rule_change", kp.plaintext, `${t} добавил новое правило: ${r.name}`), t.isPlayer() || NA(`${t.toNicknamedString()} дал вам новое правило: "${r.name}"`))
             }
             return !0
         }
