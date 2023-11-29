@@ -873,7 +873,7 @@ export function initRules_bc_alter() {
 			minimumRole: {
 				type: "roleSelector",
 				default: AccessLevel.owner,
-				description: "Минимальная роль, которую разрешено вести:",
+				description: "Минимальная роль, которой разрешено вести:",
 				Y: 320,
 			},
 		},

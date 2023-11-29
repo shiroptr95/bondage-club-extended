@@ -9676,21 +9676,21 @@ const Tp = {
     relationships_change: Dp.none
 },
 Op = {
-    log_config_change: "Log changes in logging configuration",
-    log_deleted: "Log deleted log entries",
-    praise: "Log praising or scolding behavior",
-    user_note: "Ability to see attached notes",
-    entered_public_room: "Log which public rooms are entered",
-    entered_private_room: "Log which private rooms are entered",
-    had_orgasm: "Log each single orgasm",
-    permission_change: "Log changes in permission settings",
-    curse_change: "Log each application, removal or change of curses",
-    curse_trigger: "Log every time a triggered curse reapplies an item",
-    rule_change: "Log each addition, removal or change of rules",
-    rule_trigger: "Log every rule violation",
-    command_change: "Log each change of commands limit",
-    authority_roles_change: "Log getting or losing a BCX owner/mistress",
-    relationships_change: "Log each change in relationships module"
+    log_config_change: "Зафиксируйте изменения в конфигурации протоколирования",
+    log_deleted: "Журнал удаленных записей журнала",
+    praise: "Записывайте в журнал поведение, за которое вас хвалят или ругают",
+    user_note: "Возможность просматривать прикрепленные заметки",
+    entered_public_room: "Ведите журнал, в который заходят в общественные комнаты",
+    entered_private_room: "Ведите журнал, в который заносятся личные комнаты",
+    had_orgasm: "Записывайте каждый оргазм",
+    permission_change: "Ведите журнал изменений в настройках разрешений",
+    curse_change: "Записывайте в журнал каждое применение, удаление или изменение проклятий",
+    curse_trigger: "Ведите журнал каждый раз, когда сработавшее проклятие повторно применяет элемент",
+    rule_change: "Регистрируйте каждое добавление, удаление или изменение правил",
+    rule_trigger: "Регистрируйте каждое нарушение правил",
+    command_change: "Записывайте в журнал каждое изменение лимита команд",
+    authority_roles_change: "Запись в журнале о получении или потере BCX owner/mistress",
+    relationships_change: "Зафиксируйте каждое изменение в модуле отношений"
 },
 $p = {
     [Dp.everyone]: "[ERROR]",
@@ -10423,7 +10423,7 @@ function Vp() {
                 type: "roleSelector",
             default:
                 Zw.owner,
-                description: "Минимальная роль, которую разрешено вести:",
+                description: "Минимальная роль, которой разрешено вести:",
                 Y: 320
             }
         },
