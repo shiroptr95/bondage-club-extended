@@ -22700,7 +22700,7 @@ qw(new class extends N {
                         type: "stringList",
                     default:
                         [],
-                        description: "Only joining rooms with these names is allowed:"
+                        description: "Разрешается присоединяться только к комнатам с этими именами:"
                     }
                 },
                 load(t) {
@@ -22746,7 +22746,7 @@ qw(new class extends N {
                         type: "roleSelector",
                     default:
                         Zw.mistress,
-                        description: "Minimum role preventing room leaving:",
+                        description: "Минимальная роль, препятствующая выходу из комнаты:",
                         Y: 320
                     }
                 },
@@ -22881,7 +22881,7 @@ qw(new class extends N {
                         type: "roleSelector",
                     default:
                         Zw.mistress,
-                        description: "Minimum role forbidden to blacklist:",
+                        description: "Минимальная роль, запрещенная для черного списка:",
                         Y: 320
                     }
                 },
