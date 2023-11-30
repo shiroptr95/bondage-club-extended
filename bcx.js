@@ -15041,7 +15041,7 @@ function CC(e, t) {
         const o = AssetGroup.find((t => t.Name === e));
         if (t && o) {
             const i = r.data && (null === (n = AssetGet(Player.AssetFamily, e, r.data.Name)) || void 0 === n ? void 0 : n.Description);
-            i ? (Mp("curse_change", kp.plaintext, `${t} lifted the curse on ${Player.Name}'s ${i}`), t.isPlayer() || NA(`${t.toNicknamedString()} lifted the curse on your ${i}`)) : (Mp("curse_change", kp.plaintext, `${t} lifted the curse on ${Player.Name}'s body part (${MA(o)})`), t.isPlayer() || NA(`${t.toNicknamedString()} lifted the curse on part of your body (${MA(o)})`))
+            i ? (Mp("curse_change", kp.plaintext, `${t} снял проклятие с ${Player.Name}'s ${i}`), t.isPlayer() || NA(`${t.toNicknamedString()} снял проклятие с твоего ${i}`)) : (Mp("curse_change", kp.plaintext, `${t} снял проклятие с ${Player.Name}'s часть тела (${MA(o)})`), t.isPlayer() || NA(`${t.toNicknamedString()} снял проклятие с части твоего тела (${MA(o)})`))
         }
         return Dv("curses", e),
         !0
@@ -15049,7 +15049,7 @@ function CC(e, t) {
     return !1
 }
 function wC(e) {
-    return !!Yw(C.Curses) && (!!(!e || eA("curses_normal", e) && eA("curses_limited", e)) && (e && (Mp("curse_change", kp.plaintext, `${e} lifted all curse on ${Player.Name}`), e.isPlayer() || NA(`${e.toNicknamedString()} lifted all curses on you`)), Dv("curses", I(pv("curses").conditions)), !0))
+    return !!Yw(C.Curses) && (!!(!e || eA("curses_normal", e) && eA("curses_limited", e)) && (e && (Mp("curse_change", kp.plaintext, `${e} снял все проклятия ${Player.Name}`), e.isPlayer() || NA(`${e.toNicknamedString()} снял с тебя все проклятия`)), Dv("curses", I(pv("curses").conditions)), !0))
 }
 class AC extends br {
     constructor(e, t, n, r) {

@@ -219,14 +219,14 @@ export function curseLift(Group: AssetGroupName, character: ChatroomCharacter | 
 		if (character && group) {
 			const itemName = curse.data && AssetGet(Player.AssetFamily, Group, curse.data.Name)?.Description;
 			if (itemName) {
-				logMessage("curse_change", LogEntryType.plaintext, `${character} lifted the curse on ${Player.Name}'s ${itemName}`);
+				logMessage("curse_change", LogEntryType.plaintext, `${character} снял проклятие с ${Player.Name}'s ${itemName}`);
 				if (!character.isPlayer()) {
-					ChatRoomSendLocal(`${character.toNicknamedString()} lifted the curse on your ${itemName}`);
+					ChatRoomSendLocal(`${character.toNicknamedString()} снял проклятие с твоего ${itemName}`);
 				}
 			} else {
-				logMessage("curse_change", LogEntryType.plaintext, `${character} lifted the curse on ${Player.Name}'s body part (${getVisibleGroupName(group)})`);
+				logMessage("curse_change", LogEntryType.plaintext, `${character} снял проклятие с ${Player.Name}'s часть тела (${getVisibleGroupName(group)})`);
 				if (!character.isPlayer()) {
-					ChatRoomSendLocal(`${character.toNicknamedString()} lifted the curse on part of your body (${getVisibleGroupName(group)})`);
+					ChatRoomSendLocal(`${character.toNicknamedString()} снял проклятие с части твоего тела (${getVisibleGroupName(group)})`);
 				}
 			}
 		}
@@ -244,9 +244,9 @@ export function curseLiftAll(character: ChatroomCharacter | null): boolean {
 		return false;
 
 	if (character) {
-		logMessage("curse_change", LogEntryType.plaintext, `${character} lifted all curse on ${Player.Name}`);
+		logMessage("curse_change", LogEntryType.plaintext, `${character} снял все проклятия ${Player.Name}`);
 		if (!character.isPlayer()) {
-			ChatRoomSendLocal(`${character.toNicknamedString()} lifted all curses on you`);
+			ChatRoomSendLocal(`${character.toNicknamedString()} снял с тебя все проклятия`);
 		}
 	}
 	ConditionsRemoveCondition("curses", typedObjectAssumedKeys(ConditionsGetCategoryData("curses").conditions));
