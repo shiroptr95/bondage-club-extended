@@ -15764,7 +15764,7 @@ class BC extends br {
         MainCanvas.textAlign = "center";
         const e = this.conditionCategoryData.access_normal && this.conditionCategoryData.access_limited;
         DrawButton(678, 820, 170, 50, "", e ? "White" : "#ddd", "", e ? `Включить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
-        DrawTextFit("Activate all", 765, 845, 145, "Black", ""),
+        DrawTextFit("Вкл. всё", 765, 845, 145, "Black", ""),
         DrawButton(678, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Активировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("A. only", 741.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
@@ -15775,7 +15775,7 @@ class BC extends br {
             Height: 44,
             Width: 44
         }),
-        DrawButton(870, 820, 170, 50, "Deactivate all", e ? "White" : "#ddd", "", e ? `Выключить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
+        DrawButton(870, 820, 170, 50, "Выкл. всё", e ? "White" : "#ddd", "", e ? `Выключить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawButton(870, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Деактивировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("D. only", 933.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
@@ -15787,7 +15787,7 @@ class BC extends br {
             Width: 44
         }),
         DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "", this.conditionCategoryData.access_configure ? `Существующие ${this.conditionCategory} установленные в глобальной конфигурации ${this.conditionCategory}, также изменяются` : "У вас нет разрешения на использование этого", !this.conditionCategoryData.access_configure),
-        DrawTextFit(`Изменение конфигурации глобального ${this.conditionCategory}`, 1358, 865, 400, "Black", ""),
+        DrawTextFit(`Изменить глобальную конфигурацию ${this.conditionCategory}`, 1358, 865, 400, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1113, 864, 34, 34, 360, 0, 360),
         MainCanvas.fillStyle = "#0052A3",
