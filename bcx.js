@@ -15160,7 +15160,7 @@ class AC extends br {
         c;
         MainCanvas.textAlign = "left";
         const u = null === (e = this.conditionData) || void 0 === e ? void 0 : e.addedBy;
-        if (DrawText(`- ${this.headerText()} -`, 180, 108, "Black", "Gray"), void 0 !== u && (MainCanvas.save(), MainCanvas.font = CommonGetFont(26), DrawText(`Added by: ${$A(u, "[unknown name]")} (${u})`, 205, 143, "#444"), MainCanvas.restore()), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData || null === this.conditionData)
+        if (DrawText(`- ${this.headerText()} -`, 180, 108, "Black", "Gray"), void 0 !== u && (MainCanvas.save(), MainCanvas.font = CommonGetFont(26), DrawText(`Добавил: ${$A(u, "[unknown name]")} (${u})`, 205, 143, "#444"), MainCanvas.restore()), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData || null === this.conditionData)
             return MainCanvas.textAlign = "center", this.failed ? xw(`get data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"), !0;
         this.changes && null !== this.changes.timer && (this.changes.timer < Date.now() ? (this.changes.timer = null, this.changes.timerRemove = !1, this.changes.active = !this.changes.active) : this.changes.active || (this.changes.timerRemove = !1));
         const d = null !== (t = this.changes) && void 0 !== t ? t : this.conditionData,
@@ -15181,7 +15181,7 @@ class AC extends br {
         MainCanvas.lineTo(960, 540),
         MainCanvas.stroke(),
         MainCanvas.textAlign = "left",
-        DrawCheckbox(125, 180, 64, 64, `This ${this.conditionCategory.slice(0, -1)} is active and can trigger`, d.active, !f),
+        DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активен и может сработать`, d.active, !f),
         m && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(526, 546, 418, 68), MainCanvas.fillRect(120, 615, 74, 74), MainCanvas.fillRect(120, 695, 74, 74), MainCanvas.fillRect(120, 775, 74, 74), MainCanvas.fillRect(120, 855, 74, 74)),
         MainCanvas.textAlign = "center",
         y = null === d.timer ? "Таймер выключен" : `${d.active ? "Deactivates" : "Activates"} in: ${F(d.timer - Date.now())}`,
@@ -15755,17 +15755,17 @@ class BC extends br {
             this.drawEntryExtra(o, r, n),
             n.access && DrawButton(o + 740, r, 60, 60, "X", "White", "", this.removeLabel),
             MouseIn(o + 470, r, 60, 60) && DrawHoverElements.push((() => {
-                    DrawButtonHover(o + 470, r, 60, 60, `Change this ${this.conditionCategorySingular}'s configuration`)
+                    DrawButtonHover(o + 470, r, 60, 60, `Измените конфигурацию ${this.conditionCategorySingular}'s`)
                 })),
             MouseIn(o + 531, r, 78, 60) && DrawHoverElements.push((() => {
-                    DrawButtonHover(o + 531, r, 78, 60, `Remaining duration of the ${this.conditionCategorySingular}`)
+                    DrawButtonHover(o + 531, r, 78, 60, `Оставшаяся продолжительность ${this.conditionCategorySingular}`)
                 }))
         }
         MainCanvas.textAlign = "center";
         const e = this.conditionCategoryData.access_normal && this.conditionCategoryData.access_limited;
-        DrawButton(678, 820, 170, 50, "", e ? "White" : "#ddd", "", e ? `Switch all added ${this.conditionCategory} to active` : "You have no permission to use this", !e),
+        DrawButton(678, 820, 170, 50, "", e ? "White" : "#ddd", "", e ? `Включить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("Activate all", 765, 845, 145, "Black", ""),
-        DrawButton(678, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Activate only global config ${this.conditionCategory}` : "You have no permission to use this", !e),
+        DrawButton(678, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Активировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("A. only", 741.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(817, 908, 21, 21, 360, 0, 360),
@@ -15775,8 +15775,8 @@ class BC extends br {
             Height: 44,
             Width: 44
         }),
-        DrawButton(870, 820, 170, 50, "Deactivate all", e ? "White" : "#ddd", "", e ? `Switch all added ${this.conditionCategory} to inactive` : "You have no permission to use this", !e),
-        DrawButton(870, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Deactivate only global config ${this.conditionCategory}` : "You have no permission to use this", !e),
+        DrawButton(870, 820, 170, 50, "Deactivate all", e ? "White" : "#ddd", "", e ? `Выключить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
+        DrawButton(870, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Деактивировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("D. only", 933.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1010, 908, 21, 21, 360, 0, 360),
@@ -15786,8 +15786,8 @@ class BC extends br {
             Height: 44,
             Width: 44
         }),
-        DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "", this.conditionCategoryData.access_configure ? `Existing ${this.conditionCategory} set to global ${this.conditionCategory} config are also changed` : "You have no permission to use this", !this.conditionCategoryData.access_configure),
-        DrawTextFit(`Change global ${this.conditionCategory} config`, 1358, 865, 400, "Black", ""),
+        DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "", this.conditionCategoryData.access_configure ? `Существующие ${this.conditionCategory} установленные в глобальной конфигурации ${this.conditionCategory}, также изменяются` : "У вас нет разрешения на использование этого", !this.conditionCategoryData.access_configure),
+        DrawTextFit(`Изменение конфигурации глобального ${this.conditionCategory}`, 1358, 865, 400, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1113, 864, 34, 34, 360, 0, 360),
         MainCanvas.fillStyle = "#0052A3",
@@ -15809,7 +15809,7 @@ class BC extends br {
         DrawButton(1683, 82, 64, 64, "", "White"),
         DrawTextFit("A-Z", 1715, 115, 60, _C ? "black" : "#bbb");
         const t = Math.ceil(this.conditionEntries.length / EC);
-        return DrawBackNextButton(1605, 820, 300, 90, `Page ${this.page + 1} / ${Math.max(t, 1)}`, "White", "", (() => ""), (() => "")),
+        return DrawBackNextButton(1605, 820, 300, 90, `Стр. ${this.page + 1} / ${Math.max(t, 1)}`, "White", "", (() => ""), (() => "")),
         !1
     }
     Click() {
@@ -16466,7 +16466,7 @@ class WC extends BC {
                 })))
     }
     headerText() {
-        return `Rules: All active rules on ${this.character.Name}`
+        return `Правила: Все активные правила для ${this.character.Name}`
     }
     loadCondition(e, t) {
         const n = Ay(e);

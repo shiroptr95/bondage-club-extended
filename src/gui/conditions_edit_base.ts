@@ -173,7 +173,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		if (addedBy !== undefined) {
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(26);
-			DrawText(`Added by: ${getCharacterName(addedBy, "[unknown name]")} (${addedBy})`, 205, 143, "#444");
+			DrawText(`Добавил: ${getCharacterName(addedBy, "[unknown name]")} (${addedBy})`, 205, 143, "#444");
 			MainCanvas.restore();
 		}
 		MainCanvas.textAlign = "center";
@@ -222,7 +222,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 
 		// on-off toggle
 		MainCanvas.textAlign = "left";
-		DrawCheckbox(125, 180, 64, 64, `This ${this.conditionCategory.slice(0, -1)} is active and can trigger`, data.active, !access);
+		DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активен и может сработать`, data.active, !access);
 
 		// global-category-configuration-is-active highlighting
 		if (useGlobalCategorySetting) {

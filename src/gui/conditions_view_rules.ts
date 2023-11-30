@@ -85,7 +85,7 @@ export class GuiConditionViewRules extends GuiConditionView<"rules", RuleEntry> 
 	}
 
 	protected headerText(): string {
-		return `Rules: All active rules on ${this.character.Name}`;
+		return `Правила: Все активные правила для ${this.character.Name}`;
 	}
 
 	protected loadCondition(condition: ConditionsCategoryKeys["rules"], data: ConditionsConditionPublicData<"rules">): [string, RuleEntry] | null {
