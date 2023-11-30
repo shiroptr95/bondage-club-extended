@@ -15236,7 +15236,7 @@ class AC extends br {
         MainCanvas.rect(1190, 830, 720, 104),
         MainCanvas.strokeStyle = "#0052A3",
         MainCanvas.stroke(),
-        DrawCheckbox(1210, 850, 64, 64, `Set to global ${this.conditionCategory} configuration`, m, !f),
+        DrawCheckbox(1210, 850, 64, 64, `Использовать глобальную конфигурацию ${this.conditionCategory}`, m, !f),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1910, 830, 22, 22, 360, 0, 360),
         MainCanvas.fillStyle = "#0052A3",
@@ -16438,7 +16438,7 @@ class WC extends BC {
         this.removeLabel = "Remove rule"
     }
     Run() {
-        return !(!super.Run() && null !== this.conditionCategoryData) || (DrawButton(120, 820, 384, 90, "Add new rule", "White", "", "...from the list of yet unestablished rules"), this.showHelp && FA(Ar[gr.ConditionsViewRules]), !1)
+        return !(!super.Run() && null !== this.conditionCategoryData) || (DrawButton(120, 820, 384, 90, "Добавить новое правило", "White", "", "...из списка еще не установленных правил"), this.showHelp && FA(Ar[gr.ConditionsViewRules]), !1)
     }
     Click() {
         return !(!super.Click() && null !== this.conditionCategoryData) || !!MouseIn(120, 820, 384, 90) && (sw(new $C(this.character)), !0)
@@ -22622,7 +22622,7 @@ qw(new class extends N {
                         type: "poseSelect",
                     default:
                         [],
-                        description: "Mark poses as being allowed or forbidden:"
+                        description: "Отметьте позы как разрешенные или запрещенные:"
                     }
                 },
                 load(e) {

@@ -26,8 +26,8 @@ export class GuiConditionViewRules extends GuiConditionView<"rules", RuleEntry> 
 		if (super.Run() || this.conditionCategoryData === null)
 			return true;
 
-		DrawButton(120, 820, 384, 90, "Add new rule", "White", "",
-			"...from the list of yet unestablished rules");
+		DrawButton(120, 820, 384, 90, "Добавить новое правило", "White", "",
+			"...из списка еще не установленных правил");
 
 		// help text
 		if (this.showHelp) {

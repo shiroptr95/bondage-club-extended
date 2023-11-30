@@ -352,7 +352,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 
 		////// global category configuration toggle
 		DrawEmptyRect(1190, 830, 720, 104, "#0052A3");
-		DrawCheckbox(1210, 850, 64, 64, `Set to global ${this.conditionCategory} configuration`, useGlobalCategorySetting, !access);
+		DrawCheckbox(1210, 850, 64, 64, `Использовать глобальную конфигурацию ${this.conditionCategory}`, useGlobalCategorySetting, !access);
 		DrawCircle(1877 + 33, 800 + 30, 22, 0, "", "#0052A3");
 		DrawImageEx("Icons/General.png", 1877 + 10, 800 + 7, {
 			Height: 46,
