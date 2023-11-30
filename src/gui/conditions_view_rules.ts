@@ -66,7 +66,7 @@ export class GuiConditionViewRules extends GuiConditionView<"rules", RuleEntry> 
 			});
 			if (MouseIn(X + 610, Y + 6, 44, 44)) {
 				DrawHoverElements.push(() => {
-					DrawButtonHover(X + 610, Y + 6, 44, 44, entry.data.data.enforce ? "Rule will be enforced" : "Rule will not be enforced");
+					DrawButtonHover(X + 610, Y + 6, 44, 44, entry.data.data.enforce ? "Rule will be enforced" : "Правило не будет применяться");
 				});
 			}
 		}
@@ -78,7 +78,7 @@ export class GuiConditionViewRules extends GuiConditionView<"rules", RuleEntry> 
 			});
 			if (MouseIn(X + 660, Y + 6, 44, 44)) {
 				DrawHoverElements.push(() => {
-					DrawButtonHover(X + 660, Y + 6, 44, 44, entry.data.data.log ? "Rule violations will be logged" : "Rule violations will not be logged");
+					DrawButtonHover(X + 660, Y + 6, 44, 44, entry.data.data.log ? "Rule violations will be logged" : "Нарушения правил не будут регистрироваться");
 				});
 			}
 		}

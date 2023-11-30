@@ -16455,14 +16455,14 @@ class WC extends BC {
                 Width: 40,
                 Alpha: n.data.data.enforce ? 1 : .2
             }), MouseIn(e + 610, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 610, t + 6, 44, 44, n.data.data.enforce ? "Rule will be enforced" : "Rule will not be enforced")
+                    DrawButtonHover(e + 610, t + 6, 44, 44, n.data.data.enforce ? "Rule will be enforced" : "Правило не будет применяться")
                 }))),
         !1 !== n.extra.definition.loggable && (LA("Icons/Title.png", e + 660, t + 10, {
                 Height: 40,
                 Width: 40,
                 Alpha: n.data.data.log ? 1 : .2
             }), MouseIn(e + 660, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 660, t + 6, 44, 44, n.data.data.log ? "Rule violations will be logged" : "Rule violations will not be logged")
+                    DrawButtonHover(e + 660, t + 6, 44, 44, n.data.data.log ? "Rule violations will be logged" : "Нарушения правил не будут регистрироваться")
                 })))
     }
     headerText() {
