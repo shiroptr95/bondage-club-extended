@@ -4,7 +4,7 @@
 
 # Оригинальный проект
 
-https://jomshir98.github.io/bondage-club-extended/ от Jomshir98, один из программистов Bondage Club.
+[https://jomshir98.github.io/bondage-club-extended/](https://github.com/Jomshir98/bondage-club-extended/tree/master) от Jomshir98, один из программистов Bondage Club.
 
 # Описание проекта
 
