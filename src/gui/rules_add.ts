@@ -146,8 +146,8 @@ export class GuiRulesAdd extends GuiSubscreen {
 			this.rulesData.access_changeLimits ? "White" : "#ddd",
 			this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png",
 			this.rulesData.access_changeLimits ?
-				(this.permissionMode ? "Leave permission mode" : "Edit rules permissions") :
-				"You have no permission to change limits",
+				(this.permissionMode ? "Выйти из режима разрешений" : "Разрешения на изменение правил") :
+				"У вас нет разрешения на изменение лимитов.",
 			!this.rulesData.access_changeLimits
 		);
 

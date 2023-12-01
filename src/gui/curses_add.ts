@@ -91,8 +91,8 @@ export class GuiCursesAdd extends GuiSubscreen {
 			this.curseData.access_changeLimits ? "White" : "#ddd",
 			this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png",
 			this.curseData.access_changeLimits ?
-				(this.permissionMode ? "Leave permission mode" : "Edit curse slot permissions") :
-				"You have no permission to change limits",
+				(this.permissionMode ? "Выйти из режима разрешений" : "Изменить разрешения слота проклятия") :
+				"У вас нет разрешения на изменение лимитов.",
 			!this.curseData.access_changeLimits
 		);
 
@@ -133,9 +133,9 @@ export class GuiCursesAdd extends GuiSubscreen {
 					color = itemIsCursed ? "#88c" :
 						!allowCurse ? "#ccc" :
 							(currentItem ? "Gold" : "White");
-					text = itemIsCursed ? "Already cursed" :
-						!allowCurse ? "You have no permission to curse this" :
-							(currentItem ? currentItem.Asset.Description : "Nothing");
+					text = itemIsCursed ? "Уже проклят" :
+						!allowCurse ? "У вас нет разрешения проклинать это" :
+							(currentItem ? currentItem.Asset.Description : "Ничего");
 				}
 
 				DrawButton(xOffset + 106 + 281 * column, 240 + 69 * row, 265, 54, getVisibleGroupName(group),

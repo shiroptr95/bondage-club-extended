@@ -15908,7 +15908,7 @@ class LC extends br {
         var e;
         if (MainCanvas.textAlign = "left", DrawText(`- Curses: Place new curses on ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.curseData)
             return void(this.failed ? xw(`get curse data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
-        DrawButton(1815, 305, 90, 90, "", this.curseData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.curseData.access_changeLimits ? this.permissionMode ? "Leave permission mode" : "Edit curse slot permissions" : "You have no permission to change limits", !this.curseData.access_changeLimits);
+        DrawButton(1815, 305, 90, 90, "", this.curseData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.curseData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Изменить разрешения слота проклятия" : "У вас нет разрешения на изменение лимитов.", !this.curseData.access_changeLimits);
         for (let t = 0; t < 2; t++) {
             const n = 2 * this.page + t;
             if (n >= SC.length)
@@ -15932,7 +15932,7 @@ class LC extends br {
                 u = [this.curseData.access_normal, this.curseData.access_limited, !1][c];
                 let d,
                 h;
-                this.permissionMode ? (d = ["#50ff56", "#f6fe78", "#ffa7a7"][c], h = ["Normal", "Limited", "Blocked"][c]) : (d = l ? "#88c" : u ? s ? "Gold" : "White" : "#ccc", h = l ? "Already cursed" : u ? s ? s.Asset.Description : "Nothing" : "You have no permission to curse this"),
+                this.permissionMode ? (d = ["#50ff56", "#f6fe78", "#ffa7a7"][c], h = ["Normal", "Limited", "Blocked"][c]) : (d = l ? "#88c" : u ? s ? "Gold" : "White" : "#ccc", h = l ? "Уже проклят" : u ? s ? s.Asset.Description : "Ничего" : "У вас нет разрешения проклинать это"),
                 DrawButton(o + 106 + 281 * r, 240 + 69 * n, 265, 54, MA(a), d, void 0, h, l || !u || this.permissionMode)
             }
         }
@@ -16299,7 +16299,7 @@ class $C extends br {
         var e;
         if (MainCanvas.textAlign = "left", DrawText(`- Rules: Create new rules for ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.rulesData)
             return void(this.failed ? xw(`get rules data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
-        DrawButton(1815, 305, 90, 90, "", this.rulesData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.rulesData.access_changeLimits ? this.permissionMode ? "Leave permission mode" : "Edit rules permissions" : "You have no permission to change limits", !this.rulesData.access_changeLimits),
+        DrawButton(1815, 305, 90, 90, "", this.rulesData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.rulesData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Разрешения на изменение правил" : "У вас нет разрешения на изменение лимитов.", !this.rulesData.access_changeLimits),
         MainCanvas.textAlign = "left",
         DrawText("Filter:", 130, 215, "Black"),
         Y(this.filterInput, 550, 210, 600, 64),
@@ -16984,7 +16984,7 @@ class rw extends br {
         var e;
         if (MainCanvas.textAlign = "left", DrawText(`- Commands: List all commands for ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.commandsData)
             return void(this.failed ? xw(`get commands data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
-        DrawButton(1815, 305, 90, 90, "", this.commandsData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.commandsData.access_changeLimits ? this.permissionMode ? "Leave permission mode" : "Edit commands permissions" : "You have no permission to change limits", !this.commandsData.access_changeLimits),
+        DrawButton(1815, 305, 90, 90, "", this.commandsData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.commandsData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Изменение разрешений для команд" : "У вас нет разрешения на изменение лимитов.", !this.commandsData.access_changeLimits),
         MainCanvas.textAlign = "left",
         DrawText("Filter:", 130, 215, "Black"),
         Y(this.filterInput, 550, 210, 600, 64),
@@ -20941,7 +20941,7 @@ qw(new class extends N {
                     if ("string" == typeof r)
                         return n(r);
                     if (void 0 !== i[r.Name])
-                        return n("This group or item is already cursed");
+                        return n("Эта группа или предмет уже прокляты");
                     n(vC(r.Name, null, t) ? "Ok." : Ry)
                 } else if ("curseworn" === o || "curseall" === o) {
                     const r = (e[1] || "").toLocaleLowerCase();
@@ -20953,7 +20953,7 @@ qw(new class extends N {
                     if ("string" == typeof r)
                         return n(r);
                     if (void 0 === i[r.Name])
-                        return n("This group or item is not cursed");
+                        return n("Эта группа или предмет не прокляты");
                     n(CC(r.Name, t) ? "Ok." : Ry)
                 } else if ("liftall" === o)
                     n(wC(t) ? "Ok." : Ry);
@@ -20963,12 +20963,12 @@ qw(new class extends N {
                         return n(r);
                     const o = i[r.Name];
                     if (!o)
-                        return n("This group or item is not cursed");
+                        return n("Эта группа или предмет не прокляты");
                     const a = (e[2] || "").toLocaleLowerCase();
                     if ("yes" !== a && "no" !== a)
-                        return n("Expected yes or no");
+                        return n("Ожидаемое да или нет");
                     if (null == o.data)
-                        return n("Empty groups cannot have configuration cursed");
+                        return n("Пустые группы не могут иметь проклятую конфигурацию");
                     const s = AssetGet(Player.AssetFamily, r.Name, o.data.Name);
                     if (s && "yes" === a && !pC(s))
                         return n("This item cannot have configuration cursed");

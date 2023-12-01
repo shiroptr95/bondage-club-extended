@@ -141,8 +141,8 @@ export class GuiCommandsModule extends GuiSubscreen {
 			this.commandsData.access_changeLimits ? "White" : "#ddd",
 			this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png",
 			this.commandsData.access_changeLimits ?
-				(this.permissionMode ? "Leave permission mode" : "Edit commands permissions") :
-				"You have no permission to change limits",
+				(this.permissionMode ? "Выйти из режима разрешений" : "Изменение разрешений для команд") :
+				"У вас нет разрешения на изменение лимитов.",
 			!this.commandsData.access_changeLimits
 		);
 
