@@ -22257,46 +22257,46 @@ qw(new class extends N {
                         if (!ao(null === (o = r.data.customData) || void 0 === o ? void 0 : o[e], null === (i = n.data.customData) || void 0 === i ? void 0 : i[e])) {
                             let e = t.description;
                             e.includes(":") && (e = e.slice(0, e.lastIndexOf(":"))),
-                            y.push(`${y.length > 0 ? "and " : ""}the value of the setting '${e}'`)
+                            y.push(`${y.length > 0 ? "and " : ""}значение настройки '${e}'`)
                         }
-                if (y.length > 0 && Mp("rule_change", kp.plaintext, `${t} changed the ${y.join(", ")} of ${Player.Name}'s '${d}' rule`), !t.isPlayer()) {
-                    if (h && NA(`${t.toNicknamedString()} ${n.active ? "reactivated" : "deactivated"} the '${d}' rule`, void 0, t.MemberNumber), n.timer !== r.timer && (null === n.timer ? NA(`${t.toNicknamedString()} disabled the timer of the '${d}' rule`, void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} changed the remaining time of the timer of the '${d}' rule to ${F(n.timer - Date.now())}`, void 0, t.MemberNumber)), null !== n.timer && n.timerRemove !== r.timerRemove && NA(`${t.toNicknamedString()} changed the timer behavior of the '${d}' rule to ${n.timerRemove ? "remove" : "disable"} the rule when time runs out`, void 0, t.MemberNumber), f)
+                if (y.length > 0 && Mp("rule_change", kp.plaintext, `${t} изменил ${y.join(", ")} из ${Player.Name}'s '${d}' правило`), !t.isPlayer()) {
+                    if (h && NA(`${t.toNicknamedString()} ${n.active ? "реактивирован" : "деактивирован"} the '${d}' rule`, void 0, t.MemberNumber), n.timer !== r.timer && (null === n.timer ? NA(`${t.toNicknamedString()} отключил таймер '${d}' правило`, void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} изменил оставшееся время таймера '${d}' правило ${F(n.timer - Date.now())}`, void 0, t.MemberNumber)), null !== n.timer && n.timerRemove !== r.timerRemove && NA(`${t.toNicknamedString()} изменено поведение таймера '${d}' правило ${n.timerRemove ? "удалить" : "выключить"} правило, когда время истекает`, void 0, t.MemberNumber), f)
                         if (null === n.requirements)
-                            NA(`${t.toNicknamedString()} set the triggers of '${d}' rule to the global rules configuration`, void 0, t.MemberNumber);
+                            NA(`${t.toNicknamedString()} установить триггеры '${d}' правило в конфигурацию глобальных правил`, void 0, t.MemberNumber);
                         else {
                             const e = [],
                             r = n.requirements;
-                            if (r.room && e.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`), r.roomName && e.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`), r.role) {
+                            if (r.room && e.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} room`), r.roomName && e.push(`Когда ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`), r.role) {
                                 const t = O(Zw[r.role.role]) + (r.role.role !== Zw.clubowner ? " ↑" : "");
-                                e.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${t}'`)
+                                e.push(`Когда ${r.role.inverted ? "не в" : "в"} комната с ролью '${t}'`)
                             }
                             if (r.player) {
                                 const t = $A(r.player.memberNumber, null);
-                                e.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${t ? ` (${t})` : ""}`)
+                                e.push(`Когда ${r.player.inverted ? "не в" : "в"} комната с участником '${r.player.memberNumber}'${t ? ` (${t})` : ""}`)
                             }
-                            e.length > 0 ? NA(`${t.toNicknamedString()} set the '${d}' rule to trigger under following conditions:\n` + e.join("\n"), void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} deactivated all trigger conditions of the '${d}' rule. The rule will now always trigger, while it is active`, void 0, t.MemberNumber)
+                            e.length > 0 ? NA(`${t.toNicknamedString()} установить '${d}' правило срабатывает при следующих условиях:\n` + e.join("\n"), void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} деактивированы все триггерные условия '${d}' правило. Правило теперь будет срабатывать всегда, пока оно активно.`, void 0, t.MemberNumber)
                         }
-                    if (g && NA(`${t.toNicknamedString()} ${n.data.enforce ? "enabled enforcement" : "stopped enforcement"} of the '${d}' rule`, void 0, t.MemberNumber), p && NA(`${t.toNicknamedString()} ${n.data.log ? "enabled logging" : "stopped logging"} of the '${d}' rule`, void 0, t.MemberNumber), u.dataDefinition)
+                    if (g && NA(`${t.toNicknamedString()} ${n.data.enforce ? "enabled enforcement" : "stopped enforcement"} of the '${d}' rule`, void 0, t.MemberNumber), p && NA(`${t.toNicknamedString()} ${n.data.log ? "включить журналирование" : "остановить журналирование"} м '${d}' правило`, void 0, t.MemberNumber), u.dataDefinition)
                         for (const [e, o] of Object.entries(u.dataDefinition))
-                            ao(null === (a = r.data.customData) || void 0 === a ? void 0 : a[e], null === (s = n.data.customData) || void 0 === s ? void 0 : s[e]) || NA(`${t.toNicknamedString()} changed the '${d}' rule's setting '${o.description}' from '${null === (l = r.data.customData) || void 0 === l ? void 0 : l[e]}' to '${null === (c = n.data.customData) || void 0 === c ? void 0 : c[e]}'`, void 0, t.MemberNumber)
+                            ao(null === (a = r.data.customData) || void 0 === a ? void 0 : a[e], null === (s = n.data.customData) || void 0 === s ? void 0 : s[e]) || NA(`${t.toNicknamedString()} изменил '${d}' настройка правила '${o.description}' от '${null === (l = r.data.customData) || void 0 === l ? void 0 : l[e]}' к '${null === (c = n.data.customData) || void 0 === c ? void 0 : c[e]}'`, void 0, t.MemberNumber)
                 }
             },
             logCategoryUpdate: (e, t, n) => {
                 const r = t.timer !== n.timer || t.timerRemove !== n.timerRemove,
                 o = !ao(t.requirements, n.requirements),
                 i = [];
-                if (r && i.push("default timer"), o && i.push("trigger condition"), i.length > 0 && Mp("curse_change", kp.plaintext, `${e} changed the ${i.join(", ")} of ${Player.Name}'s global rules config`), !e.isPlayer() && (t.timer !== n.timer && (null === t.timer ? NA(`${e.toNicknamedString()} removed the default timer of the global rules configuration`, void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} changed the default timer of the global rules configuration to ${F(t.timer)}`, void 0, e.MemberNumber)), null !== t.timer && t.timerRemove !== n.timerRemove && NA(`${e.toNicknamedString()} changed the default timeout behavior of the global rules configuration to ${t.timerRemove ? "removal of rules" : "disabling rules"} when time runs out`, void 0, e.MemberNumber), o)) {
+                if (r && i.push("default timer"), o && i.push("trigger condition"), i.length > 0 && Mp("curse_change", kp.plaintext, `${e} изменил ${i.join(", ")} из ${Player.Name}'s конфигурация глобальных правил`), !e.isPlayer() && (t.timer !== n.timer && (null === t.timer ? NA(`${e.toNicknamedString()} удален таймер по умолчанию из глобальной конфигурации правил`, void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} изменили таймер по умолчанию в глобальной конфигурации правил на ${F(t.timer)}`, void 0, e.MemberNumber)), null !== t.timer && t.timerRemove !== n.timerRemove && NA(`${e.toNicknamedString()} изменили поведение таймера по умолчанию в конфигурации глобальных правил на ${t.timerRemove ? "отмена правил" : "отключение правил"} когда время истекает`, void 0, e.MemberNumber), o)) {
                     const n = [],
                     r = t.requirements;
-                    if (r.room && n.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`), r.roomName && n.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`), r.role) {
+                    if (r.room && n.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комната`), r.roomName && n.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комната с названием '${r.roomName.name}'`), r.role) {
                         const e = O(Zw[r.role.role]) + (r.role.role !== Zw.clubowner ? " ↑" : "");
-                        n.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${e}'`)
+                        n.push(`Когда ${r.role.inverted ? "не в" : "в"} комнате с ролью '${e}'`)
                     }
                     if (r.player) {
                         const e = $A(r.player.memberNumber, null);
-                        n.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${e ? ` (${e})` : ""}`)
+                        n.push(`Когда ${r.player.inverted ? "не в" : "в"} комнате с участником  '${r.player.memberNumber}'${e ? ` (${e})` : ""}`)
                     }
-                    n.length > 0 ? NA(`${e.toNicknamedString()} set the global rules configuration to trigger rules under following conditions:\n` + n.join("\n"), void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} deactivated all trigger conditions for the global rules configuration. Rules set to this default configuration will now always trigger, while active`, void 0, e.MemberNumber)
+                    n.length > 0 ? NA(`${e.toNicknamedString()} установите конфигурацию глобальных правил для запуска правил при следующих условиях:\n` + n.join("\n"), void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} деактивированы все условия срабатывания для конфигурации глобальных правил. Правила, установленные в этой конфигурации по умолчанию, теперь будут срабатывать всегда, пока они активны.`, void 0, e.MemberNumber)
                 }
             },
             getDefaultLimits: () => {
