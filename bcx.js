@@ -15755,7 +15755,7 @@ class BC extends br {
             this.drawEntryExtra(o, r, n),
             n.access && DrawButton(o + 740, r, 60, 60, "X", "White", "", this.removeLabel),
             MouseIn(o + 470, r, 60, 60) && DrawHoverElements.push((() => {
-                    DrawButtonHover(o + 470, r, 60, 60, `Измените конфигурацию ${this.conditionCategorySingular}'s`)
+                    DrawButtonHover(o + 470, r, 60, 60, `Изменить конфигурацию ${this.conditionCategorySingular}'s`)
                 })),
             MouseIn(o + 531, r, 78, 60) && DrawHoverElements.push((() => {
                     DrawButtonHover(o + 531, r, 78, 60, `Оставшаяся продолжительность ${this.conditionCategorySingular}`)
