@@ -74,8 +74,8 @@ export class GuiConditionEditCurses extends GuiConditionEdit<"curses"> {
 			DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклятие", itemRemove, !access || useGlobalCategorySetting);
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(28);
-			DrawText("becomes inactive, removed, or is no longer", 1152, 185, "Black");
-			DrawText("triggering - does not remove locked items", 1152, 225, "Black");
+			DrawText("становится неактивным, удаляется или больше не является", 1152, 185, "Black");
+			DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 225, "Black");
 			MainCanvas.restore();
 		}
 		if (this.allowSettingsCurse && data.data) {
