@@ -179,8 +179,8 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		MainCanvas.textAlign = "center";
 
 		if (this.changes) {
-			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back");
-			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving");
+			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Сохраните все изменения и вернитесь назад.");
+			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Вернуться без сохранения");
 		} else {
 			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back");
 			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
@@ -222,7 +222,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 
 		// on-off toggle
 		MainCanvas.textAlign = "left";
-		DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активен и может сработать`, data.active, !access);
+		DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активно и может сработать`, data.active, !access);
 
 		// global-category-configuration-is-active highlighting
 		if (useGlobalCategorySetting) {

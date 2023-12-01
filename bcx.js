@@ -15160,7 +15160,7 @@ class AC extends br {
         c;
         MainCanvas.textAlign = "left";
         const u = null === (e = this.conditionData) || void 0 === e ? void 0 : e.addedBy;
-        if (DrawText(`- ${this.headerText()} -`, 180, 108, "Black", "Gray"), void 0 !== u && (MainCanvas.save(), MainCanvas.font = CommonGetFont(26), DrawText(`Добавил: ${$A(u, "[unknown name]")} (${u})`, 205, 143, "#444"), MainCanvas.restore()), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData || null === this.conditionData)
+        if (DrawText(`- ${this.headerText()} -`, 180, 108, "Black", "Gray"), void 0 !== u && (MainCanvas.save(), MainCanvas.font = CommonGetFont(26), DrawText(`Добавил: ${$A(u, "[unknown name]")} (${u})`, 205, 143, "#444"), MainCanvas.restore()), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Сохраните все изменения и вернитесь назад."), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Вернуться без сохранения")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData || null === this.conditionData)
             return MainCanvas.textAlign = "center", this.failed ? xw(`get data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"), !0;
         this.changes && null !== this.changes.timer && (this.changes.timer < Date.now() ? (this.changes.timer = null, this.changes.timerRemove = !1, this.changes.active = !this.changes.active) : this.changes.active || (this.changes.timerRemove = !1));
         const d = null !== (t = this.changes) && void 0 !== t ? t : this.conditionData,
@@ -15181,7 +15181,7 @@ class AC extends br {
         MainCanvas.lineTo(960, 540),
         MainCanvas.stroke(),
         MainCanvas.textAlign = "left",
-        DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активен и может сработать`, d.active, !f),
+        DrawCheckbox(125, 180, 64, 64, `Это ${this.conditionCategory.slice(0, -1)} активно и может сработать`, d.active, !f),
         m && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(526, 546, 418, 68), MainCanvas.fillRect(120, 615, 74, 74), MainCanvas.fillRect(120, 695, 74, 74), MainCanvas.fillRect(120, 775, 74, 74), MainCanvas.fillRect(120, 855, 74, 74)),
         MainCanvas.textAlign = "center",
         y = null === d.timer ? "Таймер выключен" : `${d.active ? "Deactivates" : "Activates"} in: ${F(d.timer - Date.now())}`,
@@ -15480,7 +15480,7 @@ class DC extends br {
         i,
         a,
         s;
-        if (MainCanvas.textAlign = "left", DrawText(`- ${this.headerText()} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData)
+        if (MainCanvas.textAlign = "left", DrawText(`- ${this.headerText()} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", this.changes ? (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Сохраните все изменения и вернитесь назад."), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Вернуться без сохранения")) : (DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png")), null === this.conditionCategoryData)
             return MainCanvas.textAlign = "center", this.failed ? xw(`get data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"), !0;
         this.changes && null !== this.changes.timer && this.changes.timer <= 0 && (this.changes.timer = null, this.changes.timerRemove = !1);
         const l = null !== (e = this.changes) && void 0 !== e ? e : this.conditionCategoryData,
@@ -16455,14 +16455,14 @@ class WC extends BC {
                 Width: 40,
                 Alpha: n.data.data.enforce ? 1 : .2
             }), MouseIn(e + 610, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 610, t + 6, 44, 44, n.data.data.enforce ? "Rule will be enforced" : "Правило не будет применяться")
+                    DrawButtonHover(e + 610, t + 6, 44, 44, n.data.data.enforce ? "Правило будет соблюдаться" : "Правило не будет применяться")
                 }))),
         !1 !== n.extra.definition.loggable && (LA("Icons/Title.png", e + 660, t + 10, {
                 Height: 40,
                 Width: 40,
                 Alpha: n.data.data.log ? 1 : .2
             }), MouseIn(e + 660, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 660, t + 6, 44, 44, n.data.data.log ? "Rule violations will be logged" : "Нарушения правил не будут регистрироваться")
+                    DrawButtonHover(e + 660, t + 6, 44, 44, n.data.data.log ? "Нарушения правил будут регистрироваться" : "Нарушения правил не будут регистрироваться")
                 })))
     }
     headerText() {

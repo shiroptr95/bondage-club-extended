@@ -153,8 +153,8 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 		MainCanvas.textAlign = "center";
 
 		if (this.changes) {
-			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Save all changes and go back");
-			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Go back without saving");
+			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Accept.png", "Сохраните все изменения и вернитесь назад.");
+			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Cancel.png", "Вернуться без сохранения");
 		} else {
 			DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back");
 			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
