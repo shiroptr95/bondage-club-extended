@@ -26,12 +26,12 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 		if (super.Run() || this.conditionCategoryData === null)
 			return true;
 
-		DrawButton(120, 820, 250, 90, "Add new curse", "White", "",
-			"Place new curses on body, items or clothes");
+		DrawButton(120, 820, 250, 90, "Добавить новое проклятие", "White", "",
+			"Накладывайте новые проклятия на тело, предметы или одежду.");
 
 		const access = this.conditionCategoryData.access_normal || this.conditionCategoryData.access_limited;
-		DrawButton(400, 820, 250, 90, "Lift all curses", access ? "White" : "#ddd", "",
-			access ? "Remove all curses on body, items or clothes" : "You have no permission to use this", !access);
+		DrawButton(400, 820, 250, 90, "Снимите все проклятия", access ? "White" : "#ddd", "",
+			access ? "Снимите все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !access);
 
 		// help text
 		if (this.showHelp) {

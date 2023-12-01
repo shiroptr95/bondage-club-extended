@@ -15988,9 +15988,9 @@ class RC extends BC {
     Run() {
         if (super.Run() || null === this.conditionCategoryData)
             return !0;
-        DrawButton(120, 820, 250, 90, "Add new curse", "White", "", "Place new curses on body, items or clothes");
+        DrawButton(120, 820, 250, 90, "Добавить новое проклятие", "White", "", "Накладывайте новые проклятия на тело, предметы или одежду.");
         const e = this.conditionCategoryData.access_normal || this.conditionCategoryData.access_limited;
-        return DrawButton(400, 820, 250, 90, "Lift all curses", e ? "White" : "#ddd", "", e ? "Remove all curses on body, items or clothes" : "You have no permission to use this", !e),
+        return DrawButton(400, 820, 250, 90, "Снимите все проклятия", e ? "White" : "#ddd", "", e ? "Снимите все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !e),
         this.showHelp && FA(Ar[gr.ConditionsViewCurses]),
         !1
     }
