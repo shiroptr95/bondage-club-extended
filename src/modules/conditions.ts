@@ -879,41 +879,41 @@ export function ConditionsRunSubcommand(category: ConditionsCategories, argv: st
 			return respond(condition);
 		}
 		if (!categoryData.conditions[condition]) {
-			return respond(`This ${categorySingular} doesn't exist`);
+			return respond(`Этот ${categorySingular} не существует`);
 		}
 		const conditionData = ConditionsMakeConditionPublicData(handler, condition, categoryData.conditions[condition]!, sender);
 		const keyword = (argv[2] || "").toLocaleLowerCase();
 		if (!keyword) {
 			if (!conditionData.requirements) {
-				return respond(`Current status:\n` +
-					`Uses global ${category} trigger configuration`
+				return respond(`Текущее состояние:\n` +
+					`Использует глобальные ${category} конфигурация триггера`
 				);
 			} else {
 				const triggers: string[] = [];
 				const r = conditionData.requirements;
 				triggers.push(r.orLogic ? `Logic: OR (at least one)` : `Logic: AND (all of)`);
 				if (r.room) {
-					triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+					triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комната`);
 				}
 				if (r.roomName) {
-					triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+					triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комната с названием '${r.roomName.name}'`);
 				}
 				if (r.role) {
 					const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-					triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+					triggers.push(`Когда ${r.role.inverted ? "не в" : "в"} комната с ролью '${role}'`);
 				}
 				if (r.player) {
 					const name = getCharacterName(r.player.memberNumber, null);
-					triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+					triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комната с участником '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 				}
 				if (triggers.length > 1) {
-					return respond(`Current status:\n` +
-						`This ${categorySingular} will trigger under following conditions:\n` +
+					return respond(`Текущее состояние:\n` +
+						`Этот ${categorySingular} сработает при следующих условиях:\n` +
 						triggers.join("\n")
 					);
 				} else {
 					return respond(`Current status:\n` +
-						`No triggers are set. The ${categorySingular} will now always trigger, while it is active`
+						`Триггеры не установлены. The ${categorySingular} теперь всегда будет срабатывать, пока он активен`
 					);
 				}
 			}
@@ -933,7 +933,7 @@ export function ConditionsRunSubcommand(category: ConditionsCategories, argv: st
 				return respond(`Usage:\ntriggers <${CSHelp}> logic <or/and>`);
 			}
 			if (!conditionData.requirements) {
-				return respond(`Cannot configure specific trigger while using global data. First use:\ntriggers <${CSHelp}> global no`);
+				return respond(`Невозможно настроить конкретный триггер при использовании глобальных данных. Первое использование:\ntriggers <${CSHelp}> global no`);
 			}
 			if (logic === "or") {
 				conditionData.requirements.orLogic = true;
@@ -956,7 +956,7 @@ export function ConditionsRunSubcommand(category: ConditionsCategories, argv: st
 				`To show currently set triggers, use just 'triggers <group>' without adding one of the above sub-commands.`
 			);
 		} else if (!conditionData.requirements) {
-			return respond(`Cannot configure specific trigger while using global data. First use:\ntriggers <${CSHelp}> global no`);
+			return respond(`Невозможно настроить конкретный триггер при использовании глобальных данных. Первое использование:\ntriggers <${CSHelp}> global no`);
 		} else {
 			if (ConditionsCommandProcessTriggers(conditionData.requirements, argv.slice(2), sender, respond))
 				return;
@@ -969,27 +969,27 @@ export function ConditionsRunSubcommand(category: ConditionsCategories, argv: st
 			const r = configData.requirements;
 			triggers.push(r.orLogic ? `Logic: OR (at least one)` : `Logic: AND (all of)`);
 			if (r.room) {
-				triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+				triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комната`);
 			}
 			if (r.roomName) {
-				triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+				triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комната с названием '${r.roomName.name}'`);
 			}
 			if (r.role) {
 				const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-				triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+				triggers.push(`Когда ${r.role.inverted ? "не в" : "в"} комната с ролью '${role}'`);
 			}
 			if (r.player) {
 				const name = getCharacterName(r.player.memberNumber, null);
-				triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+				triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комната с участником '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 			}
 			if (triggers.length > 1) {
-				return respond(`Current status:\n` +
-					`Globally ${category} are set to trigger under following conditions:\n` +
+				return respond(`Текущее состояние:\n` +
+					`Глобально ${category} настроены на срабатывание при следующих условиях:\n` +
 					triggers.join("\n")
 				);
 			} else {
-				return respond(`Current status:\n` +
-					`No triggers are set globally. ${capitalizeFirstLetter(category)} using global config will now always trigger, if they are active`
+				return respond(`Текущее состояние:\n` +
+					`Триггеры не установлены глобально. ${capitalizeFirstLetter(category)} использование глобальной конфигурации теперь всегда будет срабатывать, если они активны`
 				);
 			}
 		} else if (argv[1].toLocaleLowerCase() === "logic") {

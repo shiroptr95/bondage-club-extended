@@ -1221,23 +1221,23 @@ export class ModuleRules extends BaseModule {
 							const triggers: string[] = [];
 							const r = newData.requirements;
 							if (r.room) {
-								triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+								triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комнате`);
 							}
 							if (r.roomName) {
-								triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+								triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комнате с названием '${r.roomName.name}'`);
 							}
 							if (r.role) {
 								const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-								triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+								triggers.push(`Когда ${r.role.inverted ? "не в" : "в"} комнате с ролью '${role}'`);
 							}
 							if (r.player) {
 								const name = getCharacterName(r.player.memberNumber, null);
-								triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+								triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комнате с членом '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 							}
 							if (triggers.length > 0) {
-								ChatRoomSendLocal(`${character.toNicknamedString()} set the '${visibleName}' rule to trigger under following conditions:\n` + triggers.join("\n"), undefined, character.MemberNumber);
+								ChatRoomSendLocal(`${character.toNicknamedString()} установить '${visibleName}' правило срабатывает при следующих условиях:\n` + triggers.join("\n"), undefined, character.MemberNumber);
 							} else {
-								ChatRoomSendLocal(`${character.toNicknamedString()} deactivated all trigger conditions of the '${visibleName}' rule. The rule will now always trigger, while it is active`, undefined, character.MemberNumber);
+								ChatRoomSendLocal(`${character.toNicknamedString()} деактивированы все триггерные условия '${visibleName}' правило. Правило теперь будет срабатывать всегда, пока оно активно.`, undefined, character.MemberNumber);
 							}
 						}
 					if (didEnforcementChange) {
@@ -1280,23 +1280,23 @@ export class ModuleRules extends BaseModule {
 						const triggers: string[] = [];
 						const r = newData.requirements;
 						if (r.room) {
-							triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+							triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комнате`);
 						}
 						if (r.roomName) {
-							triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+							triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комнате с названием '${r.roomName.name}'`);
 						}
 						if (r.role) {
 							const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-							triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+							triggers.push(`Когда ${r.role.inverted ? "не в" : "в"} комнате с ролью '${role}'`);
 						}
 						if (r.player) {
 							const name = getCharacterName(r.player.memberNumber, null);
-							triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+							triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комнате с членом '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 						}
 						if (triggers.length > 0) {
-							ChatRoomSendLocal(`${character.toNicknamedString()} set the global rules configuration to trigger rules under following conditions:\n` + triggers.join("\n"), undefined, character.MemberNumber);
+							ChatRoomSendLocal(`${character.toNicknamedString()} установите конфигурацию глобальных правил для запуска правил при следующих условиях:\n` + triggers.join("\n"), undefined, character.MemberNumber);
 						} else {
-							ChatRoomSendLocal(`${character.toNicknamedString()} deactivated all trigger conditions for the global rules configuration. Rules set to this default configuration will now always trigger, while active`, undefined, character.MemberNumber);
+							ChatRoomSendLocal(`${character.toNicknamedString()} деактивированы все условия срабатывания для конфигурации глобальных правил. Правила, установленные в этой конфигурации по умолчанию, теперь будут срабатывать всегда, пока они активны.`, undefined, character.MemberNumber);
 						}
 					}
 				}

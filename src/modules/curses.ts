@@ -755,23 +755,23 @@ export class ModuleCurses extends BaseModule {
 							const triggers: string[] = [];
 							const r = newData.requirements;
 							if (r.room) {
-								triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+								triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комнате`);
 							}
 							if (r.roomName) {
-								triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+								triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комнате с названием '${r.roomName.name}'`);
 							}
 							if (r.role) {
 								const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-								triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+								triggers.push(`Когда ${r.role.inverted ? "не в" : "in"} комнате с ролью '${role}'`);
 							}
 							if (r.player) {
 								const name = getCharacterName(r.player.memberNumber, null);
-								triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+								triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комнате с участником '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 							}
 							if (triggers.length > 0) {
-								ChatRoomSendLocal(`${character.toNicknamedString()} set the curse on slot ${visibleName} to trigger under following conditions:\n` + triggers.join("\n"), undefined, character.MemberNumber);
+								ChatRoomSendLocal(`${character.toNicknamedString()} наложить проклятие на слот ${visibleName} срабатывать при следующих условиях:\n` + triggers.join("\n"), undefined, character.MemberNumber);
 							} else {
-								ChatRoomSendLocal(`${character.toNicknamedString()} deactivated all trigger conditions of the curse on slot ${visibleName}. The curse will now always trigger, while it is active`, undefined, character.MemberNumber);
+								ChatRoomSendLocal(`${character.toNicknamedString()} деактивированы все условия срабатывания проклятия в слоте ${visibleName}. Проклятие теперь срабатывает всегда, пока оно активно.`, undefined, character.MemberNumber);
 							}
 						}
 					if (didItemConfigCurseChange)
@@ -809,23 +809,23 @@ export class ModuleCurses extends BaseModule {
 						const triggers: string[] = [];
 						const r = newData.requirements;
 						if (r.room) {
-							triggers.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`);
+							triggers.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комнате`);
 						}
 						if (r.roomName) {
-							triggers.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`);
+							triggers.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комнате с названием '${r.roomName.name}'`);
 						}
 						if (r.role) {
 							const role = capitalizeFirstLetter(AccessLevel[r.role.role]) + (r.role.role !== AccessLevel.clubowner ? " ↑" : "");
-							triggers.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${role}'`);
+							triggers.push(`Когда ${r.role.inverted ? "не в" : "в"} комнате с ролью '${role}'`);
 						}
 						if (r.player) {
 							const name = getCharacterName(r.player.memberNumber, null);
-							triggers.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
+							triggers.push(`Когда ${r.player.inverted ? "не в" : "в"} комнате с участником '${r.player.memberNumber}'${name ? ` (${name})` : ""}`);
 						}
 						if (triggers.length > 0) {
-							ChatRoomSendLocal(`${character.toNicknamedString()} set the global curses configuration to trigger curses under following conditions:\n` + triggers.join("\n"), undefined, character.MemberNumber);
+							ChatRoomSendLocal(`${character.toNicknamedString()} установите глобальную конфигурацию проклятий для запуска проклятий при следующих условиях:\n` + triggers.join("\n"), undefined, character.MemberNumber);
 						} else {
-							ChatRoomSendLocal(`${character.toNicknamedString()} deactivated all trigger conditions for the global curses configuration. Curses set to this default configuration will now always trigger, while active`, undefined, character.MemberNumber);
+							ChatRoomSendLocal(`${character.toNicknamedString()} деактивированы все триггерные условия для конфигурации глобальных проклятий. Проклятия, установленные в этой конфигурации по умолчанию, теперь срабатывают всегда, пока они активны.`, undefined, character.MemberNumber);
 						}
 					}
 				}
