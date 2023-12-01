@@ -66,7 +66,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 			this.failed = false;
 			this.onDataChange();
 		}, err => {
-			console.error(`BCX: Failed to get condition info for ${this.conditionCategory} from ${this.character}`, err);
+			console.error(`BCX: Не удалось получить информацию о состоянии для ${this.conditionCategory} от ${this.character}`, err);
 			this.conditionCategoryData = null;
 			this.failed = true;
 			this.onDataChange();
@@ -190,7 +190,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 		if (data.timer === null) {
 			statusText = "По умолчанию таймер отключен";
 		} else {
-			statusText = `Default timer: ${formatTimeInterval(data.timer)}`;
+			statusText = `Таймер по умолчанию: ${formatTimeInterval(data.timer)}`;
 		}
 		DrawText(statusText, 530, 311, "Black");
 
@@ -207,11 +207,11 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 			DrawButton(105 + 6 * (125), 360, 85, 60, "+1d", !access ? "#ddd" : "White", "", "Добавьте 1 день к таймеру", !access);
 
 			MainCanvas.textAlign = "left";
-			DrawCheckbox(125, 450, 64, 64, `Remove the ${this.conditionCategory.slice(0, -1)} when timer runs out`, data.timerRemove, !access);
+			DrawCheckbox(125, 450, 64, 64, `Удалить ${this.conditionCategory.slice(0, -1)} когда таймер закончится`, data.timerRemove, !access);
 		}
 
 		////// condition factors area
-		DrawText(`${capitalizeFirstLetter(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", "");
+		DrawText(`${capitalizeFirstLetter(this.conditionCategory.slice(0, -1))} триггерные условия:`, 130, 580, "Black", "");
 		MainCanvas.textAlign = "center";
 		const hasAnyRequirement = !!(requirements.room || requirements.roomName || requirements.role || requirements.player);
 		DrawButton(530, 550, 410, 60, hasAnyRequirement ? (requirements.orLogic ? "Any selected below" : "All selected below") : "Always in effect", disabled || !hasAnyRequirement ? "#ddd" : "White", "", "", disabled || !hasAnyRequirement);
@@ -225,7 +225,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 		DrawButton(324, 622, 115, 60, requirements.room?.inverted ? "not in" : "in", disabled || !requirements.room ? "#ddd" : "White", "", "", disabled || !requirements.room);
 		DrawButton(324 + 115 + 14, 622, 130, 60, requirements.room?.type === "private" ? "private" : "public", disabled || !requirements.room ? "#ddd" : "White", "", "", disabled || !requirements.room);
 		MainCanvas.textAlign = "left";
-		DrawText(`room`, 324 + 115 + 14 + 130 + 14, 620 + 32, "Black", "Gray");
+		DrawText(`комната`, 324 + 115 + 14 + 130 + 14, 620 + 32, "Black", "Gray");
 		if (requirements.room) {
 			const inChatroom = ServerPlayerIsInChatRoom();
 			const chatroomPrivate = inChatroom && ChatRoomData && ChatRoomData.Private;
@@ -239,7 +239,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 		MainCanvas.textAlign = "center";
 		DrawButton(324, 702, 115, 60, requirements.roomName?.inverted ? "not in" : "in", disabled || !requirements.roomName ? "#ddd" : "White", "", "", disabled || !requirements.roomName);
 		MainCanvas.textAlign = "left";
-		DrawText(`room named`, 324 + 115 + 14, 700 + 32, "Black", "Gray");
+		DrawText(`комната с названием`, 324 + 115 + 14, 700 + 32, "Black", "Gray");
 		ElementPosition("BCX_ConditionRoomName", 324 + 115 + 14 + 360, 700 + 26, 285, 60);
 		if (requirements.roomName) {
 			const inChatroom = ServerPlayerIsInChatRoom();
@@ -265,7 +265,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 			disabled || !requirements.role
 		);
 		MainCanvas.textAlign = "left";
-		DrawText(`room with role`, 324 + 115 + 14, 780 + 32, "Black", "Gray");
+		DrawText(`комната с ролью`, 324 + 115 + 14, 780 + 32, "Black", "Gray");
 		if (requirements.role) {
 			const res = this.conditionCategoryData.highestRoleInRoom != null && this.conditionCategoryData.highestRoleInRoom <= requirements.role.role;
 			DrawRect(95, 780, 15, 64, (requirements.role.inverted ? !res : res) ? "#00FF22" : "#AA0000");
@@ -276,7 +276,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 		MainCanvas.textAlign = "center";
 		DrawButton(324, 862, 115, 60, requirements.player?.inverted ? "not in" : "in", disabled || !requirements.player ? "#ddd" : "White", "", "", disabled || !requirements.player);
 		MainCanvas.textAlign = "left";
-		DrawText(`room with member`, 324 + 115 + 14, 860 + 32, "Black", "Gray");
+		DrawText(`комната с участником`, 324 + 115 + 14, 860 + 32, "Black", "Gray");
 		ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60);
 		if (requirements.player) {
 			const inChatroom = ServerPlayerIsInChatRoom();
@@ -299,7 +299,7 @@ export abstract class GuiConditionGlobal<CAT extends ConditionsCategories> exten
 
 		// hover text for timer behavior toggle
 		MainCanvas.textAlign = "center";
-		if (data.timer !== null && MouseIn(125, 450, 80, 64)) DrawButtonHover(125, 450, 64, 64, `Removes ${this.conditionCategory.slice(0, -1)} instead of only deactivating it `);
+		if (data.timer !== null && MouseIn(125, 450, 80, 64)) DrawButtonHover(125, 450, 64, 64, `Удаляет ${this.conditionCategory.slice(0, -1)} вместо того, чтобы просто деактивировать его `);
 
 		return false;
 	}

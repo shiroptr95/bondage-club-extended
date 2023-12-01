@@ -12907,17 +12907,17 @@ function Iv(e, t, n, r) {
             if (u.requirements) {
                 const e = [],
                 t = u.requirements;
-                if (e.push(t.orLogic ? "Logic: OR (at least one)" : "Logic: AND (all of)"), t.room && e.push(`When ${t.room.inverted ? "not in" : "in"} ${t.room.type} room`), t.roomName && e.push(`When ${t.roomName.inverted ? "not in" : "in"} room named '${t.roomName.name}'`), t.role) {
+                if (e.push(t.orLogic ? "Logic: OR (at least one)" : "Logic: AND (all of)"), t.room && e.push(`Когда ${t.room.inverted ? "не в" : "in"} ${t.room.type} комната`), t.roomName && e.push(`Когда ${t.roomName.inverted ? "не в" : "в"} комната с названием '${t.roomName.name}'`), t.role) {
                     const n = O(Zw[t.role.role]) + (t.role.role !== Zw.clubowner ? " ↑" : "");
-                    e.push(`When ${t.role.inverted ? "not in" : "in"} room with role '${n}'`)
+                    e.push(`Когда ${t.role.inverted ? "не в" : "в"} комната с ролью '${n}'`)
                 }
                 if (t.player) {
                     const n = $A(t.player.memberNumber, null);
-                    e.push(`When ${t.player.inverted ? "not in" : "in"} room with member '${t.player.memberNumber}'${n ? ` (${n})` : ""}`)
+                    e.push(`Когда ${t.player.inverted ? "не в" : "в"} комната с участником '${t.player.memberNumber}'${n ? ` (${n})` : ""}`)
                 }
-                return e.length > 1 ? r(`Current status:\nThis ${s} will trigger under following conditions:\n` + e.join("\n")) : r(`Current status:\nNo triggers are set. The ${s} will now always trigger, while it is active`)
+                return e.length > 1 ? r(`Текущее состояние:\nЭтот ${s} сработает при следующих условиях:\n` + e.join("\n")) : r(`Текущее состояние:\nТриггеры не установлены. ${s} теперь будет срабатывать всегда, пока он активен`)
             }
-            return r(`Current status:\nUses global ${e} trigger configuration`)
+            return r(`Текущее состояние:\nИспользует глобальные ${e} конфигурация триггера`)
         }
         if ("global" === d) {
             const e = (t[3] || "").toLocaleLowerCase();
@@ -12945,15 +12945,15 @@ function Iv(e, t, n, r) {
         if (!t[1]) {
             const t = [],
             n = o.requirements;
-            if (t.push(n.orLogic ? "Logic: OR (at least one)" : "Logic: AND (all of)"), n.room && t.push(`When ${n.room.inverted ? "not in" : "in"} ${n.room.type} room`), n.roomName && t.push(`When ${n.roomName.inverted ? "not in" : "in"} room named '${n.roomName.name}'`), n.role) {
+            if (t.push(n.orLogic ? "Logic: OR (at least one)" : "Logic: AND (all of)"), n.room && t.push(`Когда ${n.room.inverted ? "not in" : "in"} ${n.room.type} room`), n.roomName && t.push(`Когда ${n.roomName.inverted ? "не в" : "в"} комната с названием '${n.roomName.name}'`), n.role) {
                 const e = O(Zw[n.role.role]) + (n.role.role !== Zw.clubowner ? " ↑" : "");
-                t.push(`When ${n.role.inverted ? "not in" : "in"} room with role '${e}'`)
+                t.push(`Когда ${n.role.inverted ? "не в" : "в"} комната с ролью '${e}'`)
             }
             if (n.player) {
                 const e = $A(n.player.memberNumber, null);
-                t.push(`When ${n.player.inverted ? "not in" : "in"} room with member '${n.player.memberNumber}'${e ? ` (${e})` : ""}`)
+                t.push(`Когда ${n.player.inverted ? "не в" : "в"} комната с участником '${n.player.memberNumber}'${e ? ` (${e})` : ""}`)
             }
-            return t.length > 1 ? r(`Current status:\nGlobally ${e} are set to trigger under following conditions:\n` + t.join("\n")) : r(`Current status:\nNo triggers are set globally. ${O(e)} using global config will now always trigger, if they are active`)
+            return t.length > 1 ? r(`Текущее состояние:\nГлобально ${e} настроены на срабатывание при следующих условиях:\n` + t.join("\n")) : r(`Текущее состояние:\nТриггеры не установлены глобально. ${O(e)} использование глобальной конфигурации теперь всегда будет срабатывать, если они активны`)
         }
         if ("logic" === t[1].toLocaleLowerCase()) {
             const e = (t[2] || "").toLocaleLowerCase();
@@ -21101,17 +21101,17 @@ qw(new class extends N {
                         else {
                             const e = [],
                             r = n.requirements;
-                            if (r.room && e.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`), r.roomName && e.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`), r.role) {
+                            if (r.room && e.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комната`), r.roomName && e.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комната с названием '${r.roomName.name}'`), r.role) {
                                 const t = O(Zw[r.role.role]) + (r.role.role !== Zw.clubowner ? " ↑" : "");
-                                e.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${t}'`)
+                                e.push(`Когда ${r.role.inverted ? "не в" : "в"} комната с ролью '${t}'`)
                             }
                             if (r.player) {
                                 const t = $A(r.player.memberNumber, null);
-                                e.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${t ? ` (${t})` : ""}`)
+                                e.push(`Когда ${r.player.inverted ? "не в" : "в"} комната с участником '${r.player.memberNumber}'${t ? ` (${t})` : ""}`)
                             }
-                            e.length > 0 ? NA(`${t.toNicknamedString()} set the curse on slot ${d} to trigger under following conditions:\n` + e.join("\n"), void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} deactivated all trigger conditions of the curse on slot ${d}. The curse will now always trigger, while it is active`, void 0, t.MemberNumber)
+                            e.length > 0 ? NA(`${t.toNicknamedString()} наложить проклятие на слот ${d} срабатывать при следующих условиях:\n` + e.join("\n"), void 0, t.MemberNumber) : NA(`${t.toNicknamedString()} деактивированы все условия срабатывания проклятия в слоте ${d}. Проклятие теперь срабатывает всегда, пока оно активно.`, void 0, t.MemberNumber)
                         }
-                    p && NA(`${t.toNicknamedString()} ${(null === (c = n.data) || void 0 === c ? void 0 : c.curseProperties) ? "cursed" : "lifted the curse of"} the '${d}' item's configuration`, void 0, t.MemberNumber)
+                    p && NA(`${t.toNicknamedString()} ${(null === (c = n.data) || void 0 === c ? void 0 : c.curseProperties) ? "проклятый" : "снял проклятие"} the '${d}' конфигурация элемента`, void 0, t.MemberNumber)
                 }
             },
             logCategoryUpdate: (e, t, n) => {
@@ -21125,15 +21125,15 @@ qw(new class extends N {
                 if (a && c.push("default timer"), s && c.push("trigger condition"), l && c.push("autoremove option"), c.length > 0 && Mp("curse_change", kp.plaintext, `${e} changed the ${c.join(", ")} of ${Player.Name}'s global curses config`), !e.isPlayer() && (t.timer !== n.timer && (null === t.timer ? NA(`${e.toNicknamedString()} removed the default timer of the global curses configuration`, void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} changed the default timer of the global curses configuration to ${F(t.timer)}`, void 0, e.MemberNumber)), null !== t.timer && t.timerRemove !== n.timerRemove && NA(`${e.toNicknamedString()} changed the default timeout behavior of the global curses configuration to ${t.timerRemove ? "removal of curses" : "disabling curses"} when time runs out`, void 0, e.MemberNumber), l && NA(`${e.toNicknamedString()} changed the default curses behaviour to ${(null === (i = t.data) || void 0 === i ? void 0 : i.itemRemove) ? "remove" : "keep"} an item when the curse on it is no longer in effect`, void 0, e.MemberNumber), s)) {
                     const n = [],
                     r = t.requirements;
-                    if (r.room && n.push(`When ${r.room.inverted ? "not in" : "in"} ${r.room.type} room`), r.roomName && n.push(`When ${r.roomName.inverted ? "not in" : "in"} room named '${r.roomName.name}'`), r.role) {
+                    if (r.room && n.push(`Когда ${r.room.inverted ? "не в" : "в"} ${r.room.type} комната`), r.roomName && n.push(`Когда ${r.roomName.inverted ? "не в" : "в"} комната с названием '${r.roomName.name}'`), r.role) {
                         const e = O(Zw[r.role.role]) + (r.role.role !== Zw.clubowner ? " ↑" : "");
-                        n.push(`When ${r.role.inverted ? "not in" : "in"} room with role '${e}'`)
+                        n.push(`Когда ${r.role.inverted ? "не в" : "в"} комната с ролью '${e}'`)
                     }
                     if (r.player) {
                         const e = $A(r.player.memberNumber, null);
-                        n.push(`When ${r.player.inverted ? "not in" : "in"} room with member '${r.player.memberNumber}'${e ? ` (${e})` : ""}`)
+                        n.push(`Когда ${r.player.inverted ? "не в" : "в"} комната с участником '${r.player.memberNumber}'${e ? ` (${e})` : ""}`)
                     }
-                    n.length > 0 ? NA(`${e.toNicknamedString()} set the global curses configuration to trigger curses under following conditions:\n` + n.join("\n"), void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} deactivated all trigger conditions for the global curses configuration. Curses set to this default configuration will now always trigger, while active`, void 0, e.MemberNumber)
+                    n.length > 0 ? NA(`${e.toNicknamedString()}установите глобальную конфигурацию проклятий для запуска проклятий при следующих условиях:\n` + n.join("\n"), void 0, e.MemberNumber) : NA(`${e.toNicknamedString()} деактивированы все триггерные условия для конфигурации глобальных проклятий. Проклятия, установленные в этой конфигурации по умолчанию, теперь срабатывают всегда, пока они активны.`, void 0, e.MemberNumber)
                 }
             },
             getDefaultLimits: () => {

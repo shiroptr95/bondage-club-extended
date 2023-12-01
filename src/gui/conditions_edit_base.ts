@@ -71,7 +71,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 				this.failed = false;
 				this.onDataChange();
 			} else {
-				console.warn(`BCX: Condition ${this.conditionCategory}:${this.conditionName} not found in list from ${this.character}`);
+				console.warn(`BCX: Состояние ${this.conditionCategory}:${this.conditionName} не найден в списке из ${this.character}`);
 				this.conditionCategoryData = null;
 				this.conditionData = null;
 				this.failed = true;
@@ -79,7 +79,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 				this.Exit();
 			}
 		}, err => {
-			console.error(`BCX: Failed to get condition info for ${this.conditionCategory}:${this.conditionName} from ${this.character}`, err);
+			console.error(`BCX: Не удалось получить информацию о состоянии для ${this.conditionCategory}:${this.conditionName} от ${this.character}`, err);
 			this.failed = true;
 		});
 	}
@@ -239,7 +239,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		if (data.timer === null) {
 			statusText = "Timer disabled";
 		} else {
-			statusText = `${data.active ? "Deactivates" : "Activates"} in: ${formatTimeInterval(data.timer - Date.now())}`;
+			statusText = `${data.active ? "Деактивирует" : "Активирует"} в: ${formatTimeInterval(data.timer - Date.now())}`;
 		}
 		DrawText(statusText, 530, 311, data.active || !data.timer ? "Black" : "#060");
 
@@ -257,12 +257,12 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 
 			MainCanvas.textAlign = "left";
 			if (data.active) {
-				DrawCheckbox(125, 450, 64, 64, `Delete the ${this.conditionCategory.slice(0, -1)} when timer runs out`, data.timerRemove, !access);
+				DrawCheckbox(125, 450, 64, 64, `Удалить ${this.conditionCategory.slice(0, -1)} когда таймер закончится`, data.timerRemove, !access);
 			}
 		}
 
 		////// condition factors area
-		DrawText(`${capitalizeFirstLetter(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", "");
+		DrawText(`${capitalizeFirstLetter(this.conditionCategory.slice(0, -1))} триггерные условия:`, 130, 580, "Black", "");
 		MainCanvas.textAlign = "center";
 		const hasAnyRequirement = !!(requirements.room || requirements.roomName || requirements.role || requirements.player);
 		DrawButton(530, 550, 410, 60, hasAnyRequirement ? (requirements.orLogic ? "Any selected below" : "All selected below") : "Always in effect", disabled || !hasAnyRequirement ? "#ddd" : "White", "", "", disabled || !hasAnyRequirement);
@@ -276,7 +276,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		DrawButton(324, 622, 115, 60, requirements.room?.inverted ? "not in" : "in", disabled || !requirements.room ? "#ddd" : "White", "", "", disabled || !requirements.room);
 		DrawButton(324 + 115 + 14, 622, 130, 60, requirements.room?.type === "private" ? "private" : "public", disabled || !requirements.room ? "#ddd" : "White", "", "", disabled || !requirements.room);
 		MainCanvas.textAlign = "left";
-		DrawText(`room`, 324 + 115 + 14 + 130 + 14, 620 + 32, "Black", "Gray");
+		DrawText(`комната`, 324 + 115 + 14 + 130 + 14, 620 + 32, "Black", "Gray");
 		if (requirements.room) {
 			const inChatroom = ServerPlayerIsInChatRoom();
 			const chatroomPrivate = inChatroom && ChatRoomData && ChatRoomData.Private;
@@ -290,7 +290,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		MainCanvas.textAlign = "center";
 		DrawButton(324, 702, 115, 60, requirements.roomName?.inverted ? "not in" : "in", disabled || !requirements.roomName ? "#ddd" : "White", "", "", disabled || !requirements.roomName);
 		MainCanvas.textAlign = "left";
-		DrawText(`room named`, 324 + 115 + 14, 700 + 32, "Black", "Gray");
+		DrawText(`комната с названием`, 324 + 115 + 14, 700 + 32, "Black", "Gray");
 		ElementPosition("BCX_ConditionRoomName", 324 + 115 + 14 + 360, 700 + 26, 285, 60);
 		if (requirements.roomName) {
 			const inChatroom = ServerPlayerIsInChatRoom();
@@ -316,7 +316,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 			disabled || !requirements.role
 		);
 		MainCanvas.textAlign = "left";
-		DrawText(`room with role`, 324 + 115 + 14, 780 + 32, "Black", "Gray");
+		DrawText(`комната с ролью`, 324 + 115 + 14, 780 + 32, "Black", "Gray");
 		if (requirements.role) {
 			const res = this.conditionCategoryData.highestRoleInRoom != null && this.conditionCategoryData.highestRoleInRoom <= requirements.role.role;
 			DrawRect(95, 780, 15, 64, (requirements.role.inverted ? !res : res) ? "#00FF22" : "#AA0000");
@@ -327,7 +327,7 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 		MainCanvas.textAlign = "center";
 		DrawButton(324, 862, 115, 60, requirements.player?.inverted ? "not in" : "in", disabled || !requirements.player ? "#ddd" : "White", "", "", disabled || !requirements.player);
 		MainCanvas.textAlign = "left";
-		DrawText(`room with member`, 324 + 115 + 14, 860 + 32, "Black", "Gray");
+		DrawText(`комната с участником`, 324 + 115 + 14, 860 + 32, "Black", "Gray");
 		ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60);
 		DrawButton(950, 862, 64, 64, "", disabled || !requirements.player ? "#ddd" : "White", undefined, undefined, disabled || !requirements.player);
 		DrawImageEx("Icons/Title.png", 952, 864, { Width: 60, Height: 60 });
@@ -361,16 +361,16 @@ export abstract class GuiConditionEdit<CAT extends ConditionsCategories> extends
 
 		// hover text for timer behavior toggle
 		MainCanvas.textAlign = "center";
-		if (data.timer !== null && MouseIn(125, 450, 80, 64)) DrawButtonHover(125, 450, 64, 64, `Removes ${this.conditionCategory.slice(0, -1)} instead of only deactivating it `);
+		if (data.timer !== null && MouseIn(125, 450, 80, 64)) DrawButtonHover(125, 450, 64, 64, `Удаляет ${this.conditionCategory.slice(0, -1)} вместо того, чтобы просто деактивировать его `);
 
 		// hover text for global configuration category toggle
-		if (MouseIn(1190, 830, 100, 104)) DrawButtonHover(1786, 854, 64, 64, `Overwrites current trigger conditions`);
+		if (MouseIn(1190, 830, 100, 104)) DrawButtonHover(1786, 854, 64, 64, `Перезаписывает текущие условия триггера`);
 
 		// hover text for member selector
-		if (MouseIn(950, 862, 64, 64)) DrawButtonHover(950, 782, 4, 64, `Select member number from list`);
+		if (MouseIn(950, 862, 64, 64)) DrawButtonHover(950, 782, 4, 64, `Выберите номер участника из списка`);
 
 		// hover text for favorite toggle
-		if (MouseIn(93, 80, 85, 80)) DrawButtonHover(93, 80, 80, 80, `Favorite: Listed first in overview`);
+		if (MouseIn(93, 80, 85, 80)) DrawButtonHover(93, 80, 80, 80, `Избранное: указано первым в обзоре`);
 
 		return false;
 	}
