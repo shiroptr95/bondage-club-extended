@@ -15368,8 +15368,8 @@ class kC extends AC {
         o = !!(r ? this.conditionCategoryData.data.itemRemove : null === (t = n.data) || void 0 === t ? void 0 : t.itemRemove),
         i = this.checkAccess();
         return MainCanvas.textAlign = "left",
-        n.data && (r && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(1045, 100, 74, 74)), DrawCheckbox(1050, 105, 64, 64, "Remove the item when the curse", o, !i || r), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("becomes inactive, removed, or is no longer", 1152, 185, "Black"), DrawText("triggering - does not remove locked items", 1152, 225, "Black"), MainCanvas.restore()),
-        this.allowSettingsCurse && n.data && (DrawCheckbox(1050, 265, 64, 64, "Also curse the item's configuration", n.data.curseProperties, !i), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("Example: which rope tie is used", 1151, 347, "Black", ""), MainCanvas.restore(), this.item && !yC(this.item) && (MainCanvas.save(), MainCanvas.font = CommonGetFont(30), DrawTextWrap("Warning: This item is not standardized and some or all of its configuration states could behave in unexpected ways if they are cursed with the above checkbox. Please assume most of them will not work correctly. Issues could range from respawning with a different configuration to the curse triggering randomly all the time. As some of these items do work (partially), the option to curse the configuration is still offered.", 621, 365, 860, 400, "FireBrick"), MainCanvas.restore())),
+        n.data && (r && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(1045, 100, 74, 74)), DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклятие", o, !i || r), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не является", 1152, 185, "Black"), DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 225, "Black"), MainCanvas.restore()),
+        this.allowSettingsCurse && n.data && (DrawCheckbox(1050, 265, 64, 64, "Также проклинайте конфигурацию предмета", n.data.curseProperties, !i), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("Пример: какая веревочная стяжка используется", 1151, 347, "Black", ""), MainCanvas.restore(), this.item && !yC(this.item) && (MainCanvas.save(), MainCanvas.font = CommonGetFont(30), DrawTextWrap("Предупреждение: этот элемент не стандартизирован, и некоторые или все его состояния конфигурации могут вести себя неожиданным образом, если они отмечены указанным выше флажком. Предположим, что большинство из них не будут работать корректно. Проблемы могут варьироваться от возрождения с другой конфигурацией до постоянного случайного срабатывания проклятия. Поскольку некоторые из этих элементов работают (частично), возможность проклясть конфигурацию по-прежнему предлагается.", 621, 365, 860, 400, "FireBrick"), MainCanvas.restore())),
         this.showHelp && FA(Ar[gr.ConditionsEditCurses]),
         !1
     }
@@ -15635,10 +15635,10 @@ class MC extends DC {
         if (super.Run() || null === this.conditionCategoryData)
             return !0;
         MainCanvas.textAlign = "left",
-        DrawText("Note: Settings are applied to new curses and all existing ones set to the global config.", 130, 210, "Black", "");
+        DrawText("Примечание. Настройки применяются к новым проклятиям и ко всем существующим, установленным в глобальной конфигурации.", 130, 210, "Black", "");
         const t = null !== (e = this.changes) && void 0 !== e ? e : this.conditionCategoryData,
         n = this.checkAccess();
-        return t.data && (DrawCheckbox(1050, 267, 64, 64, "Remove the item when the curse", t.data.itemRemove, !n), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("becomes inactive, removed, or is no longer", 1152, 347, "Black"), DrawText("triggering - does not remove locked items", 1152, 387, "Black"), MainCanvas.restore()),
+        return t.data && (DrawCheckbox(1050, 267, 64, 64, "Уберите предмет, когда проклятие", t.data.itemRemove, !n), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не является", 1152, 347, "Black"), DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 387, "Black"), MainCanvas.restore()),
         this.showHelp && FA(Ar[gr.ConditionsGlobalCurses]),
         !1
     }
@@ -16016,14 +16016,14 @@ class RC extends BC {
                 Width: 40,
                 Alpha: i ? 1 : .2
             }), MouseIn(e + 610, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 610, t + 6, 44, 44, i ? "Remove item when curse is dormant" : "Don't remove item when curse is dormant")
+                    DrawButtonHover(e + 610, t + 6, 44, 44, i ? "Удалить предмет, когда проклятие неактивно" : "Не удалять предмет, когда проклятие неактивно")
                 }))),
         n.extra.propertiesCursedShow && (LA(n.extra.propertiesCursed ? "Icons/Lock.png" : "Icons/Unlock.png", e + 660, t + 10, {
                 Height: 40,
                 Width: 40,
                 Alpha: n.extra.propertiesCursed ? 1 : .2
             }), MouseIn(e + 660, t + 6, 44, 44) && DrawHoverElements.push((() => {
-                    DrawButtonHover(e + 660, t + 6, 44, 44, n.extra.propertiesCursed ? "Item configuration cursed" : "Item configuration not cursed")
+                    DrawButtonHover(e + 660, t + 6, 44, 44, n.extra.propertiesCursed ? "Конфигурация предмета проклята" : "Конфигурация предмета не проклята")
                 })))
     }
     headerText() {

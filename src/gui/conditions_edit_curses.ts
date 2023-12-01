@@ -71,7 +71,7 @@ export class GuiConditionEditCurses extends GuiConditionEdit<"curses"> {
 			if (useGlobalCategorySetting) {
 				DrawRect(1045, 100, 74, 74, "#0052A3");
 			}
-			DrawCheckbox(1050, 105, 64, 64, "Remove the item when the curse", itemRemove, !access || useGlobalCategorySetting);
+			DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклятие", itemRemove, !access || useGlobalCategorySetting);
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(28);
 			DrawText("becomes inactive, removed, or is no longer", 1152, 185, "Black");
@@ -79,19 +79,19 @@ export class GuiConditionEditCurses extends GuiConditionEdit<"curses"> {
 			MainCanvas.restore();
 		}
 		if (this.allowSettingsCurse && data.data) {
-			DrawCheckbox(1050, 265, 64, 64, "Also curse the item's configuration", data.data.curseProperties, !access);
+			DrawCheckbox(1050, 265, 64, 64, "Также проклинайте конфигурацию предмета", data.data.curseProperties, !access);
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(28);
-			DrawText(`Example: which rope tie is used`, 1151, 347, "Black", "");
+			DrawText(`Пример: какая веревочная стяжка используется`, 1151, 347, "Black", "");
 			MainCanvas.restore();
 			if (this.item && !curseDefaultItemCurseProperty(this.item)) {
 				MainCanvas.save();
 				MainCanvas.font = CommonGetFont(30);
 				DrawTextWrap(
-					"Warning: This item is not standardized and some or all of its configuration states could behave in unexpected ways " +
-					"if they are cursed with the above checkbox. Please assume most of them will not work correctly. " +
-					"Issues could range from respawning with a different configuration to the curse triggering randomly all the time. " +
-					"As some of these items do work (partially), the option to curse the configuration is still offered.",
+					"Предупреждение: этот элемент не стандартизирован, и некоторые или все его состояния конфигурации могут вести себя неожиданным образом. " +
+					"если они прокляты вышеуказанным флажком. Предположим, что большинство из них не будут работать корректно. " +
+					"Проблемы могут варьироваться от возрождения с другой конфигурацией до постоянного случайного срабатывания проклятия. " +
+					"Поскольку некоторые из этих элементов работают (частично), возможность проклясть конфигурацию по-прежнему предлагается.",
 					1051 - 860 / 2, 365, 860, 400, "FireBrick");
 				MainCanvas.restore();
 			}

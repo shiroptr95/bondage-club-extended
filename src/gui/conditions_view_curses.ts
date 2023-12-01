@@ -79,7 +79,7 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 			});
 			if (MouseIn(X + 610, Y + 6, 44, 44)) {
 				DrawHoverElements.push(() => {
-					DrawButtonHover(X + 610, Y + 6, 44, 44, itemRemove ? "Remove item when curse is dormant" : "Don't remove item when curse is dormant");
+					DrawButtonHover(X + 610, Y + 6, 44, 44, itemRemove ? "Удалить предмет, когда проклятие неактивно" : "Не удалять предмет, когда проклятие неактивно");
 				});
 			}
 		}
@@ -91,7 +91,7 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 			});
 			if (MouseIn(X + 660, Y + 6, 44, 44)) {
 				DrawHoverElements.push(() => {
-					DrawButtonHover(X + 660, Y + 6, 44, 44, data.extra.propertiesCursed ? "Item configuration cursed" : "Item configuration not cursed");
+					DrawButtonHover(X + 660, Y + 6, 44, 44, data.extra.propertiesCursed ? "Конфигурация предмета проклята" : "Конфигурация предмета не проклята");
 				});
 			}
 		}
