@@ -15213,7 +15213,7 @@ class AC extends br {
             MainCanvas.fillStyle = (h.role.inverted ? !e : e) ? "#00FF22" : "#AA0000",
             MainCanvas.fillRect(95, 780, 15, 64)
         }
-        if (DrawCheckbox(125, 860, 64, 64, "when", !!h.player, g), MainCanvas.textAlign = "center", DrawButton(324, 862, 115, 60, (null === (c = h.player) || void 0 === c ? void 0 : c.inverted) ? "not in" : "in", g || !h.player ? "#ddd" : "White", "", "", g || !h.player), MainCanvas.textAlign = "left", DrawText("room with member", 453, 892, "Black", "Gray"), ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60), DrawButton(950, 862, 64, 64, "", g || !h.player ? "#ddd" : "White", void 0, void 0, g || !h.player), LA("Icons/Title.png", 952, 864, {
+        if (DrawCheckbox(125, 860, 64, 64, "when", !!h.player, g), MainCanvas.textAlign = "center", DrawButton(324, 862, 115, 60, (null === (c = h.player) || void 0 === c ? void 0 : c.inverted) ? "not in" : "in", g || !h.player ? "#ddd" : "White", "", "", g || !h.player), MainCanvas.textAlign = "left", DrawText("комната с участником", 453, 892, "Black", "Gray"), ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60), DrawButton(950, 862, 64, 64, "", g || !h.player ? "#ddd" : "White", void 0, void 0, g || !h.player), LA("Icons/Title.png", 952, 864, {
                 Width: 60,
                 Height: 60
             }), h.player) {
@@ -15527,7 +15527,7 @@ class DC extends br {
             MainCanvas.fillStyle = (c.role.inverted ? !e : e) ? "#00FF22" : "#AA0000",
             MainCanvas.fillRect(95, 780, 15, 64)
         }
-        if (DrawCheckbox(125, 860, 64, 64, "when", !!c.player, d), MainCanvas.textAlign = "center", DrawButton(324, 862, 115, 60, (null === (s = c.player) || void 0 === s ? void 0 : s.inverted) ? "not in" : "in", d || !c.player ? "#ddd" : "White", "", "", d || !c.player), MainCanvas.textAlign = "left", DrawText("room with member", 453, 892, "Black", "Gray"), ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60), c.player) {
+        if (DrawCheckbox(125, 860, 64, 64, "when", !!c.player, d), MainCanvas.textAlign = "center", DrawButton(324, 862, 115, 60, (null === (s = c.player) || void 0 === s ? void 0 : s.inverted) ? "not in" : "in", d || !c.player ? "#ddd" : "White", "", "", d || !c.player), MainCanvas.textAlign = "left", DrawText("комната с участником", 453, 892, "Black", "Gray"), ElementPositionFix("BCX_ConditionMemberNumber", 40, 768, 860, 162, 60), c.player) {
             const e = ServerPlayerIsInChatRoom() && fA().some((e => e.MemberNumber === c.player.memberNumber));
             MainCanvas.fillStyle = (c.player.inverted ? !e : e) ? "#00FF22" : "#AA0000",
             MainCanvas.fillRect(95, 860, 15, 64);
