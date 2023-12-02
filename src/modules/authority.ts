@@ -221,11 +221,11 @@ export function setPermissionMinAccess(permission: BCX_Permissions, min: AccessL
 	}
 
 	if (characterToCheck) {
-		logMessage("permission_change", LogEntryType.plaintext, `${characterToCheck} изменено разрешение "${permData.name}" из ` +
+		logMessage("permission_change", LogEntryType.plaintext, `${characterToCheck} изменил правило "${permData.name}" из ` +
 			`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" к "${getPermissionMinDisplayText(min, characterToCheck)}"`);
 		if (!characterToCheck.isPlayer()) {
 			ChatRoomSendLocal(
-				`${characterToCheck.toNicknamedString()} изменено разрешение "${permData.name}" из ` +
+				`${characterToCheck.toNicknamedString()} изменил правило "${permData.name}" из ` +
 				`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" к "${getPermissionMinDisplayText(min, characterToCheck)}"`,
 				undefined, characterToCheck.MemberNumber
 			);
