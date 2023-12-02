@@ -17684,9 +17684,9 @@ function rA(e, t, n, r = !1) {
         return !0;
     if (n && !r) {
         if (!(eA(t ? "authority_grant_self" : "authority_revoke_self", n) && (n.isPlayer() || eA(e, n))))
-            return console.warn(`BCX: Unauthorized self permission edit attempt for "${e}" by ${n}`), !1
+            return console.warn(`BCX: Попытка несанкционированного самостоятельного редактирования для "${e}" by ${n}`), !1
     }
-    return n && (Mp("permission_change", kp.plaintext, `${n} ` + (t ? `gave ${n.isPlayer() ? "herself" : Player.Name}` : "removed " + ((null == n ? void 0 : n.isPlayer()) ? "her" : Player.Name + "'s")) + ` control over permission "${o.name}"`), n.isPlayer() || NA(`${n.toNicknamedString()} ` + (t ? `gave ${n.isPlayer() ? "herself" : gA().Nickname}` : "removed " + ((null == n ? void 0 : n.isPlayer()) ? "her" : gA().Nickname + "'s")) + ` control over permission "${o.name}"`, void 0, n.MemberNumber)),
+    return n && (Mp("permission_change", kp.plaintext, `${n} ` + (t ? `gave ${n.isPlayer() ? "herself" : Player.Name}` : "removed " + ((null == n ? void 0 : n.isPlayer()) ? "her" : Player.Name + "'s")) + ` контроль над разрешением "${o.name}"`), n.isPlayer() || NA(`${n.toNicknamedString()} ` + (t ? `gave ${n.isPlayer() ? "herself" : gA().Nickname}` : "removed " + ((null == n ? void 0 : n.isPlayer()) ? "her" : gA().Nickname + "'s")) + ` контроль над разрешением "${o.name}"`, void 0, n.MemberNumber)),
     o.self = t,
     iA(),
     $w(),
@@ -17695,16 +17695,16 @@ function rA(e, t, n, r = !1) {
 function oA(e, t, n, r = !1) {
     const o = zw.get(e);
     if (!o)
-        throw new Error(`Attempt to edit unknown permission "${e}"`);
+        throw new Error(`Попытка изменить неизвестное разрешение "${e}"`);
     if (!Yw(o.category))
         return !1;
     if (o.min === t)
         return !0;
     if (n && !r) {
         if (!(n.isPlayer() && o.min < t && t <= Zw.owner || eA("authority_edit_min", n) && eA(e, n) && (n.isPlayer() || Qw(n) <= t)))
-            return console.warn(`BCX: Unauthorized min permission edit attempt for "${e}" by ${n}`), !1
+            return console.warn(`BCX: Несанкционированная попытка изменения минимального разрешения для "${e}" by ${n}`), !1
     }
-    return n && (Mp("permission_change", kp.plaintext, `${n} changed permission "${o.name}" from "${sA(o.min, n)}" to "${sA(t, n)}"`), n.isPlayer() || NA(`${n.toNicknamedString()} changed permission "${o.name}" from "${sA(o.min, n)}" to "${sA(t, n)}"`, void 0, n.MemberNumber)),
+    return n && (Mp("permission_change", kp.plaintext, `${n} изменено разрешение "${o.name}" из "${sA(o.min, n)}" в "${sA(t, n)}"`), n.isPlayer() || NA(`${n.toNicknamedString()} изменено разрешение "${o.name}" из "${sA(o.min, n)}" в "${sA(t, n)}"`, void 0, n.MemberNumber)),
     o.min = t,
     t === Zw.self && (o.self = !0),
     iA(),

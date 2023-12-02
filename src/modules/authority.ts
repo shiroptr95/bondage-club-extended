@@ -215,18 +215,18 @@ export function setPermissionMinAccess(permission: BCX_Permissions, min: AccessL
 				)
 			);
 		if (!allowed) {
-			console.warn(`BCX: Unauthorized min permission edit attempt for "${permission}" by ${characterToCheck}`);
+			console.warn(`BCX: Несанкционированная попытка изменения минимального разрешения для "${permission}" by ${characterToCheck}`);
 			return false;
 		}
 	}
 
 	if (characterToCheck) {
-		logMessage("permission_change", LogEntryType.plaintext, `${characterToCheck} changed permission "${permData.name}" from ` +
-			`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" to "${getPermissionMinDisplayText(min, characterToCheck)}"`);
+		logMessage("permission_change", LogEntryType.plaintext, `${characterToCheck} изменено разрешение "${permData.name}" из ` +
+			`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" к "${getPermissionMinDisplayText(min, characterToCheck)}"`);
 		if (!characterToCheck.isPlayer()) {
 			ChatRoomSendLocal(
-				`${characterToCheck.toNicknamedString()} changed permission "${permData.name}" from ` +
-				`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" to "${getPermissionMinDisplayText(min, characterToCheck)}"`,
+				`${characterToCheck.toNicknamedString()} изменено разрешение "${permData.name}" из ` +
+				`"${getPermissionMinDisplayText(permData.min, characterToCheck)}" к "${getPermissionMinDisplayText(min, characterToCheck)}"`,
 				undefined, characterToCheck.MemberNumber
 			);
 		}
