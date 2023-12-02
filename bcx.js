@@ -9925,7 +9925,7 @@ function Vp() {
         name: "Полностью слеп, когда глаза закрыты",
         type: 1,
         loggable: !1,
-        longDescription: "This rule enforces full blindness when the eyes are closed. (Light sensory deprivation setting is still respected and doesn't blind fully)",
+        longDescription: "Это правило обеспечивает полную слепоту, когда глаза закрыты. (Легкая сенсорная депривация все еще соблюдается и не ослепляет полностью)",
         keywords: ["seeing", "blindness", "eyes", "blindfold", "realistic", "room"],
         defaultLimit: E.normal,
         dataDefinition: {
