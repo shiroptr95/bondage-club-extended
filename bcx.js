@@ -10882,7 +10882,7 @@ function gy() {
                 type: "stringList",
             default:
                 [],
-                description: "All forbidden words:",
+                description: "Все запрещенные слова:",
                 options: {
                     validate: /^[\p{L} ]*$/iu
                 }

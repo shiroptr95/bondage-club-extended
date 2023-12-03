@@ -172,15 +172,15 @@ export class GuiLog extends GuiSubscreen {
 			MainCanvas.textAlign = "center";
 			// Praise button
 			if (this.allowPraise) {
-				DrawButton(950, 815, 150, 64, "Praise", "White");
+				DrawButton(950, 815, 150, 64, "Хвалить", "White");
 			}
 			// Leave message button
 			if (this.allowLeaveMessage) {
-				DrawButton(1150, 815, 200, 64, "Only note", "White");
+				DrawButton(1150, 815, 200, 64, "Только обратите внимание", "White");
 			}
 			// Scold button
 			if (this.allowPraise) {
-				DrawButton(1400, 815, 150, 64, "Scold", "White");
+				DrawButton(1400, 815, 150, 64, "Ругать", "White");
 			}
 
 			// Pagination
