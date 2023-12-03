@@ -16362,7 +16362,7 @@ class $C extends br {
                 Height: 64,
                 Width: 64
             }),
-            this.permissionMode ? (l = ["#50ff56", "#f6fe78", "#ffa7a7"][a], c = ["Normal", "Limited", "Blocked"][a]) : (l = i ? "#88c" : s ? "White" : "#ccc", c = i ? "Already applied" : s ? "" : "You don't have permission to use this rule"),
+            this.permissionMode ? (l = ["#50ff56", "#f6fe78", "#ffa7a7"][a], c = ["Normal", "Limited", "Blocked"][a]) : (l = i ? "#88c" : s ? "White" : "#ccc", c = i ? "Already applied" : s ? "" : "У вас нет разрешения на использование этого правила"),
             DrawButton(200, o, 1350, 64, "", l, "", "", i || this.permissionMode);
             let u = r.definition.name;
             r.definition.shortDescription && (u += ` (${X(r.definition.shortDescription, {
@@ -17011,7 +17011,7 @@ class rw extends br {
             a = this.HasAccess(r);
             let s,
             l;
-            this.permissionMode ? (s = ["#50ff56", "#f6fe78", "#ffa7a7"][i], l = ["Normal", "Limited", "Blocked"][i]) : (s = a ? "White" : "#ccc", l = a ? "" : "You don't have permission to use this rule"),
+            this.permissionMode ? (s = ["#50ff56", "#f6fe78", "#ffa7a7"][i], l = ["Normal", "Limited", "Blocked"][i]) : (s = a ? "White" : "#ccc", l = a ? "" : "У вас нет разрешения на использование этого правила"),
             DrawButton(130, o, 1350, 64, "", s, "", "", this.permissionMode);
             let c = r.definition.name;
             r.definition.shortDescription && (c += ` (${X(r.definition.shortDescription, {

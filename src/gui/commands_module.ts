@@ -185,7 +185,7 @@ export class GuiCommandsModule extends GuiSubscreen {
 				text = ["Normal", "Limited", "Blocked"][accessLevel];
 			} else {
 				color = !allowAccess ? "#ccc" : "White";
-				text = !allowAccess ? "You don't have permission to use this rule" : "";
+				text = !allowAccess ? "У вас нет разрешения на использование этого правила" : "";
 			}
 			// Command name
 			DrawButton(130, Y, 1350, 64, "", color, "", "", this.permissionMode);

@@ -219,7 +219,7 @@ export class GuiRulesAdd extends GuiSubscreen {
 				color = ruleIsCreated ? "#88c" :
 					!allowAccess ? "#ccc" : "White";
 				text = ruleIsCreated ? "Already applied" :
-					!allowAccess ? "You don't have permission to use this rule" : "";
+					!allowAccess ? "У вас нет разрешения на использование этого правила" : "";
 			}
 			// Rule name
 			DrawButton(200, Y, 1350, 64, "", color, "", "", ruleIsCreated || this.permissionMode);
