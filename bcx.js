@@ -16299,7 +16299,7 @@ class $C extends br {
         var e;
         if (MainCanvas.textAlign = "left", DrawText(`- Rules: Create new rules for ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.rulesData)
             return void(this.failed ? xw(`get rules data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
-        DrawButton(1815, 305, 90, 90, "", this.rulesData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.rulesData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Разрешения на изменение правил" : "У вас нет разрешения на изменение лимитов.", !this.rulesData.access_changeLimits),
+        DrawButton(1815, 305, 90, 90, "", this.rulesData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.rulesData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Настроить разрешения на изменение правил" : "У вас нет разрешения на изменение лимитов.", !this.rulesData.access_changeLimits),
         MainCanvas.textAlign = "left",
         DrawText("Filter:", 130, 215, "Black"),
         Y(this.filterInput, 550, 210, 600, 64),
