@@ -171,7 +171,7 @@ export function logClear(character: ChatroomCharacter | null): boolean {
 	}
 
 	modStorage.log = [];
-	logMessageAdd(LogAccessLevel.everyone, LogEntryType.plaintext, "The log has been cleared");
+	logMessageAdd(LogAccessLevel.everyone, LogEntryType.plaintext, "Журнал был очищен");
 
 	return true;
 }

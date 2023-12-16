@@ -163,7 +163,7 @@ export class GuiAuthorityRoles extends GuiSubscreen {
 
 			const Input = document.getElementById("BCX_RoleAdd") as HTMLInputElement | undefined;
 			if (Input) {
-				DrawText("Member Number:", 130, 847, "Black");
+				DrawText("Номер участника:", 130, 847, "Black");
 				ElementPosition("BCX_RoleAdd", 580, 842, 300, 64);
 			}
 
@@ -177,16 +177,16 @@ export class GuiAuthorityRoles extends GuiSubscreen {
 			}
 
 			if (this.roleData.allowAddMistress || this.roleData.allowAddOwner) {
-				DrawButton(740, 815, 64, 64, "", "White", undefined, `Select member number from list`);
+				DrawButton(740, 815, 64, 64, "", "White", undefined, `Выберите номер участника из списка`);
 				DrawImageEx("Icons/Title.png", 742, 815, { Width: 60, Height: 60 });
 			}
 
 			// Pagination
 			const totalPages = Math.ceil(this.roleList.length / PER_PAGE_COUNT);
-			DrawBackNextButton(1430, 800, 300, 90, `Page ${this.page + 1} / ${totalPages}`, "White", "", () => "", () => "");
+			DrawBackNextButton(1430, 800, 300, 90, `Страница ${this.page + 1} / ${totalPages}`, "White", "", () => "", () => "");
 		} else if (this.failed) {
 			MainCanvas.textAlign = "center";
-			DrawQueryErrorMessage(`get role data from ${this.character.Name}`, 800);
+			DrawQueryErrorMessage(`получить данные о роли из ${this.character.Name}`, 800);
 		} else {
 			MainCanvas.textAlign = "center";
 			DrawText("Loading...", 800, 480, "Black");
@@ -205,11 +205,11 @@ export class GuiAuthorityRoles extends GuiSubscreen {
 		}
 
 		MainCanvas.textAlign = "left";
-		DrawText(`- Authority: Role Management for ${this.character.Name} -`, 125, 125, "Black", "Gray");
+		DrawText(`- Authority: Управление ролями для ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
-		DrawButton(1815, 305, 90, 90, "", "White", "Icons/Preference.png", "Configure the role-based BCX permissions");
+		DrawButton(1815, 305, 90, 90, "", "White", "Icons/Preference.png", "Настройка ролевых разрешений BCX");
 
 	}
 

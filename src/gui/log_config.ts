@@ -165,7 +165,7 @@ export class GuiLogConfig extends GuiSubscreen {
 		DrawText(`- Behaviour Log: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
 		if (this.allowDelete) {
-			DrawButton(1525, 690, 380, 64, "Delete all log entries", "White");
+			DrawButton(1525, 690, 380, 64, "Удалить все записи журнала", "White");
 		}
 
 		// help text

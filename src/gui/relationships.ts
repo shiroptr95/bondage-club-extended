@@ -143,7 +143,7 @@ export class GuiRelationships extends GuiSubscreen {
 
 			// hover text for toggle
 			MainCanvas.textAlign = "center";
-			if (MouseIn(880, Y, 64, 64)) DrawButtonHover(930, Y, 4, 64, `${this.character.Name} can only say the custom name`);
+			if (MouseIn(880, Y, 64, 64)) DrawButtonHover(930, Y, 4, 64, `${this.character.Name} может произносить только пользовательское имя`);
 
 			if (allow) {
 				DrawButton(1550, Y, 64, 64, "X", "White", undefined, "Delete this custom name");
@@ -153,7 +153,7 @@ export class GuiRelationships extends GuiSubscreen {
 
 		const Input_NameAdd = document.getElementById("BCX_NameAdd") as HTMLInputElement | undefined;
 		if (Input_NameAdd) {
-			DrawText("Member Number:", 130, 847, "Black");
+			DrawText("Номер участника:", 130, 847, "Black");
 			ElementPosition("BCX_NameAdd", 580, 842, 300, 64);
 			if (!this.relationshipsData.access_modify_others) {
 				Input_NameAdd.value = String(Player.MemberNumber);
@@ -165,7 +165,7 @@ export class GuiRelationships extends GuiSubscreen {
 
 		// hover text for member selector
 		MainCanvas.textAlign = "center";
-		if (MouseIn(740, 815, 64, 64)) DrawButtonHover(580, 890, 4, 64, `Select member number from list`);
+		if (MouseIn(740, 815, 64, 64)) DrawButtonHover(580, 890, 4, 64, `Выберите номер участника из списка`);
 		MainCanvas.textAlign = "left";
 
 		const Input_NewNameAdd = document.getElementById("BCX_NewNameAdd") as HTMLInputElement | undefined;
@@ -184,7 +184,7 @@ export class GuiRelationships extends GuiSubscreen {
 
 		// Pagination
 		const totalPages = Math.max(Math.ceil(this.relationshipsList.length / PER_PAGE_COUNT), 1);
-		DrawBackNextButton(1605, 800, 300, 90, `Page ${this.page + 1} / ${totalPages}`, "White", "", () => "", () => "");
+		DrawBackNextButton(1605, 800, 300, 90, `Страница ${this.page + 1} / ${totalPages}`, "White", "", () => "", () => "");
 	}
 
 	Click() {

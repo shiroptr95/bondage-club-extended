@@ -154,7 +154,7 @@ export class GuiLog extends GuiSubscreen {
 				MainCanvas.textAlign = "center";
 
 				if (this.allowDeletion) {
-					DrawButton(1630, Y, 64, 64, "X", "White", "", "Delete log entry");
+					DrawButton(1630, Y, 64, 64, "X", "White", "", "Удалить запись журнала");
 				}
 
 				if (MouseIn(125, Y, 64, 64)) {
@@ -204,7 +204,7 @@ export class GuiLog extends GuiSubscreen {
 		MainCanvas.textAlign = "center";
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
-		DrawButton(1815, 305, 90, 90, "", this.allowConfiguration ? "White" : "#ddd", "Icons/Preference.png", "Configure logging", !this.allowConfiguration);
+		DrawButton(1815, 305, 90, 90, "", this.allowConfiguration ? "White" : "#ddd", "Icons/Preference.png", "Настройте ведение журнала", !this.allowConfiguration);
 	}
 
 	Click() {

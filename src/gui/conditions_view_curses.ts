@@ -99,7 +99,7 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 	}
 
 	protected headerText(): string {
-		return `Curses: All active curses on ${this.character.Name}`;
+		return `Curses: Все активные проклятия на ${this.character.Name}`;
 	}
 
 	protected loadCondition(condition: ConditionsCategoryKeys["curses"], data: ConditionsConditionPublicData<"curses">): [string, CurseEntry] | null {
