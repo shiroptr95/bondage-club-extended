@@ -20128,10 +20128,10 @@ qw(new class extends N {
                 down: "SENDER_NAME (SENDER_NUMBER) made you look down"
             };
             ZC("eyes", {
-                name: "Eyes",
+                name: "Глаза",
                 helpDescription: `<${Object.keys(e).join(" | ")}>`,
-                shortDescription: "Control PLAYER_NAME's eyes",
-                longDescription: "This command forces PLAYER_NAME's eyes into the specified state, but they can still manually change it.\nUsage:\n!eyes HELP_DESCRIPTION",
+                shortDescription: "Контроль PLAYER_NAME's глаза",
+                longDescription: "Это командование силами PLAYER_NAME's глаза в указанное состояние, но они все равно могут изменить его вручную.\nПрименение:\n!eyes HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (n, r, o, i) => {
@@ -20166,10 +20166,10 @@ qw(new class extends N {
                 smile: "SENDER_NAME (SENDER_NUMBER) made you smile"
             };
             ZC("mouth", {
-                name: "Mouth",
+                name: "Рот",
                 helpDescription: `<${Object.keys(n).join(" | ")}>`,
-                shortDescription: "Control PLAYER_NAME's mouth",
-                longDescription: "This command forces PLAYER_NAME's mouth into the specified state, but they can still manually change it.\nUsage:\n!mouth HELP_DESCRIPTION",
+                shortDescription: "Контроль PLAYER_NAME's рот",
+                longDescription: "Это командование силами PLAYER_NAME's рот в указанное состояние, но они все равно могут изменить его вручную.\nПрименение:\n!mouth HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, o, i) => {
@@ -20218,10 +20218,10 @@ qw(new class extends N {
                 close: "SENDER_NAME (SENDER_NUMBER) made you close your legs while standing"
             };
             ZC("arms", {
-                name: "Arms",
+                name: "Руки",
                 helpDescription: `<${Object.keys(o).join(" | ")}>`,
-                shortDescription: "Control PLAYER_NAME's arm poses",
-                longDescription: "This command forces PLAYER_NAME's arms into the specified pose, but they can still manually change it. Some may be unavailable, due to restricting items, etc.\nUsage:\n!arms HELP_DESCRIPTION",
+                shortDescription: "Контроль PLAYER_NAME's позы рук",
+                longDescription: "Эта команда заставляет PLAYER_NAME's руки в заданную позу, но они все равно могут изменить ее вручную. Некоторые из них могут быть недоступны из-за ограничения количества товаров и т.д.\nИспользование:\n!arms HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, n, r) => {
@@ -20250,10 +20250,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], Object.keys(o)) : []
             }),
             ZC("legs", {
-                name: "Legs",
+                name: "Ноги",
                 helpDescription: `<${Object.keys(i).join(" | ")}>`,
-                shortDescription: "Control PLAYER_NAME's leg poses",
-                longDescription: "This command forces PLAYER_NAME's legs into the specified pose, but they can still manually change it. Some may be unavailable, due to restricting items, etc.\nUsage:\n!legs HELP_DESCRIPTION",
+                shortDescription: "Контроль поз для ног PLAYER_NAME's",
+                longDescription: "Эта команда заставляет PLAYER_NAME's ноги в заданную позу, но они все равно могут изменить ее вручную. Некоторые из них могут быть недоступны из-за ограничения количества товаров и т.д.\nИспользование:\n!legs HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, n, r) => {
@@ -20282,10 +20282,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], Object.keys(i)) : []
             }),
             ZC("allfours", {
-                name: "Allfours",
+                name: "Четвереньки",
                 helpDescription: "",
-                shortDescription: "Make PLAYER_NAME get on all fours",
-                longDescription: "This command forces PLAYER_NAME's to get on all fours, but they can still manually change their pose. This pose requires specific items to work.\nUsage:\n!allfours",
+                shortDescription: "Заставьте PLAYER_NAME встать на четвереньки",
+                longDescription: "Эта команда заставляет PLAYER_NAME's чтобы встать на четвереньки, но они все равно могут вручную менять позу. Для работы этой позы требуются определенные предметы.\nИспользование:\n!allfours",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, n, r) => {
@@ -20313,10 +20313,10 @@ qw(new class extends N {
                 }
             }),
             ZC("goandwait", {
-                name: "Go and wait",
+                name: "Иди и жди",
                 helpDescription: "<public|private> <background name> <room name>",
-                shortDescription: "Makes PLAYER_NAME leave and wait in another chat room.",
-                longDescription: "This command forces PLAYER_NAME to leave the current room and join an existing chat room or otherwise create a new public or private one with the given background name and room name. PLAYER_NAME is not prevented from leaving that room, if she is able to. Tip: If you want to make PLAYER_NAME wait in a certain way, the pose command could for instance be used before this one.\nUsage:\n!goandwait HELP_DESCRIPTION",
+                shortDescription: "Заставляет PLAYER_NAME уйти и ждать в другом чате.",
+                longDescription: "Эта команда заставляет PLAYER_NAME покинуть текущую комнату и присоединиться к существующему чату или иным образом создать новый публичный или приватный чат с заданным фоновым именем и названием комнаты. PLAYER_NAME ей не запрещено покидать эту комнату, если она в состоянии это сделать. Совет: Если вы хотите заставить PLAYER_NAME ждать определенным образом, перед этой командой можно использовать, например, команду pose.\nИспользование:\n!goandwait HELP_DESCRIPTION",
                 defaultLimit: E.blocked,
                 playerUsable: !1,
                 trigger: (e, t, n, r) => {
@@ -20364,10 +20364,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], ["public", "private"]) : 2 === e.length ? ev(e[1], YC) : []
             }),
             ZC("cell", {
-                name: "Send to cell",
+                name: "Отправить в клетку",
                 helpDescription: "<time>",
-                shortDescription: "Lock PLAYER_NAME in a singleplayer isolation cell",
-                longDescription: "This command sends PLAYER_NAME to the timer cell for up to 60 minutes. There is no way for you to get her out before the time is up.\nIMPORTANT: The effects of this command is not going away if BCX is turned off or not activated after reloading. This is because this command uses a function present in the base game.\nUsage:\n!cell HELP_DESCRIPTION",
+                shortDescription: "Запереть PLAYER_NAME в изоляторе для одного игрока",
+                longDescription: "Эта команда отправляет PLAYER_NAME в ячейку таймера на время до 60 минут. У вас не будет возможности вывести ее до истечения времени.\nВажно: Эффект от этой команды не исчезнет, если BCX выключен или не активирован после перезагрузки. Это связано с тем, что данная команда использует функцию, присутствующую в базовой игре.\nИспользование:\n!cell HELP_DESCRIPTION",
                 defaultLimit: E.blocked,
                 playerUsable: !1,
                 trigger: (e, t, n, r) => {
@@ -20381,7 +20381,7 @@ qw(new class extends N {
                         o += e
                     }
                     const i = o / 6e4;
-                    return i < 1 || i > 60 ? (n("Time needs to be between 1 minute and 1 hour"), !1) : (EA(`Two maids locked you into a timer cell, following ${t}'s command.`, 8e3), _A(`TargetCharacterName gets grabbed by two maids and locked in a timer cell, following SourceCharacter's (${t.MemberNumber}) command.`, null, [{
+                    return i < 1 || i > 60 ? (n("Время должно составлять от 1 минуты до 1 часа"), !1) : (EA(`Two maids locked you into a timer cell, following ${t}'s command.`, 8e3), _A(`TargetCharacterName gets grabbed by two maids and locked in a timer cell, following SourceCharacter's (${t.MemberNumber}) command.`, null, [{
                                     Tag: "TargetCharacterName",
                                     MemberNumber: Player.MemberNumber,
                                     Text: CharacterNickname(Player)
@@ -20394,10 +20394,10 @@ qw(new class extends N {
                 }
             }),
             ZC("asylum", {
-                name: "Send to asylum",
+                name: "Отправить в психушку",
                 helpDescription: "<time> | cancel",
-                shortDescription: "Lock PLAYER_NAME into the aslyum",
-                longDescription: "This command sends and locks PLAYER_NAME into the asylum for up to 1 week, where she can freely walk around, but cannot leave the area. You can free PLAYER_NAME early by visiting her in the aslyum and using '.asylum cancel'.\nIMPORTANT: The effects of this command is not going away if BCX is turned off or not activated after reloading. This is because this command uses a function present in the base game.\nUsage:\n!asylum HELP_DESCRIPTION",
+                shortDescription: "Заблокируйте PLAYER_NAME в психушке",
+                longDescription: "Эта команда отправляет и запирает PLAYER_NAME в убежище на срок до 1 недели, где она может свободно передвигаться, но не может покинуть территорию. Вы можете освободить PLAYER_NAME досрочно, посетив ее в психушке и использовав '.asylum cancel'.\nВАЖНО: Эффект от этой команды не исчезнет, если BCX выключен или не активирован после перезагрузки. Это связано с тем, что данная команда использует функцию, присутствующую в базовой игре.\nИспользование:\n!asylum HELP_DESCRIPTION",
                 defaultLimit: E.blocked,
                 playerUsable: !1,
                 trigger: (e, t, n, r) => {
@@ -20412,7 +20412,7 @@ qw(new class extends N {
                             return n(e), !1;
                         o += e
                     }
-                    return o < 6e4 || o > 6048e5 ? (n("Time needs to be between 1 minute and 1 week"), !1) : (EA(`Two nurses locked you in the Asylum, following ${t}'s command.`, 8e3), _A(`TargetCharacterName gets grabbed by two nurses and locked in the Asylum, following SourceCharacter's (${t.MemberNumber}) command.`, null, [{
+                    return o < 6e4 || o > 6048e5 ? (n("Время должно составлять от 1 минуты до 1 недели"), !1) : (EA(`Two nurses locked you in the Asylum, following ${t}'s command.`, 8e3), _A(`TargetCharacterName gets grabbed by two nurses and locked in the Asylum, following SourceCharacter's (${t.MemberNumber}) command.`, null, [{
                                     Tag: "TargetCharacterName",
                                     MemberNumber: Player.MemberNumber,
                                     Text: CharacterNickname(Player)
@@ -20426,10 +20426,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], ["cancel"]) : []
             }),
             ZC("keydeposit", {
-                name: "Deposit all keys",
+                name: "Сдайте на хранение все ключи",
                 helpDescription: "<time> | cancel",
-                shortDescription: "Store away PLAYER_NAME's keys",
-                longDescription: "This command removes all of PLAYER_NAME's keys for up to 1 week. You can give them back to her early by using '.keydeposit cancel'.\nIMPORTANT: The effects of this command is not going away if BCX is turned off or not activated after reloading. This is because this command uses a function present in the base game.\nUsage:\n!keydeposit HELP_DESCRIPTION",
+                shortDescription: "Храните ключи PLAYER_NAME",
+                longDescription: "Эта команда удаляет все ключи PLAYER_NAME на срок до 1 недели. Вы можете вернуть их ей раньше, используя '.keydeposit cancel'.\nВАЖНО: Эффект от этой команды не исчезнет, если BCX выключен или не активирован после перезагрузки. Это связано с тем, что данная команда использует функцию, присутствующую в базовой игре.\nUsage:\n!keydeposit HELP_DESCRIPTION",
                 defaultLimit: E.limited,
                 playerUsable: !1,
                 trigger: (e, t, n, r) => {
@@ -20444,7 +20444,7 @@ qw(new class extends N {
                             return n(e), !1;
                         o += e
                     }
-                    return o < 6e4 || o > 6048e5 ? (n("Time needs to be between 1 minute and 1 week"), !1) : (_A(`A nurse took all keys from TargetCharacterName, following SourceCharacter's (${t.MemberNumber}) command. The keys will be deposited for ${F(o)}.`, null, [{
+                    return o < 6e4 || o > 6048e5 ? (n("Время должно составлять от 1 минуты до 1 недели"), !1) : (_A(`A nurse took all keys from TargetCharacterName, following SourceCharacter's (${t.MemberNumber}) command. The keys will be deposited for ${F(o)}.`, null, [{
                                     Tag: "TargetCharacterName",
                                     MemberNumber: Player.MemberNumber,
                                     Text: CharacterNickname(Player)
@@ -20458,10 +20458,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], ["cancel"]) : []
             }),
             ZC("timeleft", {
-                name: "Show remaining time",
+                name: "Показать оставшееся время",
                 helpDescription: "asylum | ggts | keydeposit",
-                shortDescription: "Remaining time of keyhold, asylum stay, or GGTS training",
-                longDescription: "This command shows the remaining time of either having all of PLAYER_NAME's keys deposited, her being locked in the asylum, or having to do GGTS training sessions in the asylum.\nUsage:\n!timeleft HELP_DESCRIPTION",
+                shortDescription: "Оставшееся время хранения ключей, пребывания в психушке или обучения в GGTS",
+                longDescription: "Эта команда показывает оставшееся время до того момента, когда все ключи PLAYER_NAME будут переданы на хранение, когда она будет заперта в психушке, или когда ей придется проходить тренировки GGTS в убежище.\nИспользование:\n!timeleft HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, n, r) => {
@@ -20481,10 +20481,10 @@ qw(new class extends N {
                 autoCompleter: e => 1 === e.length ? ev(e[0], ["asylum", "ggts", "keydeposit"]) : []
             }),
             ZC("servedrinks", {
-                name: "Send to serve drinks",
+                name: "Подавать напитки",
                 helpDescription: "",
-                shortDescription: "Force PLAYER_NAME to do bound maid work",
-                longDescription: "This command sends PLAYER_NAME to sell 5 drinks as a maid in multiplayer chat rooms. She must be a maid recognized by the maid sorority and be able to walk and talk, to be taken in by the maid.\nUsage:\n!servedrinks",
+                shortDescription: "Заставьте PLAYER_NAME выполнять работу связанной горничной",
+                longDescription: "Эта команда отправляет PLAYER_NAME продать 5 напитков в качестве горничной в многопользовательском чате. Она должна быть горничной, признанной женским обществом, и уметь ходить и говорить, чтобы ее взяли в горничные..\nИспользование:\n!servedrinks",
                 defaultLimit: E.blocked,
                 playerUsable: !1,
                 trigger: (e, t, n) => {
@@ -20513,10 +20513,10 @@ qw(new class extends N {
                 }
             }),
             ZC("orgasm", {
-                name: "Manipulate the arousal meter",
+                name: "Манипулируйте измерителем возбуждения",
                 helpDescription: "<number from 1 to 100> | forced | ruined | stop",
-                shortDescription: "Controls PLAYER_NAME's orgasms directly",
-                longDescription: "This command controls PLAYER_NAME's arousal meter directly, allowing four things:\n1. Setting the bar directly to a number from 1 to 100, whereas 100 triggers a normal orgasm.\n2. Triggering a forced orgasm that cannot be resisted.\n3. Triggering an orgasm that gets ruined.\n4. Stopping an orgasm already triggered (e.g. by a toy).\nUsage:\n!orgasm HELP_DESCRIPTION",
+                shortDescription: "Управляет оргазмом PLAYER_NAME напрямую",
+                longDescription: "Эта команда управляет измерителем возбуждения PLAYER_NAME напрямую, позволяя четыре вещи:\n1. Установите планку непосредственно на число от 1 до 100, тогда как 100 вызывает обычный оргазм.\n2 Вызывают принудительный оргазм, которому невозможно сопротивляться.\n3 Вызвать оргазм, который будет испорчен.\n4 Остановка уже наступившего оргазма (например. игрушкой).\nИспользование:\n!orgasm HELP_DESCRIPTION",
                 defaultLimit: E.limited,
                 playerUsable: !1,
                 trigger: (e, t, n, r) => {
@@ -20564,10 +20564,10 @@ qw(new class extends N {
                 game: "Gaming"
             };
             ZC("emoticon", {
-                name: "Emoticon",
+                name: "Эмотикон",
                 helpDescription: `<${Object.keys(l).join(" | ")}>`,
-                shortDescription: "Control PLAYER_NAME's emoticon",
-                longDescription: "This command changes PLAYER_NAME's emoticon into the specified state, but the player can still manually change it.\nUsage:\n!emoticon HELP_DESCRIPTION",
+                shortDescription: "Управление смайликом PLAYER_NAME",
+                longDescription: "Эта команда переводит смайлик PLAYER_NAME в указанное состояние, но игрок все равно может изменить его вручную.\nИспользование:\n!emoticon HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, n, r) => {
