@@ -60,17 +60,17 @@ export class GuiMisc extends GuiSubscreen {
 		MainCanvas.textAlign = "left";
 
 		if (this.page === 0) {
-			DrawCheckbox(125, 200, 64, 64, "Enable typing indicator", !!modStorage.typingIndicatorEnable);
-			DrawCheckbox(700, 200, 64, 64, "Hide BC's typing & wardrobe icon on users showing BCX one", !!modStorage.typingIndicatorHideBC);
-			DrawCheckbox(125, 300, 64, 64, "Enable status indicator showing when you are in any player's BCX menu, biography, or wardrobe", !!modStorage.screenIndicatorEnable);
-			DrawCheckbox(125, 400, 64, 64, "Cheat: Prevent random NPC events (kidnappings, ransoms, asylum, club slaves)", cheatIsEnabled(MiscCheat.BlockRandomEvents));
-			DrawCheckbox(125, 500, 64, 64, "Cheat: Prevent loosing Mistress status when reputation falls below 50 dominance", cheatIsEnabled(MiscCheat.CantLoseMistress));
-			DrawCheckbox(125, 600, 64, 64, "Cheat: Give yourself the mistress padlock and its key", cheatIsEnabled(MiscCheat.GiveMistressKey));
-			DrawCheckbox(125, 700, 64, 64, "Cheat: Give yourself the pandora padlock and its key", cheatIsEnabled(MiscCheat.GivePandoraKey));
-			DrawText("Use the following text to auto fill the chat room search field:", 125, 830, "Black", "Gray");
+			DrawCheckbox(125, 200, 64, 64, "Включить индикатор набора текста", !!modStorage.typingIndicatorEnable);
+			DrawCheckbox(700, 200, 64, 64, "Скрыть значок набора текста и гардероба BC у пользователей, показывающих BCX one", !!modStorage.typingIndicatorHideBC);
+			DrawCheckbox(125, 300, 64, 64, "Включить индикатор статуса, показывающий, когда вы находитесь в меню, биографии или гардеробе BCX любого игрока.", !!modStorage.screenIndicatorEnable);
+			DrawCheckbox(125, 400, 64, 64, "Чит: предотвращение случайных событий NPC (похищения людей, выкупы, убежище, клубные рабы)", cheatIsEnabled(MiscCheat.BlockRandomEvents));
+			DrawCheckbox(125, 500, 64, 64, "Чит: предотвращение потери статуса Госпожи, когда репутация падает ниже 50 доминирования.", cheatIsEnabled(MiscCheat.CantLoseMistress));
+			DrawCheckbox(125, 600, 64, 64, "Чит: дайте себе замок хозяйки и ключ от него.", cheatIsEnabled(MiscCheat.GiveMistressKey));
+			DrawCheckbox(125, 700, 64, 64, "Чит: дайте себе замок Пандоры и ключ от него.", cheatIsEnabled(MiscCheat.GivePandoraKey));
+			DrawText("Используйте следующий текст для автоматического заполнения поля поиска чата:", 125, 830, "Black", "Gray");
 			ElementPosition("BCX_RoomSearchValueField", 1320, 827, 460, 64);
 		} else if (this.page === 1) {
-			DrawCheckbox(125, 200, 64, 64, "Use the extended wardrobe importer as default", modStorage.wardrobeDefaultExtended ?? true);
+			DrawCheckbox(125, 200, 64, 64, "Используйте расширенный импортер гардероба по умолчанию.", modStorage.wardrobeDefaultExtended ?? true);
 		}
 
 		// help text
