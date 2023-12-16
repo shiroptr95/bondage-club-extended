@@ -160,7 +160,7 @@ export function initRules_other() {
 			logEarnings: {
 				type: "toggle",
 				default: false,
-				description: "Also log getting money",
+				description: "Записать в журнал изменение денег",
 			},
 		},
 		internalDataValidate: (data) => typeof data === "number",

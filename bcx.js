@@ -23781,7 +23781,7 @@ qw(new class extends N {
                         type: "toggle",
                     default:
                         !1,
-                        description: "Also log getting money"
+                        description: "Записать в журнал изменение денег"
                     }
                 },
                 internalDataValidate: e => "number" == typeof e,
