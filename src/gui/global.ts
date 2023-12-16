@@ -35,19 +35,19 @@ export class GuiGlobal extends GuiSubscreen {
 		// preset
 		DrawRect(840, 200, 950, 90, "#ddd");
 		DrawImageEx("Icons/Introduction.png", 840 + 20, 200 + 20, { Height: 50, Width: 50 });
-		DrawTextFit(`Your initially selected BCX preset was: "${capitalizeFirstLetter(Preset[getCurrentPreset()])}"`, 1300, 244, 850, "Black");
+		DrawTextFit(`Первоначально была выбрана предустановка BCX: "${capitalizeFirstLetter(Preset[getCurrentPreset()])}"`, 1300, 244, 850, "Black");
 
 		// Manage modules
-		DrawButton(120, 200, 400, 90, "Manage BCX modules", "White", "", "Enable/Disable individual modules");
+		DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Enable/Disable individual modules");
 
 		// Emergency reset
-		DrawButton(1490, 800, 300, 90, "Clear all BCX data", "#FF3232", "", "Emergency reset of BCX");
+		DrawButton(1490, 800, 300, 90, "Очистить все данные BCX", "#FF3232", "", "Emergency reset of BCX");
 
 		// Icon toggles
 		MainCanvas.textAlign = "left";
-		DrawCheckbox(125, 350, 64, 64, "Show BCX icons above characters in chatroom", !modStorage.chatroomIconHidden);
+		DrawCheckbox(125, 350, 64, 64, "Показывать значки BCX над персонажами в чате", !modStorage.chatroomIconHidden);
 		const isSupporter = supporterStatus !== undefined;
-		DrawCheckbox(125, 450, 64, 64, "Show your BCX Supporter Heart to all BCX users", isSupporter && !modStorage.supporterHidden, !isSupporter);
+		DrawCheckbox(125, 450, 64, 64, "Покажите свое сердце сторонника BCX всем пользователям BCX", isSupporter && !modStorage.supporterHidden, !isSupporter);
 	}
 
 	Click() {
