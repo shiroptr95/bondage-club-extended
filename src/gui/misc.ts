@@ -67,7 +67,7 @@ export class GuiMisc extends GuiSubscreen {
 			DrawCheckbox(125, 500, 64, 64, "Чит: предотвращение потери статуса Госпожи, когда репутация падает ниже 50 доминирования.", cheatIsEnabled(MiscCheat.CantLoseMistress));
 			DrawCheckbox(125, 600, 64, 64, "Чит: дайте себе замок хозяйки и ключ от него.", cheatIsEnabled(MiscCheat.GiveMistressKey));
 			DrawCheckbox(125, 700, 64, 64, "Чит: дайте себе замок Пандоры и ключ от него.", cheatIsEnabled(MiscCheat.GivePandoraKey));
-			DrawText("Используйте следующий текст для автоматического заполнения поля поиска чата:", 125, 830, "Black", "Gray");
+			DrawText("текст для автоматического заполнения поля поиска чата:", 125, 830, "Black", "Gray");
 			ElementPosition("BCX_RoomSearchValueField", 1320, 827, 460, 64);
 		} else if (this.page === 1) {
 			DrawCheckbox(125, 200, 64, 64, "Используйте расширенный импортер гардероба по умолчанию.", modStorage.wardrobeDefaultExtended ?? true);
