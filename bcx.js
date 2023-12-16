@@ -13563,7 +13563,7 @@ class wb extends br {
             Height: 50,
             Width: 50
         }),
-        DrawTextFit(`Первоначально была выбрана предустановка BCX: "${O(b[Gw()])}"`, 1300, 244, 850, "Black"),
+        DrawTextFit(`Первоначально выбрана предустановка BCX: "${O(b[Gw()])}"`, 1300, 244, 850, "Black"),
         DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Enable/Disable individual modules"),
         DrawButton(1490, 800, 300, 90, "Очистить все данные BCX", "#FF3232", "", "Emergency reset of BCX"),
         MainCanvas.textAlign = "left",
