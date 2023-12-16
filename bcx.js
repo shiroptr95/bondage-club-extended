@@ -17176,7 +17176,7 @@ class iw extends br {
             LA(t, 1770, 840, {
                 Width: 30,
                 Height: 30
-            }),з
+            }),
             MainCanvas.textAlign = "center"
         } else
             DrawText(`Ваша версия BCX: RU ${g.replace(/-[0-f]+$/i, "")}`, 1650, 765, "Black", ""), DrawText(`${this.character.Name}'s BCX версия: ${null === (e = this.character.BCXVersion) || void 0 === e ? void 0 : e.replace(/-[0-f]+$/i, "")}`, 1650, 845, "Black", "")
