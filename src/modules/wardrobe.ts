@@ -233,7 +233,7 @@ export function ValidationVerifyCraftData(Craft: unknown, Asset: Asset | null): 
 			messages,
 		};
 	} catch (error) {
-		saved("BCX: Failed crafted data validation because of crash:", error);
+		saved("BCX: Не удалось выполнить проверку данных из-за сбоя:", error);
 		return {
 			result: undefined,
 			messages: [`Validation failed: ${error}`],
@@ -299,10 +299,10 @@ export function j_WardrobeImportSelectionClothes(data: string | ItemBundle[], in
 	}
 	const C = CharacterAppearanceSelection;
 	if (!C) {
-		return "Import error: No character";
+		return "Ошибка импорта: Нет персонажа";
 	}
 	if (C.MemberNumber !== j_WardrobeBindsAllowedCharacter && includeBinds) {
-		return "Import error: Not allowed to import items";
+		return "Ошибка импорта: Не разрешается импортировать предметы";
 	}
 
 	const Allow = WardrobeImportMakeFilterFunction({
@@ -348,15 +348,15 @@ let j_WardrobeBindsAllowedCharacter = -1;
 let j_ShowHelp = false;
 let holdingShift = false;
 
-const helpText = "BCX's wardrobe export/import works by converting your appearance into a long code word that is copied to your device's clipboard. " +
-	"You can then paste it anywhere you like, for instance a text file. You can wear the look again by copying the code word to " +
-	"the clipboard and importing it with the according button. Functionality of this feature depends on the device you " +
-	"are using and if the clipboard can be used on it. Importing has two modes: quick and extended. The default behavior when importing is the extended mode, " +
-	"but you can use the quick one when you hold the 'Shift' button while importing. This behavior can be switched around in the misc module settings. " +
-	"The button to the left of the 'Export'-button toggles whether items/restraints on your character should also " +
-	"be exported or imported while using quick mode. Using quick mode, importing with items has two stages: First usage adds no locks, second one also " +
-	"imports locks from the exported items. Importing an outfit with restraints will fail if it would change any item that is locked (or blocked by a locked item), " +
-	"except collars, neck accessories/restraints, and piercings. Those, as well as the body itself, are ignored.";
+const helpText = "BCX's Экспорт/импорт гардероба работает путем преобразования вашего внешнего вида в длинное кодовое слово, которое копируется в буфер обмена вашего устройства. " +
+	"Затем вы можете вставить его куда угодно, например в текстовый файл. Вы можете повторить этот образ, скопировав кодовое слово в " +
+	"буфер обмена и импортировать его с помощью соответствующей кнопки. Функциональность этой функции зависит от устройства, которое вы " +
+	"и можно ли использовать на нем буфер обмена. Импорт имеет два режима: быстро и надолго. По умолчанию при импорте используется расширенный режим, " +
+	"но можно использовать быстрый, если во время импорта удерживать кнопку 'Shift'. Это поведение можно изменить в настройках модуля misc. " +
+	"Кнопка слева от кнопки 'Экспорт' переключает, должны ли предметы/ограничения на вашем персонаже также " +
+	"экспортировать или импортировать при использовании быстрого режима. При использовании быстрого режима импорт с элементами состоит из двух этапов: Первое использование не добавляет блокировок, второе - тоже " +
+	"импортирует замки из экспортируемых элементов. Импорт экипировки с ограничениями будет неудачным, если он изменит любой предмет, который заблокирован (или заблокирован заблокированным предметом), " +
+	"кроме ошейников, шейных аксессуаров/ограничителей и пирсинга. Они, как и само тело, игнорируются.";
 
 function PasteListener(ev: ClipboardEvent) {
 	if (CurrentScreen === "Appearance" && CharacterAppearanceMode === "Wardrobe" || CurrentScreen === "Wardrobe") {
@@ -429,7 +429,7 @@ function openExtendedImport(data: string | ItemBundle[], clothesOnly: boolean = 
 
 	const C = CharacterAppearanceSelection;
 	if (!C) {
-		return "Import error: No character";
+		return "Ошибка импорта: Нет персонажа";
 	}
 	const allowBinds = C.MemberNumber === j_WardrobeBindsAllowedCharacter;
 
@@ -490,7 +490,7 @@ export class ModuleWardrobe extends BaseModule {
 						}
 					})
 					.catch(err => {
-						console.warn("BCX: Failed to get permission to import wardrobe restraints:", err);
+						console.warn("BCX: Не удалось получить разрешение на импорт ограничителей гардероба:", err);
 						j_WardrobeBindsAllowedCharacter = -1;
 					});
 			} else {

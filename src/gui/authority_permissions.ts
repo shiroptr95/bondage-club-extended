@@ -170,7 +170,7 @@ export class GuiAuthorityPermissions extends GuiSubscreen {
 			DrawEmptyRect(1335, 230, 0, 610, "Black");
 
 			// filter
-			DrawText("Filter:", 130, 215, "Black");
+			DrawText("Фильтр:", 130, 215, "Black");
 			positionElement(this.filterInput, 550, 210, 600, 64);
 
 			//reset button

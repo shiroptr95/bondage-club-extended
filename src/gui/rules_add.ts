@@ -153,7 +153,7 @@ export class GuiRulesAdd extends GuiSubscreen {
 
 		// filter
 		MainCanvas.textAlign = "left";
-		DrawText("Filter:", 130, 215, "Black");
+		DrawText("Фильтр:", 130, 215, "Black");
 		positionElement(this.filterInput, 550, 210, 600, 64);
 
 		// reset button

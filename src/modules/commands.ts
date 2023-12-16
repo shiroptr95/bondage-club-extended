@@ -445,9 +445,9 @@ export function Command_selectCharacter(selector: string): ChatroomCharacter | s
 	if (targets.length === 1) {
 		return targets[0];
 	} else if (targets.length === 0) {
-		return `Player "${selector}" not found in the room.`;
+		return `Игрок "${selector}" не найден в комнате.`;
 	} else {
-		return `Multiple players match "${selector}". Please use Member Number instead.`;
+		return `Матч нескольких игроков "${selector}". Пожалуйста, используйте номер участника.`;
 	}
 }
 
@@ -482,9 +482,9 @@ export function Command_selectWornItem(character: ChatroomCharacter, selector: s
 	if (targets.length === 1) {
 		return targets[0];
 	} else if (targets.length === 0) {
-		return `Item "${selector}" not found on character ${character}. If your item(group) consists of more than one word, please put it in quotes, such as "lower leg".`;
+		return `Предмет "${selector}" не найден на персонаже ${character}. Если ваш товар состоит более чем из одного слова, пожалуйста, заключите его в кавычки, например, "голень".`;
 	} else {
-		return `Multiple items match, please use group name instead. (eg. arms)`;
+		return `Если совпадает несколько элементов, пожалуйста, используйте название группы. (например. arms)`;
 	}
 }
 
