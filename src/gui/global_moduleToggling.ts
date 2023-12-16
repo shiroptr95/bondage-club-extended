@@ -22,7 +22,7 @@ export class GuiGlobalModuleToggling extends GuiSubscreen {
 	Run() {
 		MainCanvas.textAlign = "left";
 		DrawText(`- Global: Enable/Disable BCX's modules -`, 125, 125, "Black", "Gray");
-		DrawText(`Warning: Disabling a module will reset all its settings and stored data!`, 125, 180, "FireBrick");
+		DrawText(`Внимание: Отключение модуля приведет к сбросу всех его настроек и сохраненных данных!`, 125, 180, "FireBrick");
 
 		for (let i = 0; i < TOGGLEABLE_MODULES.length; i++) {
 			const module = TOGGLEABLE_MODULES[i];

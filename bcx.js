@@ -2135,7 +2135,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
         Run() {
             MainCanvas.textAlign = "left",
             DrawText("- Global: Enable/Disable BCX's modules -", 125, 125, "Black", "Gray"),
-            DrawText("Warning: Disabling a module will reset all its settings and stored data!", 125, 180, "FireBrick");
+            DrawText("Внимание: Отключение модуля приведет к сбросу всех его настроек и сохраненных данных!", 125, 180, "FireBrick");
             for (let e = 0; e < k.length; e++) {
                 const t = k[e],
                 n = Math.floor(e / 5),
