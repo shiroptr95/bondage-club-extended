@@ -158,11 +158,11 @@ export class GuiCommandsModule extends GuiSubscreen {
 		}
 
 		// sort toggle
-		DrawButton(1483, 182, 64, 64, "", "White", undefined, "Toggle availability-based sorting");
+		DrawButton(1483, 182, 64, 64, "", "White", undefined, "Включить сортировку на основе доступности");
 		DrawImageEx("Icons/LockMenu.png", 1483 + 3, 182 + 3, { Alpha: availabilitySort ? 1 : 0.2, Width: 58, Height: 58 });
 
 		// A-Z toggle
-		DrawButton(1583, 182, 64, 64, "", "white", undefined, "Toggle alphabetical sorting");
+		DrawButton(1583, 182, 64, 64, "", "white", undefined, "Включить сортировку по алфавиту");
 		DrawTextFit("A-Z", 1583 + 32, 182 + 32 + 1, 64 - 4, alphabeticalSort ? "black" : "#bbb");
 
 		// Actual commands

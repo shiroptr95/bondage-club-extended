@@ -16336,13 +16336,13 @@ class $C extends br {
             Width: 58,
             Height: 58
         }),
-        DrawButton(1483, 132, 64, 64, "", "White", void 0, "Toggle availability-based sorting"),
+        DrawButton(1483, 132, 64, 64, "", "White", void 0, "Включить сортировку на основе доступности"),
         LA("Icons/LockMenu.png", 1486, 135, {
             Alpha: OC ? 1 : .2,
             Width: 58,
             Height: 58
         }),
-        DrawButton(1583, 132, 64, 64, "", "white", void 0, "Toggle alphabetical sorting"),
+        DrawButton(1583, 132, 64, 64, "", "white", void 0, "Включить сортировку по алфавиту"),
         DrawTextFit("A-Z", 1615, 165, 60, TC ? "black" : "#bbb"),
         MainCanvas.textAlign = "left";
         for (let t = 0; t < 6; t++) {
@@ -16990,13 +16990,13 @@ class rw extends br {
         Y(this.filterInput, 550, 210, 600, 64),
         MainCanvas.textAlign = "center",
         this.filterInput.value && DrawButton(870, 182, 64, 64, "X", "White"),
-        DrawButton(1483, 182, 64, 64, "", "White", void 0, "Toggle availability-based sorting"),
+        DrawButton(1483, 182, 64, 64, "", "White", void 0, "Включить сортировку на основе доступности"),
         LA("Icons/LockMenu.png", 1486, 185, {
             Alpha: nw ? 1 : .2,
             Width: 58,
             Height: 58
         }),
-        DrawButton(1583, 182, 64, 64, "", "white", void 0, "Toggle alphabetical sorting"),
+        DrawButton(1583, 182, 64, 64, "", "white", void 0, "Включить сортировку по алфавиту"),
         DrawTextFit("A-Z", 1615, 215, 60, tw ? "black" : "#bbb"),
         MainCanvas.textAlign = "left";
         for (let t = 0; t < 6; t++) {
