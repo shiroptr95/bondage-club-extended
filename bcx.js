@@ -16661,17 +16661,17 @@ class jC extends br {
 var YC = ["AbandonedBuilding", "AbandonedSideRoom", "AlchemistOffice", "AmandaCollarIntro", "AmandaIntro", "AncientRuins", "AsylumBedroom", "AsylumEntrance", "AsylumGGTSRoom", "AsylumGGTSRoomAlert", "AsylumMeeting", "AsylumTherapy", "BDSMRoomBlue", "BDSMRoomPurple", "BDSMRoomRed", "BackAlley", "BalconyNight", "Bar", "BarRestaurant", "Beach", "BeachCafe", "BeachHotel", "BeachSunset", "Bedroom", "BondageBedChamber", "Boudoir", "BoutiqueBack", "BoutiqueMain", "BrickWall", "CaptainCabin", "Castle", "Cell", "Cellar", "CeremonialVenue", "ChillRoom", "ClubCardLounge", "ClubCardPlayBoard1", "CollegeCafeteria", "CollegeClass", "CollegeClass2", "CollegeDetention", "CollegeEntrance", "CollegeTeacherLounge", "CollegeTennis", "CollegeTennisPlay", "CollegeTheater", "Confessions", "CosyChalet", "CozyLivingRoom", "CraftingWorkshop", "CreepyBasement", "DeepForest", "Desert", "DesolateVillage", "DiningRoom", "Dressing", "Dungeon", "DungeonRuin", "DystopianCity", "EgyptianExhibit", "EgyptianTomb", "EmptyWarehouse", "ForestCave", "ForestPath", "Gambling", "Gardens", "Gymnasium", "HeavenEntrance", "HellEntrance", "HorseStable", "HorseStableLight", "HotelBedroom", "HotelBedroom2", "HouseBasement1", "HouseBasement2", "HouseBasement3", "HouseInterior1", "HouseInterior2", "HouseInterior3", "HypnoSpiral2", "HypnoticSpiral", "IndoorPool", "Industrial", "Infiltration", "Introduction", "JungleTemple", "Kennels", "KidnapLeague", "Kitchen", "LatexRoom", "LeatherChamber", "LingerieShop", "LockerRoom", "LostVages", "Magic", "MagicSchoolEscape", "MagicSchoolLaboratory", "MaidCafe", "MaidQuarters", "MainHall", "Management", "MedinaMarket", "MiddletownSchool", "MovieStudio", "NightClub", "Nursery", "Office1", "Office2", "OldFarm", "Onsen", "Orig/Dressing", "Orig/Entrance", "Orig/KidnapLeague", "Orig/Lounge", "Orig/MaidQuarters", "Orig/MainHall", "Orig/Shibari", "Orig/Shop", "Orig/buhne-dekorativ-kino-276179", "OutdoorPool", "OutdoorPool2", "OutsideCells", "PaddedCell", "PaddedCell2", "Pandora/Ground/Entrance", "Pandora/Second/Cell0", "Pandora/Second/Cell1", "Pandora/Second/Cell2", "Pandora/Second/Cell3", "Pandora/Second/Cell4", "Pandora/Second/Cell5", "Pandora/Second/Cell6", "Pandora/Second/Entrance", "Pandora/Second/Fork0", "Pandora/Second/Fork1", "Pandora/Second/Fork2", "Pandora/Second/Fork3", "Pandora/Second/Fork4", "Pandora/Second/Fork5", "Pandora/Second/Fork6", "Pandora/Second/Rest0", "Pandora/Second/Tunnel0", "Pandora/Second/Tunnel1", "Pandora/Second/Tunnel2", "Pandora/Second/Tunnel3", "Pandora/Second/Tunnel4", "Pandora/Second/Tunnel5", "Pandora/Second/Tunnel6", "Pandora/Underground/Cell0", "Pandora/Underground/Cell1", "Pandora/Underground/Cell2", "Pandora/Underground/Cell3", "Pandora/Underground/Cell4", "Pandora/Underground/Cell5", "Pandora/Underground/Cell6", "Pandora/Underground/Entrance", "Pandora/Underground/Fork0", "Pandora/Underground/Fork1", "Pandora/Underground/Fork2", "Pandora/Underground/Fork3", "Pandora/Underground/Fork4", "Pandora/Underground/Fork5", "Pandora/Underground/Fork6", "Pandora/Underground/Rest0", "Pandora/Underground/Tunnel0", "Pandora/Underground/Tunnel1", "Pandora/Underground/Tunnel2", "Pandora/Underground/Tunnel3", "Pandora/Underground/Tunnel4", "Pandora/Underground/Tunnel5", "Pandora/Underground/Tunnel6", "ParkDay", "ParkNight", "ParkWinter", "PartyBasement", "PirateIsland", "PirateIslandNight", "PoolBottom", "Prison", "PrisonHall", "Private", "PublicBath", "RainyForestPathDay", "RainyForstPathNight", "RainyStreetDay", "RainyStreetNight", "Ranch", "ResearchPrep", "ResearchProgress", "Restaurant1", "Restaurant2", "RhythmGame", "RhythmGameLoading", "RooftopParty", "RustySaloon", "SarahBedroom0", "SarahBedroom1", "SarahBedroom2", "SarahBedroom3", "SarahCollarIntro", "SarahIntro", "SchoolHallway", "SchoolHospital", "SchoolRuins", "SciFiCell", "SciFiOutdoors", "SciFiRed", "SecretChamber", "Sheet", "SheetWhite", "SheikhPrivate", "SheikhTent", "Shibari", "ShipDeck", "Shipwreck", "Shop", "SlaveMarket", "SlipperyClassroom", "SlumApartment", "SlumCellar", "SlumRuins", "SnowyChaletDay", "SnowyChaletNight", "SnowyDeepForest", "SnowyForestPathDay", "SnowyForestPathNight", "SnowyLakeNight", "SnowyStreet", "SnowyStreetDay1", "SnowyStreetDay2", "SnowyStreetNight2", "SnowyTown1", "SnowyTown2", "SophieIntro", "SpaceCaptainBedroom", "SpookyForest", "StreetNight", "SunTemple", "SynthWave", "ThroneRoom", "TiledBathroom", "UnderwaterOne", "VaultCorridor", "Wagons", "WeddingArch", "WeddingBeach", "WeddingRoom", "WesternStreet", "White", "WitchWood", "WoodenCabin", "WrestlingRing", "XmasDay", "XmasEve", "Yacht1", "Yacht2", "Yacht3", "grey"];
 function UC() {
     ZC("forcesay", {
-        name: "Forced say",
+        name: "Вынужден сказать",
         helpDescription: "<text>",
-        shortDescription: "Makes PLAYER_NAME instantly say the text",
-        longDescription: "This command forces PLAYER_NAME to directly say the given text loudly in the chat room, without any way to react to it. The command is intentionally not supporting emotes, whispers or OOC text.\nUsage:\n!forcesay HELP_DESCRIPTION",
+        shortDescription: "Заставляет PLAYER_NAME мгновенно произнести текст",
+        longDescription: "Эта команда заставляет PLAYER_NAME громко произнести заданный текст в чате, без какой-либо реакции на него. Команда намеренно не поддерживает эмодзи, шепот или OOC-текст.\nИспользование:\n!forcesay HELP_DESCRIPTION",
         defaultLimit: E.blocked,
         playerUsable: !1,
         trigger: (e, t, n, r) => {
             if (e.length < 1)
                 return n(Jy(t, `!forcesay usage:\n!forcesay ${r.commandDefinition.helpDescription}`)), !1;
             const o = e.join(" ").trim();
-            return o.includes("(") ? (n("The text after '.forcesay' must not contain OOC parts in round brackets"), !1) : /^[*!/.]/.test(o[0]) ? (n("The text after '.forcesay' must not start with '*', '/', '!', or '.'"), !1) : (ServerSend("ChatRoomChat", {
+            return o.includes("(") ? (n("Текст после '.forcesay' не должен содержать частей OOC в круглых скобках"), !1) : /^[*!/.]/.test(o[0]) ? (n("The text after '.forcesay' must not start with '*', '/', '!', or '.'"), !1) : (ServerSend("ChatRoomChat", {
                     Content: o,
                     Type: "Chat"
                 }), !0)
@@ -16682,10 +16682,10 @@ function UC() {
     n = "",
     r = 0;
     ZC("say", {
-        name: "Say",
+        name: "Сказать",
         helpDescription: "<text> | cancel",
-        shortDescription: "Blocks PLAYER_NAME until she typed the text",
-        longDescription: "This command makes PLAYER_NAME unable to say anything else than the given text loudly in the chat (she can still use emotes and whispers). The blocking lasts until the command giver cancels it with 'say cancel' command, leaves the room or until PLAYER_NAME leaves the room. The text is supposed to be typed out manually, otherwise the giver of the command will be notified of this. The command is intentionally not supporting emotes, whispers or OOC text.\nUsage:\n!say HELP_DESCRIPTION",
+        shortDescription: "Блокирует PLAYER_NAME до тех пор, пока она не наберет текст",
+        longDescription: "Эта команда делает PLAYER_NAME неспособной громко говорить в чате ничего, кроме заданного текста (при этом она может использовать эмодзи и шепот). Блокировка длится до тех пор, пока подающий команду не отменит ее командой 'say cancel', не покинет комнату или пока PLAYER_NAME не выйдет из комнаты. Текст должен быть набран вручную, иначе податель команды будет уведомлен об этом. Команда намеренно не поддерживает эмодзи, шепот или OOC-текст..\nИспользование:\n!say HELP_DESCRIPTION",
         defaultLimit: E.blocked,
         playerUsable: !1,
         load() {
@@ -16746,19 +16746,19 @@ function UC() {
                         })(n)) {
                         if (t && o.length >= r) {
                             if (i)
-                                return _A("SourceCharacter failed one instance of her typing task, since she did not type out the required text fully and likely used copy & paste or the chat history instead.", t, [{
+                                return _A("SourceCharacter не справилась с одним заданием по набору текста, так как она не набрала требуемый текст полностью и, скорее всего, использовала копирование и вставку или историю чата.", t, [{
                                             Tag: "SourceCharacter",
                                             MemberNumber: Player.MemberNumber,
                                             Text: CharacterNickname(Player)
                                         }
-                                    ]), NA("You are required to type the text out fully yourself. This try did not count!"), 1;
+                                    ]), NA("Вы должны полностью набрать текст самостоятельно. Эта попытка не засчитана!"), 1;
                             _A(`SourceCharacter failed the typing task as she did not type out the required text '${o}' fully and likely used copy & paste or the chat history instead.`, t, [{
                                         Tag: "SourceCharacter",
                                         MemberNumber: Player.MemberNumber,
                                         Text: CharacterNickname(Player)
                                     }
                                 ]),
-                            NA("You failed the typing task as you did not type out the text fully"),
+                            NA("Вы не справились с заданием по набору текста, так как набрали его не полностью"),
                             l()
                         } else
                             s >= a ? (_A("SourceCharacter completed the typing task successfully", t, [{
@@ -16805,10 +16805,10 @@ function UC() {
         return 1 === e.length && o && i === t ? ev(e[0], ["cancel"]) : []
     }
     ZC("typetask", {
-        name: "Typing task",
+        name: "Задание по набору текста",
         helpDescription: "<number> <text> | cancel",
-        shortDescription: "Orders PLAYER_NAME to type a text several times or until she makes a mistake",
-        longDescription: "This command gives PLAYER_NAME the task to type the given text in a whisper to the task giver for the number of times defined in the command. This will block PLAYER_NAME from chatting or whispering to anyone other than the task giver (she can still use emotes). This state lasts until the task giver cancels it with 'typetask cancel' command, leaves the room or until PLAYER_NAME either makes a mistake or leaves the room. The command is intentionally not supporting emotes, whispers or OOC text.\nUsage:\n!typetask HELP_DESCRIPTION",
+        shortDescription: "Приказывает PLAYER_NAME набирать текст несколько раз или до тех пор, пока она не сделает ошибку",
+        longDescription: "Эта команда дает задание PLAYER_NAME набрать заданный текст шепотом, обращаясь к дающему задание, определенное в команде количество раз. Это заблокирует возможность PLAYER_NAME общаться в чате или шепотом с кем-либо, кроме дающего задание (при этом она может использовать эмоуты). Это состояние длится до тех пор, пока дающий задание не отменит его командой 'typetask cancel', не выйдет из комнаты или пока PLAYER_NAME не совершит ошибку или не покинет комнату. Команда намеренно не поддерживает эмодзи, шепот или OOC-текст..\nИспользование:\n!typetask HELP_DESCRIPTION",
         defaultLimit: E.blocked,
         playerUsable: !1,
         load() {
@@ -16828,10 +16828,10 @@ function UC() {
         autoCompleter: e => d(e, !1)
     }),
     ZC("forcetypetask", {
-        name: "Forced typing task",
+        name: "Принудительное задание по набору текста",
         helpDescription: "<number> <text> | cancel",
-        shortDescription: "Orders PLAYER_NAME to type a text a set number of times",
-        longDescription: "This command gives PLAYER_NAME the task to type the given text in a whisper to the task giver for the number of times defined in the command. This will block PLAYER_NAME from chatting or whispering to anyone other than the task giver (she can still use emotes). This state lasts until the task giver cancels it with 'typetask cancel' command, leaves the room or until PLAYER_NAME either finishes the whole task successfully or leaves the room. The command is intentionally not supporting emotes, whispers or OOC text.\nUsage:\n!forcetypetask HELP_DESCRIPTION",
+        shortDescription: "Приказывает PLAYER_NAME набрать текст заданное количество раз",
+        longDescription: "Эта команда дает задание PLAYER_NAME набрать заданный текст шепотом, обращаясь к дающему задание, определенное в команде количество раз. Это заблокирует возможность PLAYER_NAME общаться в чате или шепотом с кем-либо, кроме дающего задание (при этом она может использовать эмоуты). Это состояние длится до тех пор, пока дающий задание не отменит его командой 'typetask cancel', не покинет комнату или пока PLAYER_NAME не завершит успешно все задание или не выйдет из комнаты. Команда намеренно не поддерживает эмодзи, шепот или OOC-текст..\nИспользование:\n!forcetypetask HELP_DESCRIPTION",
         defaultLimit: E.blocked,
         playerUsable: !1,
         load() {},
@@ -20130,7 +20130,7 @@ qw(new class extends N {
             ZC("eyes", {
                 name: "Глаза",
                 helpDescription: `<${Object.keys(e).join(" | ")}>`,
-                shortDescription: "Контроль PLAYER_NAME's глаза",
+                shortDescription: "Контроль глаз PLAYER_NAME",
                 longDescription: "Это командование силами PLAYER_NAME's глаза в указанное состояние, но они все равно могут изменить его вручную.\nПрименение:\n!eyes HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
@@ -20168,8 +20168,8 @@ qw(new class extends N {
             ZC("mouth", {
                 name: "Рот",
                 helpDescription: `<${Object.keys(n).join(" | ")}>`,
-                shortDescription: "Контроль PLAYER_NAME's рот",
-                longDescription: "Это командование силами PLAYER_NAME's рот в указанное состояние, но они все равно могут изменить его вручную.\nПрименение:\n!mouth HELP_DESCRIPTION",
+                shortDescription: "Контроль рта PLAYER_NAME",
+                longDescription: "Это команда заставляет PLAYER_NAME установить рот в указанное состояние, но они все равно могут изменить его вручную.\nПрименение:\n!mouth HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
                 trigger: (e, t, o, i) => {
@@ -20220,7 +20220,7 @@ qw(new class extends N {
             ZC("arms", {
                 name: "Руки",
                 helpDescription: `<${Object.keys(o).join(" | ")}>`,
-                shortDescription: "Контроль PLAYER_NAME's позы рук",
+                shortDescription: "Контроль поз рук PLAYER_NAME",
                 longDescription: "Эта команда заставляет PLAYER_NAME's руки в заданную позу, но они все равно могут изменить ее вручную. Некоторые из них могут быть недоступны из-за ограничения количества товаров и т.д.\nИспользование:\n!arms HELP_DESCRIPTION",
                 defaultLimit: E.normal,
                 playerUsable: !0,
