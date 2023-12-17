@@ -15628,7 +15628,7 @@ class MC extends DC {
         super(e, "curses", t)
     }
     headerText() {
-        return `View / Edit the global ${this.conditionCategory} configuration`
+        return `Просмотр / редактирование глобальной конфигурации ${this.conditionCategory}`
     }
     Run() {
         var e;
@@ -16187,7 +16187,7 @@ class IC extends DC {
         super(e, "rules", t)
     }
     headerText() {
-        return `View / Edit the global ${this.conditionCategory} configuration`
+        return `Просмотр / редактирование глобальной конфигурации ${this.conditionCategory}`
     }
     Run() {
         return !(!super.Run() && null !== this.conditionCategoryData) || (MainCanvas.textAlign = "left", DrawText("Применяется к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.", 130, 210, "Black", ""), this.showHelp && FA(Ar[gr.ConditionsGlobalRules]), !1)

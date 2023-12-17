@@ -13,7 +13,7 @@ export class GuiConditionGlobalRules extends GuiConditionGlobal<"rules"> {
 	}
 
 	protected override headerText(): string {
-		return `View / Edit the global ${this.conditionCategory} configuration`;
+		return `Просмотр / редактирование глобальной конфигурации ${this.conditionCategory}`;
 	}
 
 	Run(): boolean {
