@@ -15786,7 +15786,7 @@ class BC extends br {
             Height: 44,
             Width: 44
         }),
-        DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "", this.conditionCategoryData.access_configure ? `Существующие ${this.conditionCategory} установленные в глобальной конфигурации ${this.conditionCategory}, также изменяются` : "У вас нет разрешения на использование этого", !this.conditionCategoryData.access_configure),
+        DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "", this.conditionCategoryData.access_configure ? `Существующие ${this.conditionCategory} установленные в глобальной конф. ${this.conditionCategory}, также изменяются` : "У вас нет разрешения на использование этого", !this.conditionCategoryData.access_configure),
         DrawTextFit(`Изменить глобальную конфигурацию ${this.conditionCategory}`, 1358, 865, 400, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1113, 864, 34, 34, 360, 0, 360),
@@ -15906,7 +15906,7 @@ class LC extends br {
     }
     Run() {
         var e;
-        if (MainCanvas.textAlign = "left", DrawText(`- Curses: Place new curses on ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.curseData)
+        if (MainCanvas.textAlign = "left", DrawText(`- Curses: Наложите новые проклятия на ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.curseData)
             return void(this.failed ? xw(`get curse data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
         DrawButton(1815, 305, 90, 90, "", this.curseData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.curseData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Изменить разрешения слота проклятия" : "У вас нет разрешения на изменение лимитов.", !this.curseData.access_changeLimits);
         for (let t = 0; t < 2; t++) {
@@ -15920,7 +15920,7 @@ class LC extends br {
             MainCanvas.fillRect(o + 105, 165, 830, 64),
             DrawText(r.title, o + 120, 199, "Black"),
             MainCanvas.textAlign = "center",
-            this.permissionMode || (DrawButton(o + 440, 173, 265, 48, "Curse occupied", "White", void 0, "Curse all occupied slots at once"), DrawButton(o + 720, 173, 200, 48, "Curse all", "White", void 0, "Curse all slots at once"));
+            this.permissionMode || (DrawButton(o + 440, 173, 265, 48, "Проклятье занятых", "White", void 0, "Проклятье всех занятых слотов одновременно"), DrawButton(o + 720, 173, 200, 48, "Проклятье всех", "White", void 0, "Проклинать все слоты одновременно"));
             const i = AssetGroup.filter(r.filter);
             for (let t = 0; t < i.length; t++) {
                 const n = t % 10,
@@ -15939,7 +15939,7 @@ class LC extends br {
         this.permissionMode && (MainCanvas.fillStyle = "#50ff56", MainCanvas.fillRect(1284, 75, 166, 64), MainCanvas.fillStyle = "#f6fe78", MainCanvas.fillRect(1450, 75, 166, 64), MainCanvas.fillStyle = "#ffa7a7", MainCanvas.fillRect(1616, 75, 165, 64), MainCanvas.textAlign = "center", DrawText("Normal", 1367, 109, "Black"), DrawText("Limited", 1533, 109, "Black"), DrawText("Blocked", 1699, 109, "Black")),
         this.showHelp && FA(Ar[this.permissionMode ? gr.CursesAddPermissionMode : gr.CursesAdd]);
         const t = Math.ceil(SC.length / 2);
-        DrawBackNextButton(1605, 865, 300, 90, `Page ${this.page + 1} / ${Math.max(t, 1)}`, "White", "", (() => ""), (() => ""))
+        DrawBackNextButton(1605, 865, 300, 90, `Стр. ${this.page + 1} / ${Math.max(t, 1)}`, "White", "", (() => ""), (() => ""))
     }
     Click() {
         var e;
@@ -15983,7 +15983,7 @@ class LC extends br {
 class RC extends BC {
     constructor(e) {
         super(e, "curses"),
-        this.removeLabel = "Lift curse"
+        this.removeLabel = "Снять проклятие"
     }
     Run() {
         if (super.Run() || null === this.conditionCategoryData)

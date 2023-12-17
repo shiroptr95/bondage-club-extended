@@ -58,7 +58,7 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 		return false;
 	}
 
-	protected removeLabel: string = "Lift curse";
+	protected removeLabel: string = "Снять проклятие";
 
 	protected drawCategoryImage(X: number, Y: number, data: dataEntry): void {
 		DrawImageEx(data.extra.type === "body" ? "Icons/Character.png" : data.extra.type === "clothing" ? "Icons/Dress.png" : "Assets/Female3DCG/ItemArms/Preview/NylonRope.png", X + 6, Y + 6, {

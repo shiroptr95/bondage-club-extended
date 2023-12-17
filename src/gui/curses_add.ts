@@ -73,7 +73,7 @@ export class GuiCursesAdd extends GuiSubscreen {
 
 	Run() {
 		MainCanvas.textAlign = "left";
-		DrawText(`- Curses: Place new curses on ${this.character.Name} -`, 125, 125, "Black", "Gray");
+		DrawText(`- Curses: Наложите новые проклятия на ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Back");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
@@ -109,8 +109,8 @@ export class GuiCursesAdd extends GuiSubscreen {
 			MainCanvas.textAlign = "center";
 
 			if (!this.permissionMode) {
-				DrawButton(xOffset + 440, 173, 265, 48, "Curse occupied", "White", undefined, "Curse all occupied slots at once");
-				DrawButton(xOffset + 720, 173, 200, 48, "Curse all", "White", undefined, "Curse all slots at once");
+				DrawButton(xOffset + 440, 173, 265, 48, "Проклятье занятых", "White", undefined, "Проклятье всех занятых слотов одновременно");
+				DrawButton(xOffset + 720, 173, 200, 48, "Проклятье всех", "White", undefined, "Проклинать все слоты одновременно");
 			}
 
 			const AssetGroups = AssetGroup.filter(category.filter);
