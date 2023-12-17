@@ -14096,7 +14096,7 @@ class _b extends br {
             MainCanvas.strokeRect(994, r, 500, 64),
             DrawTextFit(n.newName, 1004, r + 34, 480, "Black"),
             MainCanvas.textAlign = "center",
-            MouseIn(880, r, 64, 64) && DrawButtonHover(930, r, 4, 64, `${this.character.Name} can only say the custom name`),
+            MouseIn(880, r, 64, 64) && DrawButtonHover(930, r, 4, 64, `${this.character.Name} может произносить только пользовательское имя`),
             o && DrawButton(1550, r, 64, 64, "X", "White", void 0, "Удалить это произвольное имя"),
             MainCanvas.textAlign = "left"
         }
