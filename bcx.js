@@ -2134,7 +2134,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
         }
         Run() {
             MainCanvas.textAlign = "left",
-            DrawText("- Global: Enable/Disable BCX's modules -", 125, 125, "Black", "Gray"),
+            DrawText("- Global: Включение/отключение модулей BCX -", 125, 125, "Black", "Gray"),
             DrawText("Внимание: Отключение модуля приведет к сбросу всех его настроек и сохраненных данных!", 125, 180, "FireBrick");
             for (let e = 0; e < k.length; e++) {
                 const t = k[e],
@@ -2148,8 +2148,8 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
                 DrawText(w[t], 370 + 500 * n, 272 + 110 * r, "Black")
             }
             MainCanvas.textAlign = "center",
-            DrawButton(300, 800, 200, 80, "Confirm", this.changed ? "White" : "#ddd", void 0, void 0, !this.changed),
-            DrawButton(1520, 800, 200, 80, "Cancel", "White")
+            DrawButton(300, 800, 200, 80, "Подтвердить", this.changed ? "White" : "#ddd", void 0, void 0, !this.changed),
+            DrawButton(1520, 800, 200, 80, "Отмена", "White")
         }
         Click() {
             if (MouseIn(1815, 75, 90, 90))
@@ -13569,7 +13569,7 @@ class wb extends br {
         MainCanvas.textAlign = "left",
         DrawCheckbox(125, 350, 64, 64, "Показывать значки BCX над персонажами в чате", !vw.chatroomIconHidden);
         const e = void 0 !== fb;
-        DrawCheckbox(125, 450, 64, 64, "Покажите свое сердце сторонника BCX всем пользователям BCX", e && !vw.supporterHidden, !e)
+        DrawCheckbox(125, 450, 64, 64, "Покажите свое сердце участника BCX всем пользователям BCX", e && !vw.supporterHidden, !e)
     }
     Click() {
         if (MouseIn(1815, 75, 90, 90))

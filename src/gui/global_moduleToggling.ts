@@ -21,7 +21,7 @@ export class GuiGlobalModuleToggling extends GuiSubscreen {
 
 	Run() {
 		MainCanvas.textAlign = "left";
-		DrawText(`- Global: Enable/Disable BCX's modules -`, 125, 125, "Black", "Gray");
+		DrawText(`- Global: Включение/отключение модулей BCX -`, 125, 125, "Black", "Gray");
 		DrawText(`Внимание: Отключение модуля приведет к сбросу всех его настроек и сохраненных данных!`, 125, 180, "FireBrick");
 
 		for (let i = 0; i < TOGGLEABLE_MODULES.length; i++) {
@@ -39,9 +39,9 @@ export class GuiGlobalModuleToggling extends GuiSubscreen {
 
 		MainCanvas.textAlign = "center";
 
-		DrawButton(300, 800, 200, 80, "Confirm", this.changed ? "White" : "#ddd", undefined, undefined, !this.changed);
+		DrawButton(300, 800, 200, 80, "Подтвердить", this.changed ? "White" : "#ddd", undefined, undefined, !this.changed);
 
-		DrawButton(1520, 800, 200, 80, "Cancel", "White");
+		DrawButton(1520, 800, 200, 80, "Отмена", "White");
 	}
 
 	Click() {

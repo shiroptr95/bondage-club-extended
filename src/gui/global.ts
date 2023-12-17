@@ -22,13 +22,13 @@ export class GuiGlobal extends GuiSubscreen {
 
 	Run() {
 		MainCanvas.textAlign = "left";
-		DrawText(`- Global: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray");
+		DrawText(`- Global: Конфигурация для ${this.character.Name} -`, 125, 125, "Black", "Gray");
 
 		MainCanvas.textAlign = "center";
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 
 		if (!this.character.isPlayer()) {
-			DrawText(`Global configuration is not possible on others`, 1000, 500, "Black");
+			DrawText(`Глобальная настройка невозможна на других устройствах.`, 1000, 500, "Black");
 			return;
 		}
 
@@ -47,7 +47,7 @@ export class GuiGlobal extends GuiSubscreen {
 		MainCanvas.textAlign = "left";
 		DrawCheckbox(125, 350, 64, 64, "Показывать значки BCX над персонажами в чате", !modStorage.chatroomIconHidden);
 		const isSupporter = supporterStatus !== undefined;
-		DrawCheckbox(125, 450, 64, 64, "Покажите свое сердце сторонника BCX всем пользователям BCX", isSupporter && !modStorage.supporterHidden, !isSupporter);
+		DrawCheckbox(125, 450, 64, 64, "Покажите свое сердце участника BCX всем пользователям BCX", isSupporter && !modStorage.supporterHidden, !isSupporter);
 	}
 
 	Click() {
