@@ -13565,7 +13565,7 @@ class wb extends br {
         }),
         DrawTextFit(`Первоначально выбрана предустановка BCX: "${O(b[Gw()])}"`, 1300, 244, 850, "Black"),
         DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Включить/отключить отдельные модули"),
-        DrawButton(1490, 800, 300, 90, "Clear all BCX data", "#FF3232", "", "Очистить все данные BCX"),
+        DrawButton(1490, 800, 300, 90, "Clear all BCX data", "#FF3232", "", "Emergency reset of BCX"),
         MainCanvas.textAlign = "left",
         DrawCheckbox(125, 350, 64, 64, "Показывать значки BCX над персонажами в чате", !vw.chatroomIconHidden);
         const e = void 0 !== fb;

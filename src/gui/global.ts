@@ -41,7 +41,7 @@ export class GuiGlobal extends GuiSubscreen {
 		DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Enable/Disable individual modules");
 
 		// Emergency reset
-		DrawButton(1490, 800, 300, 90, "Clear all BCX data", "#FF3232", "", "Очистить все данные BCX");
+		DrawButton(1490, 800, 300, 90, "Clear all BCX data", "#FF3232", "", "Emergency reset of BCX");
 
 		// Icon toggles
 		MainCanvas.textAlign = "left";
