@@ -15187,7 +15187,7 @@ class AC extends br {
         y = null === d.timer ? "Таймер выключен" : `${d.active ? "Deactivates" : "Activates"} in: ${F(d.timer - Date.now())}`,
         DrawText(y, 530, 311, d.active || !d.timer ? "Black" : "#060"),
         null === d.timer ? (DrawButton(120, 360, 820, 160, "Включить таймер", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", f ? "White" : "#ddd", "", "Убрать 1 день из таймера", !f), DrawButton(245, 360, 85, 60, "-1h", f ? "White" : "#ddd", "", "Убрать 1 час с таймера", !f), DrawButton(370, 360, 85, 60, "-5m", f ? "White" : "#ddd", "", "Убрать 5 минут с таймера", !f), DrawButton(495, 360, 70, 60, "∞", f ? "White" : "#ddd", "", "Отключить таймер", !f), DrawButton(605, 360, 85, 60, "+5m", f ? "White" : "#ddd", "", "Добавьте 5 минут к таймеру", !f), DrawButton(730, 360, 85, 60, "+1h", f ? "White" : "#ddd", "", "Добавьте 1 час к таймеру", !f), DrawButton(855, 360, 85, 60, "+1d", f ? "White" : "#ddd", "", "Add 1 day to the timer", !f), MainCanvas.textAlign = "left", d.active && DrawCheckbox(125, 450, 64, 64, `Delete the ${this.conditionCategory.slice(0, -1)} when timer runs out`, d.timerRemove, !f)),
-        DrawText(`${O(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", ""),
+        DrawText(`${O(this.conditionCategory.slice(0, -1))} условия срабатывания:`, 130, 580, "Black", ""),
         MainCanvas.textAlign = "center";
         const v = !!(h.room || h.roomName || h.role || h.player);
         if (DrawButton(530, 550, 410, 60, v ? h.orLogic ? "Any selected below" : "All selected below" : "Always in effect", g || !v ? "#ddd" : "White", "", "", g || !v), MainCanvas.textAlign = "left", MainCanvas.fillStyle = Bv(h, this.conditionCategoryData.highestRoleInRoom) ? "#00FF22" : "#AA0000", MainCanvas.fillRect(80, 620, 15, 304), DrawCheckbox(125, 620, 64, 64, "when", !!h.room, g), MainCanvas.textAlign = "center", DrawButton(324, 622, 115, 60, (null === (r = h.room) || void 0 === r ? void 0 : r.inverted) ? "not in" : "in", g || !h.room ? "#ddd" : "White", "", "", g || !h.room), DrawButton(453, 622, 130, 60, "private" === (null === (o = h.room) || void 0 === o ? void 0 : o.type) ? "private" : "public", g || !h.room ? "#ddd" : "White", "", "", g || !h.room), MainCanvas.textAlign = "left", DrawText("room", 597, 652, "Black", "Gray"), h.room) {
@@ -15368,7 +15368,7 @@ class kC extends AC {
         o = !!(r ? this.conditionCategoryData.data.itemRemove : null === (t = n.data) || void 0 === t ? void 0 : t.itemRemove),
         i = this.checkAccess();
         return MainCanvas.textAlign = "left",
-        n.data && (r && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(1045, 100, 74, 74)), DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклятие", o, !i || r), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не является", 1152, 185, "Black"), DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 225, "Black"), MainCanvas.restore()),
+        n.data && (r && (MainCanvas.fillStyle = "#0052A3", MainCanvas.fillRect(1045, 100, 74, 74)), DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклят", o, !i || r), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не срабатывает", 1152, 185, "Black"), DrawText("- не удаляет заблокированные элементы", 1152, 225, "Black"), MainCanvas.restore()),
         this.allowSettingsCurse && n.data && (DrawCheckbox(1050, 265, 64, 64, "Также проклинайте конфигурацию предмета", n.data.curseProperties, !i), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("Пример: какая веревочная стяжка используется", 1151, 347, "Black", ""), MainCanvas.restore(), this.item && !yC(this.item) && (MainCanvas.save(), MainCanvas.font = CommonGetFont(30), DrawTextWrap("Предупреждение: этот элемент не стандартизирован, и некоторые или все его состояния конфигурации могут вести себя неожиданным образом, если они отмечены указанным выше флажком. Предположим, что большинство из них не будут работать корректно. Проблемы могут варьироваться от возрождения с другой конфигурацией до постоянного случайного срабатывания проклятия. Поскольку некоторые из этих элементов работают (частично), возможность проклясть конфигурацию по-прежнему предлагается.", 621, 365, 860, 400, "FireBrick"), MainCanvas.restore())),
         this.showHelp && FA(Ar[gr.ConditionsEditCurses]),
         !1
@@ -15501,7 +15501,7 @@ class DC extends br {
         h = null === l.timer ? "По умолчанию таймер отключен" : `Default timer: ${F(l.timer)}`,
         DrawText(h, 530, 311, "Black"),
         null === l.timer ? (DrawButton(120, 360, 820, 160, "Включить таймер", "White"), MainCanvas.textAlign = "left") : (DrawButton(120, 360, 85, 60, "-1d", u ? "White" : "#ddd", "", "Убрать 1 день из таймера", !u), DrawButton(245, 360, 85, 60, "-1h", u ? "White" : "#ddd", "", "Убрать 1 час с таймера", !u), DrawButton(370, 360, 85, 60, "-5m", u ? "White" : "#ddd", "", "Убрать 5 минут с таймера", !u), DrawButton(495, 360, 70, 60, "∞", u ? "White" : "#ddd", "", "Установите время жизни на бесконечность", !u), DrawButton(605, 360, 85, 60, "+5m", u ? "White" : "#ddd", "", "Добавьте 5 минут к таймеру", !u), DrawButton(730, 360, 85, 60, "+1h", u ? "White" : "#ddd", "", "Добавьте 1 час к таймеру", !u), DrawButton(855, 360, 85, 60, "+1d", u ? "White" : "#ddd", "", "Добавьте 1 день к таймеру", !u), MainCanvas.textAlign = "left", DrawCheckbox(125, 450, 64, 64, `Remove the ${this.conditionCategory.slice(0, -1)} when timer runs out`, l.timerRemove, !u)),
-        DrawText(`${O(this.conditionCategory.slice(0, -1))} trigger conditions:`, 130, 580, "Black", ""),
+        DrawText(`${O(this.conditionCategory.slice(0, -1))} условия срабатывания:`, 130, 580, "Black", ""),
         MainCanvas.textAlign = "center";
         const m = !!(c.room || c.roomName || c.role || c.player);
         if (DrawButton(530, 550, 410, 60, m ? c.orLogic ? "Any selected below" : "All selected below" : "Always in effect", d || !m ? "#ddd" : "White", "", "", d || !m), MainCanvas.textAlign = "left", MainCanvas.fillStyle = Bv(c, this.conditionCategoryData.highestRoleInRoom) ? "#00FF22" : "#AA0000", MainCanvas.fillRect(75, 620, 15, 304), DrawCheckbox(125, 620, 64, 64, "when", !!c.room, d), MainCanvas.textAlign = "center", DrawButton(324, 622, 115, 60, (null === (t = c.room) || void 0 === t ? void 0 : t.inverted) ? "not in" : "in", d || !c.room ? "#ddd" : "White", "", "", d || !c.room), DrawButton(453, 622, 130, 60, "private" === (null === (n = c.room) || void 0 === n ? void 0 : n.type) ? "private" : "public", d || !c.room ? "#ddd" : "White", "", "", d || !c.room), MainCanvas.textAlign = "left", DrawText("room", 597, 652, "Black", "Gray"), c.room) {
@@ -15635,10 +15635,10 @@ class MC extends DC {
         if (super.Run() || null === this.conditionCategoryData)
             return !0;
         MainCanvas.textAlign = "left",
-        DrawText("Примечание. Настройки применяются к новым проклятиям и ко всем существующим, установленным в глобальной конфигурации.", 130, 210, "Black", "");
+        DrawText("Применяется к новым проклятиям и ко всем существующим, установленным в глобальной конфигурации.", 130, 210, "Black", "");
         const t = null !== (e = this.changes) && void 0 !== e ? e : this.conditionCategoryData,
         n = this.checkAccess();
-        return t.data && (DrawCheckbox(1050, 267, 64, 64, "Уберите предмет, когда проклятие", t.data.itemRemove, !n), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не является", 1152, 347, "Black"), DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 387, "Black"), MainCanvas.restore()),
+        return t.data && (DrawCheckbox(1050, 267, 64, 64, "Уберите предмет, когда проклят", t.data.itemRemove, !n), MainCanvas.save(), MainCanvas.font = CommonGetFont(28), DrawText("становится неактивным, удаляется или больше не срабатывает", 1152, 347, "Black"), DrawText("- не удаляет заблокированные элементы", 1152, 387, "Black"), MainCanvas.restore()),
         this.showHelp && FA(Ar[gr.ConditionsGlobalCurses]),
         !1
     }
@@ -16190,7 +16190,7 @@ class IC extends DC {
         return `View / Edit the global ${this.conditionCategory} configuration`
     }
     Run() {
-        return !(!super.Run() && null !== this.conditionCategoryData) || (MainCanvas.textAlign = "left", DrawText("Примечание: Настройки применяются к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.", 130, 210, "Black", ""), this.showHelp && FA(Ar[gr.ConditionsGlobalRules]), !1)
+        return !(!super.Run() && null !== this.conditionCategoryData) || (MainCanvas.textAlign = "left", DrawText("Применяется к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.", 130, 210, "Black", ""), this.showHelp && FA(Ar[gr.ConditionsGlobalRules]), !1)
     }
     Click() {
         return !(!super.Click() && null !== this.conditionCategoryData)

@@ -71,11 +71,11 @@ export class GuiConditionEditCurses extends GuiConditionEdit<"curses"> {
 			if (useGlobalCategorySetting) {
 				DrawRect(1045, 100, 74, 74, "#0052A3");
 			}
-			DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклятие", itemRemove, !access || useGlobalCategorySetting);
+			DrawCheckbox(1050, 105, 64, 64, "Уберите предмет, когда проклят", itemRemove, !access || useGlobalCategorySetting);
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(28);
-			DrawText("становится неактивным, удаляется или больше не является", 1152, 185, "Black");
-			DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 225, "Black");
+			DrawText("становится неактивным, удаляется или больше не срабатывает", 1152, 185, "Black");
+			DrawText("- не удаляет заблокированные элементы", 1152, 225, "Black");
 			MainCanvas.restore();
 		}
 		if (this.allowSettingsCurse && data.data) {

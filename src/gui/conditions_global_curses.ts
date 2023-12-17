@@ -28,11 +28,11 @@ export class GuiConditionGlobalCurses extends GuiConditionGlobal<"curses"> {
 
 		////// right side: special curse category options
 		if (data.data) {
-			DrawCheckbox(1050, 267, 64, 64, "Уберите предмет, когда проклятие", data.data.itemRemove, !access);
+			DrawCheckbox(1050, 267, 64, 64, "Уберите предмет, когда проклят", data.data.itemRemove, !access);
 			MainCanvas.save();
 			MainCanvas.font = CommonGetFont(28);
-			DrawText("становится неактивным, удаляется или больше не является", 1152, 347, "Black");
-			DrawText("срабатывание - не удаляет заблокированные элементы", 1152, 387, "Black");
+			DrawText("становится неактивным, удаляется или больше не срабатывает", 1152, 347, "Black");
+			DrawText("- не удаляет заблокированные элементы", 1152, 387, "Black");
 			MainCanvas.restore();
 		}
 

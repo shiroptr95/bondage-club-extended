@@ -21,7 +21,7 @@ export class GuiConditionGlobalRules extends GuiConditionGlobal<"rules"> {
 			return true;
 
 		MainCanvas.textAlign = "left";
-		DrawText(`Примечание: Настройки применяются к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.`, 130, 210, "Black", "");
+		DrawText(`Применяется к новым правилам и ко всем существующим, установленным в глобальную конфигурацию.`, 130, 210, "Black", "");
 
 		// help text
 		if (this.showHelp) {
