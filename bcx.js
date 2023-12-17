@@ -15765,7 +15765,7 @@ class BC extends br {
         const e = this.conditionCategoryData.access_normal && this.conditionCategoryData.access_limited;
         DrawButton(678, 820, 170, 50, "", e ? "White" : "#ddd", "", e ? `Включить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("Вкл. всё", 765, 845, 145, "Black", ""),
-        DrawButton(678, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Активировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
+        DrawButton(678, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Активировать ${this.conditionCategory} только с глобальной конфигурацией` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("A. only", 741.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(817, 908, 21, 21, 360, 0, 360),
@@ -15776,7 +15776,7 @@ class BC extends br {
             Width: 44
         }),
         DrawButton(870, 820, 170, 50, "Выкл. всё", e ? "White" : "#ddd", "", e ? `Выключить все добавленные ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
-        DrawButton(870, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Деактивировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !e),
+        DrawButton(870, 885, 170, 46, "", e ? "White" : "#ddd", "", e ? `Деактивировать ${this.conditionCategory} только с глобальной конфигурацией` : "У вас нет разрешения на использование этого", !e),
         DrawTextFit("D. only", 933.5, 910, 90, "Black", ""),
         MainCanvas.beginPath(),
         MainCanvas.ellipse(1010, 908, 21, 21, 360, 0, 360),
@@ -15990,7 +15990,7 @@ class RC extends BC {
             return !0;
         DrawButton(120, 820, 250, 90, "Добавить новое проклятие", "White", "", "Накладывайте новые проклятия на тело, предметы или одежду.");
         const e = this.conditionCategoryData.access_normal || this.conditionCategoryData.access_limited;
-        return DrawButton(400, 820, 250, 90, "Снимите все проклятия", e ? "White" : "#ddd", "", e ? "Снимите все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !e),
+        return DrawButton(400, 820, 250, 90, "Снять все проклятия", e ? "White" : "#ddd", "", e ? "Снять все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !e),
         this.showHelp && FA(Ar[gr.ConditionsViewCurses]),
         !1
     }

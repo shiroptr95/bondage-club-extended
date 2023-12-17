@@ -30,8 +30,8 @@ export class GuiConditionViewCurses extends GuiConditionView<"curses", CurseEntr
 			"Накладывайте новые проклятия на тело, предметы или одежду.");
 
 		const access = this.conditionCategoryData.access_normal || this.conditionCategoryData.access_limited;
-		DrawButton(400, 820, 250, 90, "Снимите все проклятия", access ? "White" : "#ddd", "",
-			access ? "Снимите все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !access);
+		DrawButton(400, 820, 250, 90, "Снять все проклятия", access ? "White" : "#ddd", "",
+			access ? "Снять все проклятия с тела, предметов или одежды." : "У вас нет разрешения на использование этого", !access);
 
 		// help text
 		if (this.showHelp) {
