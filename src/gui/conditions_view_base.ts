@@ -225,22 +225,22 @@ export abstract class GuiConditionView<CAT extends ConditionsCategories, ExtraDa
 		// activate/deactivate buttons
 		const accessFull = this.conditionCategoryData.access_normal && this.conditionCategoryData.access_limited;
 		DrawButton(678, 820, 170, 50, "", accessFull ? "White" : "#ddd", "",
-			accessFull ? `Switch all added ${this.conditionCategory} to active` : "You have no permission to use this", !accessFull);
-		DrawTextFit(`Activate all`, 680 + 170 / 2, 820 + 25, 145, "Black", "");
+			accessFull ? `Переключите все добавленные ${this.conditionCategory} в активное состояние` : "У вас нет разрешения на использование этого", !accessFull);
+		DrawTextFit(`Активировать все`, 680 + 170 / 2, 820 + 25, 145, "Black", "");
 		DrawButton(678, 885, 170, 46, "", accessFull ? "White" : "#ddd", "",
-			accessFull ? `Activate only global config ${this.conditionCategory}` : "You have no permission to use this", !accessFull);
-		DrawTextFit(`A. only`, 684 + 115 / 2, 885 + 25, 90, "Black", "");
+			accessFull ? `Активировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !accessFull);
+		DrawTextFit(`Вкл глоб`, 684 + 115 / 2, 885 + 25, 90, "Black", "");
 		DrawCircle(675 + 120 + 22, 885 + 23, 21, 0, "", "#0052A3");
 		DrawImageEx("Icons/General.png", 675 + 120, 885 + 1, {
 			Height: 44,
 			Width: 44,
 		});
 
-		DrawButton(870, 820, 170, 50, "Deactivate all", accessFull ? "White" : "#ddd", "",
-			accessFull ? `Switch all added ${this.conditionCategory} to inactive` : "You have no permission to use this", !accessFull);
+		DrawButton(870, 820, 170, 50, "Деактивировать все", accessFull ? "White" : "#ddd", "",
+			accessFull ? `Переключите все добавленные ${this.conditionCategory} на неактивные` : "У вас нет разрешения на использование этого", !accessFull);
 		DrawButton(870, 885, 170, 46, "", accessFull ? "White" : "#ddd", "",
-			accessFull ? `Deactivate only global config ${this.conditionCategory}` : "You have no permission to use this", !accessFull);
-		DrawTextFit(`D. only`, 876 + 115 / 2, 885 + 25, 90, "Black", "");
+			accessFull ? `Деактивировать только глобальную конфигурацию ${this.conditionCategory}` : "У вас нет разрешения на использование этого", !accessFull);
+		DrawTextFit(`Выкл глоб`, 876 + 115 / 2, 885 + 25, 90, "Black", "");
 		DrawCircle(868 + 120 + 22, 885 + 23, 21, 0, "", "#0052A3");
 		DrawImageEx("Icons/General.png", 868 + 120, 885 + 1, {
 			Height: 44,
@@ -249,8 +249,8 @@ export abstract class GuiConditionView<CAT extends ConditionsCategories, ExtraDa
 
 		// change global config button
 		DrawButton(1068, 820, 505, 90, "", this.conditionCategoryData.access_configure ? "White" : "#ddd", "",
-			this.conditionCategoryData.access_configure ? `Existing ${this.conditionCategory} set to global ${this.conditionCategory} config are also changed` : "You have no permission to use this", !this.conditionCategoryData.access_configure);
-		DrawTextFit(`Change global ${this.conditionCategory} config`, 1018 + 680 / 2, 865, 400, "Black", "");
+			this.conditionCategoryData.access_configure ? `Existing ${this.conditionCategory} set to global ${this.conditionCategory} config are also changed` : "У вас нет разрешения на использование этого", !this.conditionCategoryData.access_configure);
+		DrawTextFit(`Изменить глобальную конфигурацию ${this.conditionCategory}`, 1018 + 680 / 2, 865, 400, "Black", "");
 		DrawCircle(1068 + 10 + 35, 820 + 44, 34, 0, "", "#0052A3");
 		DrawImageEx("Icons/General.png", 1068 + 10, 820 + 10, {
 			Height: 70,
