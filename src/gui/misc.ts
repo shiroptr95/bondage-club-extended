@@ -45,7 +45,7 @@ export class GuiMisc extends GuiSubscreen {
 		DrawText(`- Miscellaneous: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray");
 
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		if (this.character.isPlayer()) {
 			DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
 		}

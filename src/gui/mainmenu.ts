@@ -162,7 +162,7 @@ export class GuiMainMenu extends GuiSubscreen {
 
 		MainCanvas.textAlign = "center";
 		if (this.character.isPlayer()) {
-			DrawText(`Your BCX version: RU ${VERSION.replace(/-[0-f]+$/i, "")}`, 1450 + 400 / 2, 500, "Black", "");
+			DrawText(`Ваша версия BCX: RU ${VERSION.replace(/-[0-f]+$/i, "")}`, 1450 + 400 / 2, 500, "Black", "");
 			DrawButton(1450, 590, 400, 90, "", "White", "", "Журнал изменений оригинального BCX на GitHub");
 			if (versionCheckNewAvailable === true) {
 				const tick = Date.now() % 6_000;
@@ -176,7 +176,7 @@ export class GuiMainMenu extends GuiSubscreen {
 			}
 			DrawText(`Журнал изменений`, 1450 + 350 / 2, 635, "Black", "");
 			DrawImageEx(icon_ExternalLink, 1770, 620, { Width: 30, Height: 30 });
-			DrawButton(1450, 700, 400, 90, "", "White", "", "For saying 'thank you' with a tip");
+			DrawButton(1450, 700, 400, 90, "", "White", "", "Поблагодарить разработчика оригинального BCX");
 			MainCanvas.textAlign = "left";
 			DrawText(`BCX Patreon`, 1450 + 90, 745, "Black", "");
 			drawIcon(MainCanvas, icon_patreon, 1450 + 10, 693 + 17, 70, 70, 180, 1, 0, "Black", "");

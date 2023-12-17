@@ -25,7 +25,7 @@ export class GuiGlobal extends GuiSubscreen {
 		DrawText(`- Global: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray");
 
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 
 		if (!this.character.isPlayer()) {
 			DrawText(`Global configuration is not possible on others`, 1000, 500, "Black");

@@ -232,9 +232,9 @@ export class GuiAuthorityPermissions extends GuiSubscreen {
 
 		DrawText(`- Authority: Permission Settings for ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
-		DrawButton(1815, 305, 90, 90, "", "White", "Icons/West.png", "Previous screen");
+		DrawButton(1815, 305, 90, 90, "", "White", "Icons/West.png", "Предыдущий экран");
 	}
 
 	Click() {

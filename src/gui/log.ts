@@ -202,7 +202,7 @@ export class GuiLog extends GuiSubscreen {
 		MainCanvas.textAlign = "left";
 		DrawText(`- Behaviour Log: About ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
 		DrawButton(1815, 305, 90, 90, "", this.allowConfiguration ? "White" : "#ddd", "Icons/Preference.png", "Настройте ведение журнала", !this.allowConfiguration);
 	}

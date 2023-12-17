@@ -97,9 +97,9 @@ export class GuiRelationships extends GuiSubscreen {
 
 	Run() {
 		MainCanvas.textAlign = "left";
-		DrawText(`- Relationships: Custom names shown (only) to ${this.character.Name} -`, 125, 125, "Black", "Gray");
+		DrawText(`- Relationships: Пользовательские имена отображаются (только) для ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
 
 		// help text
@@ -119,9 +119,9 @@ export class GuiRelationships extends GuiSubscreen {
 
 		MainCanvas.textAlign = "left";
 		DrawRect(130, 200, 1484, 64, "#eeeeee");
-		DrawText("Actual character name", 140, 200 + 34, "Black");
-		DrawText("Enforce speaking it?", 740, 200 + 34, "Black");
-		DrawText("Custom name", 1260, 200 + 34, "Black");
+		DrawText("Настоящее имя персонажа", 140, 200 + 34, "Black");
+		DrawText("Заставить говорить это?", 740, 200 + 34, "Black");
+		DrawText("Пользовательское имя", 1260, 200 + 34, "Black");
 
 		for (let off = 0; off < PER_PAGE_COUNT; off++) {
 			const i = this.page * PER_PAGE_COUNT + off;
@@ -146,7 +146,7 @@ export class GuiRelationships extends GuiSubscreen {
 			if (MouseIn(880, Y, 64, 64)) DrawButtonHover(930, Y, 4, 64, `${this.character.Name} может произносить только пользовательское имя`);
 
 			if (allow) {
-				DrawButton(1550, Y, 64, 64, "X", "White", undefined, "Delete this custom name");
+				DrawButton(1550, Y, 64, 64, "X", "White", undefined, "Удалить это произвольное имя");
 			}
 			MainCanvas.textAlign = "left";
 		}
@@ -170,7 +170,7 @@ export class GuiRelationships extends GuiSubscreen {
 
 		const Input_NewNameAdd = document.getElementById("BCX_NewNameAdd") as HTMLInputElement | undefined;
 		if (Input_NewNameAdd) {
-			DrawText("New name:", 854, 847, "Black");
+			DrawText("Новое имя:", 854, 847, "Black");
 			ElementPosition("BCX_NewNameAdd", 1210, 842, 300, 64);
 		}
 

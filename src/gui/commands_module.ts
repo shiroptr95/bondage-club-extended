@@ -123,9 +123,9 @@ export class GuiCommandsModule extends GuiSubscreen {
 
 	Run() {
 		MainCanvas.textAlign = "left";
-		DrawText(`- Commands: List all commands for ${this.character.Name} -`, 125, 125, "Black", "Gray");
+		DrawText(`- Commands: Все команды для ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
 
 		if (this.commandsData === null) {

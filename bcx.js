@@ -1726,9 +1726,9 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
             MainCanvas.textAlign = "left",
             DrawText(`- Authority: Permission Settings for ${this.character.Name} -`, 125, 125, "Black", "Gray"),
             MainCanvas.textAlign = "center",
-            DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"),
+            DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"),
             DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"),
-            DrawButton(1815, 305, 90, 90, "", "White", "Icons/West.png", "Previous screen")
+            DrawButton(1815, 305, 90, 90, "", "White", "Icons/West.png", "Предыдущий экран")
         }
         Click() {
             if (MouseIn(1815, 75, 90, 90))
@@ -2039,7 +2039,7 @@ window.BCX_Loaded = !1, console.debug("BCX: Parse start..."), function () {
             MainCanvas.textAlign = "left",
             DrawText(`- Authority: Управление ролями для ${this.character.Name} -`, 125, 125, "Black", "Gray"),
             MainCanvas.textAlign = "center",
-            DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"),
+            DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"),
             DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"),
             DrawButton(1815, 305, 90, 90, "", "White", "Icons/Preference.png", "Настройка ролевых разрешений BCX")
         }
@@ -13555,7 +13555,7 @@ class wb extends br {
         this.character = e
     }
     Run() {
-        if (MainCanvas.textAlign = "left", DrawText(`- Global: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"), !this.character.isPlayer())
+        if (MainCanvas.textAlign = "left", DrawText(`- Global: Конфигурация для ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"), !this.character.isPlayer())
             return void DrawText("Global configuration is not possible on others", 1e3, 500, "Black");
         MainCanvas.fillStyle = "#ddd",
         MainCanvas.fillRect(840, 200, 950, 90),
@@ -13564,8 +13564,8 @@ class wb extends br {
             Width: 50
         }),
         DrawTextFit(`Первоначально выбрана предустановка BCX: "${O(b[Gw()])}"`, 1300, 244, 850, "Black"),
-        DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Enable/Disable individual modules"),
-        DrawButton(1490, 800, 300, 90, "Очистить все данные BCX", "#FF3232", "", "Emergency reset of BCX"),
+        DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Включить/отключить отдельные модули"),
+        DrawButton(1490, 800, 300, 90, "Очистить все данные BCX", "#FF3232", "", "Аварийный сброс BCX"),
         MainCanvas.textAlign = "left",
         DrawCheckbox(125, 350, 64, 64, "Показывать значки BCX над персонажами в чате", !vw.chatroomIconHidden);
         const e = void 0 !== fb;
@@ -13814,7 +13814,7 @@ class kb extends br {
         MainCanvas.textAlign = "left",
         DrawText(`- Behaviour Log: About ${this.character.Name} -`, 125, 125, "Black", "Gray"),
         MainCanvas.textAlign = "center",
-        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"),
+        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"),
         DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"),
         DrawButton(1815, 305, 90, 90, "", this.allowConfiguration ? "White" : "#ddd", "Icons/Preference.png", "Настройте ведение журнала", !this.allowConfiguration)
     }
@@ -13876,9 +13876,9 @@ class Db extends br {
     Run() {
         var e;
         MainCanvas.textAlign = "left",
-        DrawText(`- Miscellaneous: Configuration for ${this.character.Name} -`, 125, 125, "Black", "Gray"),
+        DrawText(`- Miscellaneous: Конфигурация для ${this.character.Name} -`, 125, 125, "Black", "Gray"),
         MainCanvas.textAlign = "center",
-        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"),
+        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"),
         this.character.isPlayer() && DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"),
         DrawBackNextButton(1600, 820, 300, 90, `Page ${this.page + 1} / 2`, "White", "", (() => ""), (() => "")),
         this.character.isPlayer() ? (MainCanvas.textAlign = "left", 0 === this.page ? (DrawCheckbox(125, 200, 64, 64, "Вкл. значок набора текста", !!vw.typingIndicatorEnable), DrawCheckbox(700, 200, 64, 64, "Скрыть значок набора и гардероба у пользователей, показывающих BCX one", !!vw.typingIndicatorHideBC), DrawCheckbox(125, 300, 64, 64, "Включите индикатор, показывающий, когда вы находитесь в меню BCX, биографии или гардеробе любого игрока", !!vw.screenIndicatorEnable), DrawCheckbox(125, 400, 64, 64, "Чит: предотвращение случайных событий NPC (похищения людей, выкупы, убежище, клубные рабы)", ry(M.BlockRandomEvents)), DrawCheckbox(125, 500, 64, 64, "Чит: предотвращение потери статуса Госпожи, когда репутация падает ниже 50 доминирования.", ry(M.CantLoseMistress)), DrawCheckbox(125, 600, 64, 64, "Чит: дайте себе замок хозяйки и ключ от него.", ry(M.GiveMistressKey)), DrawCheckbox(125, 700, 64, 64, "Чит: дайте себе замок Пандоры и ключ от него.", ry(M.GivePandoraKey)), DrawText("текст для автоматического заполнения поля поиска чата:", 125, 830, "Black", "Gray"), ElementPosition("BCX_RoomSearchValueField", 1320, 827, 460, 64)) : 1 === this.page && DrawCheckbox(125, 200, 64, 64, "Используйте расширенный импортер гардероба по умолчанию.", null === (e = vw.wardrobeDefaultExtended) || void 0 === e || e), this.showHelp && FA(Ar[gr.Misc])) : DrawText("Другая конфигурация модуля невозможна на других устройствах.", 1e3, 500, "Black")
@@ -13996,15 +13996,15 @@ class Eb extends br {
         e === this.character.MemberNumber && this.Load()
     }
     Run() {
-        DrawText(`- Export / Import of BCX module configurations on ${this.character.Name} -`, 125, 125, "Black", "Gray"),
-        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"),
+        DrawText(`- Экспорт/импорт конфигураций модуля BCX на ${this.character.Name} -`, 125, 125, "Black", "Gray"),
+        DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"),
         DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
         for (let e = 0; e < pp.length; e++) {
             const t = pp[e],
             n = Math.floor(e / 6),
             r = e % 6,
             o = this.disabledModules.includes(t.module);
-            DrawButton(150 + 530 * n, 190 + 120 * r, 500, 90, "", o ? "#ddd" : "White", A[t.module], o ? "Module is deactivated" : "", o),
+            DrawButton(150 + 530 * n, 190 + 120 * r, 500, 90, "", o ? "#ddd" : "White", A[t.module], o ? "Модуль деактивирован" : "", o),
             DrawTextFit(t.name, 250 + 530 * n, 235 + 120 * r, 390, "Black")
         }
         MainCanvas.textAlign = "left",
@@ -14074,14 +14074,14 @@ class _b extends br {
         this.page = W(this.page, 0, Math.ceil(this.relationshipsList.length / 6))
     }
     Run() {
-        if (MainCanvas.textAlign = "left", DrawText(`- Relationships: Custom names shown (only) to ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), this.showHelp && FA(Ar[gr.Relationships]), null == this.relationshipsData)
+        if (MainCanvas.textAlign = "left", DrawText(`- Relationships: Пользовательские имена отображаются (только) для ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), this.showHelp && FA(Ar[gr.Relationships]), null == this.relationshipsData)
             return MainCanvas.textAlign = "center", void(this.failed ? xw(`get role data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
         MainCanvas.textAlign = "left",
         MainCanvas.fillStyle = "#eeeeee",
         MainCanvas.fillRect(130, 200, 1484, 64),
-        DrawText("Actual character name", 140, 234, "Black"),
-        DrawText("Enforce speaking it?", 740, 234, "Black"),
-        DrawText("Custom name", 1260, 234, "Black");
+        DrawText("Настоящее имя персонажа", 140, 234, "Black"),
+        DrawText("Заставить говорить это?", 740, 234, "Black"),
+        DrawText("Пользовательское имя", 1260, 234, "Black");
         for (let e = 0; e < 6; e++) {
             const t = 6 * this.page + e;
             if (t >= this.relationshipsList.length)
@@ -14097,7 +14097,7 @@ class _b extends br {
             DrawTextFit(n.newName, 1004, r + 34, 480, "Black"),
             MainCanvas.textAlign = "center",
             MouseIn(880, r, 64, 64) && DrawButtonHover(930, r, 4, 64, `${this.character.Name} can only say the custom name`),
-            o && DrawButton(1550, r, 64, 64, "X", "White", void 0, "Delete this custom name"),
+            o && DrawButton(1550, r, 64, 64, "X", "White", void 0, "Удалить это произвольное имя"),
             MainCanvas.textAlign = "left"
         }
         const e = document.getElementById("BCX_NameAdd");
@@ -14111,13 +14111,13 @@ class _b extends br {
         MouseIn(740, 815, 64, 64) && DrawButtonHover(580, 890, 4, 64, "Выберите номер участника из списка"),
         MainCanvas.textAlign = "left";
         const t = document.getElementById("BCX_NewNameAdd");
-        t && (DrawText("New name:", 854, 847, "Black"), ElementPosition("BCX_NewNameAdd", 1210, 842, 300, 64)),
+        t && (DrawText("Новое имя:", 854, 847, "Black"), ElementPosition("BCX_NewNameAdd", 1210, 842, 300, 64)),
         MainCanvas.textAlign = "center";
         const n = e && /^[0-9]+$/.test(e.value) ? Number.parseInt(e.value, 10) : null,
         r = null !== n && (n === Player.MemberNumber ? this.relationshipsData.access_modify_self : this.relationshipsData.access_modify_others) && t && Up(t.value);
         DrawButton(1375, 815, 90, 64, "Add", r ? "White" : "#ddd", void 0, void 0, !r);
         const o = Math.max(Math.ceil(this.relationshipsList.length / 6), 1);
-        DrawBackNextButton(1605, 800, 300, 90, `Page ${this.page + 1} / ${o}`, "White", "", (() => ""), (() => ""))
+        DrawBackNextButton(1605, 800, 300, 90, `Стр. ${this.page + 1} / ${o}`, "White", "", (() => ""), (() => ""))
     }
     Click() {
         var e,
@@ -16982,7 +16982,7 @@ class rw extends br {
     }
     Run() {
         var e;
-        if (MainCanvas.textAlign = "left", DrawText(`- Commands: List all commands for ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.commandsData)
+        if (MainCanvas.textAlign = "left", DrawText(`- Commands: Все команды для ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"), DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png"), null === this.commandsData)
             return void(this.failed ? xw(`get commands data from ${this.character.Name}`) : DrawText("Loading...", 1e3, 480, "Black"));
         DrawButton(1815, 305, 90, 90, "", this.commandsData.access_changeLimits ? "White" : "#ddd", this.permissionMode ? "Icons/Reset.png" : "Icons/Preference.png", this.commandsData.access_changeLimits ? this.permissionMode ? "Выйти из режима разрешений" : "Изменение разрешений для команд" : "У вас нет разрешения на изменение лимитов.", !this.commandsData.access_changeLimits),
         MainCanvas.textAlign = "left",
@@ -17154,7 +17154,7 @@ class iw extends br {
             DrawTextFit(w[t.module], 250 + 430 * n, 235 + 120 * r, 310, "Black")
         }
         if (MainCanvas.textAlign = "center", this.character.isPlayer()) {
-            if (DrawText(`Your BCX version: RU ${g.replace(/-[0-f]+$/i, "")}`, 1650, 500, "Black", ""), DrawButton(1450, 590, 400, 90, "", "White", "", "Журнал изменений оригинального BCX на GitHub"), !0 === yb) {
+            if (DrawText(`Ваша версия BCX: RU ${g.replace(/-[0-f]+$/i, "")}`, 1650, 500, "Black", ""), DrawButton(1450, 590, 400, 90, "", "White", "", "Журнал изменений оригинального BCX на GitHub"), !0 === yb) {
                 Date.now() % 6e3 < 3e3 ? DrawText("Доступна новая версия", 1650, 555, "Red", "Black") : DrawText("Login again to upgrade", 1650, 555, "Red", "Black")
             } else !1 === yb && DrawText("Это последняя версия", 1650, 555, "Black", "");
             DrawText("Журнал изменений", 1625, 635, "Black", ""),
@@ -17162,7 +17162,7 @@ class iw extends br {
                 Width: 30,
                 Height: 30
             }),
-            DrawButton(1450, 700, 400, 90, "", "White", "", "For saying 'thank you' with a tip"),
+            DrawButton(1450, 700, 400, 90, "", "White", "", "Поблагодарить разработчика оригинального BCX"),
             MainCanvas.textAlign = "left",
             DrawText("BCX Patreon", 1540, 745, "Black", ""),
             YA(MainCanvas, "M108.8135992 26.06720125c-26.468266 0-48.00213212 21.53066613-48.00213212 47.99733213 0 26.38653268 21.53386613 47.85426547 48.00213213 47.85426547 26.38639937 0 47.8530655-21.4677328 47.8530655-47.85426547 0-26.466666-21.46666613-47.99733213-47.85306547-47.99733213 M23.333335 153.93333178V26.0666679h23.46666576v127.8666639z", 1460, 710, 70, 70, 180, 1, 0, "Black", ""),

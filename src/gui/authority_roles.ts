@@ -207,7 +207,7 @@ export class GuiAuthorityRoles extends GuiSubscreen {
 		MainCanvas.textAlign = "left";
 		DrawText(`- Authority: Управление ролями для ${this.character.Name} -`, 125, 125, "Black", "Gray");
 		MainCanvas.textAlign = "center";
-		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "BCX main menu");
+		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX");
 		DrawButton(1815, 190, 90, 90, "", "White", "Icons/Question.png");
 		DrawButton(1815, 305, 90, 90, "", "White", "Icons/Preference.png", "Настройка ролевых разрешений BCX");
 
