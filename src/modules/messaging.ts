@@ -49,7 +49,7 @@ const pendingQueries: Map<string, IPendingQuery> = new Map();
 
 export function DrawQueryErrorMessage(subject: string, x: number = 1000): void {
 	DrawTextWrap(
-		`Failed to ${subject}. This can be caused by missing permission to interact with their items, the user having left the room meanwhile, or the user not having the BC tab focused.`,
+		`Не удалось выполнить операцию ${subject}. Это может быть вызвано отсутствием разрешения на взаимодействие со своими объектами, или тем, что пользователь покинул комнату, или у пользователя нет фокуса на вкладке BC.`,
 		200, 280, 2 * (x - 200), 400,
 		"Black"
 	);
