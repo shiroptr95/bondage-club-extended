@@ -156,7 +156,7 @@ export class GuiMainMenu extends GuiSubscreen {
 			const isDisabled = this.disabledModules.includes(e.module);
 
 			DrawButton(150 + 430 * PX, 190 + 120 * PY, 400, 90, "", isDisabled ? "#ddd" : "White", MODULE_ICONS[e.module],
-				isDisabled ? "Module is deactivated" : "", isDisabled);
+				isDisabled ? "Модуль деактивирован" : "", isDisabled);
 			DrawTextFit(MODULE_NAMES[e.module], 250 + 430 * PX, 235 + 120 * PY, 310, "Black");
 		}
 

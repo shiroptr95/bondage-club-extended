@@ -50,7 +50,7 @@ export class GuiExportImportMain extends GuiSubscreen {
 			const isDisabled = this.disabledModules.includes(e.module);
 
 			DrawButton(150 + 530 * PX, 190 + 120 * PY, 500, 90, "", isDisabled ? "#ddd" : "White", MODULE_ICONS[e.module],
-				isDisabled ? "Module is deactivated" : "", isDisabled);
+				isDisabled ? "Модуль деактивирован" : "", isDisabled);
 			DrawTextFit(e.name, 250 + 530 * PX, 235 + 120 * PY, 390, "Black");
 		}
 

@@ -17150,7 +17150,7 @@ class iw extends br {
             n = Math.floor(e / 6),
             r = e % 6,
             o = this.disabledModules.includes(t.module);
-            DrawButton(150 + 430 * n, 190 + 120 * r, 400, 90, "", o ? "#ddd" : "White", A[t.module], o ? "Module is deactivated" : "", o),
+            DrawButton(150 + 430 * n, 190 + 120 * r, 400, 90, "", o ? "#ddd" : "White", A[t.module], o ? "Модуль деактивирован" : "", o),
             DrawTextFit(w[t.module], 250 + 430 * n, 235 + 120 * r, 310, "Black")
         }
         if (MainCanvas.textAlign = "center", this.character.isPlayer()) {
@@ -17463,7 +17463,7 @@ function Lw(e, t, n, r = !1) {
 }
 const Rw = new Map;
 function xw(e, t = 1e3) {
-    DrawTextWrap(`Failed to ${e}. This can be caused by missing permission to interact with their items, the user having left the room meanwhile, or the user not having the BC tab focused.`, 200, 280, 2 * (t - 200), 400, "Black")
+    DrawTextWrap(`Не удалось получить ${e}. Это может быть вызвано отсутствием разрешения на взаимодействие с предметами, тем, что пользователь покинул комнату, или тем, что у пользователя не была сфокусирована вкладка BC.`, 200, 280, 2 * (t - 200), 400, "Black")
 }
 function Iw(e, t, n, r = 1e4) {
     return Cw ? Promise.reject("Unavailable during init") : new Promise(((o, i) => {
