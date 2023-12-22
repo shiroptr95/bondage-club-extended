@@ -35,7 +35,7 @@ export class GuiGlobal extends GuiSubscreen {
 		// preset
 		DrawRect(840, 200, 950, 90, "#ddd");
 		DrawImageEx("Icons/Introduction.png", 840 + 20, 200 + 20, { Height: 50, Width: 50 });
-		DrawTextFit(`Первично выбрана предустановка BCX: "${capitalizeFirstLetter(Preset[getCurrentPreset()])}"`, 1300, 244, 850, "Black");
+		DrawTextFit(` Первично выбрана предустановка BCX: "${capitalizeFirstLetter(Preset[getCurrentPreset()])}"`, 1300, 244, 850, "Black");
 
 		// Manage modules
 		DrawButton(120, 200, 400, 90, "Управление модулями BCX", "White", "", "Enable/Disable individual modules");
