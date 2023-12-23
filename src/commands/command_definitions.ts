@@ -380,7 +380,7 @@ export function initCommands_definitions() {
 				Ban: [],
 				Limit: 10,
 				BlockCategory: [],
-				Language: ChatRoomData?.Language ?? Player.LastChatRoom?.Language ?? ChatCreateLanguage,
+				Language: Player.LastChatRoomLanguage as ServerChatRoomLanguage,
 			});
 			ServerSend("ChatRoomJoin", { Name });
 			return true;
