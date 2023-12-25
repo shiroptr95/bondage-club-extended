@@ -24068,7 +24068,7 @@ qw(new class extends N {
                         if (null !== pb && (clearTimeout(pb), pb = null), pb = u(Cb, 6e4 * (15 + 5 * Math.random())), "current" === t.status)
                             yb = !1;
                         else if ("newAvailable" === t.status)
-                            yb = !0, vb || (vb = !0, ServerPlayerIsInChatRoom() ? NA("New BCX version is available! You can upgrade by logging in again.") : EA("New BCX version is available! You can upgrade by logging in again.", 1e4));
+                            yb = !0, vb || (vb = !0, ServerPlayerIsInChatRoom() ? NA("Доступна новая версия BCX! Вы можете обновиться, снова войдя в систему.") : EA("Доступна новая версия BCX! Вы можете обновиться, снова войдя в систему.", 1e4));
                         else if ("deprecated" === t.status) {
                             if (yb = !0, !vb) {
                                 vb = !0;
