@@ -103,9 +103,9 @@ export class ModuleVersionCheck extends BaseModule {
 					versionCheckDidNotify = true;
 
 					if (ServerPlayerIsInChatRoom()) {
-						ChatRoomSendLocal("New BCX version is available! You can upgrade by logging in again.");
+						ChatRoomSendLocal("Доступна новая версия BCX! Вы можете обновиться, снова войдя в систему.");
 					} else {
-						InfoBeep("New BCX version is available! You can upgrade by logging in again.", 10_000);
+						InfoBeep("Доступна новая версия BCX! Вы можете обновиться, снова войдя в систему.", 10_000);
 					}
 				}
 			} else if (message.status === "deprecated") {
