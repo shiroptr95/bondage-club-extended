@@ -31,41 +31,41 @@ export class GuiWelcomeSelection extends GuiSubscreen {
 		const images = ["Icons/Management.png", "Icons/Swap.png", "Icons/Kneel.png", icon_OwnerList];
 
 		const descriptionDominant =
-			`This preset is for dominants who\n` +
-			`never intend to submit. Therefore,\n` +
-			`most modules are not loaded at\n` +
-			`start. That said, you can still use\n` +
-			`the BCX graphical user interface\n` +
-			`on other BCX users to use actions,\n` +
-			`you have permission for, on them,\n` +
-			`same as with all other presets.`;
+			`Пресет предназначен для доминантов, которые\n` +
+			`никогда не собираются подчиняться. Поэтому,\n` +
+			`большинство модулей не включены при\n` +
+			`старте. Но, вы сможете использовать\n` +
+			`интерфейс BCX на других пользователях\n` +
+			`BCX, чтобы использовать действия,\n` +
+			`на которые у вас есть разрешение,\n` +
+			`на них, как и в других пресетах.`;
 
 		const descriptionSwitch =
-			`This preset is for switches who\n` +
-			`are sometimes dominant and\n` +
-			`sometimes submissive, enabling\n` +
-			`them to explore BCX slowly, while\n` +
-			`having full control over all of its\n` +
-			`settings and features.`;
+			`Этот пресет предназначен для тех,\n` +
+			`кто иногда доминируют, а\n` +
+			`иногда подчиняется, позволяя им\n` +
+			`изучать BCX и при этом\n` +
+			`иметь полный контроль над всеми его\n` +
+			`настройками и возможностями.`;
 
 		const descriptionSubmissive =
-			`This preset is for submissives,\n` +
-			`who want to give some of their\n` +
-			`control to selected dominants and\n` +
-			`lovers, giving only them authority\n` +
-			`over some of BCX's settings. You\n` +
-			`can irreversably give away more\n` +
-			`and more control, when you want.`;
+			`Пресет предназначен для сабмиссивов,\n` +
+			`которые хотят отдать часть своего\n` +
+			`контроля избранным доминантам и\n` +
+			`любовникам, предоставив только им\n` +
+			`власть над некоторыми настройками BCX.\n` +
+			`Вы может необратимо отдать больше\n` +
+			`контроля, когда захотите.`;
 
 		const descriptionSlave =
-			`This preset is a much more\n` +
-			`extreme submissive experience,\n` +
-			`not leaving much control over the\n` +
-			`settings and permissions to you,\n` +
-			`thus enabling others to use many\n` +
-			`of BCX's features on you. Owners\n` +
-			`can even unblock the most extreme\n` +
-			`settings, if they desire so.`;
+			`Этот пресет - более экстремальный\n` +
+			`вариант покорности,\n` +
+			`не оставляющий вам контроля над\n` +
+			`настройками и разрешениями,\n` +
+			`позволяя другим использовать многие\n` +
+			`функции BCX на вас. Владельцы могут\n` +
+			`разблокировать самые экстремальные\n` +
+			`настройки, если они того пожелают.`;
 
 		const descriptions = [descriptionDominant, descriptionSwitch, descriptionSubmissive, descriptionSlave];
 
