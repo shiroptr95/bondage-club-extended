@@ -22419,8 +22419,8 @@ qw(new class extends N {
                 keywords: ["controling", "taking", "away", "limiting", "confiscate", "locks"],
                 triggerTexts: {
                     infoBeep: "Вам не разрешается использовать ключ на предметах на вашем теле!",
-                    attempt_log: "PLAYER_NAME пытался использовать ключ на изношенной вещи, что было запрещено",
-                    log: "PLAYER_NAME использовал ключ на изношенной вещи, что было запрещено"
+                    attempt_log: "PLAYER_NAME пытался использовать ключ на надетой вещи, что было запрещено",
+                    log: "PLAYER_NAME использовал ключ на надетой вещи, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22486,9 +22486,9 @@ qw(new class extends N {
                 longDescription: "Это правило запрещает PLAYER_NAME взламывать любые запертые предметы на своем теле. (Другие все еще могут нормально взламывать ее замки.)",
                 keywords: ["controling", "limiting", "secure", "security"],
                 triggerTexts: {
-                    infoBeep: "Вам не разрешается взламывать изношенные предметы на вашем теле.!",
-                    attempt_log: "PLAYER_NAME пытался взломать изношенную вещь, что было запрещено",
-                    log: "PLAYER_NAME взломал замок изношенной вещи, что было запрещено"
+                    infoBeep: "Вам не разрешается взламывать надетые предметы на вашем теле.!",
+                    attempt_log: "PLAYER_NAME пытался взломать надетую вещь, что было запрещено",
+                    log: "PLAYER_NAME взломал замок надетой вещи, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 load(e) {
@@ -22769,8 +22769,8 @@ qw(new class extends N {
                 keywords: ["limiting", "untying", "unbinding", "bondage"],
                 triggerTexts: {
                     infoBeep: "Вынимать предмет из тела запрещено!",
-                    attempt_log: "PLAYER_NAME пытался снять изношенную вещь, что было запрещено",
-                    log: "PLAYER_NAME сняла изношенную вещь, что было запрещено"
+                    attempt_log: "PLAYER_NAME пытался снять надетую вещь, что было запрещено",
+                    log: "PLAYER_NAME сняла надетую вещь, что было запрещено"
                 },
                 defaultLimit: E.normal,
                 dataDefinition: {

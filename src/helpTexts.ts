@@ -55,7 +55,7 @@ export const HELP_TEXTS: Record<Views, string> = {
 	[Views.ConditionsGlobalCurses]: "Настройки на этой странице являются глобальными настройками/настройками по умолчанию для всех вновь добавленных проклятий. Изменения в триггере " +
 		"conditions are also applied to existing curses that are (still) set to global curses configuration, though. Exception is if a timer is set here. " +
 		"Such a timer only applies to newly created curses.",
-	[Views.CursesAdd]: "Здесь вы можете наложить проклятие на любой пустой слот (белый), который останется пустым, или на любой изношенный предмет (золотой). " +
+	[Views.CursesAdd]: "Здесь вы можете наложить проклятие на любой пустой слот (белый), который останется пустым, или на любой надетый предмет (золотой). " +
 		"which will prevent removal. You add the curse by simply clicking the slot which then becomes purple to indicate that " +
 		"it is now cursed. Grey slots indicate " +
 		"that you have no access to them, due to them being blocked or due to your permission settings. Slots can be limited/blocked via the settings button " +
