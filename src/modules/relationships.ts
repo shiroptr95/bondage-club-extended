@@ -220,7 +220,7 @@ export class ModuleRelationhips extends BaseModule {
 						)
 					);
 					if (transgression !== undefined) {
-						ChatRoomSendLocal(`You are not allowed to use the name '${transgression}'! You need to use the name for her that was given to you!`, 7_000);
+						ChatRoomSendLocal(`Вам запрещено использовать имя '${transgression}'! Вы должны использовать для нее то имя, которое вам дали!`, 7_000);
 						return SpeechHookAllow.BLOCK;
 					}
 
@@ -235,7 +235,7 @@ export class ModuleRelationhips extends BaseModule {
 			module: ModuleCategory.Relationships,
 			export: (character) => {
 				if (character && !checkPermissionAccess("relationships_view_all", character)) {
-					throw new Error("Missing the following permission required to export:\nAllow viewing others in relationship list");
+					throw new Error("Отсутствует следующее разрешение, необходимое для экспорта:\nРазрешить просмотр других в списке отношений");
 				}
 				return modStorage.relationships ?? [];
 			},
@@ -244,9 +244,9 @@ export class ModuleRelationhips extends BaseModule {
 				modStorage.relationships = data;
 
 				if (character) {
-					logMessage("relationships_change", LogEntryType.plaintext, `${character} imported settings for relationships module`);
+					logMessage("relationships_change", LogEntryType.plaintext, `${character} импортированные настройки для модуля отношений`);
 					if (!character.isPlayer()) {
-						ChatRoomSendLocal(`${character.toNicknamedString()} settings for relationships module`, undefined, character.MemberNumber);
+						ChatRoomSendLocal(`${character.toNicknamedString()} настройки модуля отношений`, undefined, character.MemberNumber);
 					}
 				}
 

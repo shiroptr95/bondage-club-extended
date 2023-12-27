@@ -13556,7 +13556,7 @@ class wb extends br {
     }
     Run() {
         if (MainCanvas.textAlign = "left", DrawText(`- Global: Конфигурация для ${this.character.Name} -`, 125, 125, "Black", "Gray"), MainCanvas.textAlign = "center", DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png", "Главное меню BCX"), !this.character.isPlayer())
-            return void DrawText("Global configuration is not possible on others", 1e3, 500, "Black");
+            return void DrawText("Глобальная настройка невозможна на других устройствах.", 1e3, 500, "Black");
         MainCanvas.fillStyle = "#ddd",
         MainCanvas.fillRect(840, 200, 950, 90),
         LA("Icons/Introduction.png", 860, 220, {
@@ -13920,8 +13920,8 @@ class Mb extends br {
         DrawText(`- Export / Import of ${this.category.name} on ${this.character.Name} -`, 125, 125, "Black", "Gray"),
         DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png"),
         MainCanvas.textAlign = "center",
-        DrawButton(120, 180, 400, 90, "Export", "White", "", "Export current config"),
-        DrawButton(620, 180, 400, 90, "Import", "White", "", "Try to import a previously exported config"),
+        DrawButton(120, 180, 400, 90, "Export", "White", "", "Экспортировать текущую конфигурацию"),
+        DrawButton(620, 180, 400, 90, "Import", "White", "", "Попробуйте импортировать ранее экспортированную конфигурацию."),
         ElementPositionFix("BCX_EI", 36, 105, 380, 1790, 500),
         MainCanvas.textAlign = "left",
         DrawCheckbox(125, 290, 64, 64, "Export compressed", this.exportCompress)
@@ -17155,7 +17155,7 @@ class iw extends br {
         }
         if (MainCanvas.textAlign = "center", this.character.isPlayer()) {
             if (DrawText(`Ваша версия BCX: RU ${g.replace(/-[0-f]+$/i, "")}`, 1650, 500, "Black", ""), DrawButton(1450, 590, 400, 90, "", "White", "", "Журнал изменений оригинального BCX на GitHub"), !0 === yb) {
-                Date.now() % 6e3 < 3e3 ? DrawText("Доступна новая версия", 1650, 555, "Red", "Black") : DrawText("Login again to upgrade", 1650, 555, "Red", "Black")
+                Date.now() % 6e3 < 3e3 ? DrawText("Доступна новая версия", 1650, 555, "Red", "Black") : DrawText("Войдите снова, чтобы обновить", 1650, 555, "Red", "Black")
             } else !1 === yb && DrawText("Это последняя версия", 1650, 555, "Black", "");
             DrawText("Журнал изменений", 1625, 635, "Black", ""),
             LA(t, 1770, 620, {
@@ -21469,9 +21469,9 @@ qw(new class extends N {
         Nw.export_import_do_export = (e, t) => R(t) && "string" == typeof t.category && gp.some((e => e.category === t.category)) && "boolean" == typeof t.compress ? function (e, t, n) {
             const r = gp.find((t => t.category === e));
             if (!r)
-                throw new Error(`Unknown export category "${e}"`);
+                throw new Error(`Неизвестная категория экспорта "${e}"`);
             if (n && !eA("exportimport_export", n))
-                throw new Error("Missing the following permission required to export:\nAllow exporting BCX module configurations");
+                throw new Error("Отсутствует следующее разрешение, необходимое для экспорта:\nРазрешить экспорт конфигураций модуля BCX");
             let o = JSON.stringify({
                 __bcxExport: 1,
                 [e]: r.export(n)
@@ -21483,7 +21483,7 @@ qw(new class extends N {
         Nw.export_import_do_import = (e, t) => R(t) && "string" == typeof t.category && gp.some((e => e.category === t.category)) && "string" == typeof t.data ? function (e, t, n) {
             const r = gp.find((t => t.category === e));
             if (!r)
-                throw new Error(`Unknown import category "${e}"`);
+                throw new Error(`Неизвестная категория импорта "${e}"`);
             let o;
             t = t.trim();
             try {
@@ -21494,14 +21494,14 @@ qw(new class extends N {
                 }
                 o = JSON.parse(t)
             } catch (e) {
-                return `Invalid input: parse error: ${e}`
+                return `Неверный ввод: ошибка анализа: ${e}`
             }
             if (!R(o) || "number" != typeof o.__bcxExport)
                 return "Invalid input: Input is not data exported from BCX";
             if (1 !== o.__bcxExport)
-                return `Unable to load version ${o.__bcxExport} of export, maximum compatible version: 1`;
+                return `Невозможно загрузить версию ${o.__bcxExport} экспорта, максимальная совместимая версия: 1`;
             if (void 0 === o[e])
-                return `Input doesn't include data for category "${r.name}"\nInput has data for following known categories:\n` + (Object.keys(o).map((e => {
+                return `Входные данные не включают данные для категории. "${r.name}"\nВходные данные содержат данные для следующих известных категорий:\n` + (Object.keys(o).map((e => {
                             const t = gp.find((t => t.category === e));
                             return t ? ` - ${t.name}\n` : ""
                         })).join("") || "[NONE]\n");
@@ -21971,7 +21971,7 @@ qw(new class extends N {
                                     }))
                             }));
                     if (void 0 !== r)
-                        return NA(`You are not allowed to use the name '${r}'! You need to use the name for her that was given to you!`, 7e3), 1
+                        return NA(`Вам не разрешено использовать имя '${r}'! Вам нужно использовать для нее то имя, которое вам дали!`, 7e3), 1
                 }
                 return 0
             }
@@ -21983,7 +21983,7 @@ qw(new class extends N {
             export: e => {
                 var t;
                 if (e && !eA("relationships_view_all", e))
-                    throw new Error("Missing the following permission required to export:\nAllow viewing others in relationship list");
+                    throw new Error("Отсутствует следующее разрешение, необходимое для экспорта:\nРазрешить просмотр других в списке отношений");
                 return null !== (t = vw.relationships) && void 0 !== t ? t : []
             },
             import: (e, t) => (e = Bg(e, (e => e.memberNumber)), vw.relationships = e, t && (Mp("relationships_change", kp.plaintext, `${t} imported settings for relationships module`), t.isPlayer() || NA(`${t.toNicknamedString()} settings for relationships module`, void 0, t.MemberNumber)), "Done!"),

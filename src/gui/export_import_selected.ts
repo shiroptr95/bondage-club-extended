@@ -47,9 +47,9 @@ export class GuiExportImportSelected extends GuiSubscreen {
 		DrawButton(1815, 75, 90, 90, "", "White", "Icons/Exit.png");
 
 		MainCanvas.textAlign = "center";
-		DrawButton(120, 180, 400, 90, "Export", "White", "", "Export current config");
+		DrawButton(120, 180, 400, 90, "Export", "White", "", "Экспортировать текущую конфигурацию");
 
-		DrawButton(620, 180, 400, 90, "Import", "White", "", "Try to import a previously exported config");
+		DrawButton(620, 180, 400, 90, "Import", "White", "", "Попробуйте импортировать ранее экспортированную конфигурацию.");
 
 		ElementPositionFix(`BCX_EI`, 36, 105, 380, 1790, 500);
 

@@ -145,7 +145,7 @@ export class GuiMainMenu extends GuiSubscreen {
 
 		if (this.character.isPlayer() && modStorage.menuShouldDisplayTutorialHelp) {
 			DrawRect(950, 190, 850, 90, "Black");
-			DrawText(`New advanced tutorial pages are now available ►`, 980, 190 + 45, "White");
+			DrawText(`Теперь доступны новые страницы расширенного руководства. ►`, 980, 190 + 45, "White");
 		}
 
 		for (let i = 0; i < MAIN_MENU_ITEMS.length; i++) {
@@ -169,7 +169,7 @@ export class GuiMainMenu extends GuiSubscreen {
 				if (tick < 3_000) {
 					DrawText(`Доступна новая версия`, 1450 + 400 / 2, 555, "Red", "Black");
 				} else {
-					DrawText(`Login again to upgrade`, 1450 + 400 / 2, 555, "Red", "Black");
+					DrawText(`Войдите снова, чтобы обновить`, 1450 + 400 / 2, 555, "Red", "Black");
 				}
 			} else if (versionCheckNewAvailable === false) {
 				DrawText(`Это последняя версия`, 1450 + 400 / 2, 555, "Black", "");

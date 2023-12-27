@@ -27,7 +27,7 @@ export function ExportImportRegisterCategory<T>(definition: ExportImportCategory
 		throw new Error("Export/Import categories can be registered only during init");
 	}
 	if (exportImportCategories.some(c => c.category === definition.category)) {
-		throw new Error(`Export/Import category "${definition.category}" already defined!`);
+		throw new Error(`Категория экспорта/импорта "${definition.category}" уже определены!`);
 	}
 	exportImportCategories.push(definition);
 }
@@ -35,11 +35,11 @@ export function ExportImportRegisterCategory<T>(definition: ExportImportCategory
 export function ExportImportDoExport(category: string, compress: boolean, character: ChatroomCharacter | null): string {
 	const definition = exportImportCategories.find(c => c.category === category);
 	if (!definition) {
-		throw new Error(`Unknown export category "${category}"`);
+		throw new Error(`Неизвестная категория экспорта "${category}"`);
 	}
 
 	if (character && !checkPermissionAccess("exportimport_export", character)) {
-		throw new Error("Missing the following permission required to export:\nAllow exporting BCX module configurations");
+		throw new Error("Отсутствует следующее разрешение, необходимое для экспорта:\nРазрешить экспорт конфигураций модулей BCX");
 	}
 
 	let result = JSON.stringify({
@@ -55,7 +55,7 @@ export function ExportImportDoExport(category: string, compress: boolean, charac
 export function ExportImportDoImport(category: string, data: string, character: ChatroomCharacter | null): string {
 	const definition = exportImportCategories.find(c => c.category === category);
 	if (!definition) {
-		throw new Error(`Unknown import category "${category}"`);
+		throw new Error(`Неизвестная категория импорта "${category}"`);
 	}
 
 	data = data.trim();
@@ -73,7 +73,7 @@ export function ExportImportDoImport(category: string, data: string, character: 
 
 		parsedData = JSON.parse(data);
 	} catch (err) {
-		return `Invalid input: parse error: ${err}`;
+		return `Неверный ввод: ошибка разбора: ${err}`;
 	}
 
 	if (!isObject(parsedData) || typeof parsedData.__bcxExport !== "number") {
@@ -81,12 +81,12 @@ export function ExportImportDoImport(category: string, data: string, character: 
 	}
 
 	if (parsedData.__bcxExport !== EXPORT_IMPORT_FORMAT_VERSION) {
-		return `Unable to load version ${parsedData.__bcxExport} of export, maximum compatible version: ${EXPORT_IMPORT_FORMAT_VERSION}`;
+		return `Невозможно загрузить версию ${parsedData.__bcxExport} экспорта, максимально совместимую версию: ${EXPORT_IMPORT_FORMAT_VERSION}`;
 	}
 
 	if (parsedData[category] === undefined) {
-		return `Input doesn't include data for category "${definition.name}"\n` +
-			`Input has data for following known categories:\n` +
+		return `Входные данные не включают данные для категории "${definition.name}"\n` +
+			`На входе имеются данные для следующих известных категорий:\n` +
 			(Object.keys(parsedData).map((key) => {
 				const knownCategory = exportImportCategories.find(c => c.category === key);
 				return knownCategory ? ` - ${knownCategory.name}\n` : "";
@@ -95,7 +95,7 @@ export function ExportImportDoImport(category: string, data: string, character: 
 
 	const zodResult = definition.importValidator.safeParse(parsedData[category]);
 	if (!zodResult.success) {
-		return `Invalid input:\n${JSON.stringify(zodResult.error.format(), undefined, "\t")}`;
+		return `Недопустимый ввод:\n${JSON.stringify(zodResult.error.format(), undefined, "\t")}`;
 	}
 
 	if (character) {
